@@ -57,6 +57,7 @@ void Field::pause()
 
 void Field::start()
 {
+    init(false, false, true, true, QString::null);
     GTInitData data;
     data.seed = kapp->random();
     BaseField::start(data);

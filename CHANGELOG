@@ -1,4 +1,7 @@
-0.0.2 (16 June 2002) [CVS 3.1 devel]
+1.0.0b (18 December 2002) [KDE 3.1 stable]
+ * fix uninitialized variable
+
+1.0.0 (16 June 2002)
  * adapt to library changes
  * world-wide highscores
 

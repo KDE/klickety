@@ -19,8 +19,8 @@ const MainData MAIN_DATA = {
               "similar to the \"same\" game)."),
     "http://klickety.sourceforge.net/",
     I18N_NOOP("Removed blocks"),
-    "0.0.2",
-    "0.0.2 (6 June 2002)"
+    "1.0.0b",
+    "1.0.0b (18 December 2002)"
 };
 
 const uint HISTOGRAM_SIZE = 16;
