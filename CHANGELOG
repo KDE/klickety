@@ -1,5 +1,9 @@
-0.0.2 (6 June 2002) [CVS 3.1 devel]
+0.0.2 (16 June 2002) [CVS 3.1 devel]
  * adapt to library changes
+ * world-wide highscores
 
 0.0.1 (23 May 2002)
  * initial version in CVS
+
+-----------------
+see also the CHANGELOG for libksirtet

@@ -1,22 +1,18 @@
 #ifndef KL_HIGHSCORES_H
 #define KL_HIGHSCORES_H
 
-#include "generic/ghighscores.h"
+#include "base/highscores.h"
 
 
-namespace KExtHighscores
-{
-
-class ExtHighscores : public Highscores
+class KLHighscores : public BaseHighscores
 {
  public:
-    ExtHighscores();
+    KLHighscores();
 
  private:
-    bool isStrictlyLess(const Score &, const Score &) const;
-    void additionnalQueryItems(KURL &url, const Score &) const;
-};
-
+    bool isStrictlyLess(const KExtHighscores::Score &,
+                        const KExtHighscores::Score &) const;
+    void additionnalQueryItems(KURL &url, const KExtHighscores::Score &) const;
 };
 
 #endif
