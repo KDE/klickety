@@ -1,7 +1,7 @@
-INCLUDES = -I$(top_srcdir)/ksirtet -I$(top_srcdir)/libkdegames -I$(top_srcdir)/kmines $(all_includes)
+INCLUDES = -I$(top_srcdir)/libksirtet -I$(top_srcdir)/libkdegames -I$(top_srcdir)/kmines $(all_includes)
 
 bin_PROGRAMS     = klickety
-klickety_LDADD   = $(top_builddir)/ksirtet/base/libksirtetbase.la
+klickety_LDADD   = $(top_builddir)/libksirtet/base/libksirtetbase.la
 klickety_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 klickety_SOURCES = piece.cpp board.cpp field.cpp highscores.cpp main.cpp
 METASOURCES      = board.moc field.moc main.moc
