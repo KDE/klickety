@@ -2,25 +2,25 @@
 #include "main.moc"
 
 #include <klocale.h>
-#include <kcmdlineargs.h>
-#include <kaboutdata.h>
 #include <kapplication.h>
 
 #include "base/settings.h"
-#include "version.h"
 #include "board.h"
 #include "piece.h"
 #include "highscores.h"
 #include "field.h"
 
 
+//-----------------------------------------------------------------------------
 const MainData MAIN_DATA = {
     "klickety",
     I18N_NOOP("Klickety"),
     I18N_NOOP("Klickety is an adaptation of the clickomania game (it is "
               "similar to the \"same\" game)."),
     0, //"http://klickety.sourceforge.net/klickety/",
-    I18N_NOOP("Removed blocks")
+    I18N_NOOP("Removed blocks"),
+    "0.0.2",
+    "0.0.2 (6 June 2002)"
 };
 
 const BaseBoardInfo BASE_BOARD_INFO = {
@@ -31,44 +31,40 @@ const BaseBoardInfo BASE_BOARD_INFO = {
     10,  // after removed time
     3,   // nb toggles
     7,   // nb partial fall stages
+
+    0    // nb arcade stages
 };
 
-BaseBoard *KLMainWindow::_createBoard(bool, QWidget *parent)
+KLFactory::KLFactory()
+    : BaseFactory(MAIN_DATA, BASE_BOARD_INFO)
+{}
+
+BaseBoard *KLFactory::createBoard(bool, QWidget *parent)
 {
     return new KLBoard(parent);
 }
 
-KLMainWindow::KLMainWindow()
-    : BaseFactory(&MAIN_DATA, &BASE_BOARD_INFO)
+BaseInterface *KLFactory::createInterface(QWidget *parent)
 {
-    Field *field = new Field(this);
-    _inter = field;
-    buildGUI(field);
+    return new Field(parent);
 }
 
-KConfigWidget *KLMainWindow::_createAppearanceConfig()
+
+//-----------------------------------------------------------------------------
+KLMainWindow::KLMainWindow()
 {
-    return new AppearanceConfig;
+    buildGUI(static_cast<Field *>(_inter));
 }
 
 
 //-----------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
-    KLocale::setMainCatalogue("ksirtet");
-	KAboutData aboutData(MAIN_DATA.name, MAIN_DATA.trName, LONG_VERSION,
-                         MAIN_DATA.description, KAboutData::License_GPL,
-                         COPYLEFT, 0, MAIN_DATA.homepage);
-    aboutData.addAuthor("Nicolas Hadacek", 0, "hadacek@kde.org");
-	aboutData.addAuthor("Eirik Eng", I18N_NOOP("Core engine"));
-	KCmdLineArgs::init(argc, argv, &aboutData);
-
-	KApplication a;
-    KGlobal::locale()->insertCatalogue("libkdegames");
-    KGlobal::locale()->insertCatalogue("libkdehighscores");
+    KLFactory flf;
+    flf.init(argc, argv);
 
     KLPieceInfo pieceInfo;
-    KExtHighscores::ExtHighscores highscores(MAIN_DATA, BASE_BOARD_INFO);
+    KExtHighscores::ExtHighscores highscores;
 
     if ( kapp->isRestored() ) RESTORE(KLMainWindow)
     else {

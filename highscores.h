@@ -3,8 +3,6 @@
 
 #include "ghighscores.h"
 
-#include "base/factory.h"
-
 
 namespace KExtHighscores
 {
@@ -12,7 +10,7 @@ namespace KExtHighscores
 class ExtHighscores : public Highscores
 {
  public:
-    ExtHighscores(const MainData &, const BaseBoardInfo &);
+    ExtHighscores();
 
  private:
     bool isStrictlyLess(const Score &, const Score &) const;

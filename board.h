@@ -11,7 +11,7 @@ class KLBoard : public BaseBoard
  public:
 	KLBoard(QWidget *parent);
 
-    void start();
+    void start(const GTInitData &data);
 
  signals:
     void firstBlockClicked();
@@ -25,7 +25,7 @@ class KLBoard : public BaseBoard
 
     Grid2D::Coord findSprite(QCanvasSprite *) const;
     AfterRemoveResult afterRemove(bool doAll, bool first);
-    void afterAfterRemove();
+    bool afterAfterRemove();
     bool toBeRemoved(const Grid2D::Coord &) const;
     void remove();
     bool toFall(const Grid2D::Coord &) const;

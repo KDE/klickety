@@ -59,7 +59,7 @@ void Field::start()
 {
     GTInitData data;
     data.seed = kapp->random();
-    BaseField::init(data);
+    BaseField::start(data);
     elapsedTime->reset();
 }
 

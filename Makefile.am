@@ -13,3 +13,6 @@ KDE_ICON = klickety
 appsdir = $(kde_appsdir)/Games/Arcade
 apps_DATA = klickety.desktop
 EXTRA_DIST = $(apps_DATA)
+
+messages: rc.cpp
+	$(XGETTEXT) rc.cpp $(klickety_SOURCES) -o $(podir)/klickety.pot

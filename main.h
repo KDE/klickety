@@ -5,18 +5,23 @@
 #include "base/factory.h"
 
 
-class KLMainWindow : public BaseMainWindow, public BaseFactory
+class KLFactory : public BaseFactory
+{
+ public:
+    KLFactory();
+
+ protected:
+    BaseBoard *createBoard(bool graphic, QWidget *parent);
+    BaseInterface *createInterface(QWidget *parent);
+
+    KConfigWidget *createGameConfig() { return 0; }
+};
+
+class KLMainWindow : public BaseMainWindow
 {
  Q_OBJECT
  public:
     KLMainWindow();
-
- protected:
-    BaseBoard *_createBoard(bool graphic, QWidget *parent);
-    BaseField *_createField(QWidget *) { return 0; }
-
-    KConfigWidget *_createAppearanceConfig();
-    KConfigWidget *_createGameConfig() { return 0; }
 };
 
 #endif

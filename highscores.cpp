@@ -2,17 +2,18 @@
 
 #include <klocale.h>
 
-#include "version.h"
+#include "base/factory.h"
 #include "base/board.h"
 
 
 namespace KExtHighscores
 {
 
-ExtHighscores::ExtHighscores(const MainData &md, const BaseBoardInfo &bi)
-    : Highscores(VERSION, md.homepage)
+ExtHighscores::ExtHighscores()
+    : Highscores(bfactory->mainData.version, bfactory->mainData.homepage)
 {
-    ScoreItem *sitem = new ScoreItem(bi.width * bi.height);
+    ScoreItem *sitem =
+        new ScoreItem(bfactory->bbi.width * bfactory->bbi.height);
     setItem("score", sitem);
 
     Item *item = new Item((uint)0, i18n("Elapsed time"), Qt::AlignRight);

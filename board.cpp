@@ -33,9 +33,9 @@ KLBoard::KLBoard(QWidget *parent)
       blocked(false)
 {}
 
-void KLBoard::start()
+void KLBoard::start(const GTInitData &data)
 {
-    BaseBoard::start();
+    BaseBoard::start(data);
 
     updateScore(matrix().width() * matrix().height());
     state = GameOver;
@@ -107,8 +107,7 @@ bool KLBoard::doSlide(bool doAll, bool first, bool lineByLine)
 		if (first) loop = 0;
 		else loop++;
     }
-	bool final = (doAll || lineByLine
-                  || loop==BaseFactory::bbi()->nbFallStages);
+	bool final = (doAll || lineByLine || loop==bfactory->bbi.nbFallStages);
 
     for (uint j=0; j<firstClearLine(); j++) {
         // compute
@@ -141,8 +140,7 @@ BaseBoard::AfterRemoveResult KLBoard::afterRemove(bool doAll, bool first)
 {
     AfterRemoveResult res = Done; // dummy default
     if (sliding) {
-        res = (doSlide(doAll,
-           loop==BaseFactory::bbi()->nbFallStages+1, false) ? Done
+        res = (doSlide(doAll, loop==bfactory->bbi.nbFallStages+1, false) ? Done
            : NeedAfterRemove);
         if ( res==Done ) sliding = false;
     } else {
@@ -156,11 +154,11 @@ BaseBoard::AfterRemoveResult KLBoard::afterRemove(bool doAll, bool first)
     return res;
 }
 
-void KLBoard::afterAfterRemove()
+bool KLBoard::afterAfterRemove()
 {
     // check if there are remaining groups
     field.fill(0);
     QMemArray<uint> groups = findGroups(field, 2, true);
-    if ( groups.size()==0 ) gameOver();
     blocked = false;
+    return groups.size()!=0;
 }
