@@ -11,7 +11,7 @@ const char *KLPieceInfo::DEFAULT_COLORS[NB_BLOCK_TYPES] = {
 
 QString KLPieceInfo::colorLabel(uint i) const
 {
-    return i18n("Color #%1").arg(i+1);
+    return i18n("Color #%1:").arg(i+1);
 }
 
 void KLPieceInfo::draw(QPixmap *pixmap, uint blockType, uint bMode,
