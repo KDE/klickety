@@ -23,14 +23,14 @@ class KLPieceInfo : public GPieceInfo
     uint nbGarbageBlockTypes() const  { return 0; }
 	uint nbBlockModes() const         { return 1+4+6+4+1; }
 
+    uint nbColors() const { return NB_BLOCK_TYPES; }
+
  protected:
     void draw(QPixmap *, uint blockType, uint blockMode,
               bool lighted) const;
 
  private:
     static const uint NB_BLOCK_TYPES = 5;
-    static const QColor COLORS[NB_BLOCK_TYPES];
-
 };
 
 #endif

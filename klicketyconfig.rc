@@ -22,6 +22,21 @@
 
   <Entry name="menubar visible" vtype="bool" defaultValue="true">
   </Entry>
+
+  <Entry name="color #0" vtype="QColor" defaultValue="#C86464">
+  <text>Color #1</text>
+  </Entry>
+  <Entry name="color #1" vtype="QColor" defaultValue="#64C864">
+  <text>Color #2</text>
+  </Entry>
+  <Entry name="color #2" vtype="QColor" defaultValue="#6464C8">
+  <text>Color #3</text>
+  </Entry>
+  <Entry name="color #3" vtype="QColor" defaultValue="#C8C864">
+  <text>Color #4</text>
+  </Entry>
+  <Entry name="color #4" vtype="QColor" defaultValue="#C864C8">
+  <text>Color #5</text>
 </Group>
 
 </kconfig>

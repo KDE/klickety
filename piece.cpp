@@ -5,18 +5,10 @@
 #include "base/board.h"
 
 
-const QColor KLPieceInfo::COLORS[NB_BLOCK_TYPES] = {
-    QColor(200, 100, 100), // red
-	QColor(100, 200, 100), // green
-	QColor(100, 100, 200), // blue
-	QColor(200, 200, 100), // orange
-    QColor(200, 100, 200)  // violet
-};
-
 void KLPieceInfo::draw(QPixmap *pixmap, uint blockType, uint bMode,
                        bool lighted) const
 {
-	QColor col = COLORS[blockType];
+	QColor col = color(blockType);
     if (lighted) col = col.light();
     pixmap->fill(col);
 
