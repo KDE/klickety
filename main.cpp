@@ -15,8 +15,7 @@
 const MainData MAIN_DATA = {
     "klickety",
     I18N_NOOP("Klickety"),
-    I18N_NOOP("Klickety is an adaptation of the \"clickomania\" game (it is "
-              "similar to the \"same\" game)."),
+    I18N_NOOP("Klickety is an adaptation of the \"clickomania\" game"),
     "http://klickety.sourceforge.net/",
     I18N_NOOP("Removed blocks"),
     "1.0.2",
