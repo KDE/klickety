@@ -23,9 +23,9 @@ const MainData MAIN_DATA = {
     "0.0.2 (6 June 2002)"
 };
 
-const uint HISTOGRAM_SIZE = 15;
+const uint HISTOGRAM_SIZE = 16;
 const uint HISTOGRAM[HISTOGRAM_SIZE] = {
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 160
 };
 
 const BaseBoardInfo BASE_BOARD_INFO = {
@@ -39,8 +39,7 @@ const BaseBoardInfo BASE_BOARD_INFO = {
 
     0,   // nb arcade stages
 
-    HISTOGRAM, HISTOGRAM_SIZE,
-    false, false, // score is not bound and max pixmap should not be shown
+    HISTOGRAM, HISTOGRAM_SIZE, true, // score is bound
 };
 
 KLFactory::KLFactory()
