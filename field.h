@@ -27,7 +27,7 @@ class Field : public QWidget, public BaseField, public BaseInterface
     KGameLCDClock *elapsedTime;
 
     void pause();
-    KExtHighscores::Score currentScore() const;
+    KExtHighscore::Score currentScore() const;
     void _start()          { start(); }
     void _pause()          { pause(); }
     bool _isPaused() const;

@@ -67,12 +67,12 @@ void Field::gameOver()
 {
     elapsedTime->stop();
     stop(true);
-    KExtHighscores::submitScore(currentScore(), this);
+    KExtHighscore::submitScore(currentScore(), this);
 }
 
-KExtHighscores::Score Field::currentScore() const
+KExtHighscore::Score Field::currentScore() const
 {
-    KExtHighscores::Score score(KExtHighscores::Won);
+    KExtHighscore::Score score(KExtHighscore::Won);
     score.setData("score", board->score());
     score.setData("time", 3600 - elapsedTime->seconds());
     return score;

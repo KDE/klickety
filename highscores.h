@@ -10,9 +10,9 @@ class KLHighscores : public BaseHighscores
     KLHighscores();
 
  private:
-    bool isStrictlyLess(const KExtHighscores::Score &,
-                        const KExtHighscores::Score &) const;
-    void additionnalQueryItems(KURL &url, const KExtHighscores::Score &) const;
+    bool isStrictlyLess(const KExtHighscore::Score &,
+                        const KExtHighscore::Score &) const;
+    void additionnalQueryItems(KURL &url, const KExtHighscore::Score &) const;
 };
 
 #endif

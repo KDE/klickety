@@ -6,17 +6,17 @@
 #include "base/board.h"
 
 
-using namespace KExtHighscores;
+using namespace KExtHighscore;
 
 KLHighscores::KLHighscores()
 {
     ScoreItem *sitem =
         new ScoreItem(bfactory->bbi.width * bfactory->bbi.height);
-    setItem("score", sitem);
+    setScoreItem("score", sitem);
 
     Item *item = new Item((uint)0, i18n("Elapsed Time"), Qt::AlignRight);
     item->setPrettyFormat(Item::MinuteTime);
-    setItem("time", item);
+    setScoreItem("time", item);
 }
 
 bool KLHighscores::isStrictlyLess(const Score &s1, const Score &s2) const
