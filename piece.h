@@ -25,8 +25,7 @@ class KLPieceInfo : public GPieceInfo
 
     virtual uint nbColors() const             { return NB_BLOCK_TYPES; }
     virtual QString colorLabel(uint i) const;
-    virtual QColor defaultColor(uint i) const
-        { return QColor(DEFAULT_COLORS[i]); }
+    virtual QColor defaultColor(uint i) const;
 
  protected:
     void draw(QPixmap *, uint blockType, uint blockMode,
