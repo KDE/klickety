@@ -1,0 +1,13 @@
+[!Global!]
+IconName=klickety
+Comment=Klickety
+
+[removed]
+Name=Line removed
+Comment=Line removed
+default_presentation=0
+
+[game over]
+Name=Game Over
+Comment=Game Over
+default_presentation=0
