@@ -1,6 +1,7 @@
 [!Global!]
 IconName=klickety
 Comment=Klickety
+Comment[hi]=के-लिकेटी
 Comment[xx]=xxKlicketyxx
 
 [removed]
@@ -16,6 +17,7 @@ Name[et]=Eemaldatud rida
 Name[fi]=Rivi poistettu
 Name[fr]=Ligne supprimée
 Name[gl]=Liña eliminada
+Name[hi]=पंक्ति हटाए
 Name[hu]=Sor eltávolítva
 Name[it]=Riga rimossa
 Name[nl]=Regel verwijderd
@@ -40,6 +42,7 @@ Comment[et]=Eemaldatud rida
 Comment[fi]=Rivi poistettu
 Comment[fr]=Ligne supprimée
 Comment[gl]=Liña eliminada
+Comment[hi]=पंक्ति हटाए
 Comment[hu]=Sor eltávolítva
 Comment[it]=Linea rimossa
 Comment[nl]=Regel verwijderd
@@ -72,6 +75,7 @@ Name[fi]=Peli loppu
 Name[fr]=Fin de la partie
 Name[gl]=Fin do Xogo
 Name[he]=סיום משחק
+Name[hi]=खेल खत्म
 Name[hr]=Igra je završena
 Name[hu]=Vége a játéknak
 Name[id]=permainan berakhir
@@ -117,6 +121,7 @@ Comment[et]=Mäng läbi
 Comment[fi]=Peli loppui
 Comment[fr]=Fin de la partie
 Comment[gl]=Fin do Xogo
+Comment[hi]=खेल खत्म
 Comment[hu]=Vége a játéknak
 Comment[it]=Gioco terminato
 Comment[nl]=Het spel is afgelopen
