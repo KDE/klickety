@@ -1,4 +1,4 @@
-SUBDIR = pics
+SUBDIRS = pics
 
 INCLUDES = -I$(top_builddir)/libksirtet -I$(top_srcdir)/libksirtet -I$(top_srcdir)/libkdegames/highscore -I$(top_srcdir)/libkdegames $(all_includes)
 
