@@ -20,3 +20,33 @@ appdata_DATA = eventsrc
 
 messages: rc.cpp
 	$(XGETTEXT) rc.cpp $(klickety_SOURCES) -o $(podir)/klickety.pot
+
+# for system-wide highscore file
+DESTBIN = $(DESTDIR)$(bindir)/$(bin_PROGRAMS)
+DESTSCORES = $(HIGHSCORE_DIRECTORY)/$(bin_PROGRAMS).scores
+
+install-data-local:
+	@(test x$(HIGHSCORE_DIRECTORY) != x \
+	&& echo "********************************************************" \
+	&& echo "" \
+	&& echo "This game is installed sgid \"games\" to use the" \
+	&& echo "system-wide highscore file (in "$(HIGHSCORE_DIRECTORY)")." \
+	&& echo "" \
+	&& echo "If the system-wide highscore file does not exist, it is" \
+        && echo "created with the correct ownership and permissions. See the" \
+        && echo "INSTALL file in \"kdegames/libkdegames/highscore\" for details." \
+	&& echo "" \
+	&& echo "********************************************************" \
+	) || true
+
+install-exec-hook:
+	@(test x$(HIGHSCORE_DIRECTORY) != x \
+        && ((chown root:games $(DESTBIN) && chmod 2755  $(DESTBIN)) \
+	|| echo "Error: Could not install the game with correct permissions !!" \
+	)) || true
+
+	@(test x$(HIGHSCORE_DIRECTORY) != x \
+        && ((touch $(DESTSCORES) && chown root.games $(DESTSCORES) \
+	&& chmod 0660 $(DESTSCORES)) \
+	|| echo "Error: Could not create system-wide highscore file with correct permissions !!" \
+	)) || true

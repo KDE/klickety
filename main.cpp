@@ -3,6 +3,7 @@
 
 #include <klocale.h>
 #include <kapplication.h>
+#include <khighscore.h>
 
 #include "base/settings.h"
 #include "board.h"
@@ -67,6 +68,7 @@ KLMainWindow::KLMainWindow()
 //-----------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
+    KHighscore::init(MAIN_DATA.name);
     KLFactory flf;
     flf.init(argc, argv);
 
