@@ -10,11 +10,14 @@ using namespace KExtHighscores;
 
 KLHighscores::KLHighscores()
 {
-    ScoreItem *sitem =
-        new ScoreItem(bfactory->bbi.width * bfactory->bbi.height);
-    setItem("score", sitem);
+    uint worstScore = bfactory->bbi.width * bfactory->bbi.height + 1;
+    Item *item = new ScoreItem(worstScore);
+    setItem("score", item);
 
-    Item *item = new Item((uint)0, i18n("Elapsed time"), Qt::AlignRight);
+    item = new BestScoreItem(worstScore);
+    setItem("best score", item);
+
+    item = new Item((uint)0, i18n("Elapsed time"), Qt::AlignRight);
     item->setPrettyFormat(Item::MinuteTime);
     setItem("time", item);
 }
