@@ -1,7 +1,5 @@
 #include "highscores.h"
 
-#include <klocale.h>
-
 #include "base/factory.h"
 #include "base/board.h"
 
@@ -11,7 +9,7 @@ using namespace KExtHighscore;
 KLHighscores::KLHighscores()
 {
     Item *item = createItem(ScoreDefault);
-    setScoreItem(bfactory->bbi.width * bfactory->bbi.height, item);
+    setScoreItem(bfactory->bbi.width * bfactory->bbi.height + 1, item);
     addScoreItem("time", createItem(ElapsedTime));
 }
 
