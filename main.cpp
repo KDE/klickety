@@ -18,7 +18,7 @@ const MainData MAIN_DATA = {
     "http://klickety.sourceforge.net/",
     I18N_NOOP("Removed blocks"),
     "1.0.3",
-    "1.0.3 (4 July 2004)"
+    "1.0.3 (5 August 2004)"
 };
 
 const uint HISTOGRAM_SIZE = 16;
