@@ -1,3 +1,5 @@
+SUBDIR = pics
+
 INCLUDES = -I$(top_builddir)/libksirtet -I$(top_srcdir)/libksirtet -I$(top_srcdir)/libkdegames/highscore -I$(top_srcdir)/libkdegames $(all_includes)
 
 bin_PROGRAMS     = klickety
@@ -8,8 +10,6 @@ METASOURCES      = board.moc field.moc main.moc
 
 rcdir   = $(kde_datadir)/klickety
 rc_DATA = klicketyui.rc
-
-KDE_ICON = klickety
 
 xdg_apps_DATA = klickety.desktop
 
