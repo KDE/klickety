@@ -5,9 +5,11 @@ Comment=Klickety
 [removed]
 Name=Line removed
 Name[es]=Línea eliminada
+Name[pt_BR]=Linha removida
 Name[sv]=Rad borttagen
 Comment=Line removed
 Comment[es]=Línea eliminada
+Comment[pt_BR]=Linha removida
 Comment[sv]=Rad borttagen
 default_presentation=0
 
@@ -60,5 +62,6 @@ Name[zh_TW]=遊戲結束
 Name[zu]=Umdlalo uphelile
 Comment=Game Over
 Comment[es]=Fin de la partida
+Comment[pt_BR]=Fim de Jogo
 Comment[sv]=Spelet slut
 default_presentation=0
