@@ -4,6 +4,7 @@ Comment=Klickety
 
 [removed]
 Name=Line removed
+Name[bg]=Линията е премахната
 Name[da]=Linje fjernet
 Name[es]=Línea eliminada
 Name[hu]=Sor eltávolítva
@@ -12,6 +13,7 @@ Name[sv]=Rad borttagen
 Name[tr]=Silinen Çizgiler
 Name[zh_CN]=消去的行数
 Comment=Line removed
+Comment[bg]=Линията е премахната
 Comment[da]=Linje fjernet
 Comment[es]=Línea eliminada
 Comment[hu]=Sor eltávolítva
@@ -69,6 +71,7 @@ Name[zh_CN]=游戏结束
 Name[zh_TW]=遊戲結束
 Name[zu]=Umdlalo uphelile
 Comment=Game Over
+Comment[bg]=Край на играта
 Comment[da]=Spil forbi
 Comment[es]=Fin de la partida
 Comment[hu]=Vége a játéknak
