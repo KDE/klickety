@@ -8,16 +8,16 @@
 
   <Entry name="block size" type="ranged" vtype="int"
          defaultValue="20" minValue="20" maxValue="100">
-  <text>Block size</text>
+  <text>Block size:</text>
   </Entry>
 
   <Entry name="fade intensity" type="ranged"
          vtype="double" defaultValue="1" minValue="0" maxValue="1">
-  <text>Fade strength</text>
+  <text>Fade strength:</text>
   </Entry>
 
   <Entry name="fade color" vtype="QColor" defaultValue="#000000">
-  <text>Fade color</text>
+  <text>Fade color:</text>
   </Entry>
 
   <Entry name="menubar visible" vtype="bool" defaultValue="true">
