@@ -1,6 +1,7 @@
 [!Global!]
 IconName=klickety
 Comment=Klickety
+Comment[ar]=لعبة Klickety
 Comment[bn]=ক্লিকেটি
 Comment[hi]=के-लिकेटी
 Comment[ta]=Kலிங்கட்டி
@@ -8,6 +9,7 @@ Comment[xx]=xxKlicketyxx
 
 [removed]
 Name=Line removed
+Name[ar]=لقد أزيل الخط
 Name[bg]=Линията е премахната
 Name[bn]=লাইন সরিয়ে ফেলা হয়েছে
 Name[ca]=Línia eliminada
@@ -44,6 +46,7 @@ Name[xx]=xxLine removedxx
 Name[zh_CN]=消去的行数
 Name[zh_TW]=消去的行
 Comment=Line removed
+Comment[ar]=لقد أزيل الخط
 Comment[bg]=Линията е премахната
 Comment[bn]=লাইন সরিয়ে ফেলা হয়েছে
 Comment[ca]=Línia eliminada
@@ -84,6 +87,7 @@ default_presentation=0
 [game over]
 Name=Game Over
 Name[af]=Speletjie Bo
+Name[ar]=اللعبة انتهت
 Name[az]=Oyun Qurtardı
 Name[bg]=Край на играта
 Name[bn]=খেল খতম
