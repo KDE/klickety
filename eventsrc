@@ -7,7 +7,7 @@ Comment[xx]=xxKlicketyxx
 
 [removed]
 Name=Line removed
-Name[bg]=Линията е премахната
+Name[bg]=Премахната е линия
 Name[ca]=Línia eliminada
 Name[cs]=Odstraněn řádek
 Name[da]=Linje fjernet
@@ -37,7 +37,7 @@ Name[xx]=xxLine removedxx
 Name[zh_CN]=消去的行数
 Name[zh_TW]=消去的行
 Comment=Line removed
-Comment[bg]=Линията е премахната
+Comment[bg]=Премахната е линия
 Comment[ca]=Línia eliminada
 Comment[cs]=Odstraněn řádek
 Comment[da]=Linje fjernet
