@@ -9,6 +9,12 @@ const char *KLPieceInfo::DEFAULT_COLORS[NB_BLOCK_TYPES] = {
     "#C86464", "#64C864", "#6464C8", "#C8C864", "#C864C8"
 };
 
+QColor KLPieceInfo::defaultColor(uint i) const
+{
+  if ( i>=nbColors() ) return QColor();
+  return QColor(DEFAULT_COLORS[i]);
+}
+
 QString KLPieceInfo::colorLabel(uint i) const
 {
     return i18n("Color #%1:").arg(i+1);
