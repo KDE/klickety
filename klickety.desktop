@@ -1,11 +1,14 @@
 [Desktop Entry]
 Name=Klickety
 Name[ru]=Отпечаток
+Name[xx]=xxKlicketyxx
 Name[zu]=I-Klickety
+GenericName=Board Game
 Icon=klickety
 Exec=klickety -caption "%c" %i %m
 Type=Application
 DocPath=klickety/index.html
 Comment=
+Comment[xx]=xxxx
 MapNotify=true
-Categories=Qt;KDE;Game;ArcadeGame
+Categories=Qt;KDE;Game;StrategyGame
