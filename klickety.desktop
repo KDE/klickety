@@ -1,5 +1,7 @@
 [Desktop Entry]
 Name=Klickety
+Name[ru]=Отпечаток
+Name[zu]=I-Klickety
 Icon=klickety
 Exec=klickety -caption "%c" %i %m
 Type=Application
