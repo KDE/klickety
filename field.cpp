@@ -6,8 +6,8 @@
 
 #include <kapplication.h>
 #include <klocale.h>
+#include <kgamelcd.h>
 
-#include "generic/gmisc_ui.h"
 #include "base/board.h"
 
 
