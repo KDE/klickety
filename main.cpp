@@ -4,6 +4,7 @@
 #include <klocale.h>
 #include <kapplication.h>
 #include <khighscore.h>
+#include <kaboutdata.h>
 
 #include "base/settings.h"
 #include "piece.h"
@@ -45,7 +46,9 @@ const BaseBoardInfo BASE_BOARD_INFO = {
 
 KLFactory::KLFactory()
     : BaseFactory(MAIN_DATA, BASE_BOARD_INFO)
-{}
+{
+  _aboutData->addCredit("Dan Hill", I18N_NOOP("Icons"));
+}
 
 
 //-----------------------------------------------------------------------------
@@ -58,7 +61,7 @@ KLMainWindow::KLMainWindow()
 //-----------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
-    KHighscore::init(MAIN_DATA.name);
+    KHighscore::init(MAIN_DATA.appName);
     KLFactory flf;
     flf.init(argc, argv);
 
