@@ -18,7 +18,7 @@ class Field : public QWidget, public BaseField, public BaseInterface
     QSizePolicy sizePolicy() const;
 
  private slots:
-    void scoreUpdatedSlot(int score) { scoreUpdated(score); }
+    void scoreUpdatedSlot() { scoreUpdated(); }
     void start();
     void gameOver();
     void settingsChanged() { BaseField::settingsChanged(); }
@@ -28,8 +28,8 @@ class Field : public QWidget, public BaseField, public BaseInterface
 
     void pause();
     KExtHighscore::Score currentScore() const;
-    void _start()          { start(); }
-    void _pause()          { pause(); }
+    void _start() { start(); }
+    void _pause() { pause(); }
     bool _isPaused() const;
 };
 

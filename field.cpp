@@ -33,7 +33,7 @@ Field::Field(QWidget *parent)
     lcds->addWidget(et, 5, 0);
     lcds->setRowStretch(6, 1);
 
-    connect(board, SIGNAL(scoreUpdated(int)), SLOT(scoreUpdatedSlot(int)));
+    connect(board, SIGNAL(scoreUpdated()), SLOT(scoreUpdatedSlot()));
     connect(board, SIGNAL(gameOverSignal()), SLOT(gameOver()));
 
     settingsChanged();
