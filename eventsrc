@@ -30,6 +30,7 @@ Name[sv]=Rad borttagen
 Name[tr]=Silinen Çizgiler
 Name[xx]=xxLine removedxx
 Name[zh_CN]=消去的行数
+Name[zh_TW]=消去的行
 Comment=Line removed
 Comment[bg]=Линията е премахната
 Comment[ca]=Línia eliminada
@@ -55,6 +56,7 @@ Comment[sv]=Rad borttagen
 Comment[tr]=Silinen çizgiler
 Comment[xx]=xxLine removedxx
 Comment[zh_CN]=消去的行数
+Comment[zh_TW]=消去的行
 default_presentation=0
 
 [game over]
@@ -138,4 +140,5 @@ Comment[uz]=Ўйин тугади
 Comment[wa]=Li djeu est houte
 Comment[xx]=xxGame Overxx
 Comment[zh_CN]=游戏结束
+Comment[zh_TW]=遊戲結束
 default_presentation=0
