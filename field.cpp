@@ -17,7 +17,7 @@ Field::Field(QWidget *parent)
     KGameLCDList *sc  = new KGameLCDList(i18n("Remaining blocks"), this);
     showScore = new KGameLCD(3, sc);
     sc->append(showScore);
-    QWhatsThis::add(sc, i18n("<qt>Display the number of remaining"
+    QWhatsThis::add(sc, i18n("<qt>Display the number of remaining "
                              "blocks.<br/>"
                              "It turns <font color=\"blue\">blue"
                              "</font> if it is a highscore "
