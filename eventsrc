@@ -1,13 +1,16 @@
 [!Global!]
 IconName=klickety
 Comment=Klickety
+Comment[ar]=لعبة Klickety
 Comment[bn]=ক্লিকেটি
 Comment[hi]=के-लिकेटी
 Comment[ru]=Отпечаток
 Comment[ta]=கேலிங்கட்டி
+Comment[tg]=KЛикути
 
 [removed]
 Name=Line removed
+Name[ar]=لقد أزيل الخط
 Name[bg]=Премахната е линия
 Name[bn]=লাইন সরিয়ে ফেলা হয়েছে
 Name[bs]=Uklonjena linija
@@ -45,6 +48,7 @@ Name[tr]=Silinen Çizgiler
 Name[zh_CN]=消去的行数
 Name[zh_TW]=消去的行
 Comment=Line removed
+Comment[ar]=لقد أزيل الخط
 Comment[bg]=Премахната е линия
 Comment[bn]=লাইন সরিয়ে ফেলা হয়েছে
 Comment[bs]=Uklonjena linija
@@ -86,9 +90,11 @@ default_presentation=0
 [game over]
 Name=Game Over
 Name[af]=Speletjie Bo
+Name[ar]=اللعبة انتهت
 Name[az]=Oyun Qurtardı
 Name[bg]=Край на играта
 Name[bn]=খেল খতম
+Name[br]=Echu an abadenn
 Name[bs]=Igra završena
 Name[ca]=Fi de la partida
 Name[cs]=Konec hry
@@ -140,6 +146,7 @@ Name[zh_TW]=遊戲結束
 Name[zu]=Umdlalo uphelile
 Comment=Game over
 Comment[bg]=Край на играта
+Comment[br]=Echu an abadenn
 Comment[bs]=Kraj igre
 Comment[ca]=Fi de la partida
 Comment[cs]=Hra skončena
@@ -164,5 +171,6 @@ Comment[sr]=Крај игре
 Comment[sr@Latn]=Kraj igre
 Comment[sv]=Spelet slut
 Comment[ta]=ஆட்டம் முடிந்தது
+Comment[tg]=Бозӣ ба итмом расид
 Comment[zh_CN]=游戏结束
 default_presentation=0
