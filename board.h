@@ -17,19 +17,19 @@ class KLBoard : public BaseBoard
     void firstBlockClicked();
 
  private:
-    Grid2D::Square<int> field;
+    KGrid2D::Square<int> field;
     bool                sliding;
     QMemArray<bool>     empty;
     uint                addRemoved;
     bool                blocked;
 
-    Grid2D::Coord findSprite(QCanvasSprite *) const;
+    KGrid2D::Coord findSprite(QCanvasSprite *) const;
     AfterRemoveResult afterRemove(bool doAll, bool first);
     bool afterAfterRemove();
-    bool toBeRemoved(const Grid2D::Coord &) const;
+    bool toBeRemoved(const KGrid2D::Coord &) const;
     void remove();
-    bool toFall(const Grid2D::Coord &) const;
-    bool toSlide(const Grid2D::Coord &) const;
+    bool toFall(const KGrid2D::Coord &) const;
+    bool toSlide(const KGrid2D::Coord &) const;
     bool doSlide(bool doAll, bool first, bool lineByLine);
     void computeInfos();
 

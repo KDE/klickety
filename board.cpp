@@ -4,7 +4,7 @@
 #include "base/factory.h"
 
 
-using namespace Grid2D;
+using namespace KGrid2D;
 
 void KLBoard::contentsMouseReleaseEvent(QMouseEvent *e)
 {
