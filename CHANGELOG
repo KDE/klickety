@@ -1,4 +1,8 @@
-1.0.1 (18 December 2002) [CVS 3.2 devel]
+1.0.2 (10 March 2004) [KDE 3.2.2 stable]
+ * fix bug #65490 (default with simpler removed display)
+ * fix bug #77170 (crash at startup)
+
+1.0.1 (18 December 2002) [KDE 3.2 stable]
  * notifications
 
 1.0.0b (18 December 2002) [KDE 3.1 stable]
