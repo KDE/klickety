@@ -7,23 +7,26 @@
 class KLPieceInfo : public GPieceInfo
 {
  public:
-	KLPieceInfo() {}
+    KLPieceInfo() {}
 
-	uint nbBlocks() const             { return 0; }
-	uint nbTypes() const              { return NB_BLOCK_TYPES; }
-	uint nbForms() const              { return 0; }
+    virtual uint nbBlocks() const             { return 0; }
+    virtual uint nbTypes() const              { return NB_BLOCK_TYPES; }
+    virtual uint nbForms() const              { return 0; }
 
-	const int *i(uint, uint) const    { return 0; }
-	const int *j(uint, uint) const    { return 0; }
-	uint value(uint, uint) const      { return 0; }
-	uint form(uint) const             { return 0; }
-	uint nbConfigurations(uint) const { return 0; }
+    virtual const int *i(uint, uint) const    { return 0; }
+    virtual const int *j(uint, uint) const    { return 0; }
+    virtual uint value(uint, uint) const      { return 0; }
+    virtual uint form(uint) const             { return 0; }
+    virtual uint nbConfigurations(uint) const { return 0; }
 
-	uint nbNormalBlockTypes() const   { return NB_BLOCK_TYPES; }
-    uint nbGarbageBlockTypes() const  { return 0; }
-	uint nbBlockModes() const         { return 1+4+6+4+1; }
+    virtual uint nbNormalBlockTypes() const   { return NB_BLOCK_TYPES; }
+    virtual uint nbGarbageBlockTypes() const  { return 0; }
+    virtual uint nbBlockModes() const         { return 1+4+6+4+1; }
 
-    uint nbColors() const { return NB_BLOCK_TYPES; }
+    virtual uint nbColors() const             { return NB_BLOCK_TYPES; }
+    virtual QString colorLabel(uint i) const;
+    virtual QColor defaultColor(uint i) const
+        { return QColor(DEFAULT_COLORS[i]); }
 
  protected:
     void draw(QPixmap *, uint blockType, uint blockMode,
@@ -31,6 +34,7 @@ class KLPieceInfo : public GPieceInfo
 
  private:
     static const uint NB_BLOCK_TYPES = 5;
+    static const char *DEFAULT_COLORS[NB_BLOCK_TYPES];
 };
 
 #endif

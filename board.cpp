@@ -44,8 +44,7 @@ void KLBoard::start(const GTInitData &data)
     for (uint i=0; i<matrix().width(); i++)
         for (uint j=0; j<matrix().height(); j++) {
             Block *block = new Block;
-            block->setValue(Piece::info()->generateType(&randomSequence()),
-                            main);
+            block->setValue(Piece::info().generateType(&randomSequence()), main);
             Coord c(i, j);
             setBlock(c, block);
         }

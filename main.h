@@ -3,6 +3,8 @@
 
 #include "base/main.h"
 #include "base/factory.h"
+#include "board.h"
+#include "field.h"
 
 
 class KLFactory : public BaseFactory
@@ -11,10 +13,10 @@ class KLFactory : public BaseFactory
     KLFactory();
 
  protected:
-    BaseBoard *createBoard(bool graphic, QWidget *parent);
-    BaseInterface *createInterface(QWidget *parent);
-
-    KConfigWidget *createGameConfig() { return 0; }
+    virtual BaseBoard *createBoard(bool, QWidget *parent)
+        { return new KLBoard(parent); }
+    virtual BaseInterface *createInterface(QWidget *parent)
+        { return new Field(parent); }
 };
 
 class KLMainWindow : public BaseMainWindow

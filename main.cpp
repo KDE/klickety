@@ -6,10 +6,8 @@
 #include <khighscore.h>
 
 #include "base/settings.h"
-#include "board.h"
 #include "piece.h"
 #include "highscores.h"
-#include "field.h"
 
 
 //-----------------------------------------------------------------------------
@@ -41,21 +39,13 @@ const BaseBoardInfo BASE_BOARD_INFO = {
     0,   // nb arcade stages
 
     HISTOGRAM, HISTOGRAM_SIZE, true, // score is bound
+
+    5, 100, 20 // min, max and default block size
 };
 
 KLFactory::KLFactory()
     : BaseFactory(MAIN_DATA, BASE_BOARD_INFO)
 {}
-
-BaseBoard *KLFactory::createBoard(bool, QWidget *parent)
-{
-    return new KLBoard(parent);
-}
-
-BaseInterface *KLFactory::createInterface(QWidget *parent)
-{
-    return new Field(parent);
-}
 
 
 //-----------------------------------------------------------------------------

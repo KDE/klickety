@@ -1,9 +1,18 @@
 #include "piece.h"
 
 #include <qpainter.h>
-
+#include <klocale.h>
 #include "base/board.h"
 
+
+const char *KLPieceInfo::DEFAULT_COLORS[NB_BLOCK_TYPES] = {
+    "#C86464", "#64C864", "#6464C8", "#C8C864", "#C864C8"
+};
+
+QString KLPieceInfo::colorLabel(uint i) const
+{
+    return i18n("Color #%1").arg(i+1);
+}
 
 void KLPieceInfo::draw(QPixmap *pixmap, uint blockType, uint bMode,
                        bool lighted) const
