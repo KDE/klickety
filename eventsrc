@@ -8,11 +8,13 @@ Name[es]=Línea eliminada
 Name[hu]=Sor eltávolítva
 Name[pt_BR]=Linha removida
 Name[sv]=Rad borttagen
+Name[zh_CN]=消去的行数
 Comment=Line removed
 Comment[es]=Línea eliminada
 Comment[hu]=Sor eltávolítva
 Comment[pt_BR]=Linha removida
 Comment[sv]=Rad borttagen
+Comment[zh_CN]=消去的行数
 default_presentation=0
 
 [game over]
@@ -67,4 +69,5 @@ Comment[es]=Fin de la partida
 Comment[hu]=Vége a játéknak
 Comment[pt_BR]=Fim de Jogo
 Comment[sv]=Spelet slut
+Comment[zh_CN]=游戏结束
 default_presentation=0
