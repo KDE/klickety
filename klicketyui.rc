@@ -1,11 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE kpartgui>
-<kpartgui name="klickety" version="3">
-
-<MenuBar>
-  <Menu name="settings"><text>&amp;Settings</text>
-    <Action name="configure_highscores" append="configure_merge" />
-  </Menu>
-</Menubar>
+<kpartgui name="klickety" version="4">
 
 <Menu name="popup">
   <Action name="options_show_menubar"/>
