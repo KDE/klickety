@@ -14,7 +14,7 @@ KLHighscores::KLHighscores()
         new ScoreItem(bfactory->bbi.width * bfactory->bbi.height);
     setItem("score", sitem);
 
-    Item *item = new Item((uint)0, i18n("Elapsed time"), Qt::AlignRight);
+    Item *item = new Item((uint)0, i18n("Elapsed Time"), Qt::AlignRight);
     item->setPrettyFormat(Item::MinuteTime);
     setItem("time", item);
 }
