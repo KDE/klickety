@@ -12,12 +12,11 @@ rc_DATA = klicketyui.rc klicketyconfig.rc
 
 KDE_ICON = klickety
 
-appsdir = $(kde_appsdir)/Games/Arcade
-apps_DATA = klickety.desktop
-EXTRA_DIST = $(apps_DATA)
+xdg_apps_DATA = klickety.desktop
+EXTRA_DIST = $(xdg_apps_DATA)
 
-datadir = $(kde_datadir)/klickety
-data_DATA = eventsrc
+appdatadir = $(kde_datadir)/klickety
+appdata_DATA = eventsrc
 
 messages: rc.cpp
 	$(XGETTEXT) rc.cpp $(klickety_SOURCES) -o $(podir)/klickety.pot
