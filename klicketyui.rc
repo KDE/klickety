@@ -2,7 +2,7 @@
 <kpartgui name="klickety" version="3">
 
 <MenuBar>
-  <Menu name="settings"><text>&amps;Settings</text>
+  <Menu name="settings"><text>&amp;Settings</text>
     <Action name="configure_highscores" append="configure_merge" />
   </Menu>
 </Menubar>
