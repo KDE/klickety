@@ -12,7 +12,6 @@ rc_DATA = klicketyui.rc
 KDE_ICON = klickety
 
 xdg_apps_DATA = klickety.desktop
-EXTRA_DIST = $(xdg_apps_DATA)
 
 appdatadir = $(kde_datadir)/klickety
 appdata_DATA = eventsrc
