@@ -20,7 +20,7 @@ bool KLHighscores::isStrictlyLess(const Score &s1, const Score &s2) const
     return s1.score()>s2.score();
 }
 
-void KLHighscores::additionnalQueryItems(KURL &url, const Score &s) const
+void KLHighscores::additionalQueryItems(KURL &url, const Score &s) const
 {
     uint time = s.data("time").toUInt();
     addToQueryURL(url, "scoreTime", QString::number(time));
