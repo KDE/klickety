@@ -10,9 +10,9 @@ using namespace KExtHighscore;
 
 KLHighscores::KLHighscores()
 {
-    ScoreItem *s = new ScoreItem(bfactory->bbi.width * bfactory->bbi.height);
-    setScoreItem("score", s);
-    setScoreItem("time", new ElapsedTimeItem);
+    Item *item = createItem(ScoreDefault);
+    setScoreItem(bfactory->bbi.width * bfactory->bbi.height, item);
+    addScoreItem("time", createItem(ElapsedTime));
 }
 
 bool KLHighscores::isStrictlyLess(const Score &s1, const Score &s2) const

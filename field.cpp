@@ -74,7 +74,7 @@ void Field::gameOver()
 KExtHighscore::Score Field::currentScore() const
 {
     KExtHighscore::Score score(KExtHighscore::Won);
-    score.setData("score", board->score());
+    score.setScore(board->score());
     score.setData("time", 3600 - elapsedTime->seconds());
     return score;
 }
