@@ -1,5 +1,11 @@
 <!DOCTYPE kpartgui>
-<kpartgui name="klickety" version="2">
+<kpartgui name="klickety" version="3">
+
+<MenuBar>
+  <Menu name="settings"><text>&amps;Settings</text>
+    <Action name="configure_highscores" append="configure_merge" />
+  </Menu>
+</Menubar>
 
 <Menu name="popup">
   <Action name="options_show_menubar"/>
