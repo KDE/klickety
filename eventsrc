@@ -4,12 +4,14 @@ Comment=Klickety
 
 [removed]
 Name=Line removed
+Name[da]=Linje fjernet
 Name[es]=Línea eliminada
 Name[hu]=Sor eltávolítva
 Name[pt_BR]=Linha removida
 Name[sv]=Rad borttagen
 Name[zh_CN]=消去的行数
 Comment=Line removed
+Comment[da]=Linje fjernet
 Comment[es]=Línea eliminada
 Comment[hu]=Sor eltávolítva
 Comment[pt_BR]=Linha removida
@@ -65,6 +67,7 @@ Name[zh_CN]=游戏结束
 Name[zh_TW]=遊戲結束
 Name[zu]=Umdlalo uphelile
 Comment=Game Over
+Comment[da]=Spil forbi
 Comment[es]=Fin de la partida
 Comment[hu]=Vége a játéknak
 Comment[pt_BR]=Fim de Jogo
