@@ -10,7 +10,7 @@ namespace KExtHighscores
 {
 
 ExtHighscores::ExtHighscores()
-    : Highscores(bfactory->mainData.version, bfactory->mainData.homepage)
+    : Highscores(bfactory->mainData.version, 0/*bfactory->mainData.homepage*/)
 {
     ScoreItem *sitem =
         new ScoreItem(bfactory->bbi.width * bfactory->bbi.height);

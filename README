@@ -6,7 +6,7 @@ Distributed under the GNU General Public License
 Klickety is an adaptation of the (perharps) well-known Clickomania game ; it
 is very similar to the "same" game.
 
-Note: This game uses the libksirtet library.
+The code links to the ksirtet libraries.
 
 
 Enjoy !

@@ -7,15 +7,15 @@
 #include <kapplication.h>
 #include <klocale.h>
 
-#include "gmisc_ui.h"
+#include "generic/gmisc_ui.h"
 #include "base/board.h"
 
 
 Field::Field(QWidget *parent)
     : QWidget(parent, "field"), BaseField(this)
 {
-    LCDList *sc  = new LCDList(i18n("Remaining blocks"), this);
-    showScore = new LCD(3, sc);
+    KGameLCDList *sc  = new KGameLCDList(i18n("Remaining blocks"), this);
+    showScore = new KGameLCD(3, sc);
     sc->append(showScore);
     QWhatsThis::add(sc, i18n("<qt>Display the number of remaining"
                              "blocks.<br/>"
@@ -26,8 +26,8 @@ Field::Field(QWidget *parent)
     lcds->addWidget(sc, 1, 0);
     lcds->setRowStretch(2, 1);
 
-    LCDList *et = new LCDList(i18n("Elapsed time"), this);
-    elapsedTime = new LCDClock(et);
+    KGameLCDList *et = new KGameLCDList(i18n("Elapsed time"), this);
+    elapsedTime = new KGameLCDClock(et);
     connect(board, SIGNAL(firstBlockClicked()), elapsedTime, SLOT(start()));
     et->append(elapsedTime);
     lcds->addWidget(et, 5, 0);
@@ -74,7 +74,7 @@ KExtHighscores::Score Field::currentScore() const
 {
     KExtHighscores::Score score(KExtHighscores::Won);
     score.setData("score", board->score());
-    score.setData("time", elapsedTime->time());
+    score.setData("time", 3600 - elapsedTime->seconds());
     return score;
 }
 

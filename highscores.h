@@ -1,7 +1,7 @@
 #ifndef KL_HIGHSCORES_H
 #define KL_HIGHSCORES_H
 
-#include "ghighscores.h"
+#include "generic/ghighscores.h"
 
 
 namespace KExtHighscores

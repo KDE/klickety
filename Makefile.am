@@ -1,4 +1,4 @@
-INCLUDES = -I$(top_srcdir)/ksirtet -I$(top_srcdir)/libkdegames -I$(top_srcdir)/kmines/generic $(all_includes)
+INCLUDES = -I$(top_srcdir)/ksirtet -I$(top_srcdir)/libkdegames -I$(top_srcdir)/kmines $(all_includes)
 
 bin_PROGRAMS     = klickety
 klickety_LDADD   = $(top_builddir)/ksirtet/base/libksirtetbase.la

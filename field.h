@@ -6,8 +6,8 @@
 #include "base/field.h"
 #include "base/inter.h"
 
-class LCDClock;
 
+class KGameLCDClock;
 
 class Field : public QWidget, public BaseField, public BaseInterface
 {
@@ -24,7 +24,7 @@ class Field : public QWidget, public BaseField, public BaseInterface
     void settingsChanged() { BaseField::settingsChanged(); }
 
  private:
-    LCDClock *elapsedTime;
+    KGameLCDClock *elapsedTime;
 
     void pause();
     KExtHighscores::Score currentScore() const;
