@@ -1,3 +1,6 @@
+1.0.3 (4 July 2004) [CVS 3.3 devel]
+ * use zoom in/out actions (bug #65456)
+
 1.0.2 (10 March 2004) [KDE 3.2.2 stable]
  * fix bug #65490 (default with simpler removed display)
  * fix bug #77170 (crash at startup)
@@ -16,4 +19,4 @@
  * initial version in CVS
 
 -----------------
-see also the CHANGELOG for libksirtet
+see also the CHANGELOG for ksirtet

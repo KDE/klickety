@@ -10,7 +10,6 @@
 #include "piece.h"
 #include "highscores.h"
 
-
 //-----------------------------------------------------------------------------
 const MainData MAIN_DATA = {
     "klickety",
@@ -18,8 +17,8 @@ const MainData MAIN_DATA = {
     I18N_NOOP("Klickety is an adaptation of the \"clickomania\" game"),
     "http://klickety.sourceforge.net/",
     I18N_NOOP("Removed blocks"),
-    "1.0.2",
-    "1.0.2 (10 March 2004)"
+    "1.0.3",
+    "1.0.3 (4 July 2004)"
 };
 
 const uint HISTOGRAM_SIZE = 16;
@@ -29,7 +28,6 @@ const uint HISTOGRAM[HISTOGRAM_SIZE] = {
 
 const BaseBoardInfo BASE_BOARD_INFO = {
     10, 16, false, // width, height, with pieces
-    false, // block size must be odd
 
     50,  // before remove time
     10,  // after removed time
@@ -39,8 +37,6 @@ const BaseBoardInfo BASE_BOARD_INFO = {
     0,   // nb arcade stages
 
     HISTOGRAM, HISTOGRAM_SIZE, true, // score is bound
-
-    5, 100, 20 // min, max and default block size
 };
 
 KLFactory::KLFactory()
@@ -53,9 +49,9 @@ KLFactory::KLFactory()
 //-----------------------------------------------------------------------------
 KLMainWindow::KLMainWindow()
 {
-    buildGUI(static_cast<Field *>(_inter));
+    Field *field = static_cast<Field *>(_inter);
+    buildGUI(field);
 }
-
 
 //-----------------------------------------------------------------------------
 int main(int argc, char **argv)

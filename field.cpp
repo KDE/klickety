@@ -37,13 +37,8 @@ Field::Field(QWidget *parent)
     connect(board, SIGNAL(gameOverSignal()), SLOT(gameOver()));
 
     settingsChanged();
-    connect(parent, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
+    connect(parent, SIGNAL(settingsChanged()), SLOT(settingsChanged()));
     QTimer::singleShot(0, this, SLOT(start()));
-}
-
-QSizePolicy Field::sizePolicy() const
-{
-	return QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
 }
 
 void Field::pause()

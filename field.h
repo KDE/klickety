@@ -6,7 +6,6 @@
 #include "base/field.h"
 #include "base/inter.h"
 
-
 class KGameLCDClock;
 
 class Field : public QWidget, public BaseField, public BaseInterface
@@ -14,9 +13,7 @@ class Field : public QWidget, public BaseField, public BaseInterface
  Q_OBJECT
  public:
     Field(QWidget *parent);
-
-    QSizePolicy sizePolicy() const;
-
+  
  private slots:
     void scoreUpdatedSlot() { scoreUpdated(); }
     void start();

@@ -4,7 +4,6 @@
 #include "base/board.h"
 #include "base/piece.h"
 
-
 class KLBoard : public BaseBoard
 {
  Q_OBJECT
