@@ -1,0 +1,12 @@
+KLICKTY   : a clickomania-alike game
+------------------------------------
+Copyright (c) 2001-2002 Nicolas HADACEK (hadacek@kde.org)
+Distributed under the GNU General Public License
+
+Klickety is an adaptation of the (perharps) well-known Clickomania game ; it
+is very similar to the "same" game.
+
+Note: This game uses the libksirtet library.
+
+
+Enjoy !

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Klickety
+Icon=klickety
+Exec=klickety -caption "%c" %i %m
+Type=Application
+DocPath=klickety/index.html
+Comment=
+MapNotify=true
