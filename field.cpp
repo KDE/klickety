@@ -57,6 +57,7 @@ void Field::pause()
 
 void Field::start()
 {
+    init(false, false, true, true, QString::null);
     GTInitData data;
     data.seed = kapp->random();
     BaseField::start(data);
@@ -67,7 +68,7 @@ void Field::gameOver()
 {
     elapsedTime->stop();
     stop(true);
-    KExtHighscore::submitScore(currentScore(), this);
+    BaseField::gameOver(currentScore(), this);
 }
 
 KExtHighscore::Score Field::currentScore() const
