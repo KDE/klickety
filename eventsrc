@@ -1,6 +1,7 @@
 [!Global!]
 IconName=klickety
 Comment=Klickety
+Comment[xx]=xxKlicketyxx
 
 [removed]
 Name=Line removed
@@ -11,6 +12,7 @@ Name[hu]=Sor eltávolítva
 Name[pt_BR]=Linha removida
 Name[sv]=Rad borttagen
 Name[tr]=Silinen Çizgiler
+Name[xx]=xxLine removedxx
 Name[zh_CN]=消去的行数
 Comment=Line removed
 Comment[bg]=Линията е премахната
@@ -20,6 +22,7 @@ Comment[hu]=Sor eltávolítva
 Comment[pt_BR]=Linha removida
 Comment[sv]=Rad borttagen
 Comment[tr]=Silinen çizgiler
+Comment[xx]=xxLine removedxx
 Comment[zh_CN]=消去的行数
 default_presentation=0
 
@@ -67,6 +70,7 @@ Name[uk]=Гру завершено
 Name[ven]=Muthambo wo Fhela
 Name[vi]=Game kết thúc 
 Name[xh]=Uphelile Umdlalo
+Name[xx]=xxGame Overxx
 Name[zh_CN]=游戏结束
 Name[zh_TW]=遊戲結束
 Name[zu]=Umdlalo uphelile
@@ -79,5 +83,6 @@ Comment[pt_BR]=Fim do Jogo
 Comment[sv]=Spelet slut
 Comment[tr]=Oyun Bitti
 Comment[wa]=Li djeu est houte
+Comment[xx]=xxGame Overxx
 Comment[zh_CN]=游戏结束
 default_presentation=0
