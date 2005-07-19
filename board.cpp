@@ -2,17 +2,20 @@
 #include "board.moc"
 
 #include "base/factory.h"
+//Added by qt3to4:
+#include <QMouseEvent>
+#include <Q3MemArray>
 
 
 using namespace KGrid2D;
 
 void KLBoard::contentsMouseReleaseEvent(QMouseEvent *e)
 {
-    if ( e->button()!=LeftButton || blocked ) return;
-    QCanvasItemList list = canvas()->collisions(e->pos());
+    if ( e->button()!=Qt::LeftButton || blocked ) return;
+    Q3CanvasItemList list = canvas()->collisions(e->pos());
     if ( list.count()==0 ) return;
 
-    QCanvasSprite *spr = static_cast<QCanvasSprite *>(list.first());
+    Q3CanvasSprite *spr = static_cast<Q3CanvasSprite *>(list.first());
     Coord c = findSprite(spr);
     field.fill(0);
     addRemoved = findGroup(field, c);
@@ -52,7 +55,7 @@ void KLBoard::start(const GTInitData &data)
     showBoard(true);
 }
 
-Coord KLBoard::findSprite(QCanvasSprite *spr) const
+Coord KLBoard::findSprite(Q3CanvasSprite *spr) const
 {
     for (uint i=0; i<matrix().width(); i++)
         for (uint j=0; j<matrix().height(); j++) {
@@ -111,7 +114,7 @@ bool KLBoard::doSlide(bool doAll, bool first, bool lineByLine)
     for (uint j=0; j<firstClearLine(); j++) {
         // compute
         uint h = 0;
-        QMemArray<uint> heights(matrix().width());
+        Q3MemArray<uint> heights(matrix().width());
         for (uint i=1; i<matrix().width(); i++) { // first column cannot slide
             Coord src(i, j);
             if ( toSlide(src) ) h++;
@@ -157,7 +160,7 @@ bool KLBoard::afterAfterRemove()
 {
     // check if there are remaining groups
     field.fill(0);
-    QMemArray<uint> groups = findGroups(field, 2, true);
+    Q3MemArray<uint> groups = findGroups(field, 2, true);
     blocked = false;
     return groups.size()!=0;
 }
