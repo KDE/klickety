@@ -2,6 +2,8 @@
 #define KL_PIECE_H
 
 #include "base/piece.h"
+//Added by qt3to4:
+#include <QPixmap>
 
 
 class KLPieceInfo : public GPieceInfo

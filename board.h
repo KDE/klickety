@@ -3,6 +3,9 @@
 
 #include "base/board.h"
 #include "base/piece.h"
+//Added by qt3to4:
+#include <QMouseEvent>
+#include <Q3MemArray>
 
 class KLBoard : public BaseBoard
 {
@@ -18,11 +21,11 @@ class KLBoard : public BaseBoard
  private:
     KGrid2D::Square<int> field;
     bool                sliding;
-    QMemArray<bool>     empty;
+    Q3MemArray<bool>     empty;
     uint                addRemoved;
     bool                blocked;
 
-    KGrid2D::Coord findSprite(QCanvasSprite *) const;
+    KGrid2D::Coord findSprite(Q3CanvasSprite *) const;
     AfterRemoveResult afterRemove(bool doAll, bool first);
     bool afterAfterRemove();
     bool toBeRemoved(const KGrid2D::Coord &) const;
