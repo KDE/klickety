@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     KLPieceInfo pieceInfo;
     KLHighscores highscores;
 
-    if ( QApplication::isSessionRestored() ) RESTORE(KLMainWindow)
+    if ( qApp->isSessionRestored() ) RESTORE(KLMainWindow)
     else {
         KLMainWindow *mw = new KLMainWindow;
         kapp->setMainWidget(mw);
