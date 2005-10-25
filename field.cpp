@@ -7,6 +7,7 @@
 #include <kapplication.h>
 #include <klocale.h>
 #include <kgamelcd.h>
+#include <krandom.h>
 
 #include "base/board.h"
 
@@ -54,7 +55,7 @@ void Field::start()
 {
     init(false, false, true, true, QString::null);
     GTInitData data;
-    data.seed = kapp->random();
+    data.seed = KRandom::random();
     BaseField::start(data);
     elapsedTime->reset();
 }
