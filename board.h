@@ -5,7 +5,7 @@
 #include "base/piece.h"
 //Added by qt3to4:
 #include <QMouseEvent>
-#include <Q3MemArray>
+#include <QVector>
 
 class KLBoard : public BaseBoard
 {
@@ -21,7 +21,7 @@ class KLBoard : public BaseBoard
  private:
     KGrid2D::Square<int> field;
     bool                sliding;
-    Q3MemArray<bool>     empty;
+    QVector<bool>     empty;
     uint                addRemoved;
     bool                blocked;
 

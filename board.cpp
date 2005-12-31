@@ -4,7 +4,7 @@
 #include "base/factory.h"
 //Added by qt3to4:
 #include <QMouseEvent>
-#include <Q3MemArray>
+#include <QVector>
 
 
 using namespace KGrid2D;
@@ -114,7 +114,7 @@ bool KLBoard::doSlide(bool doAll, bool first, bool lineByLine)
     for (uint j=0; j<firstClearLine(); j++) {
         // compute
         uint h = 0;
-        Q3MemArray<uint> heights(matrix().width());
+        QVector<uint> heights(matrix().width());
         for (uint i=1; i<matrix().width(); i++) { // first column cannot slide
             Coord src(i, j);
             if ( toSlide(src) ) h++;
@@ -160,7 +160,7 @@ bool KLBoard::afterAfterRemove()
 {
     // check if there are remaining groups
     field.fill(0);
-    Q3MemArray<uint> groups = findGroups(field, 2, true);
+    QVector<uint> groups = findGroups(field, 2, true);
     blocked = false;
     return groups.size()!=0;
 }
