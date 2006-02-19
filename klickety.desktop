@@ -2,6 +2,7 @@
 Name=Klickety
 Name[x-test]=xxKlicketyxx
 GenericName=Board Game
+GenericName[fr]=Jeu de plateau
 GenericName[x-test]=xxBoard Gamexx
 Icon=klickety
 Exec=klickety -caption "%c"
@@ -9,5 +10,4 @@ Encoding=UTF-8
 Type=Application
 DocPath=klickety/index.html
 Comment=
-Comment[x-test]=xxxx
 Categories=Qt;KDE;Game;StrategyGame;

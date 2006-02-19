@@ -5,14 +5,18 @@ Comment[x-test]=xxKlicketyxx
 
 [removed]
 Name=Line removed
+Name[fr]=Ligne supprimée
 Name[x-test]=xxLine removedxx
 Comment=Line removed
+Comment[fr]=Ligne supprimée
 Comment[x-test]=xxLine removedxx
 default_presentation=0
 
 [game over]
 Name=Game Over
+Name[fr]=Fin de la partie
 Name[x-test]=xxGame Overxx
 Comment=Game over
+Comment[fr]=Fin de la partie
 Comment[x-test]=xxGame overxx
 default_presentation=0
