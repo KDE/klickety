@@ -35,7 +35,7 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-09-15</date>
+<date>2006-01-21</date>
 <releaseinfo>3.5</releaseinfo>
 
 <abstract>
@@ -245,8 +245,8 @@ action="simul">&Ctrl;<keycap>M</keycap> </keycombo>.</para>
 <term><menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure Notifications...</guimenuitem>
 </menuchoice></term>
 
-<listitem><para>Allows you to change the notifications for <quote>Game
-over</quote> and the removal of a column (listed as <guilabel>line
+<listitem><para>Allows you to change the notifications for <guilabel>Game
+over</guilabel> and the removal of a column (listed as <guilabel>Line
 removed</guilabel>), such as playing a sound when you remove a column, or
 starting your favorite IRC client when you finish the game so that you
 can tell all your friends about your &klickety; skills.</para>
@@ -263,13 +263,22 @@ tabs:</para>
 <para>On the <guilabel>Main</guilabel> tab, you can change the default
 nickname that is entered onto the highscore table if you get a
 highscore, add a comment to go with your entry on the players tab of
-the highscore table and to activate the worldwide highscore feature so
-that you can compare scores with players from around the globe.</para>
+the highscore table.  You can also activate the <guilabel>World-wide highscores
+enabled</guilabel> feature so that you can compare scores with players 
+from around the globe. If you are connected to the 
+Internet, &klickety; will send your score automatically at the end of the 
+game to the highscore web server (klickety.sf.net).</para>
 
-<para>The <guilabel>Advanced</guilabel> tab. If worldwide highscores
-have been activated, this tab shows the nickname with which you are
-registered and the cryptographic key used to prevent any attempts at
-cheating. Also has a button to remove you from the world highscores
+<para>The <guilabel>Advanced</guilabel> tab displays your <guilabel>Registration Data</guilabel>
+on klickety.sf.net. If worldwide highscores have been activated, 
+this tab shows the <guilabel>Nickname:</guilabel> from the <guilabel>Main</guilabel> 
+tab with which you are registered and the cryptographic <guilabel>Key:</guilabel> 
+used to prevent any attempts at cheating. This key was generated when you 
+registered on klickety.sf.net by selecting 
+<guilabel>World-wide highscores enabled</guilabel> the first time.
+The registration key is used in conjunction with the 
+nickname to identify uniquely users, but users cannot have the same nickname.
+Click on the <guibutton>Remove</guibutton> button to delete you from the world highscores
 list.</para>
 </listitem>
 </varlistentry>
@@ -278,7 +287,7 @@ list.</para>
 <term><menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &klickety;...</guimenuitem>
 </menuchoice></term>
 
-<listitem><para>Brings up the main configuration menu, this will be
+<listitem><para>Brings up the main configuration dialog, this will be
 dealt with in the next chapter.</para>
 </listitem>
 </varlistentry>
@@ -292,19 +301,6 @@ dealt with in the next chapter.</para>
 
 &help.menu.documentation;
 
-<!--
-&klickety; Handbook â Brings this up.
-Shortcut key: F1
-
-What's this â Brings up the 'what's this' cursor, at present only works on the blocks remaining counter.
-Shortcut Key: Shift + F1
-
-Report Bug â Brings up the standard KDE bug report interface.
-
-About &klickety; â Brings up information about &klickety;, it's developers, and license agreement.
-
-About KDE â Brings up the standard 'about KDE' window.
--->
 </sect1>
 </chapter>
 
@@ -325,7 +321,8 @@ button restores all the settings to their default values.</para>
 <variablelist>
 <varlistentry>
 <term><guilabel>Enable Animations</guilabel></term>
-<listitem><para><remark>To be written</remark></para>
+<listitem><para>If checked, pieces are shown with an
+animation (a small rebound effect), when they touch the bottom.</para>
 </listitem>
 </varlistentry>
 
