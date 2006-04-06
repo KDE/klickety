@@ -7,7 +7,7 @@ include_directories( ${CMAKE_SOURCE_DIR}/libksirtet ${CMAKE_SOURCE_DIR}/libkdega
 
 ########### next target ###############
 
-set(klickety_SRCS ${libksirtetbase_SRCS} 
+set(klickety_SRCS 
    piece.cpp 
    board.cpp 
    field.cpp 
