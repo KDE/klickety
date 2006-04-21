@@ -13,8 +13,9 @@
 
 
 Field::Field(QWidget *parent)
-    : QWidget(parent, "field"), BaseField(this)
+    : QWidget(parent), BaseField(this)
 {
+    setObjectName("field");
     KGameLCDList *sc  = new KGameLCDList(i18n("Remaining blocks"), this);
     showScore = new KGameLCD(3, sc);
     sc->append(showScore);

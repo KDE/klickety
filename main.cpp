@@ -66,7 +66,6 @@ int main(int argc, char **argv)
     if ( qApp->isSessionRestored() ) RESTORE(KLMainWindow)
     else {
         KLMainWindow *mw = new KLMainWindow;
-        kapp->setMainWidget(mw);
         mw->show();
     }
 	return kapp->exec();
