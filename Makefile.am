@@ -19,8 +19,6 @@ xdg_apps_DATA = klickety.desktop
 appdatadir = $(kde_datadir)/klickety
 appdata_DATA = eventsrc
 
-messages: rc.cpp
-	$(XGETTEXT) rc.cpp $(klickety_SOURCES) -o $(podir)/klickety.pot
 
 # for system-wide highscore file
 DESTBIN = $(DESTDIR)$(bindir)/$(bin_PROGRAMS)
