@@ -2,7 +2,7 @@
 #include "field.moc"
 
 
-#include <qlayout.h>
+#include <QLayout>
 
 #include <kapplication.h>
 #include <klocale.h>

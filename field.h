@@ -1,7 +1,7 @@
 #ifndef KL_FIELD_H
 #define KL_FIELD_H
 
-#include <qwidget.h>
+#include <QWidget>
 
 #include "base/field.h"
 #include "base/inter.h"
