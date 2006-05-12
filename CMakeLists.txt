@@ -1,4 +1,3 @@
-kde4_header()
 project(klickety)
 add_subdirectory( pics ) 
 
@@ -29,7 +28,6 @@ install_files( ${XDG_APPS_DIR} FILES klickety.desktop )
 install_files( ${DATA_INSTALL_DIR}/klickety FILES eventsrc )
 install_files( ${DATA_INSTALL_DIR}/klickety FILES klicketyui.rc )
 
-kde4_footer()
 
 
 
