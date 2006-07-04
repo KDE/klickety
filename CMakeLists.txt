@@ -24,9 +24,9 @@ install_targets(/bin klickety )
 
 ########### install files ###############
 
-install_files( ${XDG_APPS_DIR} FILES klickety.desktop )
-install_files( ${DATA_INSTALL_DIR}/klickety FILES eventsrc )
-install_files( ${DATA_INSTALL_DIR}/klickety FILES klicketyui.rc )
+install( FILES klickety.desktop  DESTINATION  ${XDG_APPS_DIR} )
+install( FILES eventsrc  DESTINATION  ${DATA_INSTALL_DIR}/klickety )
+install( FILES klicketyui.rc  DESTINATION  ${DATA_INSTALL_DIR}/klickety )
 
 
 
