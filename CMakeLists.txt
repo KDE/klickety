@@ -19,7 +19,7 @@ kde4_add_executable(klickety ${klickety_SRCS})
 
 target_link_libraries(klickety  ${KDE4_KDECORE_LIBS} ksirtetbase )
 
-install_targets(/bin klickety )
+install(TARGETS klickety  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### install files ###############
