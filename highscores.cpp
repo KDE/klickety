@@ -1,7 +1,7 @@
 #include "highscores.h"
 
 #include "base/factory.h"
-#include "base/board.h"
+#include "base/baseboard.h"
 
 
 using namespace KExtHighscore;

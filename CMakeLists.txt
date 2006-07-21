@@ -17,7 +17,7 @@ kde4_automoc(${klickety_SRCS})
 
 kde4_add_executable(klickety ${klickety_SRCS})
 
-target_link_libraries(klickety  ${KDE4_KDECORE_LIBS} ksirtetbase )
+target_link_libraries(klickety  ${KDE4_KDECORE_LIBS} ksirtetlib )
 
 install(TARGETS klickety  DESTINATION ${BIN_INSTALL_DIR} )
 

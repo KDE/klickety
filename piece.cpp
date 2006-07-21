@@ -4,7 +4,7 @@
 //Added by qt3to4:
 #include <QPixmap>
 #include <klocale.h>
-#include "base/board.h"
+#include "base/baseboard.h"
 
 
 const char *KLPieceInfo::DEFAULT_COLORS[NB_BLOCK_TYPES] = {

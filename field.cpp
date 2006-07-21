@@ -9,7 +9,7 @@
 #include <kgamelcd.h>
 #include <krandom.h>
 
-#include "base/board.h"
+#include "base/baseboard.h"
 
 
 Field::Field(QWidget *parent)

@@ -1,7 +1,7 @@
 #ifndef KL_BOARD_H
 #define KL_BOARD_H
 
-#include "base/board.h"
+#include "base/baseboard.h"
 #include "base/piece.h"
 //Added by qt3to4:
 #include <QMouseEvent>
