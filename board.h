@@ -3,8 +3,6 @@
 
 #include "base/baseboard.h"
 #include "base/piece.h"
-//Added by qt3to4:
-#include <QMouseEvent>
 #include <QVector>
 
 class KLBoard : public BaseBoard
@@ -25,7 +23,7 @@ class KLBoard : public BaseBoard
     uint                addRemoved;
     bool                blocked;
 
-    KGrid2D::Coord findSprite(Q3CanvasSprite *) const;
+    KGrid2D::Coord findSprite(Sprite *) const;
     AfterRemoveResult afterRemove(bool doAll, bool first);
     bool afterAfterRemove();
     bool toBeRemoved(const KGrid2D::Coord &) const;
@@ -35,7 +33,7 @@ class KLBoard : public BaseBoard
     bool doSlide(bool doAll, bool first, bool lineByLine);
     void computeInfos();
 
-    void contentsMouseReleaseEvent(QMouseEvent *);
+    void mouseReleaseEvent(QMouseEvent *);
 };
 
 #endif

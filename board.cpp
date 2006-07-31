@@ -9,13 +9,13 @@
 
 using namespace KGrid2D;
 
-void KLBoard::contentsMouseReleaseEvent(QMouseEvent *e)
+void KLBoard::mouseReleaseEvent(QMouseEvent *e)
 {
     if ( e->button()!=Qt::LeftButton || blocked ) return;
-    Q3CanvasItemList list = canvas()->collisions(e->pos());
+    QList<QGraphicsItem*> list = scene()->items(e->pos());
     if ( list.count()==0 ) return;
 
-    Q3CanvasSprite *spr = static_cast<Q3CanvasSprite *>(list.first());
+    Sprite *spr = static_cast<Sprite *>(list.first());
     Coord c = findSprite(spr);
     field.fill(0);
     addRemoved = findGroup(field, c);
@@ -31,8 +31,8 @@ void KLBoard::contentsMouseReleaseEvent(QMouseEvent *e)
 
 KLBoard::KLBoard(QWidget *parent)
     : BaseBoard(true, parent),
-      field(matrix().width(), matrix().height()),
-      empty(matrix().width()),
+      field(blocksMatrix().width(), blocksMatrix().height()),
+      empty(blocksMatrix().width()),
       blocked(false)
 {}
 
@@ -40,12 +40,12 @@ void KLBoard::start(const GTInitData &data)
 {
     BaseBoard::start(data);
 
-    updateScore(matrix().width() * matrix().height());
+    updateScore(blocksMatrix().width() * blocksMatrix().height());
     state = GameOver;
     sliding = false;
     blocked = false;
-    for (uint i=0; i<matrix().width(); i++)
-        for (uint j=0; j<matrix().height(); j++) {
+    for (uint i=0; i<blocksMatrix().width(); i++)
+        for (uint j=0; j<blocksMatrix().height(); j++) {
             Block *block = new Block;
             block->setValue(Piece::info().generateType(&randomSequence()), main);
             Coord c(i, j);
@@ -55,12 +55,12 @@ void KLBoard::start(const GTInitData &data)
     showBoard(true);
 }
 
-Coord KLBoard::findSprite(Q3CanvasSprite *spr) const
+Coord KLBoard::findSprite(Sprite *spr) const
 {
-    for (uint i=0; i<matrix().width(); i++)
-        for (uint j=0; j<matrix().height(); j++) {
+    for (uint i=0; i<blocksMatrix().width(); i++)
+        for (uint j=0; j<blocksMatrix().height(); j++) {
             Coord c(i, j);
-            if ( matrix()[c] && matrix()[c]->sprite()==spr ) return c;
+            if ( blocksMatrix()[c] && blocksMatrix()[c]->sprite()==spr ) return c;
         }
     Q_ASSERT(false);
     return Coord();
@@ -81,7 +81,7 @@ void KLBoard::remove()
 bool KLBoard::toFall(const Coord &c) const
 {
     Coord under(c.first, c.second-1);
-    return ( matrix()[under]==0 );
+    return ( blocksMatrix()[under]==0 );
 }
 
 void KLBoard::computeInfos()
@@ -89,10 +89,10 @@ void KLBoard::computeInfos()
     BaseBoard::computeInfos();
     if ( graphic() ) computeNeighbours();
     empty.fill(true);
-    for (uint i=0; i<matrix().width(); i++)
+    for (uint i=0; i<blocksMatrix().width(); i++)
         for (uint j=0; j<firstClearLine(); j++) {
             Coord c(i, j);
-            if ( matrix()[c]!=0 ) empty[i] = false;
+            if ( blocksMatrix()[c]!=0 ) empty[i] = false;
         }
 }
 
@@ -114,17 +114,17 @@ bool KLBoard::doSlide(bool doAll, bool first, bool lineByLine)
     for (uint j=0; j<firstClearLine(); j++) {
         // compute
         uint h = 0;
-        QVector<uint> heights(matrix().width());
-        for (uint i=1; i<matrix().width(); i++) { // first column cannot slide
+        QVector<uint> heights(blocksMatrix().width());
+        for (uint i=1; i<blocksMatrix().width(); i++) { // first column cannot slide
             Coord src(i, j);
             if ( toSlide(src) ) h++;
             heights[i] = h;
         }
 
         // do move
-        for (uint i=1; i<matrix().width(); i++) {
+        for (uint i=1; i<blocksMatrix().width(); i++) {
             Coord src(i, j);
-            if( heights[i]==0 || matrix()[src]==0 ) continue;
+            if( heights[i]==0 || blocksMatrix()[src]==0 ) continue;
             if (lineByLine) final = false;
             uint k = i - (lineByLine ? 1 : heights[i]);
             Coord dest(k, j);
