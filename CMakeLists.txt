@@ -4,6 +4,10 @@ add_subdirectory( pics )
 include_directories( ${CMAKE_SOURCE_DIR}/libksirtet ${CMAKE_SOURCE_DIR}/libkdegames/highscore ${CMAKE_SOURCE_DIR}/libkdegames )
 
 
+if(KDE4_ENABLE_FPIE)
+    set ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_CXX_FPIE_FLAGS}")
+endif(KDE4_ENABLE_FPIE)
+
 ########### next target ###############
 
 set(klickety_SRCS 
@@ -17,7 +21,11 @@ kde4_automoc(${klickety_SRCS})
 
 kde4_add_executable(klickety ${klickety_SRCS})
 
-target_link_libraries(klickety  ${KDE4_KDECORE_LIBS} ksirtetlib )
+if(KDE4_ENABLE_FPIE)
+    target_link_libraries(klickety  ${KDE4_KDECORE_LIBS} ksirtetlib ${KDE4_PIE_LDFLAGS})
+else(KDE4_ENABLE_FPIE)
+    target_link_libraries(klickety  ${KDE4_KDECORE_LIBS} ksirtetlib )
+endif(KDE4_ENABLE_FPIE)
 
 install(TARGETS klickety  DESTINATION ${BIN_INSTALL_DIR} )
 
