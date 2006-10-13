@@ -17,7 +17,7 @@ set(klickety_SRCS
    highscores.cpp 
    main.cpp )
 
-kde4_automoc(${klickety_SRCS})
+kde4_automoc(klickety ${klickety_SRCS})
 
 kde4_add_executable(klickety ${klickety_SRCS})
 
