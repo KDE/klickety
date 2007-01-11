@@ -4,7 +4,6 @@
 
 #include <QLayout>
 
-#include <kapplication.h>
 #include <klocale.h>
 #include <kgamelcd.h>
 #include <krandom.h>
