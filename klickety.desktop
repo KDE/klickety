@@ -2,6 +2,7 @@
 Name=Klickety
 Name[x-test]=xxKlicketyxx
 GenericName=Board Game
+GenericName[el]=Επιτραπέζιο παιχνίδι
 GenericName[fr]=Jeu de plateau
 GenericName[ja]=ボードゲーム
 GenericName[x-test]=xxBoard Gamexx
