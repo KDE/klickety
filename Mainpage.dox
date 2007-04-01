@@ -1,0 +1,5 @@
+/** @mainpage Klickety API Reference
+ *
+ * Klickety is an adaptation of the game called Clickomania / SameGame. It is similar to KSame.
+ * The game depends on libksirtet.
+ */
