@@ -35,9 +35,6 @@ KLBoard::KLBoard(QWidget *parent)
       empty(blocksMatrix().width()),
       blocked(false)
 {
-    KZoomMainWindow* zm = qobject_cast<KZoomMainWindow*>(topLevelWidget());
-    if(zm)
-        zm->addZoomable(this);
 }
 
 void KLBoard::start(const GTInitData &data)
