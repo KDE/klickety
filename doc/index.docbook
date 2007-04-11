@@ -25,9 +25,8 @@
 &Philip.Rodrigues;
 &Philip.Rodrigues.mail;
 </othercredit>
-</authorgroup>
-
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
 
 <copyright>
 <year>2005</year>
@@ -102,7 +101,7 @@ removable block.</para>
 
 <para>This the remaining block counter, which also doubles up the score
 counter. It is usually black at the start of a game, it changes to
-blue if the score is good enough to get onto your local highscore
+blue if the score is good enough to get onto your local high score
 table, and red if it would make the top spot.
 </para>
 </callout>
@@ -171,15 +170,15 @@ the higher position.</para>
 
 <varlistentry>
 <term><menuchoice><guimenu>Game</guimenu><guimenuitem>Show
-Highscores</guimenuitem> </menuchoice> (<keycombo
+High scores</guimenuitem> </menuchoice> (<keycombo
 action="simul">&Ctrl;<keycap>H</keycap> </keycombo>)</term>
 
-<listitem><para>Shows the Highscore Table for checking a target or for
-bragging purposes. (This is the same highscore table as is displayed
-if you get a new highscore at the end of a game.) There are also tabs
+<listitem><para>Shows the High score Table for checking a target or for
+bragging purposes. (This is the same high score table as is displayed
+if you get a new high score at the end of a game.) There are also tabs
 for seeing all the players who have turned in scores and for looking
 at some statistical analysis of the performance of individual
-players. There are also links to the worldwide highscore and player
+players. There are also links to the worldwide high score and player
 lists on the web.</para>
 </listitem>
 </varlistentry>
@@ -254,31 +253,31 @@ can tell all your friends about your &klickety; skills.</para>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure Highscores...</guimenuitem>
+<term><menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure High scores...</guimenuitem>
 </menuchoice></term>
 <listitem><para>
-Displays the highscores configuration dialog, which has two
+Displays the high scores configuration dialog, which has two
 tabs:</para>
 
 <para>On the <guilabel>Main</guilabel> tab, you can change the default
-nickname that is entered onto the highscore table if you get a
-highscore, add a comment to go with your entry on the players tab of
-the highscore table.  You can also activate the <guilabel>World-wide highscores
+nickname that is entered onto the high score table if you get a
+high score, add a comment to go with your entry on the players tab of
+the high score table.  You can also activate the <guilabel>World-wide high scores
 enabled</guilabel> feature so that you can compare scores with players 
 from around the globe. If you are connected to the 
 Internet, &klickety; will send your score automatically at the end of the 
-game to the highscore web server (klickety.sf.net).</para>
+game to the high score web server (klickety.sf.net).</para>
 
 <para>The <guilabel>Advanced</guilabel> tab displays your <guilabel>Registration Data</guilabel>
-on klickety.sf.net. If worldwide highscores have been activated, 
+on klickety.sf.net. If worldwide high scores have been activated, 
 this tab shows the <guilabel>Nickname:</guilabel> from the <guilabel>Main</guilabel> 
 tab with which you are registered and the cryptographic <guilabel>Key:</guilabel> 
 used to prevent any attempts at cheating. This key was generated when you 
 registered on klickety.sf.net by selecting 
-<guilabel>World-wide highscores enabled</guilabel> the first time.
+<guilabel>World-wide high scores enabled</guilabel> the first time.
 The registration key is used in conjunction with the 
 nickname to identify uniquely users, but users cannot have the same nickname.
-Click on the <guibutton>Remove</guibutton> button to delete you from the world highscores
+Click on the <guibutton>Remove</guibutton> button to delete you from the world high scores
 list.</para>
 </listitem>
 </varlistentry>
@@ -359,7 +358,7 @@ effect.</para>
 up with other ones of the same color, it's your only way to get rid of
 them.</para></listitem>
 
-<listitem><para>Spend time thinking about your move: you primarily get higher places on the highscore table by getting rid of more pieces than doing it quickly.</para></listitem>
+<listitem><para>Spend time thinking about your move: you primarily get higher places on the high score table by getting rid of more pieces than doing it quickly.</para></listitem>
 
 </itemizedlist>
 </chapter>
@@ -369,7 +368,7 @@ them.</para></listitem>
 
 <title>Credits and License</title>
 
-<para>&klickety; Program Copyright 1995 Eirik Eng and 1996-2004 Nicolas Hadacek</para>
+<para>&klickety; Program Copyright 1995 Eirik Eng and 1996-2004 &Nicolas.Hadacek;</para>
 
 <para>&klickety; is based on clickomania.</para>
 
