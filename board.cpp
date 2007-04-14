@@ -1,4 +1,4 @@
-#include "board.h"
+#include "klboard.h"
 
 
 
@@ -14,8 +14,10 @@ using namespace KGrid2D;
 
 void KLBoard::mouseReleaseEvent(QMouseEvent* e)
 {
+	//TODO: convert widget position to graphicsscene position
+	
 	if (e->button()==Qt::LeftButton && !blocked) {
-		QList<QGraphicsItem*> list = scene()->items(e->pos());
+		QList<QGraphicsItem*> list = scene()->items(mapToScene(e->pos()));
 		if ( list.count()!=0 ) {
 			Sprite *spr = static_cast<Sprite *>(list.first());
 			Coord c = findSprite(spr);
@@ -170,4 +172,4 @@ bool KLBoard::afterAfterRemove()
     return groups.size()!=0;
 }
 
-#include "board.moc"
+#include "klboard.moc"

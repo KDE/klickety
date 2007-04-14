@@ -31,7 +31,7 @@
 
 
 #include "base/factory.h"
-#include "board.h"
+#include "klboard.h"
 #include "field.h"
 
 
