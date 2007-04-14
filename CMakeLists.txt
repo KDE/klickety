@@ -12,7 +12,7 @@ endif(KDE4_ENABLE_FPIE)
 
 set(klickety_SRCS 
    piece.cpp 
-   board.cpp 
+   klboard.cpp 
    field.cpp 
    highscores.cpp 
    main.cpp 
