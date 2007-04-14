@@ -1,3 +1,27 @@
+/***************************************************************************
+ *   Copyright (c) 1995, Eirik Eng                                         *
+ *   hadacek@kde.org                                                       *
+ *                                                                         *
+ *   Copyright (c) 1996-2004, Nicolas Hadacek                              *
+ *   hadacek@kde.org                                                       *
+ *                                                                         *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA               *
+ ***************************************************************************/
+
 #include "klboard.h"
 
 
@@ -6,27 +30,46 @@
 #include <QVector>
 
 
+#include <kdebug.h>
+
+
 #include "base/factory.h"
 
 
 
 using namespace KGrid2D;
 
-void KLBoard::mouseReleaseEvent(QMouseEvent* e)
+//
+// Constructor / Destructor
+//
+
+KlBoard::KlBoard(QWidget *parent)
+    : BaseBoard(true, parent),
+      field(blocksMatrix().width(), blocksMatrix().height()),
+      empty(blocksMatrix().width()),
+      blocked(false)
 {
-	//TODO: convert widget position to graphicsscene position
-	
+}
+
+
+
+//
+// Public & Private
+//
+
+void KlBoard::mouseReleaseEvent(QMouseEvent* e)
+{
 	if (e->button()==Qt::LeftButton && !blocked) {
 		QList<QGraphicsItem*> list = scene()->items(mapToScene(e->pos()));
 		if ( list.count()!=0 ) {
 			Sprite *spr = static_cast<Sprite *>(list.first());
-			Coord c = findSprite(spr);
 			field.fill(0);
-			addRemoved = findGroup(field, c);
+			addRemoved = findGroup(field, findSprite(spr));
 			if ( addRemoved>=2 ) {
+				kDebug() << "Click\n";
 				if ( state!=Normal ) {
-				state = Normal;
-				emit firstBlockClicked();
+					state = Normal;
+					emit firstBlockClicked();
 				}
 				blocked = true;
 				_beforeRemove(true);
@@ -35,15 +78,7 @@ void KLBoard::mouseReleaseEvent(QMouseEvent* e)
 	}
 }
 
-KLBoard::KLBoard(QWidget *parent)
-    : BaseBoard(true, parent),
-      field(blocksMatrix().width(), blocksMatrix().height()),
-      empty(blocksMatrix().width()),
-      blocked(false)
-{
-}
-
-void KLBoard::start(const GTInitData &data)
+void KlBoard::start(const GTInitData &data)
 {
     BaseBoard::start(data);
 
@@ -62,7 +97,7 @@ void KLBoard::start(const GTInitData &data)
     showBoard(true);
 }
 
-Coord KLBoard::findSprite(Sprite *spr) const
+Coord KlBoard::findSprite(Sprite *spr) const
 {
     for (uint i=0; i<blocksMatrix().width(); i++)
         for (uint j=0; j<blocksMatrix().height(); j++) {
@@ -73,25 +108,27 @@ Coord KLBoard::findSprite(Sprite *spr) const
     return Coord();
 }
 
-bool KLBoard::toBeRemoved(const Coord &c) const
+bool KlBoard::toBeRemoved(const Coord &c) const
 {
     return ( field[c]==-1 );
 }
 
-void KLBoard::remove()
+void KlBoard::remove()
 {
+	kDebug() << "1\n";
     BaseBoard::remove();
+	kDebug() << "2\n";
     updateRemoved(nbRemoved() + addRemoved);
     updateScore(score() - addRemoved);
 }
 
-bool KLBoard::toFall(const Coord &c) const
+bool KlBoard::toFall(const Coord &c) const
 {
     Coord under(c.first, c.second-1);
     return ( blocksMatrix()[under]==0 );
 }
 
-void KLBoard::computeInfos()
+void KlBoard::computeInfos()
 {
     BaseBoard::computeInfos();
     if ( graphic() ) computeNeighbours();
@@ -103,19 +140,21 @@ void KLBoard::computeInfos()
         }
 }
 
-bool KLBoard::toSlide(const Coord &c) const
+bool KlBoard::toSlide(const Coord &c) const
 {
     return empty[c.first-1];
 }
 
-bool KLBoard::doSlide(bool doAll, bool first, bool lineByLine)
+bool KlBoard::doSlide(bool doAll, bool first, bool lineByLine)
 {
-    Q_ASSERT( !lineByLine || !doAll );
-
-    if ( !doAll ) {
-		if (first) loop = 0;
-		else loop++;
-    }
+	Q_ASSERT( !lineByLine || !doAll );
+	
+	if ( !doAll ) {
+		if (first)
+			loop = 0;
+		else 
+			loop++;
+	}
 	bool final = (doAll || lineByLine || loop==bfactory->bbi.nbFallStages);
 
     for (uint j=0; j<firstClearLine(); j++) {
@@ -142,10 +181,11 @@ bool KLBoard::doSlide(bool doAll, bool first, bool lineByLine)
 
     main->update();
     if (final) computeInfos();
+
     return final;
 }
 
-BaseBoard::AfterRemoveResult KLBoard::afterRemove(bool doAll, bool first)
+BaseBoard::AfterRemoveResult KlBoard::afterRemove(bool doAll, bool first)
 {
     AfterRemoveResult res = Done; // dummy default
     if (sliding) {
@@ -163,7 +203,7 @@ BaseBoard::AfterRemoveResult KLBoard::afterRemove(bool doAll, bool first)
     return res;
 }
 
-bool KLBoard::afterAfterRemove()
+bool KlBoard::afterAfterRemove()
 {
     // check if there are remaining groups
     field.fill(0);

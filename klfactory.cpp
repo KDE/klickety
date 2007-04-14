@@ -36,34 +36,11 @@
 
 
 
-const uint HISTOGRAM_SIZE = 16;
-
-
-const uint HISTOGRAM[HISTOGRAM_SIZE] = {
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 160
-};
-
-
-const BaseBoardInfo BASE_BOARD_INFO = {
-    10, 16, false, // width, height, with pieces
-
-    50,  // before remove time
-    10,  // after removed time
-    3,   // nb toggles
-    7,   // nb partial fall stages
-
-    0,   // nb arcade stages
-
-    HISTOGRAM, HISTOGRAM_SIZE, true, // score is bound
-};
-
-
-
 //
 // Constructor / Destructor
 //
 
-KlFactory::KlFactory(const MainData &mainData) : BaseFactory(mainData, BASE_BOARD_INFO)
+KlFactory::KlFactory(const MainData &mainData, const BaseBoardInfo info) : BaseFactory(mainData, info)
 {
 	_aboutData->addCredit("Dan Hill", I18N_NOOP("Icons"));
 }
@@ -75,7 +52,7 @@ KlFactory::KlFactory(const MainData &mainData) : BaseFactory(mainData, BASE_BOAR
 //
 BaseBoard* KlFactory::createBoard(bool, QWidget *parent)
 {
-	return new KLBoard(parent);
+	return new KlBoard(parent);
 }
 
 

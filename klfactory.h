@@ -22,10 +22,9 @@
  *   51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA               *
  ***************************************************************************/
 
-
-
 #ifndef KLFACTORY_H
 #define KLFACTORY_H
+
 
 
 class QWidget;
@@ -38,7 +37,7 @@ class QWidget;
 class KlFactory : public BaseFactory
 {
 	public:
-		explicit KlFactory(const MainData &mainData);
+		KlFactory(const MainData &mainData, const BaseBoardInfo info);
 
 
 	private:

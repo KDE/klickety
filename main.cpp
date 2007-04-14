@@ -1,5 +1,4 @@
 #include "main.h"
-#include "main.moc"
 
 
 #include <klocale.h>
@@ -35,7 +34,24 @@ int main(int argc, char **argv)
 		"1.0.3 (5 August 2004)"
 	};
 	
-	KlFactory factory(MAIN_DATA);
+	const uint HISTOGRAM_SIZE = 16;
+	
+	const uint HISTOGRAM[HISTOGRAM_SIZE] = {
+		0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 160
+	};
+	
+	const BaseBoardInfo BASE_BOARD_INFO = {
+		10, 16, false, // width, height, with pieces
+		50,  // before remove time
+		10,  // after removed time
+		3,   // nb toggles
+		7,   // nb partial fall stages
+		0,   // nb arcade stages
+		HISTOGRAM, HISTOGRAM_SIZE, true, // score is bound
+	};
+	
+	
+	KlFactory factory(MAIN_DATA, BASE_BOARD_INFO);
 	factory.init(argc, argv);
 	KHighscore::init(MAIN_DATA.appName);
 	
@@ -50,3 +66,5 @@ int main(int argc, char **argv)
 	}
 	return kapp->exec();
 }
+
+#include "main.moc"
