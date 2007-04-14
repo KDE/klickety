@@ -33,7 +33,7 @@ class KLBoard : public BaseBoard
     bool doSlide(bool doAll, bool first, bool lineByLine);
     void computeInfos();
 
-    void mouseReleaseEvent(QMouseEvent *);
+    void mouseReleaseEvent(QMouseEvent* e);
 };
 
 #endif

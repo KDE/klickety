@@ -1,32 +1,36 @@
 #include "board.h"
-#include "board.moc"
 
-#include "base/factory.h"
-//Added by qt3to4:
+
+
 #include <QMouseEvent>
 #include <QVector>
 
 
+#include "base/factory.h"
+
+
+
 using namespace KGrid2D;
 
-void KLBoard::mouseReleaseEvent(QMouseEvent *e)
+void KLBoard::mouseReleaseEvent(QMouseEvent* e)
 {
-    if ( e->button()!=Qt::LeftButton || blocked ) return;
-    QList<QGraphicsItem*> list = scene()->items(e->pos());
-    if ( list.count()==0 ) return;
-
-    Sprite *spr = static_cast<Sprite *>(list.first());
-    Coord c = findSprite(spr);
-    field.fill(0);
-    addRemoved = findGroup(field, c);
-    if ( addRemoved>=2 ) {
-        if ( state!=Normal ) {
-            state = Normal;
-            emit firstBlockClicked();
-        }
-        blocked = true;
-        _beforeRemove(true);
-    }
+	if (e->button()==Qt::LeftButton && !blocked) {
+		QList<QGraphicsItem*> list = scene()->items(e->pos());
+		if ( list.count()!=0 ) {
+			Sprite *spr = static_cast<Sprite *>(list.first());
+			Coord c = findSprite(spr);
+			field.fill(0);
+			addRemoved = findGroup(field, c);
+			if ( addRemoved>=2 ) {
+				if ( state!=Normal ) {
+				state = Normal;
+				emit firstBlockClicked();
+				}
+				blocked = true;
+				_beforeRemove(true);
+			}
+		}
+	}
 }
 
 KLBoard::KLBoard(QWidget *parent)
@@ -47,7 +51,7 @@ void KLBoard::start(const GTInitData &data)
     blocked = false;
     for (uint i=0; i<blocksMatrix().width(); i++)
         for (uint j=0; j<blocksMatrix().height(); j++) {
-            Block *block = new Block;
+            Block *block = new Block();
             block->setValue(Piece::info().generateType(&randomSequence()), main);
             Coord c(i, j);
             setBlock(c, block);
@@ -165,3 +169,5 @@ bool KLBoard::afterAfterRemove()
     blocked = false;
     return groups.size()!=0;
 }
+
+#include "board.moc"

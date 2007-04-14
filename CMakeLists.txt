@@ -15,7 +15,9 @@ set(klickety_SRCS
    board.cpp 
    field.cpp 
    highscores.cpp 
-   main.cpp )
+   main.cpp 
+   klfactory.cpp
+   )
 
 kde4_automoc(${klickety_SRCS})
 
