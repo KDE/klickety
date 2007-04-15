@@ -1,6 +1,5 @@
 /***************************************************************************
  *   Copyright (c) 1995, Eirik Eng                                         *
- *   hadacek@kde.org                                                       *
  *                                                                         *
  *   Copyright (c) 1996-2004, Nicolas Hadacek                              *
  *   hadacek@kde.org                                                       *
