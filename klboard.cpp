@@ -29,9 +29,6 @@
 #include <QVector>
 
 
-#include <kdebug.h>
-
-
 #include "base/factory.h"
 
 
@@ -65,7 +62,6 @@ void KlBoard::mouseReleaseEvent(QMouseEvent* e)
 			field.fill(0);
 			addRemoved = findGroup(field, findSprite(spr));
 			if ( addRemoved>=2 ) {
-				kDebug() << "Click\n";
 				if ( state!=Normal ) {
 					state = Normal;
 					emit firstBlockClicked();
@@ -93,7 +89,6 @@ void KlBoard::start(const GTInitData &data)
             setBlock(c, block);
         }
     computeInfos();
-    showBoard(true);
 }
 
 Coord KlBoard::findSprite(Sprite *spr) const
@@ -114,9 +109,7 @@ bool KlBoard::toBeRemoved(const Coord &c) const
 
 void KlBoard::remove()
 {
-	kDebug() << "1\n";
     BaseBoard::remove();
-	kDebug() << "2\n";
     updateRemoved(nbRemoved() + addRemoved);
     updateScore(score() - addRemoved);
 }
