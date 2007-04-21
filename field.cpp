@@ -1,8 +1,8 @@
 #include "field.h"
-#include "field.moc"
 
 
 
+#include <QHBoxLayout>
 #include <QGridLayout>
 
 
@@ -45,6 +45,8 @@ Field::Field(QWidget *parent)
     settingsChanged();
     connect(parent, SIGNAL(settingsChanged()), SLOT(settingsChanged()));
     QTimer::singleShot(0, this, SLOT(start()));
+
+	_top->addWidget(board, 1);
 }
 
 void Field::pause()
@@ -84,3 +86,5 @@ bool Field::_isPaused() const
 {
     return board->isPaused();
 }
+
+#include "field.moc"
