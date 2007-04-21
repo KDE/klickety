@@ -30,4 +30,4 @@ class Field : public QWidget, public BaseField, public BaseInterface
     bool _isPaused() const;
 };
 
-#endif
+#endif //KL_FIELD_H
