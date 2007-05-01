@@ -27,7 +27,6 @@ Field::Field(QWidget *parent)
                              "</font> if it is a highscore "
                              "and <font color=\"red\">red</font> "
                              "if it is the best local score.</qt>"));
-    sc->setMaximumWidth(INFO_MAXIMUM_WIDTH);
     lcds->addWidget(sc, 1, 0);
     lcds->setRowStretch(2, 1);
 
@@ -35,7 +34,6 @@ Field::Field(QWidget *parent)
     elapsedTime = new KGameLCDClock(et);
     connect(board, SIGNAL(firstBlockClicked()), elapsedTime, SLOT(start()));
     et->append(elapsedTime);
-    et->setMaximumWidth(INFO_MAXIMUM_WIDTH);
     lcds->addWidget(et, 5, 0);
     lcds->setRowStretch(6, 1);
 
@@ -45,8 +43,6 @@ Field::Field(QWidget *parent)
     settingsChanged();
     connect(parent, SIGNAL(settingsChanged()), SLOT(settingsChanged()));
     QTimer::singleShot(0, this, SLOT(start()));
-
-	_top->addWidget(board, 1);
 }
 
 void Field::pause()
