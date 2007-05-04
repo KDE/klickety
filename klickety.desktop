@@ -1,6 +1,8 @@
 [Desktop Entry]
 Name=Klickety
 GenericName=Board Game
+GenericName[pt]=Jogo de Tabuleiro
+GenericName[pt_BR]=Jogo de Tabuleiro
 Icon=klickety
 Exec=klickety -caption "%c"
 Encoding=UTF-8
