@@ -3,8 +3,8 @@
 
 #include <QWidget>
 
-#include "base/basefield.h"
-#include "base/inter.h"
+#include <base/basefield.h>
+#include <base/inter.h>
 
 class KGameLCDClock;
 

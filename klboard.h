@@ -29,8 +29,8 @@
 #include <QVector>
 
 
-#include "base/baseboard.h"
-#include "base/piece.h"
+#include <base/baseboard.h>
+#include <base/piece.h>
 
 
 

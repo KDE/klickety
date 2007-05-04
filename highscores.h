@@ -1,7 +1,7 @@
 #ifndef KL_HIGHSCORES_H
 #define KL_HIGHSCORES_H
 
-#include "base/highscores.h"
+#include <base/highscores.h>
 
 
 class KLHighscores : public BaseHighscores
