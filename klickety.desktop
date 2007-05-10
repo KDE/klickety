@@ -5,6 +5,7 @@ GenericName[de]=Brettspiel
 GenericName[el]=Επιτραπέζιο παιχνίδι
 GenericName[pt]=Jogo de Tabuleiro
 GenericName[pt_BR]=Jogo de Tabuleiro
+GenericName[sv]=Brädspel
 Icon=klickety
 Exec=klickety -caption "%c"
 Encoding=UTF-8
