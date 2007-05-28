@@ -1,7 +1,7 @@
 project(klickety)
 add_subdirectory( pics ) 
 
-include_directories( ${LIBKSIRTET_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/libkdegames/highscore ${CMAKE_SOURCE_DIR}/libkdegames )
+include_directories( ${LIBKSIRTET_INCLUDE_DIR} )
 
 
 if(KDE4_ENABLE_FPIE)
