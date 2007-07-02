@@ -41,7 +41,7 @@
 
 KlFactory::KlFactory(const MainData &mainData, const BaseBoardInfo info) : BaseFactory(mainData, info)
 {
-	_aboutData->addCredit("Dan Hill", I18N_NOOP("Icons"));
+	_aboutData->addCredit(ki18n("Dan Hill"), ki18n("Icons"));
 }
 
 
