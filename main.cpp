@@ -6,7 +6,10 @@
 #include <khighscore.h>
 
 
-#include "base/settings.h"
+#include <base/lksmaindata.h>
+#include <base/settings.h>
+
+
 #include "field.h"
 #include "piece.h"
 #include "highscores.h"
@@ -24,16 +27,16 @@ KLMainWindow::KLMainWindow()
 //-----------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
-	const MainData MAIN_DATA = {
-		"klickety",
-		I18N_NOOP("Klickety"),
-		I18N_NOOP("Klickety is an adaptation of the \"clickomania\" game"),
-		"http://klickety.sourceforge.net/",
-		I18N_NOOP("Removed blocks"),
-		"1.0.3",
-		"1.0.3 (5 August 2004)"
-	};
-	
+	LksMainData mainData;
+	mainData.appName = "klickety";
+	mainData.trName = ki18n("Klickety");
+	mainData.description = ki18n("Klickety is an adaptation of the \"clickomania\" game");
+	mainData.homepage = "http://klickety.sourceforge.net/";
+	mainData.removedLabel = I18N_NOOP("Removed blocks");
+	mainData.version = "1.1.0-SVN";
+
+	KHighscore::init(mainData.appName.constData());
+
 	const uint HISTOGRAM_SIZE = 16;
 	
 	const uint HISTOGRAM[HISTOGRAM_SIZE] = {
@@ -51,9 +54,8 @@ int main(int argc, char **argv)
 	};
 	
 	
-	KlFactory factory(MAIN_DATA, BASE_BOARD_INFO);
+	KlFactory factory(mainData, BASE_BOARD_INFO);
 	factory.init(argc, argv);
-	KHighscore::init(MAIN_DATA.appName);
 	
 	KLPieceInfo pieceInfo;
 	KLHighscores highscores;

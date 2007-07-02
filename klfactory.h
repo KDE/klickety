@@ -30,13 +30,14 @@ class QWidget;
 
 
 #include <base/factory.h>
+class LksMainData;
 
 
 
 class KlFactory : public BaseFactory
 {
 	public:
-		KlFactory(const MainData &mainData, const BaseBoardInfo info);
+		KlFactory(const LksMainData &mainData, const BaseBoardInfo info);
 
 
 	private:

@@ -29,7 +29,10 @@
 #include <klocale.h>
 
 
-#include "base/factory.h"
+#include <base/factory.h>
+#include <base/lksmaindata.h>
+
+
 #include "klboard.h"
 #include "field.h"
 
@@ -39,7 +42,7 @@
 // Constructor / Destructor
 //
 
-KlFactory::KlFactory(const MainData &mainData, const BaseBoardInfo info) : BaseFactory(mainData, info)
+KlFactory::KlFactory(const LksMainData &mainData, const BaseBoardInfo info) : BaseFactory(mainData, info)
 {
 	_aboutData->addCredit(ki18n("Dan Hill"), ki18n("Icons"));
 }
