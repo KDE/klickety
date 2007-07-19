@@ -1,8 +1,7 @@
 project(klickety)
 add_subdirectory( pics ) 
 
-include_directories( ${LIBKSIRTET_INCLUDE_DIR} )
-
+include_directories( ${CMAKE_SOURCE_DIR}/libksirtet )
 
 if(KDE4_ENABLE_FPIE)
     set ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_CXX_FPIE_FLAGS}")
