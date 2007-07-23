@@ -32,7 +32,7 @@ install(TARGETS klickety  DESTINATION ${BIN_INSTALL_DIR} )
 
 ########### install files ###############
 
-install( FILES klickety.desktop  DESTINATION  ${XDG_APPS_DIR} )
+install( FILES klickety.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES klickety.notifyrc  DESTINATION  ${DATA_INSTALL_DIR}/klickety )
 install( FILES klicketyui.rc  DESTINATION  ${DATA_INSTALL_DIR}/klickety )
 
