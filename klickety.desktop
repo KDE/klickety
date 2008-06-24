@@ -78,7 +78,6 @@ GenericName[zh_TW]=棋盤遊戲
 GenericName[zu]=Umdlalo webhodi
 Icon=klickety
 Exec=klickety -caption "%c" %i %m
-Encoding=UTF-8
 Type=Application
 DocPath=klickety/index.html
 Comment=
