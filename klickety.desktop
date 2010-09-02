@@ -1,22 +1,12 @@
 [Desktop Entry]
 Name=Klickety
-Name[xx]=xxKlicketyxx
 GenericName=Board Game
-GenericName[bg]=Игра на дъска
-GenericName[br]=Ur c'hoari taolenn
-GenericName[de]=Brettspiel
-GenericName[el]=Επιτραπέζιο παιχνίδι
-GenericName[et]=Lauamäng
-GenericName[nl]=Bordspel
-GenericName[pt]=Jogo de Tabuleiro
-GenericName[pt_BR]=Jogo de Tabuleiro
-GenericName[sv]=Brädspel
-GenericName[xx]=xxBoard Gamexx
 Icon=klickety
 Exec=klickety -caption "%c"
-Encoding=UTF-8
 Type=Application
 DocPath=klickety/index.html
 Comment=
-Comment[xx]=xxxx
+Categories=Qt;KDE;Game;StrategyGame;
+X-KDE-StartupNotify=true
+X-DBUS-StartupType=Multi
 Categories=Qt;KDE;Game;StrategyGame;

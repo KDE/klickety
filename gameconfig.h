@@ -16,30 +16,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QGraphicsLineItem>
+#ifndef GAMECONFIG_H
+#define GAMECONFIG_H
 
-#include "gamescene.h"
-#include "piece.h"
+#include <QWidget>
 
-Piece::Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent )
-: KGameRenderedObjectItem(renderer,QString("BLOCK_%1").arg(QString::number(color)),parent),
-m_x(x),
-m_y(y),
-m_color(color),
-m_rightLine(new QGraphicsLineItem),
-m_bottomLine(new QGraphicsLineItem)
+#include "ui_gameconfig.h"
+
+class GameConfig : public QWidget, private Ui::GameConfig
 {
-    setAcceptedMouseButtons( Qt::LeftButton );
-}
+    public:
+        explicit GameConfig( QWidget* parent = 0 ) : QWidget(parent) {
+            setupUi( this );
+        }
+};
 
-Piece::~Piece()
-{
-    delete m_rightLine;
-    delete m_bottomLine;
-}
-
-void Piece::mousePressEvent( QGraphicsSceneMouseEvent* event )
-{
-    Q_UNUSED(event)
-    emit pieceClicked( m_x, m_y );
-}
+#endif // GAMECONFIG_H

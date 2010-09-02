@@ -1,44 +1,56 @@
-#ifndef KL_PIECE_H
-#define KL_PIECE_H
+/*
+ * Copyright (c) 2010 Ni Hui <shuizhuyuanluo@126.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
 
-#include <base/piece.h>
-//Added by qt3to4:
-#include <QPixmap>
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
 
-class KLPieceInfo : public GPieceInfo
+#ifndef PIECE_H
+#define PIECE_H
+
+#include <KGameRenderedObjectItem>
+
+class QGraphicsLineItem;
+class QGraphicsSceneMouseEvent;
+/**
+ * This class represents a single piece on the game scene.
+ * It emits signals when clicked.
+ */
+class Piece : public KGameRenderedObjectItem
 {
- public:
-    KLPieceInfo() {}
-
-    virtual uint nbBlocks() const             { return 0; }
-    virtual uint nbTypes() const              { return NB_BLOCK_TYPES; }
-    virtual uint nbForms() const              { return 0; }
-
-    virtual const int *i(uint, uint) const    { return 0; }
-    virtual const int *j(uint, uint) const    { return 0; }
-    virtual uint value(uint, uint) const      { return 0; }
-    virtual uint form(uint) const             { return 0; }
-    virtual uint nbConfigurations(uint) const { return 0; }
-
-    virtual uint nbNormalBlockTypes() const   { return NB_BLOCK_TYPES; }
-    virtual uint nbGarbageBlockTypes() const  { return 0; }
-    virtual uint nbBlockModes() const         { return 1+4+6+4+1; }
-
-    virtual uint nbColors() const             { return NB_BLOCK_TYPES; }
-    virtual QString colorLabel(uint i) const;
-    virtual QColor defaultColor(uint i) const;
-
- protected:
-    void draw(QPixmap *, uint blockType, uint blockMode,
-              bool lighted) const;
-
- private:
-    static const uint NB_BLOCK_TYPES = 5;
-    static const char *DEFAULT_COLORS[NB_BLOCK_TYPES];
+    Q_OBJECT
+    public:
+        /** Constructor */
+        explicit Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent = 0 );
+        /** Destructor */
+        ~Piece();
+        /** The current column in the game scene, from left to right, starts from 0 */
+        int m_x;
+        /** The current row in the game scene, from top to bottom, starts from 0 */
+        int m_y;
+        /** The color of the piece */
+        const int m_color;
+        /** The bound line graphics item on the right side */
+        QGraphicsLineItem* const m_rightLine;
+        /** The bound line graphics item on the bottom side */
+        QGraphicsLineItem* const m_bottomLine;
+    Q_SIGNALS:
+        /** Emitted when this piece is clicked */
+        void pieceClicked( int x, int y );
+    protected:
+        /** Reimplemented for emitting signals if any mouse click event */
+        virtual void mousePressEvent( QGraphicsSceneMouseEvent* event );
 };
 
-#endif
-
-
-
+#endif // PIECE_H

@@ -1,17 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE kpartgui>
-<kpartgui name="klickety" version="4">
+<?xml version="1.0" encoding="UTF-8"?>
+<gui name="klickety"
+     version="1"
+     xmlns="http://www.kde.org/standards/kxmlgui/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.kde.org/standards/kxmlgui/1.0
+                         http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
 
-<Menu name="popup">
-  <Action name="options_show_menubar"/>
-  <Separator/>
-  <Action name="game_new"/>
-  <Separator/>
-  <Action name="game_pause"/>
-  <Action name="game_highscores"/>
-  <Action name="game_print"/>
-  <Separator/>
-  <Action name="game_quit"/>
-</Menu>
+    <MenuBar>
+         <Menu name="move">
+            <Action name="move_undo_all" />
+            <Action name="move_redo_all" />
+        </Menu>
+        <Menu name="settings">
+            <Action name="random_board" />
+            <Action name="sounds" />
+        </Menu>
+    </MenuBar>
+    <ToolBar name="mainToolBar">
+        <text>Main Toolbar</text>
+        <Action name="game_new"/>
+        <Action name="game_load" />
+        <Action name="game_save" />
+        <Separator/>
+        <Action name="game_restart"/>
+        <Separator/>
+        <Action name="game_pause"/>
+        <Separator/>
+        <Action name="game_highscores" />
+        <Separator/>
+        <Action name="move_undo" />
+        <Action name="move_redo" />
+        <Separator/>
+        <Action name="game_quit"/>
+    </ToolBar>
 
-</kpartgui>
+</gui>

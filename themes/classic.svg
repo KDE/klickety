@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20mm" height="20mm"
+    viewBox="0 0 100 100"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.2"
+    baseProfile="tiny">
+<title>Klickety Basic Theme</title>
+<desc>Klickety Basic Theme.</desc>
+<defs>
+</defs>
+
+<g id="BLOCK_0" fill="#c86464" fill-opacity="1">
+    <path d="M0,0 L100,0 L100,100 L0,100 L0,0"/>
+</g>
+
+<g id="BLOCK_1" fill="#64c864" fill-opacity="1">
+    <path d="M0,0 L100,0 L100,100 L0,100 L0,0"/>
+</g>
+
+<g id="BLOCK_2" fill="#6464c8" fill-opacity="1">
+    <path d="M0,0 L100,0 L100,100 L0,100 L0,0"/>
+</g>
+
+<g id="BLOCK_3" fill="#c8c864" fill-opacity="1">
+    <path d="M0,0 L100,0 L100,100 L0,100 L0,0"/>
+</g>
+
+<g id="BLOCK_4" fill="#c864c8" fill-opacity="1">
+    <path d="M0,0 L100,0 L100,100 L0,100 L0,0"/>
+</g>
+
+<g id="BLOCK_5" fill="#64c8c8" fill-opacity="1">
+    <path d="M0,0 L100,0 L100,100 L0,100 L0,0"/>
+</g>
+
+<g id="BACKGROUND" fill="#000000" fill-opacity="1">
+    <path d="M0,0 L100,0 L100,100 L0,100 L0,0"/>
+</g>
+
+</svg>

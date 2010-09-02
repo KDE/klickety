@@ -16,30 +16,26 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QGraphicsLineItem>
+#ifndef GAMEVIEW_H
+#define GAMEVIEW_H
 
-#include "gamescene.h"
-#include "piece.h"
+#include <QGraphicsView>
 
-Piece::Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent )
-: KGameRenderedObjectItem(renderer,QString("BLOCK_%1").arg(QString::number(color)),parent),
-m_x(x),
-m_y(y),
-m_color(color),
-m_rightLine(new QGraphicsLineItem),
-m_bottomLine(new QGraphicsLineItem)
+class QGraphicsScene;
+/**
+ * This class represents a graphics view for the game scene.
+ * It is just a standard QGraphicsView but specialized for resizeEvent.
+ * When resizing, it can notify the scene so that the scene can adjust
+ * its layout according to the new size.
+ */
+class GameView : public QGraphicsView
 {
-    setAcceptedMouseButtons( Qt::LeftButton );
-}
+    public:
+        /** Constructor */
+        explicit GameView( QGraphicsScene* scene, QWidget* parent = 0 );
+    protected:
+        /** Reimplemented for notifying game scene of the resize event */
+        virtual void resizeEvent( QResizeEvent *event );
+};
 
-Piece::~Piece()
-{
-    delete m_rightLine;
-    delete m_bottomLine;
-}
-
-void Piece::mousePressEvent( QGraphicsSceneMouseEvent* event )
-{
-    Q_UNUSED(event)
-    emit pieceClicked( m_x, m_y );
-}
+#endif // GAMEVIEW_H

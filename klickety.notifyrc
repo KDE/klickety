@@ -1,22 +1,21 @@
 [Global]
 IconName=klickety
-Comment=Klickety
-Comment[x-test]=xxKlicketyxx
+Comment=Board Game
 
-[removed]
-Name=Line removed
-Name[fr]=Ligne supprimée
-Name[x-test]=xxLine removedxx
-Comment=Line removed
-Comment[fr]=Ligne supprimée
-Comment[x-test]=xxLine removedxx
-Action=None
+[Context/game]
+Name=Game
+Comment=Sounds that appear during a game
 
-[game over]
-Name=Game Over
-Name[fr]=Fin de la partie
-Name[x-test]=xxGame Overxx
-Comment=Game over
-Comment[fr]=Fin de la partie
-Comment[x-test]=xxGame overxx
-Action=None
+[Event/remove]
+Name=Pieces removed
+Comment=Pieces were removed.
+Contexts=game
+Sound=KDE-Window-Shade-Down.ogg
+Action=Sound
+
+[Event/gamefinished]
+Name=Game over
+Comment=Time is up.
+Contexts=game
+Sound=KDE-Im-User-Auth.ogg
+Action=Sound

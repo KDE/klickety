@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="klicketyrc"/>
+  <include>KGameDifficulty</include>
+  <group name="General">
+    <entry name="ShowBoundLines" type="Bool" key="showboundlines">
+      <default>true</default>
+    </entry>
+    <entry name="EnableAnimation" type="Bool" key="enableanimation">
+      <default>true</default>
+    </entry>
+  </group>
+  <group name="Themes">
+    <entry name="Theme" type="String" key="Theme">
+      <label>The graphical theme to be used.</label>
+    </entry>
+  </group>
+  <group name="Background">
+    <entry name="BgType" type="Enum" key="Background Type">
+      <label>The background type to be used.</label>
+      <choices>
+        <choice name="theme"/>
+        <choice name="color"/>
+        <choice name="image"/>
+      </choices>
+      <default>color</default>
+    </entry>
+    <entry name="BgColor" type="Color" key="Background Color">
+      <label>The background color to be used.</label>
+      <default>#000000</default>
+    </entry>
+    <entry name="BgImage" type="Url" key="Background Image">
+      <label>The background image to be used.</label>
+    </entry>
+  </group>
+  <group name="CustomGame">
+    <entry name="CustomWidth" type="Int" key="Custom Width">
+      <label>The width of the playing field.</label>
+      <min>5</min>
+      <max>50</max>
+      <default>10</default>
+    </entry>
+    <entry name="CustomHeight" type="Int" key="Custom Height">
+      <label>The height of the playing field.</label>
+      <min>5</min>
+      <max>50</max>
+      <default>16</default>
+    </entry>
+    <entry name="CustomColorCount" type="Int" key="Custom Color Count">
+      <label>The number of color in the playing field.</label>
+      <min>1</min>
+      <default>5</default>
+    </entry>
+    <entry name="level" type="Int">
+      <label>The difficulty level.</label>
+      <default code="true">KGameDifficulty::Medium</default>
+    </entry>
+  </group>
+</kcfg>
