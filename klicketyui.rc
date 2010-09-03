@@ -7,13 +7,12 @@
                          http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
 
     <MenuBar>
-         <Menu name="move">
+        <Menu name="game">
+            <Action name="game_new_numeric" append="new_merge" />
+        </Menu>
+        <Menu name="move">
             <Action name="move_undo_all" />
             <Action name="move_redo_all" />
-        </Menu>
-        <Menu name="settings">
-            <Action name="random_board" />
-            <Action name="sounds" />
         </Menu>
     </MenuBar>
     <ToolBar name="mainToolBar">

@@ -37,7 +37,8 @@ class MainWindow : public KXmlGuiWindow
         void customLevelChanged( int key );
         void levelChanged( KGameDifficulty::standardLevel level );
         void loadSettings();
-        void newGame();
+        void newGame( int gameId = qrand() );
+        void newNumGame();
         void pauseGame( bool isPaused );
         void restartGame();
         void loadGame();
@@ -52,7 +53,6 @@ class MainWindow : public KXmlGuiWindow
         GameScene* m_scene;
         KGameClock* m_gameClock;
         KAction* m_pauseAction;
-        KAction* m_randomBoardAction;
 };
 
 #endif // MAINWINDOW_H

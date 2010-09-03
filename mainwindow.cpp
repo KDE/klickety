@@ -85,7 +85,7 @@ void MainWindow::configureSettings()
     dialog->addPage( new GameConfig( dialog ), i18n( "General" ), "games-config-options" );
     dialog->addPage( new KGameThemeSelector( dialog, Settings::self(), KGameThemeSelector::NewStuffDisableDownload ), i18n( "Theme" ), "games-config-theme" );
     dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), "games-config-background" );
-    dialog->addPage( new CustomGameConfig( dialog ), i18n("Custom Game"), "games-config-custom" );
+    dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), "games-config-custom" );
     connect( dialog, SIGNAL(settingsChanged(const QString&)), this, SLOT(loadSettings()) );
     dialog->setHelp( QString(), "klickety" );
     dialog->show();
@@ -113,7 +113,7 @@ void MainWindow::loadSettings()
     m_scene->invalidate( m_scene->sceneRect(), QGraphicsScene::BackgroundLayer );
 }
 
-void MainWindow::newGame()
+void MainWindow::newGame( int gameId )
 {
     if ( !confirmAbort() )
         return;
@@ -121,19 +121,6 @@ void MainWindow::newGame()
     m_gameClock->restart();
     m_pauseAction->setChecked( false );
     m_pauseAction->setEnabled( true );
-
-    int gameId = qrand();
-    if ( !m_randomBoardAction->isChecked() ) {
-        bool ok = false;
-        int userGameId = KInputDialog::getInteger( i18n( "Select Board" ),
-                                                 i18n( "Select a board number:" ),
-                                                 gameId, 1, RAND_MAX, 1,
-                                                 &ok, this );
-        if ( ok )
-            gameId = userGameId;
-        else
-            return;
-    }
 
     switch ( KGameDifficulty::level() ) {
         case KGameDifficulty::VeryEasy:
@@ -156,6 +143,20 @@ void MainWindow::newGame()
         default:
             break;
     }
+}
+
+void MainWindow::newNumGame()
+{
+    if ( !confirmAbort() )
+        return;
+
+    bool ok = false;
+    int userGameId = KInputDialog::getInteger( i18n( "Select Board" ),
+                                                i18n( "Select a board number:" ),
+                                                qrand(), 1, RAND_MAX, 1,
+                                                &ok, this );
+    if ( ok )
+        newGame( userGameId );
 }
 
 void MainWindow::pauseGame( bool isPaused )
@@ -211,8 +212,9 @@ void MainWindow::changeTime( const QString& newTime )
 
 void MainWindow::showHighscores()
 {
-    KScoreDialog d( KScoreDialog::Name | KScoreDialog::Time, this );
+    KScoreDialog d( KScoreDialog::Name, this );
     d.addField( KScoreDialog::Custom1, "Remain pieces", "remains" );
+    d.addField( KScoreDialog::Custom2, "Time", "time" );
     d.addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
     d.setConfigGroupWeights( KGameDifficulty::levelWeights() );
     d.hideField( KScoreDialog::Score );
@@ -226,8 +228,9 @@ void MainWindow::onGameOver( int remainCount )
     m_pauseAction->setEnabled( false );
     KGameDifficulty::setRunning( false );
 
-    KScoreDialog d( KScoreDialog::Name | KScoreDialog::Time, this );
+    KScoreDialog d( KScoreDialog::Name, this );
     d.addField( KScoreDialog::Custom1, "Remain pieces", "remains" );
+    d.addField( KScoreDialog::Custom2, "Time", "time" );
     d.addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
     d.setConfigGroupWeights( KGameDifficulty::levelWeights() );
     d.hideField( KScoreDialog::Score );
@@ -239,7 +242,7 @@ void MainWindow::onGameOver( int remainCount )
 
     KScoreDialog::FieldInfo scoreInfo;
     scoreInfo[KScoreDialog::Custom1].setNum( remainCount );
-    scoreInfo[KScoreDialog::Time] = m_gameClock->timeString();
+    scoreInfo[KScoreDialog::Custom2] = m_gameClock->timeString();
     // remainCount*10000000 is much bigger than a usual time seconds
     scoreInfo[KScoreDialog::Score].setNum( remainCount*10000000 + m_gameClock->seconds() );
     if ( d.addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 )
@@ -262,6 +265,9 @@ void MainWindow::setupActions()
     KStandardGameAction::highscores( this, SLOT(showHighscores()), actionCollection() );
     m_pauseAction = KStandardGameAction::pause( this, SLOT(pauseGame(bool)), actionCollection() );
     KStandardGameAction::quit( this, SLOT(close()), actionCollection() );
+    KAction* m_newNumGameAction = new KAction( i18n( "New Numbered Game..." ), actionCollection() );
+    actionCollection()->addAction( "game_new_numeric", m_newNumGameAction );
+    connect( m_newNumGameAction, SIGNAL(triggered(bool)), this, SLOT(newNumGame()) );
 
     // move menu
     KAction* undoAction = KStandardGameAction::undo( m_scene, SLOT(undoMove()), actionCollection() );
@@ -285,11 +291,6 @@ void MainWindow::setupActions()
     redoAllAction->setEnabled( false );
     connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAllAction, SLOT(setEnabled(bool)) );
     connect( redoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(redoAllMove()) );
-
-    // setting menu
-    m_randomBoardAction = new KToggleAction( i18n("&Random Board"), actionCollection() );
-    m_randomBoardAction->setChecked( true );
-    actionCollection()->addAction( "random_board", m_randomBoardAction );
 
     KGameDifficulty::init( this, this, SLOT(levelChanged(KGameDifficulty::standardLevel)),
                            SLOT(customLevelChanged(int)) );
