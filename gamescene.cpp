@@ -466,6 +466,9 @@ void GameScene::removePieces( int x, int y )
     // horizontal center
     int gameAreaWidth = PWC * elementsSize;
     int xShift = ( sceneRect().width() - gameAreaWidth ) / 2;
+    // vertical center
+    int gameAreaHeight = PHC * elementsSize;
+    int yShift = ( sceneRect().height() - gameAreaHeight ) / 2;
 
     QParallelAnimationGroup* gravityAnimationGroup = NULL;
     QParallelAnimationGroup* removeColumnsAnimationGroup = NULL;
@@ -490,7 +493,7 @@ void GameScene::removePieces( int x, int y )
                 // swap the visible one down to floorRow
                 Piece* visiblePiece = m_pieces[ j * PWC + i ];
                 Piece* hiddenPiece = m_pieces[ floorRow * PWC + i ];
-                const QPointF oldpos( xShift + visiblePiece->m_x * elementsSize, visiblePiece->m_y * elementsSize );
+                const QPointF oldpos( xShift + visiblePiece->m_x * elementsSize, yShift + visiblePiece->m_y * elementsSize );
                 const QPointF newpos = hiddenPiece->pos();
 
                 m_undoStack.push( new SwapPiece( &m_pieces[j*PWC+i], &m_pieces[floorRow*PWC+i], oldpos, newpos ) );
@@ -528,7 +531,7 @@ void GameScene::removePieces( int x, int y )
                 if ( m_pieces[ j * PWC + i ]->isEnabled() ) {
                     Piece* visiblePiece = m_pieces[ j * PWC + i ];
                     Piece* hiddenPiece = m_pieces[ j * PWC + floorCol ];
-                    const QPointF oldpos( xShift + visiblePiece->m_x * elementsSize, visiblePiece->m_y * elementsSize );
+                    const QPointF oldpos( xShift + visiblePiece->m_x * elementsSize, yShift + visiblePiece->m_y * elementsSize );
                     const QPointF newpos = hiddenPiece->pos();
 
                     m_undoStack.push( new SwapPiece( &m_pieces[j*PWC+i], &m_pieces[j*PWC+floorCol], oldpos, newpos ) );
@@ -601,12 +604,15 @@ void GameScene::resize( const QRectF& size )
     // horizontal center pieces
     int gameAreaWidth = PWC * elementsSize;
     int xShift = ( size.width() - gameAreaWidth ) / 2;
+    // vertical center pieces
+    int gameAreaHeight = PHC * elementsSize;
+    int yShift = ( size.height() - gameAreaHeight ) / 2;
 
     for ( int j = 0; j < PHC; ++j ) {
         for ( int i = 0; i < PWC; ++i ) {
             Piece* item = m_pieces[j*PWC+i];
             item->setRenderSize( QSize(elementsSize,elementsSize) );
-            const QPoint pos( xShift + item->m_x * elementsSize, item->m_y * elementsSize );
+            const QPoint pos( xShift + item->m_x * elementsSize, yShift + item->m_y * elementsSize );
             item->setPos( pos );
             item->m_highlighter->setRenderSize( QSize(elementsSize,elementsSize) );
             item->m_highlighter->setPos( 0, 0 );
