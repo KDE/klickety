@@ -211,6 +211,13 @@ void MainWindow::restartGame()
     if ( confirmAbort() ) {
         m_pauseAction->setChecked( false );
         m_pauseAction->setEnabled( true );
+        if ( m_KSameMode ) {
+            m_gameScore = 0;
+            m_markedScore = 0;
+        }
+        else {
+            m_gameClock->restart();
+        }
         m_scene->restartGame();
     }
 }
