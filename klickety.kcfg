@@ -12,6 +12,9 @@
     <entry name="EnableAnimation" type="Bool" key="enableanimation">
       <default>true</default>
     </entry>
+    <entry name="EnableHighlight" type="Bool" key="enablehighlight">
+      <default>true</default>
+    </entry>
   </group>
   <group name="Themes">
     <entry name="Theme" type="String" key="Theme">

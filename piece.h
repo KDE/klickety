@@ -45,10 +45,20 @@ class Piece : public KGameRenderedObjectItem
         QGraphicsLineItem* const m_rightLine;
         /** The bound line graphics item on the bottom side */
         QGraphicsLineItem* const m_bottomLine;
+        /** The highlight graphics item overlapped */
+        KGameRenderedObjectItem* const m_highlighter;
     Q_SIGNALS:
         /** Emitted when this piece is clicked */
         void pieceClicked( int x, int y );
+        /** Emitted when this piece is hovered */
+        void pieceHovered( int x, int y );
+        /** Emitted when this piece is unhovered */
+        void pieceUnhovered( int x, int y );
     protected:
+        /** Reimplemented for emitting signals if this piece is hovered */
+        virtual void hoverEnterEvent( QGraphicsSceneHoverEvent* event );
+        /** Reimplemented for emitting signals if this piece is unhovered */
+        virtual void hoverLeaveEvent( QGraphicsSceneHoverEvent* event );
         /** Reimplemented for emitting signals if any mouse click event */
         virtual void mousePressEvent( QGraphicsSceneMouseEvent* event );
 };

@@ -17,6 +17,7 @@
  */
 
 #include <QEasingCurve>
+#include <QGraphicsColorizeEffect>
 #include <QPainter>
 #include <QParallelAnimationGroup>
 #include <QPropertyAnimation>
@@ -41,6 +42,7 @@ m_renderer("themes/default.desktop"),
 m_messenger(new KGamePopupItem),
 m_showBoundLines(true),
 m_enableAnimation(true),
+m_enableHighlight(true),
 PWC(0),
 PHC(0),
 m_colorCount(0),
@@ -103,15 +105,22 @@ void GameScene::startNewGame( int pwc, int phc, int colorCount, int gameId )
             // piece item
             Piece* item = new Piece( &m_renderer, i, j, s.getLong( m_colorCount ) );
             connect( item, SIGNAL(pieceClicked(int,int)), this, SLOT(removePieces(int,int)) );
+            connect( item, SIGNAL(pieceHovered(int,int)), this, SLOT(highlightPieces(int,int)) );
+            connect( item, SIGNAL(pieceUnhovered(int,int)), this, SLOT(unhighlightPieces(int,int)) );
             m_pieces << item;
             addItem( item );
+
+            // set up highlight effects
+            item->m_highlighter->setParentItem( item );
+            item->m_highlighter->hide();
+
             // bound line item
             item->m_rightLine->setPen( pen );
             item->m_bottomLine->setPen( pen );
-            item->m_rightLine->setZValue( 1 );
-            item->m_bottomLine->setZValue( 1 );
             item->m_rightLine->setParentItem( item );
             item->m_bottomLine->setParentItem( item );
+            item->m_rightLine->hide();
+            item->m_bottomLine->hide();
         }
     }
 
@@ -256,6 +265,11 @@ bool GameScene::isGameFinished() const
     return true;
 }
 
+void GameScene::setRendererTheme( const QString& theme )
+{
+    m_renderer.setTheme( theme );
+}
+
 void GameScene::setShowBoundLines( bool isShowing )
 {
     if ( m_showBoundLines != isShowing ) {
@@ -268,6 +282,11 @@ void GameScene::setShowBoundLines( bool isShowing )
 void GameScene::setEnableAnimation( bool isEnabled )
 {
     m_enableAnimation = isEnabled;
+}
+
+void GameScene::setEnableHighlight( bool isEnabled )
+{
+    m_enableHighlight = isEnabled;
 }
 
 void GameScene::undoMove()
@@ -315,11 +334,48 @@ void GameScene::checkGameFinished()
     m_isFinished = finished;
 }
 
-void GameScene::removePieces( int x, int y )
+void GameScene::traverseNeighbors( int x, int y, int color, bool (GameScene::*func)(Piece*) )
 {
     if ( x < 0 || x >= PWC || y < 0 || y >= PHC )
         return;
 
+    int index = y * PWC + x;
+    if ( m_pieces[index]->m_color == color ) {
+        if ( (this->*func)( m_pieces[index] ) ) {
+            traverseNeighbors( x-1, y, color, func );// check left neighbor
+            traverseNeighbors( x, y-1, color, func );// check up neighbor
+            traverseNeighbors( x+1, y, color, func );// check right neighbor
+            traverseNeighbors( x, y+1, color, func );// check down neighbor
+        }
+    }
+}
+
+bool GameScene::highlightPiece( Piece* p )
+{
+    if ( !p->isEnabled() || p->m_highlighter->isVisible() )
+        return false;
+    p->m_highlighter->show();
+    return true;
+}
+
+bool GameScene::unhighlightPiece( Piece* p )
+{
+    if ( !p->isEnabled() || !p->m_highlighter->isVisible() )
+        return false;
+    p->m_highlighter->hide();
+    return true;
+}
+
+bool GameScene::removePiece( Piece* p )
+{
+    if ( !p->isEnabled() )
+        return false;
+    m_undoStack.push( new HidePiece( p ) );
+    return true;
+}
+
+bool GameScene::canRemovePiece( int x, int y )
+{
     int index = y * PWC + x;
     int color = m_pieces[index]->m_color;
 
@@ -327,20 +383,67 @@ void GameScene::removePieces( int x, int y )
     int rightX = x + 1;
     int upY = y - 1;
     int downY = y + 1;
-    if ( !( ( leftX >= 0 && m_pieces[y*PWC+leftX]->m_color == color && m_pieces[y*PWC+leftX]->isEnabled() )
+    return ( leftX >= 0 && m_pieces[y*PWC+leftX]->m_color == color && m_pieces[y*PWC+leftX]->isEnabled() )
         || ( rightX < PWC && m_pieces[y*PWC+rightX]->m_color == color && m_pieces[y*PWC+rightX]->isEnabled() )
         || ( upY >= 0 && m_pieces[upY*PWC+x]->m_color == color && m_pieces[upY*PWC+x]->isEnabled() )
-        || ( downY < PHC && m_pieces[downY*PWC+x]->m_color == color && m_pieces[downY*PWC+x]->isEnabled() ) )
-    )
+        || ( downY < PHC && m_pieces[downY*PWC+x]->m_color == color && m_pieces[downY*PWC+x]->isEnabled() );
+}
+
+void GameScene::highlightPieces( int x, int y )
+{
+    if ( !m_enableHighlight )
         return;
 
+    if ( x < 0 || x >= PWC || y < 0 || y >= PHC )
+        return;
+
+    if ( !canRemovePiece( x, y ) )
+        return;
+
+    int index = y * PWC + x;
+    m_pieces[index]->m_highlighter->show();
+    traverseNeighbors( x-1, y, m_pieces[index]->m_color, &GameScene::highlightPiece );// check left neighbor
+    traverseNeighbors( x, y-1, m_pieces[index]->m_color, &GameScene::highlightPiece );// check up neighbor
+    traverseNeighbors( x+1, y, m_pieces[index]->m_color, &GameScene::highlightPiece );// check right neighbor
+    traverseNeighbors( x, y+1, m_pieces[index]->m_color, &GameScene::highlightPiece );// check down neighbor
+}
+
+void GameScene::unhighlightPieces( int x, int y )
+{
+    if ( x < 0 || x >= PWC || y < 0 || y >= PHC )
+        return;
+
+    if ( !canRemovePiece( x, y ) )
+        return;
+
+    int index = y * PWC + x;
+    m_pieces[index]->m_highlighter->hide();
+
+    traverseNeighbors( x-1, y, m_pieces[index]->m_color, &GameScene::unhighlightPiece );// check left neighbor
+    traverseNeighbors( x, y-1, m_pieces[index]->m_color, &GameScene::unhighlightPiece );// check up neighbor
+    traverseNeighbors( x+1, y, m_pieces[index]->m_color, &GameScene::unhighlightPiece );// check right neighbor
+    traverseNeighbors( x, y+1, m_pieces[index]->m_color, &GameScene::unhighlightPiece );// check down neighbor
+}
+
+void GameScene::removePieces( int x, int y )
+{
+    if ( x < 0 || x >= PWC || y < 0 || y >= PHC )
+        return;
+
+    if ( !canRemovePiece( x, y ) )
+        return;
+
+    // unhighlight pieces
+    unhighlightPieces( x, y );
+
+    int index = y * PWC + x;
     m_undoStack.beginMacro( "Remove pieces" );
     m_undoStack.push( new HidePiece( m_pieces[index] ) );
 
-    removeNeighbors( x-1, y, color );// check left neighbor
-    removeNeighbors( x, y-1, color );// check up neighbor
-    removeNeighbors( x+1, y, color );// check right neighbor
-    removeNeighbors( x, y+1, color );// check down neighbor
+    traverseNeighbors( x-1, y, m_pieces[index]->m_color, &GameScene::removePiece );// check left neighbor
+    traverseNeighbors( x, y-1, m_pieces[index]->m_color, &GameScene::removePiece );// check up neighbor
+    traverseNeighbors( x+1, y, m_pieces[index]->m_color, &GameScene::removePiece );// check right neighbor
+    traverseNeighbors( x, y+1, m_pieces[index]->m_color, &GameScene::removePiece );// check down neighbor
 
     const int elementsSize1 = sceneRect().width() / PWC;
     const int elementsSize2 = sceneRect().height() / PHC;
@@ -455,22 +558,6 @@ void GameScene::removePieces( int x, int y )
     }
 }
 
-void GameScene::removeNeighbors( int x, int y, int color )
-{
-    if ( x < 0 || x >= PWC || y < 0 || y >= PHC )
-        return;
-
-    int index = y * PWC + x;
-    if ( m_pieces[index]->m_color == color && m_pieces[index]->isEnabled() ) {
-        m_undoStack.push( new HidePiece( m_pieces[index] ) );
-
-        removeNeighbors( x-1, y, color );// check left neighbor
-        removeNeighbors( x, y-1, color );// check up neighbor
-        removeNeighbors( x+1, y, color );// check right neighbor
-        removeNeighbors( x, y+1, color );// check down neighbor
-    }
-}
-
 int GameScene::currentRemainCount() const
 {
     int remain = 0;
@@ -497,6 +584,8 @@ void GameScene::resize( const QRectF& size )
             item->setRenderSize( QSize(elementsSize,elementsSize) );
             const QPoint pos( xShift + item->m_x * elementsSize, item->m_y * elementsSize );
             item->setPos( pos );
+            item->m_highlighter->setRenderSize( QSize(elementsSize,elementsSize) );
+            item->m_highlighter->setPos( 0, 0 );
         }
     }
 

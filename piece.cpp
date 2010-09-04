@@ -27,15 +27,32 @@ m_x(x),
 m_y(y),
 m_color(color),
 m_rightLine(new QGraphicsLineItem),
-m_bottomLine(new QGraphicsLineItem)
+m_bottomLine(new QGraphicsLineItem),
+m_highlighter(new KGameRenderedObjectItem(renderer,"HIGHLIGHT"))
 {
+    setAcceptHoverEvents( true );
     setAcceptedMouseButtons( Qt::LeftButton );
+    m_highlighter->setAcceptHoverEvents( false );
+    m_highlighter->setAcceptedMouseButtons( 0 );
 }
 
 Piece::~Piece()
 {
     delete m_rightLine;
     delete m_bottomLine;
+    delete m_highlighter;
+}
+
+void Piece::hoverEnterEvent( QGraphicsSceneHoverEvent* event )
+{
+    Q_UNUSED(event)
+    emit pieceHovered( m_x, m_y );
+}
+
+void Piece::hoverLeaveEvent( QGraphicsSceneHoverEvent* event )
+{
+    Q_UNUSED(event)
+    emit pieceUnhovered( m_x, m_y );
 }
 
 void Piece::mousePressEvent( QGraphicsSceneMouseEvent* event )

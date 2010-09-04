@@ -52,10 +52,14 @@ class GameScene : public QGraphicsScene
         void setPaused( bool isPaused );
         /** @return whether the current game has been finished */
         bool isGameFinished() const;
+        /** Change the theme used */
+        void setRendererTheme( const QString& theme );
         /** Determine whether to show the bound lines between different colors */
         void setShowBoundLines( bool isShowing );
         /** Determine whether to enable the animation when removing pieces */
         void setEnableAnimation( bool isEnabled );
+        /** Determine whether the pieces should be highlighted when hovered */
+        void setEnableHighlight( bool isEnabled );
     Q_SIGNALS:
         /** Emitted when undo action enable or disable */
         void canUndoChanged( bool canUndo );
@@ -80,6 +84,10 @@ class GameScene : public QGraphicsScene
     private Q_SLOTS:
         /** Check whether the player has no way to remove any pieces, emit signals if finished */
         void checkGameFinished();
+        /** Try to highlight the pieces of the same color at ( x y ) */
+        void highlightPieces( int x, int y );
+        /** Try to unhighlight the pieces of the same color at ( x y ) */
+        void unhighlightPieces( int x, int y );
         /** Try to remove the pieces of the same color at ( x y ) */
         void removePieces( int x, int y );
         /** Resize the game scene, layout all the pieces and bound lines */
@@ -89,8 +97,16 @@ class GameScene : public QGraphicsScene
         /** Update all the bound lines */
         void updateBoundLines();
     private:
+        /** Internal function used to help perform piece function recursively */
+        void traverseNeighbors( int x, int y, int color, bool (GameScene::*func)(Piece*) );
+        /** Internal function used to help highlight pieces recursively */
+        bool highlightPiece( Piece* p );
+        /** Internal function used to help unhighlight pieces recursively */
+        bool unhighlightPiece( Piece* p );
         /** Internal function used to help remove pieces recursively */
-        void removeNeighbors( int x, int y, int color );
+        bool removePiece( Piece* p );
+        /** Internal function used to check whether the piece can be removed */
+        bool canRemovePiece( int x, int y );
         /** Internal function used to caluculate the remain piece count */
         int currentRemainCount() const;
         /** The game graphics item renderer */
@@ -105,6 +121,8 @@ class GameScene : public QGraphicsScene
         bool m_showBoundLines;
         /** True if the animation of removing pieces should be used */
         bool m_enableAnimation;
+        /** True if the pieces should be highlighted when hovered */
+        bool m_enableHighlight;
         /** The count of pieces in a row */
         int PWC;
         /** The count of pieces in a column */

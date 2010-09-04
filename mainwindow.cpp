@@ -108,8 +108,10 @@ void MainWindow::levelChanged( KGameDifficulty::standardLevel level )
 void MainWindow::loadSettings()
 {
     KGameDifficulty::setLevel( KGameDifficulty::standardLevel( Settings::level() ) );
+    m_scene->setRendererTheme( Settings::theme() );
     m_scene->setShowBoundLines( Settings::showBoundLines() );
     m_scene->setEnableAnimation( Settings::enableAnimation() );
+    m_scene->setEnableHighlight( Settings::enableHighlight() );
     m_scene->invalidate( m_scene->sceneRect(), QGraphicsScene::BackgroundLayer );
 }
 
