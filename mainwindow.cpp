@@ -42,8 +42,12 @@
 #include "mainwindow.h"
 #include "settings.h"
 
-MainWindow::MainWindow( QWidget* parent )
-: KXmlGuiWindow(parent)
+MainWindow::MainWindow( bool KSameMode, QWidget* parent )
+: KXmlGuiWindow(parent),
+m_KSameMode(KSameMode),
+m_gameClock(NULL),
+m_gameScore(0),
+m_markedScore(0)
 {
     m_scene = new GameScene;
     GameView* view = new GameView( m_scene );
@@ -53,18 +57,31 @@ MainWindow::MainWindow( QWidget* parent )
     view->setCacheMode( QGraphicsView::CacheBackground );
     setCentralWidget( view );
 
-    m_gameClock = new KGameClock( this, KGameClock::MinSecOnly );
-    connect( m_gameClock, SIGNAL(timeChanged(const QString&)), this, SLOT(changeTime(const QString&)) );
 
-    connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeRemainCount(int)) );
+    if ( m_KSameMode ) {
+//         statusBar()->insertItem( i18n( "Colors: XX" ), 1 );
+//         statusBar()->insertItem( i18n( "Board: XXXXXX" ), 2 );
+        statusBar()->insertItem( i18n( "Marked: 0" ), 3 );
+        statusBar()->insertItem( i18n( "Score: 0" ), 4 );
+        connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeScore(int)) );
+        connect( m_scene, SIGNAL(markedCountChanged(int)), this, SLOT(changeMarkedCount(int)) );
+        setWindowTitle( i18n( "Klickety - KSame compability mode" ) );
+    }
+    else {
+        m_gameClock = new KGameClock( this, KGameClock::MinSecOnly );
+        statusBar()->insertItem( i18n( "Pieces: 0" ), 0 );
+        statusBar()->insertItem( i18n( "Time: 00:00" ), 1 );
+        connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeRemainCount(int)) );
+        connect( m_gameClock, SIGNAL(timeChanged(const QString&)), this, SLOT(changeTime(const QString&)) );
+    }
+
     connect( m_scene, SIGNAL(gameFinished(int)), this, SLOT(onGameOver(int)) );
-
-    statusBar()->insertItem( i18n( "Pieces: 0" ), 0 );
-    statusBar()->insertItem( i18n( "Time: 00:00" ), 1 );
 
     setupActions();
 
     loadSettings();
+
+    newGame( qrand() );
 }
 
 MainWindow::~MainWindow()
@@ -107,12 +124,21 @@ void MainWindow::levelChanged( KGameDifficulty::standardLevel level )
 
 void MainWindow::loadSettings()
 {
+    if ( m_KSameMode ) {
+        m_scene->setRendererTheme( "themes/ksame.desktop" );
+        m_scene->setShowBoundLines( false );
+        m_scene->setEnableAnimation( true );
+        m_scene->setEnableHighlight( true );
+        m_scene->setBackgroundType( 0 );
+        return;
+    }
+
     KGameDifficulty::setLevel( KGameDifficulty::standardLevel( Settings::level() ) );
     m_scene->setRendererTheme( Settings::theme() );
     m_scene->setShowBoundLines( Settings::showBoundLines() );
     m_scene->setEnableAnimation( Settings::enableAnimation() );
     m_scene->setEnableHighlight( Settings::enableHighlight() );
-    m_scene->invalidate( m_scene->sceneRect(), QGraphicsScene::BackgroundLayer );
+    m_scene->setBackgroundType( Settings::bgType() );
 }
 
 void MainWindow::newGame( int gameId )
@@ -120,9 +146,17 @@ void MainWindow::newGame( int gameId )
     if ( !confirmAbort() )
         return;
 
-    m_gameClock->restart();
     m_pauseAction->setChecked( false );
     m_pauseAction->setEnabled( true );
+
+    if ( m_KSameMode ) {
+        m_gameScore = 0;
+        m_markedScore = 0;
+        m_scene->startNewGame( 15, 10, 3, gameId );
+        return;
+    }
+
+    m_gameClock->restart();
 
     switch ( KGameDifficulty::level() ) {
         case KGameDifficulty::VeryEasy:
@@ -164,10 +198,12 @@ void MainWindow::newNumGame()
 void MainWindow::pauseGame( bool isPaused )
 {
     m_scene->setPaused( isPaused );
-    if ( isPaused )
-        m_gameClock->pause();
-    else
-        m_gameClock->resume();
+    if ( !m_KSameMode ) {
+        if ( isPaused )
+            m_gameClock->pause();
+        else
+            m_gameClock->resume();
+    }
 }
 
 void MainWindow::restartGame()
@@ -202,6 +238,21 @@ void MainWindow::saveGame()
     m_scene->saveGame( group );
 }
 
+void MainWindow::changeMarkedCount( int markedCount )
+{
+    int markedScore = ( markedCount < 2 ) ? 0 : ( ( markedCount - 2 ) * ( markedCount - 2 ) );
+    statusBar()->changeItem( i18n( "Marked: %1 (%2 Points)", markedCount, markedScore ), 3 );
+    // change the marked score which is to be added to the game score when necessary
+    if ( markedScore != 0 )
+        m_markedScore = markedScore;
+}
+
+void MainWindow::changeScore( int remainCount )
+{
+    m_gameScore += m_markedScore;
+    statusBar()->changeItem( i18n( "Score: %1", m_gameScore ), 4 );
+}
+
 void MainWindow::changeRemainCount( int remainCount )
 {
     statusBar()->changeItem( i18n( "Pieces: %1", remainCount ), 0 );
@@ -214,6 +265,14 @@ void MainWindow::changeTime( const QString& newTime )
 
 void MainWindow::showHighscores()
 {
+    if ( m_KSameMode ) {
+        KScoreDialog d( KScoreDialog::Name | KScoreDialog::Score, this );
+        d.addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
+        d.setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
+        d.exec();
+        return;
+    }
+
     KScoreDialog d( KScoreDialog::Name, this );
     d.addField( KScoreDialog::Custom1, "Remain pieces", "remains" );
     d.addField( KScoreDialog::Custom2, "Time", "time" );
@@ -226,8 +285,27 @@ void MainWindow::showHighscores()
 
 void MainWindow::onGameOver( int remainCount )
 {
-    m_gameClock->pause();
     m_pauseAction->setEnabled( false );
+
+    if ( m_KSameMode ) {
+        if ( remainCount == 0 ) {
+            // if the board is empty, give a bonus
+            m_gameScore += 1000;
+        }
+
+        KScoreDialog d( KScoreDialog::Name | KScoreDialog::Score, this );
+        d.addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
+        d.setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
+
+        KScoreDialog::FieldInfo scoreInfo;
+        scoreInfo[ KScoreDialog::Score ].setNum( m_gameScore );
+
+        if ( d.addScore( scoreInfo ) )
+            d.exec();
+        return;
+    }
+
+    m_gameClock->pause();
     KGameDifficulty::setRunning( false );
 
     KScoreDialog d( KScoreDialog::Name, this );
@@ -261,9 +339,11 @@ void MainWindow::setupActions()
 {
     // game menu
     KStandardGameAction::gameNew( this, SLOT(newGame()), actionCollection() );
-    KStandardGameAction::load( this, SLOT(loadGame()), actionCollection() );
+    if ( !m_KSameMode ) {
+        KStandardGameAction::load( this, SLOT(loadGame()), actionCollection() );
+        KStandardGameAction::save( this, SLOT(saveGame()), actionCollection() );
+    }
     KStandardGameAction::restart( this, SLOT(restartGame()), actionCollection() );
-    KStandardGameAction::save( this, SLOT(saveGame()), actionCollection() );
     KStandardGameAction::highscores( this, SLOT(showHighscores()), actionCollection() );
     m_pauseAction = KStandardGameAction::pause( this, SLOT(pauseGame(bool)), actionCollection() );
     KStandardGameAction::quit( this, SLOT(close()), actionCollection() );
@@ -278,8 +358,6 @@ void MainWindow::setupActions()
     KAction* redoAction = KStandardGameAction::redo( m_scene, SLOT(redoMove()), actionCollection() );
     redoAction->setEnabled( false );
     connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAction, SLOT(setEnabled(bool)) );
-    KStandardAction::preferences( this, SLOT(configureSettings()), actionCollection() );
-    KStandardAction::configureNotifications( this, SLOT(configureNotifications()), actionCollection() );
 
     KAction* undoAllAction = actionCollection()->addAction( "move_undo_all" );
     undoAllAction->setIcon( KIcon( "media-skip-backward" ) );
@@ -293,6 +371,16 @@ void MainWindow::setupActions()
     redoAllAction->setEnabled( false );
     connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAllAction, SLOT(setEnabled(bool)) );
     connect( redoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(redoAllMove()) );
+
+    // settings menu
+    if ( !m_KSameMode )
+        KStandardAction::preferences( this, SLOT(configureSettings()), actionCollection() );
+    KStandardAction::configureNotifications( this, SLOT(configureNotifications()), actionCollection() );
+
+    if ( m_KSameMode ) {
+        setupGUI( QSize( 576, 384 ) );
+        return;
+    }
 
     KGameDifficulty::init( this, this, SLOT(levelChanged(KGameDifficulty::standardLevel)),
                            SLOT(customLevelChanged(int)) );

@@ -29,7 +29,7 @@ class MainWindow : public KXmlGuiWindow
 {
     Q_OBJECT
     public:
-        explicit MainWindow( QWidget* parent = 0 );
+        explicit MainWindow( bool KSameMode = false, QWidget* parent = 0 );
         ~MainWindow();
     private Q_SLOTS:
         void configureNotifications();
@@ -43,6 +43,8 @@ class MainWindow : public KXmlGuiWindow
         void restartGame();
         void loadGame();
         void saveGame();
+        void changeMarkedCount( int markedCount );
+        void changeScore( int remainCount );
         void changeRemainCount( int remainCount );
         void changeTime( const QString& newTime );
         void showHighscores();
@@ -50,8 +52,13 @@ class MainWindow : public KXmlGuiWindow
     private:
         bool confirmAbort();
         void setupActions();
+        void setupDifficulties();
+        bool m_KSameMode;
         GameScene* m_scene;
+        /** Klickety mode only */
         KGameClock* m_gameClock;
+        /** KSame mode only */
+        int m_gameScore, m_markedScore;
         KAction* m_pauseAction;
 };
 

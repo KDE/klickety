@@ -44,6 +44,8 @@ int main( int argc, char* argv[] )
     options.add( "Easy", ki18n( "Start with Easy difficulty level" ) );
     options.add( "Medium", ki18n( "Start with Medium difficulty level" ) );
     options.add( "Hard", ki18n( "Start with Hard difficulty level" ) );
+
+    options.add( "KSameMode", ki18n( "Start with KSame compability mode" ) );
     KCmdLineArgs::addCmdLineOptions( options );
 
     KApplication app;
@@ -51,6 +53,7 @@ int main( int argc, char* argv[] )
     //resource directory for KNewStuff2
 //     KStandardDirs::locateLocal("appdata", "themes/");
 
+    bool KSameMode = false;
     KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
     if ( args->isSet( "VeryEasy" ) )
         Settings::setLevel( KGameDifficulty::VeryEasy );
@@ -60,14 +63,16 @@ int main( int argc, char* argv[] )
         Settings::setLevel( KGameDifficulty::Medium );
     if ( args->isSet( "Hard" ) )
         Settings::setLevel( KGameDifficulty::Hard );
+    if ( args->isSet( "KSameMode" ) )
+        KSameMode = true;
     args->clear();
 
     // see if we are starting with session management
     if ( app.isSessionRestored() ) {
-        RESTORE(MainWindow);
+        RESTORE(MainWindow( KSameMode ));
     }
     else {
-        MainWindow* window = new MainWindow;
+        MainWindow* window = new MainWindow( KSameMode );
         window->show();
     }
 

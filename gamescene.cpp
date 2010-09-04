@@ -43,6 +43,7 @@ m_messenger(new KGamePopupItem),
 m_showBoundLines(true),
 m_enableAnimation(true),
 m_enableHighlight(true),
+m_backgroundType(0),
 PWC(0),
 PHC(0),
 m_colorCount(0),
@@ -270,6 +271,15 @@ void GameScene::setRendererTheme( const QString& theme )
     m_renderer.setTheme( theme );
 }
 
+void GameScene::setBackgroundType( int type )
+{
+    if ( m_backgroundType != type ) {
+        m_backgroundType = type;
+        // update background immediately
+        invalidate( sceneRect(), QGraphicsScene::BackgroundLayer );
+    }
+}
+
 void GameScene::setShowBoundLines( bool isShowing )
 {
     if ( m_showBoundLines != isShowing ) {
@@ -406,6 +416,8 @@ void GameScene::highlightPieces( int x, int y )
     traverseNeighbors( x, y-1, m_pieces[index]->m_color, &GameScene::highlightPiece );// check up neighbor
     traverseNeighbors( x+1, y, m_pieces[index]->m_color, &GameScene::highlightPiece );// check right neighbor
     traverseNeighbors( x, y+1, m_pieces[index]->m_color, &GameScene::highlightPiece );// check down neighbor
+
+    emit markedCountChanged( currentMarkedCount() );
 }
 
 void GameScene::unhighlightPieces( int x, int y )
@@ -423,6 +435,8 @@ void GameScene::unhighlightPieces( int x, int y )
     traverseNeighbors( x, y-1, m_pieces[index]->m_color, &GameScene::unhighlightPiece );// check up neighbor
     traverseNeighbors( x+1, y, m_pieces[index]->m_color, &GameScene::unhighlightPiece );// check right neighbor
     traverseNeighbors( x, y+1, m_pieces[index]->m_color, &GameScene::unhighlightPiece );// check down neighbor
+
+    emit markedCountChanged( currentMarkedCount() );
 }
 
 void GameScene::removePieces( int x, int y )
@@ -558,6 +572,16 @@ void GameScene::removePieces( int x, int y )
     }
 }
 
+int GameScene::currentMarkedCount() const
+{
+    int marked = 0;
+    foreach ( const Piece* p, m_pieces ) {
+        if ( p->m_highlighter->isVisible() )
+            ++marked;
+    }
+    return marked;
+}
+
 int GameScene::currentRemainCount() const
 {
     int remain = 0;
@@ -645,7 +669,7 @@ void GameScene::updateBoundLines()
 
 void GameScene::drawBackground( QPainter* painter, const QRectF& rect )
 {
-    switch ( Settings::bgType() ) {
+    switch ( m_backgroundType ) {
         case Settings::EnumBgType::theme: {
             QPixmap pix = m_renderer.spritePixmap( "BACKGROUND", rect.toRect().size() );
             painter->drawPixmap( rect.topLeft(), pix );

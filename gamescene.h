@@ -54,6 +54,8 @@ class GameScene : public QGraphicsScene
         bool isGameFinished() const;
         /** Change the theme used */
         void setRendererTheme( const QString& theme );
+        /** Change the background type */
+        void setBackgroundType( int type );
         /** Determine whether to show the bound lines between different colors */
         void setShowBoundLines( bool isShowing );
         /** Determine whether to enable the animation when removing pieces */
@@ -65,6 +67,8 @@ class GameScene : public QGraphicsScene
         void canUndoChanged( bool canUndo );
         /** Emitted when redo action enable or disable */
         void canRedoChanged( bool canRedo );
+        /** Emitted when the marked piece count changes */
+        void markedCountChanged( int markedCount );
         /** Emitted when the remaining piece count changes */
         void remainCountChanged( int remainCount );
         /** Emitted when the game has been finished */
@@ -107,6 +111,8 @@ class GameScene : public QGraphicsScene
         bool removePiece( Piece* p );
         /** Internal function used to check whether the piece can be removed */
         bool canRemovePiece( int x, int y );
+        /** Internal function used to caluculate the marked piece count */
+        int currentMarkedCount() const;
         /** Internal function used to caluculate the remain piece count */
         int currentRemainCount() const;
         /** The game graphics item renderer */
@@ -123,6 +129,8 @@ class GameScene : public QGraphicsScene
         bool m_enableAnimation;
         /** True if the pieces should be highlighted when hovered */
         bool m_enableHighlight;
+        /** The background type */
+        int m_backgroundType;
         /** The count of pieces in a row */
         int PWC;
         /** The count of pieces in a column */
