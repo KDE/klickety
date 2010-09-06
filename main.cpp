@@ -16,14 +16,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <ctime>
+#include "mainwindow.h"
+#include "settings.h"
+
 #include <KAboutData>
 #include <KApplication>
 #include <KCmdLineArgs>
 #include <KLocale>
 
-#include "mainwindow.h"
-#include "settings.h"
+#include <ctime>
 
 int main( int argc, char* argv[] )
 {
@@ -45,7 +46,7 @@ int main( int argc, char* argv[] )
     options.add( "Medium", ki18n( "Start with Medium difficulty level" ) );
     options.add( "Hard", ki18n( "Start with Hard difficulty level" ) );
 
-    options.add( "KSameMode", ki18n( "Start with KSame compability mode" ) );
+    options.add( "KSameMode", ki18n( "Start with KSame compatibility mode" ) );
     KCmdLineArgs::addCmdLineOptions( options );
 
     KApplication app;

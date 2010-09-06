@@ -16,10 +16,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QGraphicsLineItem>
+#include "piece.h"
 
 #include "gamescene.h"
-#include "piece.h"
+
+#include <QGraphicsLineItem>
 
 Piece::Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent )
 : KGameRenderedObjectItem(renderer,QString("BLOCK_%1").arg(QString::number(color)),parent),

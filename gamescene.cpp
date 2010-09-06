@@ -16,12 +16,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QEasingCurve>
-#include <QGraphicsColorizeEffect>
-#include <QPainter>
-#include <QParallelAnimationGroup>
-#include <QPropertyAnimation>
-#include <QSequentialAnimationGroup>
+#include "gamescene.h"
+
+#include "piece.h"
+#include "settings.h"
+#include "undo.h"
 
 #include <KConfigGroup>
 #include <KGamePopupItem>
@@ -31,10 +30,12 @@
 
 #include <KDebug>
 
-#include "gamescene.h"
-#include "piece.h"
-#include "settings.h"
-#include "undo.h"
+#include <QEasingCurve>
+#include <QGraphicsColorizeEffect>
+#include <QPainter>
+#include <QParallelAnimationGroup>
+#include <QPropertyAnimation>
+#include <QSequentialAnimationGroup>
 
 GameScene::GameScene( QObject* parent )
 : QGraphicsScene(parent),
@@ -273,11 +274,9 @@ void GameScene::setRendererTheme( const QString& theme )
 
 void GameScene::setBackgroundType( int type )
 {
-    if ( m_backgroundType != type ) {
-        m_backgroundType = type;
-        // update background immediately
-        invalidate( sceneRect(), QGraphicsScene::BackgroundLayer );
-    }
+    m_backgroundType = type;
+    // update background immediately
+    invalidate( sceneRect(), QGraphicsScene::BackgroundLayer );
 }
 
 void GameScene::setShowBoundLines( bool isShowing )

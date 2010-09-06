@@ -16,6 +16,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#include "mainwindow.h"
+
+#include "bgselector.h"
+#include "customgame.h"
+#include "gameconfig.h"
+#include "gamescene.h"
+#include "gameview.h"
+#include "settings.h"
+
 #include <KAction>
 #include <KActionCollection>
 #include <KApplication>
@@ -34,13 +43,7 @@
 #include <KStatusBar>
 #include <KToggleAction>
 
-#include "bgselector.h"
-#include "customgame.h"
-#include "gameconfig.h"
-#include "gamescene.h"
-#include "gameview.h"
-#include "mainwindow.h"
-#include "settings.h"
+#include <QPointer>
 
 MainWindow::MainWindow( bool KSameMode, QWidget* parent )
 : KXmlGuiWindow(parent),
@@ -65,7 +68,7 @@ m_markedScore(0)
         statusBar()->insertItem( i18n( "Score: 0" ), 4 );
         connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeScore(int)) );
         connect( m_scene, SIGNAL(markedCountChanged(int)), this, SLOT(changeMarkedCount(int)) );
-        setWindowTitle( i18n( "Klickety - KSame compability mode" ) );
+        setWindowTitle( i18n( "Klickety - KSame compatibility mode" ) );
     }
     else {
         m_gameClock = new KGameClock( this, KGameClock::MinSecOnly );
@@ -273,21 +276,25 @@ void MainWindow::changeTime( const QString& newTime )
 void MainWindow::showHighscores()
 {
     if ( m_KSameMode ) {
-        KScoreDialog d( KScoreDialog::Name | KScoreDialog::Score, this );
-        d.addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
-        d.setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
-        d.exec();
+        QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
+        d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
+        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
+//         d->setHiddenConfigGroups( QVector<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
+        d->exec();
+        delete d;
         return;
     }
 
-    KScoreDialog d( KScoreDialog::Name, this );
-    d.addField( KScoreDialog::Custom1, "Remain pieces", "remains" );
-    d.addField( KScoreDialog::Custom2, "Time", "time" );
-    d.addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
-    d.setConfigGroupWeights( KGameDifficulty::levelWeights() );
-    d.hideField( KScoreDialog::Score );
-    d.setConfigGroup( KGameDifficulty::localizedLevelString() );
-    d.exec();
+    QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
+    d->addField( KScoreDialog::Custom1, "Remain pieces", "remains" );
+    d->addField( KScoreDialog::Custom2, "Time", "time" );
+    d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
+    d->setConfigGroupWeights( KGameDifficulty::levelWeights() );
+//     d->setHiddenConfigGroups( QVector<QByteArray>() << "KSame" );
+    d->hideField( KScoreDialog::Score );
+    d->setConfigGroup( KGameDifficulty::localizedLevelString() );
+    d->exec();
+    delete d;
 }
 
 void MainWindow::onGameOver( int remainCount )
@@ -300,40 +307,44 @@ void MainWindow::onGameOver( int remainCount )
             m_gameScore += 1000;
         }
 
-        KScoreDialog d( KScoreDialog::Name | KScoreDialog::Score, this );
-        d.addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
-        d.setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
+        QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
+        d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
+        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
+//         d->setHiddenConfigGroups( QVector<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
 
         KScoreDialog::FieldInfo scoreInfo;
         scoreInfo[ KScoreDialog::Score ].setNum( m_gameScore );
 
-        if ( d.addScore( scoreInfo ) )
-            d.exec();
+        if ( d->addScore( scoreInfo ) )
+            d->exec();
+        delete d;
         return;
     }
 
     m_gameClock->pause();
     KGameDifficulty::setRunning( false );
 
-    KScoreDialog d( KScoreDialog::Name, this );
-    d.addField( KScoreDialog::Custom1, "Remain pieces", "remains" );
-    d.addField( KScoreDialog::Custom2, "Time", "time" );
-    d.addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
-    d.setConfigGroupWeights( KGameDifficulty::levelWeights() );
-    d.hideField( KScoreDialog::Score );
+    QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
+    d->addField( KScoreDialog::Custom1, "Remain pieces", "remains" );
+    d->addField( KScoreDialog::Custom2, "Time", "time" );
+    d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
+    d->setConfigGroupWeights( KGameDifficulty::levelWeights() );
+//     d->setHiddenConfigGroups( QVector<QByteArray>() << "KSame" );
+    d->hideField( KScoreDialog::Score );
 
     QPair<QByteArray, QString> group = KGameDifficulty::localizedLevelString();
     if ( group.first.isEmpty() )
         group = qMakePair( QByteArray( "Custom" ), i18n( "Custom" ) );
-        d.setConfigGroup( group );
+        d->setConfigGroup( group );
 
     KScoreDialog::FieldInfo scoreInfo;
     scoreInfo[KScoreDialog::Custom1].setNum( remainCount );
     scoreInfo[KScoreDialog::Custom2] = m_gameClock->timeString();
     // remainCount*10000000 is much bigger than a usual time seconds
     scoreInfo[KScoreDialog::Score].setNum( remainCount*10000000 + m_gameClock->seconds() );
-    if ( d.addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 )
-        d.exec();
+    if ( d->addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 )
+        d->exec();
+    delete d;
 }
 
 bool MainWindow::confirmAbort()
