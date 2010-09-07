@@ -1,6 +1,10 @@
 [KGameTheme]
 Name=Classic
+Name[ga]=Clasaiceach
+Name[oc]=Classic
+Name[x-test]=xxClassicxx
 Description=Klickety Classic Theme
+Description[x-test]=xxKlickety Classic Themexx
 VersionFormat=1
 Author=Ni Hui
 AuthorEmail=shuizhuyuanluo@126.com

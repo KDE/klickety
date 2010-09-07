@@ -1,21 +1,30 @@
 [Global]
 IconName=klickety
 Comment=Board Game
+Comment[x-test]=xxBoard Gamexx
 
 [Context/game]
 Name=Game
+Name[ga]=Cluiche
+Name[x-test]=xxGamexx
 Comment=Sounds that appear during a game
+Comment[x-test]=xxSounds that appear during a gamexx
 
 [Event/remove]
 Name=Pieces removed
+Name[x-test]=xxPieces removedxx
 Comment=Pieces were removed.
+Comment[x-test]=xxPieces were removed.xx
 Contexts=game
 Sound=KDE-Window-Shade-Down.ogg
 Action=Sound
 
 [Event/gamefinished]
 Name=Game over
+Name[ga]=Cluiche thart
+Name[x-test]=xxGame overxx
 Comment=Time is up.
+Comment[x-test]=xxTime is up.xx
 Contexts=game
 Sound=KDE-Im-User-Auth.ogg
 Action=Sound

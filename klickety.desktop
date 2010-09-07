@@ -1,6 +1,10 @@
 [Desktop Entry]
 Name=Klickety
+Name[be]=Klickety
+Name[ga]=Klickety
+Name[x-test]=xxKlicketyxx
 GenericName=Board Game
+GenericName[x-test]=xxBoard Gamexx
 Icon=klickety
 Exec=klickety -caption "%c"
 Type=Application

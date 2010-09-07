@@ -1,6 +1,8 @@
 [KGameTheme]
 Name=KSame
+Name[x-test]=xxKSamexx
 Description=Klickety KSame Theme
+Description[x-test]=xxKlickety KSame Themexx
 VersionFormat=1
 Author=Ni Hui
 AuthorEmail=shuizhuyuanluo@126.com
