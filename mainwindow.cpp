@@ -279,7 +279,7 @@ void MainWindow::showHighscores()
         QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
         d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
         d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
-//         d->setHiddenConfigGroups( QVector<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
+        d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
         d->exec();
         delete d;
         return;
@@ -290,7 +290,7 @@ void MainWindow::showHighscores()
     d->addField( KScoreDialog::Custom2, "Time", "time" );
     d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
     d->setConfigGroupWeights( KGameDifficulty::levelWeights() );
-//     d->setHiddenConfigGroups( QVector<QByteArray>() << "KSame" );
+    d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
     d->hideField( KScoreDialog::Score );
     d->setConfigGroup( KGameDifficulty::localizedLevelString() );
     d->exec();
@@ -310,7 +310,7 @@ void MainWindow::onGameOver( int remainCount )
         QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
         d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
         d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
-//         d->setHiddenConfigGroups( QVector<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
+        d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
 
         KScoreDialog::FieldInfo scoreInfo;
         scoreInfo[ KScoreDialog::Score ].setNum( m_gameScore );
@@ -329,7 +329,7 @@ void MainWindow::onGameOver( int remainCount )
     d->addField( KScoreDialog::Custom2, "Time", "time" );
     d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
     d->setConfigGroupWeights( KGameDifficulty::levelWeights() );
-//     d->setHiddenConfigGroups( QVector<QByteArray>() << "KSame" );
+    d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
     d->hideField( KScoreDialog::Score );
 
     QPair<QByteArray, QString> group = KGameDifficulty::localizedLevelString();
