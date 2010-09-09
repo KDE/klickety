@@ -58,7 +58,7 @@ class MainWindow : public KXmlGuiWindow
         /** Klickety mode only */
         KGameClock* m_gameClock;
         /** KSame mode only */
-        int m_gameScore, m_markedScore;
+        int m_gameScore, m_lastRemainCount;
         KAction* m_pauseAction;
 };
 

@@ -50,7 +50,7 @@ MainWindow::MainWindow( bool KSameMode, QWidget* parent )
 m_KSameMode(KSameMode),
 m_gameClock(NULL),
 m_gameScore(0),
-m_markedScore(0)
+m_lastRemainCount(0)
 {
     m_scene = new GameScene;
     GameView* view = new GameView( m_scene );
@@ -59,7 +59,6 @@ m_markedScore(0)
     view->setFrameStyle( QFrame::NoFrame );
     view->setCacheMode( QGraphicsView::CacheBackground );
     setCentralWidget( view );
-
 
     if ( m_KSameMode ) {
 //         statusBar()->insertItem( i18n( "Colors: XX" ), 1 );
@@ -154,7 +153,7 @@ void MainWindow::newGame( int gameId )
 
     if ( m_KSameMode ) {
         m_gameScore = 0;
-        m_markedScore = 0;
+        m_lastRemainCount = 15 * 10;
         m_scene->startNewGame( 15, 10, 3, gameId );
         return;
     }
@@ -216,7 +215,7 @@ void MainWindow::restartGame()
         m_pauseAction->setEnabled( true );
         if ( m_KSameMode ) {
             m_gameScore = 0;
-            m_markedScore = 0;
+            m_lastRemainCount = 0;
         }
         else {
             m_gameClock->restart();
@@ -252,15 +251,29 @@ void MainWindow::changeMarkedCount( int markedCount )
 {
     int markedScore = ( markedCount < 2 ) ? 0 : ( ( markedCount - 2 ) * ( markedCount - 2 ) );
     statusBar()->changeItem( i18n( "Marked: %1 (%2 Points)", markedCount, markedScore ), 3 );
-    // change the marked score which is to be added to the game score when necessary
-    if ( markedScore != 0 )
-        m_markedScore = markedScore;
 }
 
 void MainWindow::changeScore( int remainCount )
 {
-    m_gameScore += m_markedScore;
+    if ( m_lastRemainCount == 0 ) {
+        // new game or restart
+        m_lastRemainCount = remainCount;
+        statusBar()->changeItem( i18n( "Score: 0" ), 4 );
+        return;
+    }
+    int removedCount = m_lastRemainCount - remainCount;
+    if ( removedCount > 0 ) {
+        // normal move
+        int score = ( removedCount < 2 ) ? 0 : ( ( removedCount - 2 ) * ( removedCount - 2 ) );
+        m_gameScore += score;
+    }
+    else {
+        // undo action, minus the score
+        int score = ( removedCount > -2 ) ? 0 : ( ( removedCount + 2 ) * ( removedCount + 2 ) );
+        m_gameScore -= score;
+    }
     statusBar()->changeItem( i18n( "Score: %1", m_gameScore ), 4 );
+    m_lastRemainCount = remainCount;
 }
 
 void MainWindow::changeRemainCount( int remainCount )
