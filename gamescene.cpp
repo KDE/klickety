@@ -655,7 +655,7 @@ void GameScene::updateBoundLines()
             if ( rightX < PWC && m_pieces[j*PWC+rightX]->isEnabled()
                 && m_pieces[j*PWC+rightX]->m_color != item->m_color ) {
 //                 rightLine->setPen( pen );
-                rightLine->setLine( elementsSize-1, 0, elementsSize-1, elementsSize );
+                rightLine->setLine( elementsSize-1, 0-1, elementsSize-1, elementsSize-1 );
                 rightLine->show();
             }
             else

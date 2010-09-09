@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=SameGame
+Exec=klickety --KSameMode -caption "%c"
+Type=Application
+X-DocPath=ksame/index.html
+GenericName=Board Game
+Icon=ksame
+X-KDE-StartupNotify=true
+X-DBUS-StartupType=Multi
+Categories=Qt;KDE;Game;StrategyGame;
