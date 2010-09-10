@@ -1,6 +1,8 @@
 [KGameTheme]
 Name=KSame Old
+Name[x-test]=xxKSame Oldxx
 Description=Klickety KSame Old Theme
+Description[x-test]=xxKlickety KSame Old Themexx
 VersionFormat=1
 Author=Ni Hui
 AuthorEmail=shuizhuyuanluo@126.com

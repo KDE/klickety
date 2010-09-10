@@ -1,9 +1,15 @@
 [Desktop Entry]
 Name=SameGame
+Name[x-test]=xxSameGamexx
 Exec=klickety --KSameMode -caption "%c"
 Type=Application
 X-DocPath=ksame/index.html
 GenericName=Board Game
+GenericName[pt]=Jogo de Tabuleiro
+GenericName[pt_BR]=Jogo de tabuleiro
+GenericName[sv]=Brädspel
+GenericName[uk]=Гра на дошці
+GenericName[x-test]=xxBoard Gamexx
 Icon=ksame
 X-KDE-StartupNotify=true
 X-DBUS-StartupType=Multi
