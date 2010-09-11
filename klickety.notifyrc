@@ -48,6 +48,7 @@ Name[sv]=Spelet slut
 Name[uk]=Гру завершено
 Name[x-test]=xxGame overxx
 Comment=Time is up.
+Comment[de]=Die Zeit ist abgelaufen.
 Comment[pt]=O tempo terminou.
 Comment[pt_BR]=Tempo esgotado.
 Comment[sv]=Tiden är slut.
