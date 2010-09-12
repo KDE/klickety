@@ -1,6 +1,7 @@
 [Global]
 IconName=klickety
 Comment=Board Game
+Comment[it]=Gioco da tavolo
 Comment[pt]=Jogo de Tabuleiro
 Comment[pt_BR]=Jogo de tabuleiro
 Comment[sv]=Brädspel
@@ -16,6 +17,7 @@ Name[sv]=Spel
 Name[uk]=Гра
 Name[x-test]=xxGamexx
 Comment=Sounds that appear during a game
+Comment[it]=Suoni e rumori del gioco
 Comment[pt]=Os sons que aparecem durante um jogo
 Comment[pt_BR]=Sons executados durante o jogo
 Comment[sv]=Ljud som hörs under spelet
@@ -24,12 +26,14 @@ Comment[x-test]=xxSounds that appear during a gamexx
 
 [Event/remove]
 Name=Pieces removed
+Name[it]=Pezzi rimossi
 Name[pt]=Peças removidas
 Name[pt_BR]=Peças removidas
 Name[sv]=Bitar borttagna
 Name[uk]=Шматочки вилучено
 Name[x-test]=xxPieces removedxx
 Comment=Pieces were removed.
+Comment[it]=I pezzi sono stati rimossi.
 Comment[pt]=As peças foram removidas.
 Comment[pt_BR]=As peças foram removidas.
 Comment[sv]=Bitar togs bort.
@@ -42,6 +46,7 @@ Action=Sound
 [Event/gamefinished]
 Name=Game over
 Name[ga]=Cluiche thart
+Name[it]=Partita terminata
 Name[pt]=Fim do jogo
 Name[pt_BR]=Fim de jogo
 Name[sv]=Spelet slut
@@ -49,6 +54,7 @@ Name[uk]=Гру завершено
 Name[x-test]=xxGame overxx
 Comment=Time is up.
 Comment[de]=Die Zeit ist abgelaufen.
+Comment[it]=Il tempo è finito.
 Comment[pt]=O tempo terminou.
 Comment[pt_BR]=Tempo esgotado.
 Comment[sv]=Tiden är slut.

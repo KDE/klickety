@@ -1,6 +1,7 @@
 [KGameTheme]
 Name=Classic
 Name[ga]=Clasaiceach
+Name[it]=Classico
 Name[oc]=Classic
 Name[pt]=Clássico
 Name[pt_BR]=Clássico
@@ -8,6 +9,7 @@ Name[sv]=Klassiskt
 Name[uk]=Класична
 Name[x-test]=xxClassicxx
 Description=Klickety Classic Theme
+Description[it]=Tema classico di Klickety
 Description[pt]=Tema Clássico do Klickety
 Description[pt_BR]=Tema clássico do Klickety
 Description[sv]=Klickety klassiskt tema
