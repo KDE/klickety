@@ -1,5 +1,6 @@
 [KGameTheme]
 Name=KSame
+Name[es]=KSame
 Name[it]=KSame
 Name[pt]=KSame
 Name[pt_BR]=KSame
@@ -7,6 +8,7 @@ Name[sv]=Ksame
 Name[uk]=KSame
 Name[x-test]=xxKSamexx
 Description=Klickety KSame Theme
+Description[es]=Tema de KSame para Klickety
 Description[it]=Tema KSame di Klickety
 Description[pt]=Tema KSame do Klickety
 Description[pt_BR]=Tema KSame do Klickety

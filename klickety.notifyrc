@@ -1,6 +1,7 @@
 [Global]
 IconName=klickety
 Comment=Board Game
+Comment[es]=Juego de tablero
 Comment[it]=Gioco da tavolo
 Comment[pt]=Jogo de Tabuleiro
 Comment[pt_BR]=Jogo de tabuleiro
@@ -10,6 +11,7 @@ Comment[x-test]=xxBoard Gamexx
 
 [Context/game]
 Name=Game
+Name[es]=Juego
 Name[ga]=Cluiche
 Name[pt]=Jogo
 Name[pt_BR]=Jogo
@@ -17,6 +19,7 @@ Name[sv]=Spel
 Name[uk]=Гра
 Name[x-test]=xxGamexx
 Comment=Sounds that appear during a game
+Comment[es]=Sonidos que aparecen durante el juego
 Comment[it]=Suoni e rumori del gioco
 Comment[pt]=Os sons que aparecem durante um jogo
 Comment[pt_BR]=Sons executados durante o jogo
@@ -26,6 +29,7 @@ Comment[x-test]=xxSounds that appear during a gamexx
 
 [Event/remove]
 Name=Pieces removed
+Name[es]=Piezas eliminadas
 Name[it]=Pezzi rimossi
 Name[pt]=Peças removidas
 Name[pt_BR]=Peças removidas
@@ -33,6 +37,7 @@ Name[sv]=Bitar borttagna
 Name[uk]=Шматочки вилучено
 Name[x-test]=xxPieces removedxx
 Comment=Pieces were removed.
+Comment[es]=Las piezas han sido eliminadas.
 Comment[it]=I pezzi sono stati rimossi.
 Comment[pt]=As peças foram removidas.
 Comment[pt_BR]=As peças foram removidas.
@@ -45,6 +50,7 @@ Action=Sound
 
 [Event/gamefinished]
 Name=Game over
+Name[es]=Fin de la partida
 Name[ga]=Cluiche thart
 Name[it]=Partita terminata
 Name[pt]=Fim do jogo
@@ -54,6 +60,7 @@ Name[uk]=Гру завершено
 Name[x-test]=xxGame overxx
 Comment=Time is up.
 Comment[de]=Die Zeit ist abgelaufen.
+Comment[es]=El tiempo se ha agotado.
 Comment[it]=Il tempo è finito.
 Comment[pt]=O tempo terminou.
 Comment[pt_BR]=Tempo esgotado.
