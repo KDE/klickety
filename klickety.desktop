@@ -27,3 +27,4 @@ Comment=
 X-KDE-StartupNotify=true
 X-DBUS-StartupType=Multi
 Categories=Qt;KDE;Game;StrategyGame;
+X-DocPath=klickety/index.html
