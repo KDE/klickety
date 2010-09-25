@@ -1,0 +1,42 @@
+Klickety theming guide and specification
+
+Klickety uses .desktop and .svg files for theming.
+The theme can also provide an optional .png preview image.
+
+The .desktop file
+--->8---->8---->8---->8---->8---->8---->8---->8---->8--
+[KGameTheme]
+Name=<Example>
+Description=<An example theme>
+VersionFormat=1
+Author=<Your Name>
+AuthorEmail=<Your Email Address>
+Type=SVG
+FileName=<example.svg>
+Preview=<example_preview.png>
+--->8---->8---->8---->8---->8---->8---->8---->8---->8--
+
+The .svg file
+--->8---->8---->8---->8---->8---->8---->8---->8---->8--
+The SVG file MUST contain the following elements:
+"BLOCK_0"
+"BLOCK_1"
+"BLOCK_2"
+"BLOCK_3"
+"BLOCK_4"
+"BLOCK_5"
+These elements will be used for pieces. All the elements should be square.
+
+"BACKGROUND"
+Used to render as the background.
+
+"HIGHLIGHT"
+Used to show a highlighting overlay.
+
+--->8---->8---->8---->8---->8---->8---->8---->8---->8--
+
+Please send all comments to:
+Ni Hui
+shuizhuyuanluo@126.com
+
+Last update: Sep 2010
