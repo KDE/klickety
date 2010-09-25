@@ -3,3 +3,4 @@ File=klickety.kcfg
 ClassName=Settings
 Singleton=true
 Mutators=true
+DefaultValueGetters=Theme

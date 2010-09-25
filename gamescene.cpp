@@ -39,7 +39,7 @@
 
 GameScene::GameScene( QObject* parent )
 : QGraphicsScene(parent),
-m_renderer("themes/default.desktop"),
+m_renderer(Settings::defaultThemeValue()),
 m_messenger(new KGamePopupItem),
 m_showBoundLines(true),
 m_enableAnimation(true),
@@ -53,6 +53,7 @@ m_isPaused(false),
 m_isFinished(false),
 m_animation(new QSequentialAnimationGroup)
 {
+    m_renderer.setTheme( Settings::theme() );
     connect( &m_undoStack, SIGNAL(canUndoChanged(bool)), this, SIGNAL(canUndoChanged(bool)) );
     connect( &m_undoStack, SIGNAL(canRedoChanged(bool)), this, SIGNAL(canRedoChanged(bool)) );
     connect( this, SIGNAL(sceneRectChanged(const QRectF&)), SLOT(resize(const QRectF&)) );
