@@ -143,7 +143,7 @@ the start of the game until the game is finished.
 <chapter id="ksame_mode">
 <title>The KSame Mode</title><!-- do not change this! -->
 <para>
-&klickety; provides a SameGame scoring mode.
+&klickety; provides a &ksame; scoring mode.
 </para>
 <para>The score is calculated as follows:</para>
 <para>Subtract 2 from the number of marbles erased, and square the result.
@@ -463,7 +463,7 @@ dialog, where you can change the notifications (sounds, visible messages,
 </qandaentry>
 <qandaentry>
 <question><para>How to start the game in KSame mode?</para></question>
-<answer><para>You can launch klickety with command "klickety --KSameMode" or SameGame menu entry in K menu.</para></answer>
+<answer><para>You can launch &klickety; with command <userinput>klickety --KSameMode</userinput> or &ksame; menu entry in K menu.</para></answer>
 </qandaentry>
 
 </qandaset>
@@ -573,7 +573,7 @@ and the <guilabel>Color count</guilabel> used in your custom level.
 <title>Credits and License</title>
 <para>&klickety;</para>
 <para>Program Copyright &copy; 1995, Eirik Eng</para>
-<para>Program Copyright &copy; 1996&ndash;2004, &Nicolas.Hadacek;<email>hadacek@kde.org</email></para>
+<para>Program Copyright &copy; 1996&ndash;2004, &Nicolas.Hadacek;&Nicolas.Hadacek.mail;</para>
 <para>Program Copyright &copy; 2010, Ni Hui <email>shuizhuyuanluo@126.com</email></para>
 <para>Documentation Copyright &copy; 2005, Thomas Davey</para>
 <para>Documentation Copyright &copy; 2010, Ni Hui <email>shuizhuyuanluo@126.com</email></para>
