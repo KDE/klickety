@@ -113,7 +113,7 @@ class GameScene : public QGraphicsScene
         bool canRemovePiece( int x, int y );
         /** Internal function used to caluculate the marked piece count */
         int currentMarkedCount() const;
-        /** Internal function used to caluculate the remain piece count */
+        /** Internal function used to caluculate the remaining piece count */
         int currentRemainCount() const;
         /** The game graphics item renderer */
         KGameRenderer m_renderer;

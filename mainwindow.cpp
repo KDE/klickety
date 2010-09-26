@@ -299,8 +299,8 @@ void MainWindow::showHighscores()
     }
 
     QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n ("Remain pieces" ), "remains" );
-    d->addField( KScoreDialog::Custom2, i18n ("Time" ), "time" );
+    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), "remains" );
+    d->addField( KScoreDialog::Custom2, i18n( "Time" ), "time" );
     d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
     d->setConfigGroupWeights( KGameDifficulty::levelWeights() );
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
@@ -338,8 +338,8 @@ void MainWindow::onGameOver( int remainCount )
     KGameDifficulty::setRunning( false );
 
     QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, "Remain pieces", "remains" );
-    d->addField( KScoreDialog::Custom2, "Time", "time" );
+    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), "remains" );
+    d->addField( KScoreDialog::Custom2, i18n( "Time" ), "time" );
     d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
     d->setConfigGroupWeights( KGameDifficulty::levelWeights() );
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
