@@ -232,7 +232,7 @@ score.
 </sect1>
 
 <sect1 id="game-menu">
-<title>The <guimenu>Game</guimenu> Menu</title>
+<title>The Game Menu</title>
 <variablelist>
 
 <varlistentry>
@@ -320,7 +320,7 @@ When your game scores exceed the top ten scores listed, you are prompted to ente
 </sect1>
 
 <sect1 id="move-menu">
-<title>The <guimenu>Move</guimenu> Menu</title>
+<title>The Move Menu</title>
 <variablelist>
 
 <varlistentry>
@@ -361,7 +361,7 @@ When your game scores exceed the top ten scores listed, you are prompted to ente
 </sect1>
 
 <sect1 id="settings-menu">
-<title>The <guimenu>Settings</guimenu> Menu</title>
+<title>The Settings Menu</title>
 <variablelist>
 
 <varlistentry>
@@ -441,7 +441,7 @@ dialog, where you can change the notifications (sounds, visible messages,
 
 
 <sect1 id="help"><!--This is a standard Help menubar entry. Only change if needed.-->
-<title>The <guimenu>Help</guimenu> Menu</title>
+<title>The Help Menu</title>
 &help.menu.documentation;
 </sect1>
 
@@ -477,7 +477,7 @@ dialog, where you can change the notifications (sounds, visible messages,
 the <guilabel>Configure - &klickety;</guilabel> dialog.</para>
 
 <sect1 id="general-options">
-<title><guilabel>General</guilabel> options</title>
+<title>General options</title>
 <variablelist>
 <varlistentry>
 <term><guilabel>Show bound lines</guilabel></term>
@@ -508,7 +508,7 @@ This option will enable highlighting on pieces hovered if they can be removed.
 </sect1>
 
 <sect1 id="theme-options">
-<title><guilabel>Theme</guilabel> options</title>
+<title>Theme options</title>
 <variablelist>
 <varlistentry>
 <term><guilabel>Theme</guilabel> selector</term>
@@ -525,7 +525,7 @@ This option will enable highlighting on pieces hovered if they can be removed.
 </sect1>
 
 <sect1 id="background-options">
-<title><guilabel>Background</guilabel> options</title>
+<title>Background options</title>
 <para>
 You can choose a background graphic for the game. There are three kinds of background type you can use.
 <variablelist>
@@ -553,7 +553,7 @@ You can choose a background graphic for the game. There are three kinds of backg
 </sect1>
 
 <sect1 id="customgame-options">
-<title><guilabel>Custom Game</guilabel> options</title>
+<title>Custom Game options</title>
 <para>
 You can set the <guilabel>Height</guilabel> and <guilabel>Width</guilabel> of the board
 and the <guilabel>Color count</guilabel> used in your custom level.
