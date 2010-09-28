@@ -158,7 +158,7 @@ void GameScene::loadGame( const KConfigGroup& config )
 
     // execute the history
     for ( int i = 0; i < moveCount; ++i ) {
-        QList<int> move = config.readEntry( QString( "Move_%1" ).arg( i ), QList<int>() );
+        QList<int> move = config.readEntry( QString( QLatin1String( "Move_%1" ) ).arg( i ), QList<int>() );
         if ( move.count() != 2 ) {
             qWarning() << "Unexpected undo command structure.";
             return;
@@ -206,7 +206,7 @@ void GameScene::saveGame( KConfigGroup& config ) const
         Piece* clickPiece = static_cast<const HidePiece*>(click)->m_piece;
         QList<int> move;
         move << clickPiece->m_x << clickPiece->m_y;
-        config.writeEntry( QString( "Move_%1" ).arg( i ), move );
+        config.writeEntry( QString( QLatin1String( "Move_%1" ) ).arg( i ), move );
     }
 }
 
@@ -232,7 +232,7 @@ void GameScene::setPaused( bool isPaused )
     }
 
     if ( m_isPaused ) {
-        m_messenger->showMessage( "paused", KGamePopupItem::Center );
+        m_messenger->showMessage( i18n( "paused" ), KGamePopupItem::Center );
         emit canUndoChanged( false );
         emit canRedoChanged( false );
     }
@@ -336,7 +336,7 @@ void GameScene::checkGameFinished()
     emit remainCountChanged( remain );
     bool finished = isGameFinished();
     if ( finished && m_isFinished != finished ) {
-        KNotification::event( "gamefinished" );
+        KNotification::event( QLatin1String( "gamefinished" ) );
         m_messenger->showMessage( i18n ("game finished") , KGamePopupItem::Center );
         emit canUndoChanged( false );
         emit canRedoChanged( false );
@@ -452,7 +452,7 @@ void GameScene::removePieces( int x, int y )
     unhighlightPieces( x, y );
 
     int index = y * PWC + x;
-    m_undoStack.beginMacro( "Remove pieces" );
+    m_undoStack.beginMacro( QLatin1String( "Remove pieces" ) );
     m_undoStack.push( new HidePiece( m_pieces[index] ) );
 
     traverseNeighbors( x-1, y, m_pieces[index]->m_color, &GameScene::removePiece );// check left neighbor
@@ -557,7 +557,7 @@ void GameScene::removePieces( int x, int y )
     }
 
     m_undoStack.endMacro();
-    KNotification::event( "remove" );
+    KNotification::event( QLatin1String( "remove" ) );
 
     if ( m_enableAnimation ) {
         // add new animations
@@ -678,7 +678,7 @@ void GameScene::drawBackground( QPainter* painter, const QRectF& rect )
 {
     switch ( m_backgroundType ) {
         case Settings::EnumBgType::theme: {
-            QPixmap pix = m_renderer.spritePixmap( "BACKGROUND", rect.toRect().size() );
+            QPixmap pix = m_renderer.spritePixmap( QLatin1String( "BACKGROUND" ), rect.toRect().size() );
             painter->drawPixmap( rect.topLeft(), pix );
             break;
         }

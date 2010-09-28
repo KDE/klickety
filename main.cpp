@@ -50,7 +50,7 @@ int main( int argc, char* argv[] )
     KCmdLineArgs::addCmdLineOptions( options );
 
     KApplication app;
-    KGlobal::locale()->insertCatalog( "libkdegames" );
+    KGlobal::locale()->insertCatalog( QLatin1String(  "libkdegames" ) );
     //resource directory for KNewStuff2
 //     KStandardDirs::locateLocal("appdata", "themes/");
 

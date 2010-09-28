@@ -97,16 +97,16 @@ void MainWindow::configureNotifications()
 
 void MainWindow::configureSettings()
 {
-    if ( KConfigDialog::showDialog( "settings" ) )
+    if ( KConfigDialog::showDialog( QLatin1String( "settings" ) ) )
         return;
 
-    KConfigDialog* dialog = new KConfigDialog( this, "settings", Settings::self() );
-    dialog->addPage( new GameConfig( dialog ), i18n( "General" ), "games-config-options" );
-    dialog->addPage( new KGameThemeSelector( dialog, Settings::self(), KGameThemeSelector::NewStuffDisableDownload ), i18n( "Theme" ), "games-config-theme" );
-    dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), "games-config-background" );
-    dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), "games-config-custom" );
+    KConfigDialog* dialog = new KConfigDialog( this, QLatin1String( "settings" ), Settings::self() );
+    dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QLatin1String( "games-config-options" ) );
+    dialog->addPage( new KGameThemeSelector( dialog, Settings::self(), KGameThemeSelector::NewStuffDisableDownload ), i18n( "Theme" ), QLatin1String( "games-config-theme" ) );
+    dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QLatin1String( "games-config-background" ) );
+    dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
     connect( dialog, SIGNAL(settingsChanged(const QString&)), this, SLOT(loadSettings()) );
-    dialog->setHelp( QString(), "klickety" );
+    dialog->setHelp( QString(), QLatin1String( "klickety" ) );
     dialog->show();
 }
 
@@ -127,7 +127,7 @@ void MainWindow::levelChanged( KGameDifficulty::standardLevel level )
 void MainWindow::loadSettings()
 {
     if ( m_KSameMode ) {
-        m_scene->setRendererTheme( "themes/ksame.desktop" );
+        m_scene->setRendererTheme( QLatin1String( "themes/ksame.desktop" ) );
         m_scene->setShowBoundLines( false );
         m_scene->setEnableAnimation( true );
         m_scene->setEnableHighlight( true );
@@ -226,7 +226,7 @@ void MainWindow::restartGame()
 
 void MainWindow::loadGame()
 {
-    QString fileName = KFileDialog::getOpenFileName( KUrl(), "*.klickety", this );
+    QString fileName = KFileDialog::getOpenFileName( KUrl(), QLatin1String( "*.klickety" ), this );
     if ( fileName.isEmpty() || !confirmAbort() )
         return;
 
@@ -239,7 +239,7 @@ void MainWindow::loadGame()
 
 void MainWindow::saveGame()
 {
-    QString fileName = KFileDialog::getSaveFileName( KUrl(), "*.klickety", this );
+    QString fileName = KFileDialog::getSaveFileName( KUrl(), QLatin1String( "*.klickety" ), this );
     if ( fileName.isEmpty() )
         return;
     KConfig config( fileName, KConfig::SimpleConfig );
@@ -299,8 +299,8 @@ void MainWindow::showHighscores()
     }
 
     QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), "remains" );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), "time" );
+    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
+    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
     d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
     d->setConfigGroupWeights( KGameDifficulty::levelWeights() );
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
@@ -338,8 +338,8 @@ void MainWindow::onGameOver( int remainCount )
     KGameDifficulty::setRunning( false );
 
     QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), "remains" );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), "time" );
+    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
+    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
     d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
     d->setConfigGroupWeights( KGameDifficulty::levelWeights() );
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
@@ -379,7 +379,7 @@ void MainWindow::setupActions()
     m_pauseAction = KStandardGameAction::pause( this, SLOT(pauseGame(bool)), actionCollection() );
     KStandardGameAction::quit( this, SLOT(close()), actionCollection() );
     KAction* m_newNumGameAction = new KAction( i18n( "New Numbered Game..." ), actionCollection() );
-    actionCollection()->addAction( "game_new_numeric", m_newNumGameAction );
+    actionCollection()->addAction( QLatin1String( "game_new_numeric" ), m_newNumGameAction );
     connect( m_newNumGameAction, SIGNAL(triggered(bool)), this, SLOT(newNumGame()) );
 
     // move menu
@@ -390,14 +390,14 @@ void MainWindow::setupActions()
     redoAction->setEnabled( false );
     connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAction, SLOT(setEnabled(bool)) );
 
-    KAction* undoAllAction = actionCollection()->addAction( "move_undo_all" );
-    undoAllAction->setIcon( KIcon( "media-skip-backward" ) );
+    KAction* undoAllAction = actionCollection()->addAction( QLatin1String( "move_undo_all" ) );
+    undoAllAction->setIcon( KIcon( QLatin1String(  "media-skip-backward" ) ) );
     undoAllAction->setText( i18n( "Undo All" ) );
     undoAllAction->setEnabled( false );
     connect( m_scene, SIGNAL(canUndoChanged(bool)), undoAllAction, SLOT(setEnabled(bool)) );
     connect( undoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(undoAllMove()) );
-    KAction* redoAllAction = actionCollection()->addAction( "move_redo_all" );
-    redoAllAction->setIcon( KIcon( "media-skip-forward" ) );
+    KAction* redoAllAction = actionCollection()->addAction( QLatin1String( "move_redo_all" ) );
+    redoAllAction->setIcon( KIcon( QLatin1String(  "media-skip-forward" ) ) );
     redoAllAction->setText( i18n( "Redo All" ) );
     redoAllAction->setEnabled( false );
     connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAllAction, SLOT(setEnabled(bool)) );

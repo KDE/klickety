@@ -31,7 +31,7 @@ class HidePiece : public QUndoCommand
 {
     public:
         explicit HidePiece( Piece* piece ) : m_piece(piece) {
-            setText( "HidePiece" );
+            setText( QLatin1String( "HidePiece" ) );
         }
         virtual int id() const {
             return ID_HIDEPIECE;
@@ -55,7 +55,7 @@ class SwapPiece : public QUndoCommand
     public:
         explicit SwapPiece( Piece** a, Piece** b, const QPointF& posA, const QPointF& posB )
         : m_pieceA(a), m_pieceB(b), m_posA(posA), m_posB(posB) {
-            setText( "SwapPiece" );
+            setText( QLatin1String( "SwapPiece" ) );
         }
         virtual int id() const {
             return ID_SWAPPIECE;
