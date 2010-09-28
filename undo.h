@@ -21,7 +21,7 @@
 
 #include <QPointF>
 #include <QUndoCommand>
-
+#include <klocale.h>
 #include "piece.h"
 
 const int ID_HIDEPIECE = 100;
@@ -31,7 +31,7 @@ class HidePiece : public QUndoCommand
 {
     public:
         explicit HidePiece( Piece* piece ) : m_piece(piece) {
-            setText( QLatin1String( "HidePiece" ) );
+            setText( i18n( "Hide Piece" ) );
         }
         virtual int id() const {
             return ID_HIDEPIECE;
@@ -55,7 +55,7 @@ class SwapPiece : public QUndoCommand
     public:
         explicit SwapPiece( Piece** a, Piece** b, const QPointF& posA, const QPointF& posB )
         : m_pieceA(a), m_pieceB(b), m_posA(posA), m_posB(posB) {
-            setText( QLatin1String( "SwapPiece" ) );
+            setText( i18n( "Swap Piece" ) );
         }
         virtual int id() const {
             return ID_SWAPPIECE;
