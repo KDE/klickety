@@ -22,7 +22,7 @@ kde4_add_app_icon(klickety_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/pics/hi*-app-klicke
 
 kde4_add_executable(klickety ${klickety_SRCS})
 
-target_link_libraries(klickety ${KDE4_KDEUI_LIBS} ${KDE4_KNOTIFYCONFIG_LIBS} ${KDEGAMES_LIBRARY})
+target_link_libraries(klickety ${KDE4_KDEUI_LIBS} ${KDE4_KNOTIFYCONFIG_LIBS} ${KDEGAMES_LIBRARY} ${KDE4_KIO_LIBRARY})
 
 install(TARGETS klickety DESTINATION ${BIN_INSTALL_DIR})
 install(FILES klickety.kcfg klickety.notifyrc klicketyui.rc DESTINATION ${DATA_INSTALL_DIR}/klickety)
