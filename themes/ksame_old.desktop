@@ -1,18 +1,7 @@
 [KGameTheme]
 Name=KSame Old
-Name[es]=KSame antiguo
-Name[pt]=KSame Antigo
-Name[pt_BR]=KSame antigo
-Name[sv]=Gammalt Ksame
-Name[uk]=Стара «Та сама гра»
 Name[x-test]=xxKSame Oldxx
 Description=Klickety KSame Old Theme
-Description[es]=Tema antiguo de KSame para Klickety
-Description[it]=Vecchio tema KSame di Klickety
-Description[pt]=Tema antigo do KSame do Klickety
-Description[pt_BR]=Tema antigo do KSame do Klickety
-Description[sv]=Klickety gammalt Ksame tema
-Description[uk]=Стара тема «Тієї самої гри» Klickety
 Description[x-test]=xxKlickety KSame Old Themexx
 VersionFormat=1
 Author=Ni Hui

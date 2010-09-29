@@ -1,20 +1,7 @@
 [KGameTheme]
 Name=KSame
-Name[es]=KSame
-Name[it]=KSame
-Name[nl]=KSame
-Name[pt]=KSame
-Name[pt_BR]=KSame
-Name[sv]=Ksame
-Name[uk]=KSame
 Name[x-test]=xxKSamexx
 Description=Klickety KSame Theme
-Description[es]=Tema de KSame para Klickety
-Description[it]=Tema KSame di Klickety
-Description[pt]=Tema KSame do Klickety
-Description[pt_BR]=Tema KSame do Klickety
-Description[sv]=Klickety Ksame tema
-Description[uk]=Тема «Тієї самої гри» Klickety
 Description[x-test]=xxKlickety KSame Themexx
 VersionFormat=1
 Author=Ni Hui

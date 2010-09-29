@@ -1,24 +1,7 @@
 [Desktop Entry]
 Name=Klickety
-Name[be]=Klickety
-Name[de]=Klickety
-Name[es]=Klickety
-Name[ga]=Klickety
-Name[it]=Klickety
-Name[pt]=Klickety
-Name[pt_BR]=Klickety
-Name[sv]=Klickety
-Name[uk]=Klickety
 Name[x-test]=xxKlicketyxx
 GenericName=Board Game
-GenericName[es]=Juego de tablero
-GenericName[it]=Gioco da tavolo
-GenericName[mai]=बिसात केर खेल
-GenericName[nl]=Bordspel
-GenericName[pt]=Jogo de Tabuleiro
-GenericName[pt_BR]=Jogo de tabuleiro
-GenericName[sv]=Brädspel
-GenericName[uk]=Гра на дошці
 GenericName[x-test]=xxBoard Gamexx
 Icon=klickety
 Exec=klickety -caption "%c"
