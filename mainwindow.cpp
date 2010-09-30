@@ -250,7 +250,7 @@ void MainWindow::saveGame()
 void MainWindow::changeMarkedCount( int markedCount )
 {
     int markedScore = ( markedCount < 2 ) ? 0 : ( ( markedCount - 2 ) * ( markedCount - 2 ) );
-    statusBar()->changeItem( i18n( "Marked: %1 (%2 Points)", markedCount, markedScore ), 3 );
+    statusBar()->changeItem( i18np( "Marked: %2 (1 Point)", "Marked: %2 (%1 Points)", markedScore, markedCount ), 3 );
 }
 
 void MainWindow::changeScore( int remainCount )
