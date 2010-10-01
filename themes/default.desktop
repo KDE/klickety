@@ -1,10 +1,12 @@
 [KGameTheme]
 Name=Classic
+Name[en_GB]=Classic
 Name[pt]=Clássico
 Name[sv]=Klassiskt
 Name[uk]=Класична
 Name[x-test]=xxClassicxx
 Description=Klickety Classic Theme
+Description[en_GB]=Klickety Classic Theme
 Description[pt]=Tema Clássico do Klickety
 Description[sv]=Klickety klassiskt tema
 Description[uk]=Класична тема Klickety

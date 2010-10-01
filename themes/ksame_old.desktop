@@ -1,10 +1,12 @@
 [KGameTheme]
 Name=KSame Old
+Name[en_GB]=KSame Old
 Name[pt]=KSame Antigo
 Name[sv]=Gammalt Ksame
 Name[uk]=Стара «Та сама гра»
 Name[x-test]=xxKSame Oldxx
 Description=Klickety KSame Old Theme
+Description[en_GB]=Klickety KSame Old Theme
 Description[pt]=Tema Antigo do KSame para o Klickety
 Description[sv]=Klickety gammalt Ksame tema
 Description[uk]=Стара тема «Тієї самої гри» Klickety

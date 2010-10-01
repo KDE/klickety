@@ -1,10 +1,12 @@
 [Desktop Entry]
 Name=Klickety
+Name[en_GB]=Klickety
 Name[pt]=Klickety
 Name[sv]=Klickety
 Name[uk]=Klickety
 Name[x-test]=xxKlicketyxx
 GenericName=Board Game
+GenericName[en_GB]=Board Game
 GenericName[pt]=Jogo de Tabuleiro
 GenericName[sv]=Brädspel
 GenericName[uk]=Гра на дошці

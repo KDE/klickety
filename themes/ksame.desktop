@@ -1,10 +1,12 @@
 [KGameTheme]
 Name=KSame
+Name[en_GB]=KSame
 Name[pt]=KSame
 Name[sv]=Ksame
 Name[uk]=Та сама гра
 Name[x-test]=xxKSamexx
 Description=Klickety KSame Theme
+Description[en_GB]=Klickety KSame Theme
 Description[pt]=Tema do KSame para o Klickety
 Description[sv]=Klickety Ksame tema
 Description[uk]=Тема «Тієї самої гри» Klickety
