@@ -2,12 +2,14 @@
 Name=Klickety
 Name[en_GB]=Klickety
 Name[pt]=Klickety
+Name[pt_BR]=Klickety
 Name[sv]=Klickety
 Name[uk]=Klickety
 Name[x-test]=xxKlicketyxx
 GenericName=Board Game
 GenericName[en_GB]=Board Game
 GenericName[pt]=Jogo de Tabuleiro
+GenericName[pt_BR]=Jogo de tabuleiro
 GenericName[sv]=Brädspel
 GenericName[uk]=Гра на дошці
 GenericName[x-test]=xxBoard Gamexx

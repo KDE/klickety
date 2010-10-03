@@ -2,6 +2,7 @@
 Name=SameGame
 Name[en_GB]=SameGame
 Name[pt]=SameGame
+Name[pt_BR]=SameGame
 Name[sv]=Samegame
 Name[uk]=Та сама гра
 Name[x-test]=xxSameGamexx
@@ -11,6 +12,7 @@ X-DocPath=ksame/index.html
 GenericName=Board Game
 GenericName[en_GB]=Board Game
 GenericName[pt]=Jogo de Tabuleiro
+GenericName[pt_BR]=Jogo de tabuleiro
 GenericName[sv]=Brädspel
 GenericName[uk]=Гра на дошці
 GenericName[x-test]=xxBoard Gamexx
