@@ -11,6 +11,7 @@ Type=Application
 X-DocPath=ksame/index.html
 GenericName=Board Game
 GenericName[en_GB]=Board Game
+GenericName[nds]=Brettspeel
 GenericName[pt]=Jogo de Tabuleiro
 GenericName[pt_BR]=Jogo de tabuleiro
 GenericName[sv]=Brädspel
