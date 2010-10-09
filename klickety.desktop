@@ -1,20 +1,25 @@
 [Desktop Entry]
 Name=Klickety
 Name[en_GB]=Klickety
+Name[es]=Klickety
 Name[nds]=Klickety
 Name[pt]=Klickety
 Name[pt_BR]=Klickety
 Name[sv]=Klickety
 Name[uk]=Klickety
 Name[x-test]=xxKlicketyxx
+Name[zh_TW]=Klickety
 GenericName=Board Game
 GenericName[en_GB]=Board Game
+GenericName[es]=Juego de tablero
 GenericName[nds]=Brettspeel
 GenericName[pt]=Jogo de Tabuleiro
 GenericName[pt_BR]=Jogo de tabuleiro
 GenericName[sv]=Brädspel
+GenericName[tr]=Tahta Oyunu
 GenericName[uk]=Гра на дошці
 GenericName[x-test]=xxBoard Gamexx
+GenericName[zh_TW]=棋盤遊戲
 Icon=klickety
 Exec=klickety -caption "%c"
 Type=Application

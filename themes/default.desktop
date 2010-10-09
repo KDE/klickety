@@ -1,19 +1,24 @@
 [KGameTheme]
 Name=Classic
 Name[en_GB]=Classic
+Name[es]=Clásico
 Name[nds]=Klass'sch
 Name[pt]=Clássico
 Name[pt_BR]=Clássico
 Name[sv]=Klassiskt
+Name[tr]=Klasik
 Name[uk]=Класична
 Name[x-test]=xxClassicxx
+Name[zh_TW]=傳統
 Description=Klickety Classic Theme
 Description[en_GB]=Klickety Classic Theme
+Description[es]=Tema clásico de Klickety
 Description[pt]=Tema Clássico do Klickety
 Description[pt_BR]=Tema clássico do Klickety
 Description[sv]=Klickety klassiskt tema
 Description[uk]=Класична тема Klickety
 Description[x-test]=xxKlickety Classic Themexx
+Description[zh_TW]=Klickety 傳統主題
 VersionFormat=1
 Author=Ni Hui
 AuthorEmail=shuizhuyuanluo@126.com
