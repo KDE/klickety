@@ -26,8 +26,8 @@ target_link_libraries(klickety ${KDE4_KDEUI_LIBS} ${KDE4_KNOTIFYCONFIG_LIBS} ${K
 
 install(TARGETS klickety DESTINATION ${BIN_INSTALL_DIR})
 install(FILES klickety.kcfg klickety.notifyrc klicketyui.rc DESTINATION ${DATA_INSTALL_DIR}/klickety)
-install(FILES klickety.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-install(FILES ksame.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(PROGRAMS klickety.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(PROGRAMS ksame.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 add_subdirectory(pics)
 add_subdirectory(themes)
