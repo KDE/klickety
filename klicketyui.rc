@@ -18,14 +18,8 @@
     <ToolBar name="mainToolBar">
         <text>Main Toolbar</text>
         <Action name="game_new"/>
-        <Action name="game_load" />
-        <Action name="game_save" />
-        <Separator/>
-        <Action name="game_restart"/>
         <Separator/>
         <Action name="game_pause"/>
-        <Separator/>
-        <Action name="game_highscores" />
         <Separator/>
         <Action name="move_undo" />
         <Action name="move_redo" />
