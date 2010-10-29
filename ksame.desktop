@@ -2,6 +2,7 @@
 Name=SameGame
 Name[en_GB]=SameGame
 Name[es]=SameGame
+Name[nl]=SameGame
 Name[pt]=SameGame
 Name[pt_BR]=SameGame
 Name[sv]=Samegame
@@ -16,6 +17,7 @@ GenericName=Board Game
 GenericName[en_GB]=Board Game
 GenericName[es]=Juego de tablero
 GenericName[nds]=Brettspeel
+GenericName[nl]=Bordspel
 GenericName[pt]=Jogo de Tabuleiro
 GenericName[pt_BR]=Jogo de tabuleiro
 GenericName[sv]=Brädspel
