@@ -337,7 +337,7 @@ void GameScene::checkGameFinished()
     bool finished = isGameFinished();
     if ( finished && m_isFinished != finished ) {
         KNotification::event( QLatin1String( "gamefinished" ) );
-        m_messenger->showMessage( i18n ("game finished") , KGamePopupItem::Center );
+        m_messenger->showMessage( i18n( "game finished" ) , KGamePopupItem::Center );
         emit canUndoChanged( false );
         emit canRedoChanged( false );
         emit gameFinished( remain );
@@ -656,7 +656,6 @@ void GameScene::updateBoundLines()
             int downY = j + 1;
             if ( rightX < PWC && m_pieces[j*PWC+rightX]->isEnabled()
                 && m_pieces[j*PWC+rightX]->m_color != item->m_color ) {
-//                 rightLine->setPen( pen );
                 rightLine->setLine( elementsSize-1, 0-1, elementsSize-1, elementsSize-1 );
                 rightLine->show();
             }
@@ -664,7 +663,6 @@ void GameScene::updateBoundLines()
                 rightLine->hide();
             if ( downY < PHC && m_pieces[downY*PWC+i]->isEnabled()
                 && m_pieces[downY*PWC+i]->m_color != item->m_color ) {
-//                 bottomLine->setPen( pen );
                 bottomLine->setLine( 0-1, elementsSize-1, elementsSize-1, elementsSize-1 );
                 bottomLine->show();
             }
@@ -678,8 +676,22 @@ void GameScene::drawBackground( QPainter* painter, const QRectF& rect )
 {
     switch ( m_backgroundType ) {
         case Settings::EnumBgType::theme: {
-            QPixmap pix = m_renderer.spritePixmap( QLatin1String( "BACKGROUND" ), rect.toRect().size() );
-            painter->drawPixmap( rect.topLeft(), pix );
+            // NOTE: the following is a workaround for https://bugs.kde.org/show_bug.cgi?id=243573
+            // cache the background pixmap locally in order to reduce the spritePixmap traffic when resizing
+            static QString theme_pre( m_renderer.theme() );
+            static QSize size_pre( rect.toRect().size() );
+            static QPixmap pix( m_renderer.spritePixmap( QLatin1String( "BACKGROUND" ), size_pre ) );
+            QSize size_offset = size_pre - rect.toRect().size();
+            if ( size_offset.width() < -100 || size_offset.height() < -100 || theme_pre != m_renderer.theme() ) {
+                qWarning() << "export";
+                theme_pre = m_renderer.theme();
+                size_pre = rect.toRect().size();
+                pix = m_renderer.spritePixmap( QLatin1String( "BACKGROUND" ), size_pre );
+                painter->drawPixmap( rect.topLeft(), pix );
+            }
+            else {
+                painter->drawPixmap( rect.topLeft(), pix.scaled( rect.toRect().size() ) );
+            }
             break;
         }
         case 3: // the color button
@@ -689,7 +701,13 @@ void GameScene::drawBackground( QPainter* painter, const QRectF& rect )
         }
         case 4: // the image url requester
         case Settings::EnumBgType::image: {
-            QImage img( Settings::bgImage().path() );
+            // cache the background image locally in order to reduce the file opening traffic when resizing
+            static QString img_filepath( Settings::bgImage().path() );
+            static QImage img( img_filepath );
+            if ( img_filepath != Settings::bgImage().path() ) {
+                img_filepath = Settings::bgImage().path();
+                img = QImage( img_filepath );
+            }
             if ( !img.isNull() )
                 painter->drawImage( rect, img );
             else
