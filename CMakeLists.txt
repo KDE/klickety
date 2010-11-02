@@ -20,7 +20,7 @@ kde4_add_executable(klickety ${klickety_SRCS})
 
 target_link_libraries(klickety ${KDE4_KDEUI_LIBS} ${KDE4_KNOTIFYCONFIG_LIBS} kdegames ${KDE4_KIO_LIBRARY})
 
-install(TARGETS klickety DESTINATION ${BIN_INSTALL_DIR})
+install(TARGETS klickety ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES klickety.kcfg klickety.notifyrc klicketyui.rc DESTINATION ${DATA_INSTALL_DIR}/klickety)
 install(PROGRAMS klickety.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(PROGRAMS ksame.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
