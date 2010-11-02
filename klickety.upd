@@ -1,0 +1,4 @@
+# inherit ksame highscores
+Id=klickety-2.0-inherit-ksame-highscore
+File=ksamerc,klicketyrc
+Script=klickety-2.0-inherit-ksame-highscore.pl,perl

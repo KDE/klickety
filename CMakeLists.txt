@@ -25,5 +25,10 @@ install(FILES klickety.kcfg klickety.notifyrc klicketyui.rc DESTINATION ${DATA_I
 install(PROGRAMS klickety.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(PROGRAMS ksame.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
+if(NOT WIN32)
+    install(PROGRAMS klickety-2.0-inherit-ksame-highscore.pl DESTINATION ${KCONF_UPDATE_INSTALL_DIR})
+    install(FILES klickety.upd DESTINATION ${KCONF_UPDATE_INSTALL_DIR})
+endif(NOT WIN32)
+
 add_subdirectory(pics)
 add_subdirectory(themes)
