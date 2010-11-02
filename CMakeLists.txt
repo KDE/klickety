@@ -1,8 +1,5 @@
 project(klickety)
 
-find_package(KDE4 REQUIRED)
-find_package(LibKDEGames REQUIRED)
-
 include_directories(${KDE4_INCLUDES} ${KDEGAMES_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
