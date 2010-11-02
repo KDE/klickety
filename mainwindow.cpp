@@ -67,7 +67,6 @@ m_lastRemainCount(0)
         statusBar()->insertItem( i18n( "Score: 0" ), 4 );
         connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeScore(int)) );
         connect( m_scene, SIGNAL(markedCountChanged(int)), this, SLOT(changeMarkedCount(int)) );
-        setWindowTitle( i18n( "Klickety - KSame compatibility mode" ) );
     }
     else {
         m_gameClock = new KGameClock( this, KGameClock::MinSecOnly );
@@ -291,7 +290,7 @@ void MainWindow::showHighscores()
     if ( m_KSameMode ) {
         QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
         d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
-        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
+        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
         d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
         d->exec();
         delete d;
@@ -322,7 +321,7 @@ void MainWindow::onGameOver( int remainCount )
 
         QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
         d->addLocalizedConfigGroupNames( KGameDifficulty::localizedLevelStrings() );
-        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "KSame Mode" ) ) );
+        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
         d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
 
         KScoreDialog::FieldInfo scoreInfo;

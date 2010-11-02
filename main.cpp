@@ -34,9 +34,6 @@ int main( int argc, char* argv[] )
                           KAboutData::License_GPL,
                           ki18n( "(c) 2002-2005, Nicolas Hadacek\n(c) 2010, Ni Hui" ),
                           KLocalizedString(), "http://games.kde.org/klickety" );
-    aboutData.addAuthor( ki18n( "Nicolas Hadacek" ), ki18n( "Original author" ), "hadacek@kde.org" );
-    aboutData.addAuthor( ki18n( "Ni Hui" ), ki18n( "Rewrite for KDE4. Current maintainer" ), "shuizhuyuanluo@126.com" );
-    aboutData.addCredit( ki18n( "Dan Hill" ), ki18n( "Icons" ) );
 
     KCmdLineArgs::init( argc, argv, &aboutData );
 
@@ -49,12 +46,6 @@ int main( int argc, char* argv[] )
     options.add( "KSameMode", ki18n( "Start with KSame compatibility mode" ) );
     KCmdLineArgs::addCmdLineOptions( options );
 
-    KApplication app;
-    KGlobal::locale()->insertCatalog( QLatin1String(  "libkdegames" ) );
-    //resource directory for KNewStuff2
-//     KStandardDirs::locateLocal("appdata", "themes/");
-
-    bool KSameMode = false;
     KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
     if ( args->isSet( "VeryEasy" ) )
         Settings::setLevel( KGameDifficulty::VeryEasy );
@@ -64,9 +55,32 @@ int main( int argc, char* argv[] )
         Settings::setLevel( KGameDifficulty::Medium );
     if ( args->isSet( "Hard" ) )
         Settings::setLevel( KGameDifficulty::Hard );
-    if ( args->isSet( "KSameMode" ) )
-        KSameMode = true;
+    bool KSameMode = args->isSet( "KSameMode" );
     args->clear();
+
+    if ( KSameMode )
+    {
+        aboutData.setProgramName( ki18n( "SameGame" ) );
+        aboutData.setProgramIconName( "ksame" );
+        aboutData.setShortDescription( ki18n( "A little game about balls and how to get rid of them" ) );
+        aboutData.addAuthor( ki18n( "Marcus Kreutzberger"), ki18n( "Original author" ), "kreutzbe@informatik.mu-luebeck.de" );
+        aboutData.addAuthor( ki18n( "Henrique Pinto"), ki18n( "Past maintainer" ), "henrique.pinto@kdemail.net" );
+        aboutData.addAuthor( ki18n( "Ni Hui" ), ki18n( "Integration with Klickety. Current maintainer" ), "shuizhuyuanluo@126.com" );
+        aboutData.addCredit( ki18n( "Johann Ollivier Lapeyre"), ki18n("Artwork"), "johann.ollivierlapeyre@gmail.com" );
+    }
+    else
+    {
+        aboutData.addAuthor( ki18n( "Nicolas Hadacek" ), ki18n( "Original author" ), "hadacek@kde.org" );
+        aboutData.addAuthor( ki18n( "Ni Hui" ), ki18n( "Rewrite for KDE4. Current maintainer" ), "shuizhuyuanluo@126.com" );
+        aboutData.addCredit( ki18n( "Dan Hill" ), ki18n( "Icons" ) );
+    }
+
+    KApplication app;
+
+    KGlobal::locale()->insertCatalog( QLatin1String( "libkdegames" ) );
+
+    //resource directory for KNewStuff2
+//     KStandardDirs::locateLocal("appdata", "themes/");
 
     // see if we are starting with session management
     if ( app.isSessionRestored() ) {
