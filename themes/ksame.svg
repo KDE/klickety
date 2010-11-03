@@ -65,25 +65,6 @@
          style="stop-color:#fff466;stop-opacity:1;" />
     </linearGradient>
     <linearGradient
-       id="linearGradient58640">
-      <stop
-         style="stop-color:#e7decf;stop-opacity:1;"
-         offset="0"
-         id="stop58642" />
-      <stop
-         id="stop58648"
-         offset="0.5"
-         style="stop-color:#e7decf;stop-opacity:1;" />
-      <stop
-         style="stop-color:#f5a1ca;stop-opacity:1;"
-         offset="0.75"
-         id="stop58650" />
-      <stop
-         style="stop-color:#edb000;stop-opacity:1;"
-         offset="1"
-         id="stop58644" />
-    </linearGradient>
-    <linearGradient
        id="linearGradient57663">
       <stop
          style="stop-color:#f382c1;stop-opacity:1;"
@@ -93,25 +74,6 @@
          style="stop-color:#ffeea6;stop-opacity:1;"
          offset="1"
          id="stop57667" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient54743">
-      <stop
-         style="stop-color:#b69d95;stop-opacity:0"
-         offset="0"
-         id="stop54745" />
-      <stop
-         id="stop54751"
-         offset="0.5"
-         style="stop-color:#cb7c99;stop-opacity:1;" />
-      <stop
-         style="stop-color:#e5c8c5;stop-opacity:1;"
-         offset="0.75"
-         id="stop54753" />
-      <stop
-         style="stop-color:#000000;stop-opacity:1"
-         offset="1"
-         id="stop54747" />
     </linearGradient>
     <linearGradient
        id="linearGradient47557">
@@ -127,17 +89,6 @@
          style="stop-color:#f8a900;stop-opacity:1;"
          offset="1"
          id="stop47561" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient46580">
-      <stop
-         style="stop-color:#f8e600;stop-opacity:0;"
-         offset="0"
-         id="stop46582" />
-      <stop
-         style="stop-color:#f8e600;stop-opacity:0"
-         offset="1"
-         id="stop46584" />
     </linearGradient>
     <linearGradient
        id="linearGradient43665">
@@ -185,17 +136,6 @@
          id="stop29497" />
     </linearGradient>
     <linearGradient
-       id="linearGradient28516">
-      <stop
-         style="stop-color:#faf8f9;stop-opacity:1;"
-         offset="0"
-         id="stop28518" />
-      <stop
-         style="stop-color:#faf8f9;stop-opacity:0;"
-         offset="1"
-         id="stop28520" />
-    </linearGradient>
-    <linearGradient
        id="linearGradient25599">
       <stop
          style="stop-color:#ffffff;stop-opacity:1;"
@@ -240,88 +180,6 @@
          offset="1"
          style="stop-color:#000000;stop-opacity:0;" />
     </linearGradient>
-    <linearGradient
-       id="linearGradient14520">
-      <stop
-         style="stop-color:#f8e392;stop-opacity:1;"
-         offset="0"
-         id="stop14522" />
-      <stop
-         style="stop-color:#dab00e;stop-opacity:1;"
-         offset="1"
-         id="stop14524" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient13482">
-      <stop
-         style="stop-color:#000000;stop-opacity:1;"
-         offset="0"
-         id="stop13484" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="1"
-         id="stop13486" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient6627">
-      <stop
-         id="stop6629"
-         offset="0"
-         style="stop-color:#505a67;stop-opacity:1;" />
-      <stop
-         style="stop-color:#c1cbd9;stop-opacity:1;"
-         offset="0.5"
-         id="stop6631" />
-      <stop
-         id="stop6633"
-         offset="0.75"
-         style="stop-color:#3c4b61;stop-opacity:1;" />
-      <stop
-         id="stop6635"
-         offset="1"
-         style="stop-color:#ffffff;stop-opacity:1;" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient5640">
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="0"
-         id="stop5642" />
-      <stop
-         style="stop-color:#000000;stop-opacity:1;"
-         offset="1"
-         id="stop5644" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient3682">
-      <stop
-         style="stop-color:#bec9d7;stop-opacity:1;"
-         offset="0"
-         id="stop3684" />
-      <stop
-         id="stop3690"
-         offset="0.5"
-         style="stop-color:#e5e9ef;stop-opacity:1;" />
-      <stop
-         style="stop-color:#a1afc5;stop-opacity:1;"
-         offset="0.75"
-         id="stop3692" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
-         offset="1"
-         id="stop3686" />
-    </linearGradient>
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern3414"
-       id="pattern16087"
-       patternTransform="matrix(0.3515627,0,0,0.3515627,-1250.4914,388.74812)" />
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern3418"
-       id="pattern16084"
-       patternTransform="matrix(0.4639195,0,0,0.4639195,-1250.4914,388.74812)" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient9091">
@@ -466,69 +324,6 @@
        y1="827.6109"
        x2="-185.92302"
        y2="827.6109" />
-    <pattern
-       id="pattern3407"
-       patternTransform="translate(9.1512374,6.3892626)"
-       height="362.84375"
-       width="391.4375"
-       patternUnits="userSpaceOnUse">
-      <path
-         style="opacity:1;fill:#fff299;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 28.59375,1.0658141e-13 L 28.59375,5.71875 L 34.28125,5.71875 L 34.28125,1.0658141e-13 L 28.59375,1.0658141e-13 z M 151.4375,1.0658141e-13 L 151.4375,5.71875 L 157.15625,5.71875 L 157.15625,1.0658141e-13 L 151.4375,1.0658141e-13 z M 180,1.0658141e-13 L 180,5.71875 L 185.71875,5.71875 L 185.71875,1.0658141e-13 L 180,1.0658141e-13 z M 354.28125,1.0658141e-13 L 354.28125,5.71875 L 360,5.71875 L 360,1.0658141e-13 L 354.28125,1.0658141e-13 z M 85.718753,8.5625 L 85.718753,14.28125 L 91.437503,14.28125 L 91.437503,8.5625 L 85.718753,8.5625 z M 174.28125,8.5625 L 174.28125,14.28125 L 180,14.28125 L 180,8.5625 L 174.28125,8.5625 z M 191.4375,8.5625 L 191.4375,14.28125 L 197.15625,14.28125 L 197.15625,8.5625 L 191.4375,8.5625 z M 111.4375,11.4375 L 111.4375,17.125 L 117.15625,17.125 L 117.15625,11.4375 L 111.4375,11.4375 z M 271.4375,11.4375 L 271.4375,17.125 L 277.15625,17.125 L 277.15625,11.4375 L 271.4375,11.4375 z M 345.71875,11.4375 L 345.71875,17.125 L 351.4375,17.125 L 351.4375,11.4375 L 345.71875,11.4375 z M 102.875,14.28125 L 102.875,20 L 108.59375,20 L 108.59375,14.28125 L 102.875,14.28125 z M 328.59375,17.125 L 328.59375,22.84375 L 334.28125,22.84375 L 334.28125,17.125 L 328.59375,17.125 z M 60.000003,20 L 60.000003,25.71875 L 65.718753,25.71875 L 65.718753,20 L 60.000003,20 z M 200,20 L 200,25.71875 L 205.71875,25.71875 L 205.71875,20 L 200,20 z M 22.875,22.84375 L 22.875,28.5625 L 28.59375,28.5625 L 28.59375,22.84375 L 22.875,22.84375 z M 174.28125,25.71875 L 174.28125,31.4375 L 180,31.4375 L 180,25.71875 L 174.28125,25.71875 z M 314.28125,25.71875 L 314.28125,31.4375 L 311.4375,31.4375 L 311.4375,37.125 L 317.15625,37.125 L 317.15625,31.4375 L 320,31.4375 L 320,25.71875 L 314.28125,25.71875 z M 365.71875,31.4375 L 365.71875,37.125 L 371.4375,37.125 L 371.4375,31.4375 L 365.71875,31.4375 z M 211.4375,37.125 L 211.4375,42.843745 L 217.15625,42.843745 L 217.15625,37.125 L 211.4375,37.125 z M 91.437503,40 L 91.437503,45.718745 L 97.156253,45.718745 L 97.156253,40 L 91.437503,40 z M 200,40 L 200,45.718745 L 205.71875,45.718745 L 205.71875,40 L 200,40 z M 117.15625,42.843745 L 117.15625,48.562495 L 122.875,48.562495 L 122.875,42.843745 L 117.15625,42.843745 z M 57.156253,48.562495 L 57.156253,54.281245 L 62.875003,54.281245 L 62.875003,48.562495 L 57.156253,48.562495 z M 114.28125,54.281245 L 114.28125,59.999995 L 120,59.999995 L 120,54.281245 L 114.28125,54.281245 z M 165.71875,54.281245 L 165.71875,59.999995 L 171.4375,59.999995 L 171.4375,54.281245 L 165.71875,54.281245 z M 128.59375,59.999995 L 128.59375,65.718745 L 134.28125,65.718745 L 134.28125,59.999995 L 128.59375,59.999995 z M 328.59375,59.999995 L 328.59375,65.718745 L 334.28125,65.718745 L 334.28125,59.999995 L 328.59375,59.999995 z M 368.59375,59.999995 L 368.59375,65.718745 L 374.28125,65.718745 L 374.28125,59.999995 L 368.59375,59.999995 z M 354.28125,62.843745 L 354.28125,68.562495 L 360,68.562495 L 360,62.843745 L 354.28125,62.843745 z M 251.4375,65.718745 L 251.4375,71.437495 L 257.15625,71.437495 L 257.15625,65.718745 L 251.4375,65.718745 z M 74.281253,68.562495 L 74.281253,74.281245 L 80.000003,74.281245 L 80.000003,68.562495 L 74.281253,68.562495 z M 188.59375,71.437495 L 188.59375,77.124995 L 194.28125,77.124995 L 194.28125,71.437495 L 188.59375,71.437495 z M 60.000003,74.281245 L 60.000003,79.999995 L 65.718753,79.999995 L 65.718753,74.281245 L 60.000003,74.281245 z M 245.71875,77.124995 L 245.71875,82.843745 L 251.4375,82.843745 L 251.4375,77.124995 L 245.71875,77.124995 z M 128.59375,82.843745 L 128.59375,88.562495 L 134.28125,88.562495 L 137.15625,88.562495 L 137.15625,82.843745 L 134.28125,82.843745 L 128.59375,82.843745 z M 140,82.843745 L 140,88.562495 L 145.71875,88.562495 L 145.71875,82.843745 L 140,82.843745 z M 311.4375,91.437495 L 311.4375,97.124995 L 317.15625,97.124995 L 317.15625,91.437495 L 311.4375,91.437495 z M 265.71875,94.281245 L 265.71875,99.999995 L 271.4375,99.999995 L 271.4375,94.281245 L 265.71875,94.281245 z M 28.59375,97.124995 L 28.59375,102.84375 L 34.28125,102.84375 L 34.28125,97.124995 L 28.59375,97.124995 z M 80.000003,97.124995 L 80.000003,102.84375 L 82.875003,102.84375 L 82.875003,108.5625 L 88.593753,108.5625 L 88.593753,102.84375 L 85.718753,102.84375 L 85.718753,97.124995 L 80.000003,97.124995 z M 97.156253,97.124995 L 97.156253,102.84375 L 102.875,102.84375 L 102.875,97.124995 L 97.156253,97.124995 z M 105.71875,99.999995 L 105.71875,105.71875 L 111.4375,105.71875 L 111.4375,99.999995 L 105.71875,99.999995 z M 180,102.84375 L 180,108.5625 L 185.71875,108.5625 L 185.71875,102.84375 L 180,102.84375 z M 120,105.71875 L 120,111.4375 L 125.71875,111.4375 L 125.71875,105.71875 L 120,105.71875 z M 200,105.71875 L 200,111.4375 L 205.71875,111.4375 L 205.71875,105.71875 L 200,105.71875 z M 308.59375,105.71875 L 308.59375,111.4375 L 314.28125,111.4375 L 314.28125,105.71875 L 308.59375,105.71875 z M 365.71875,105.71875 L 365.71875,111.4375 L 371.4375,111.4375 L 371.4375,105.71875 L 365.71875,105.71875 z M 80.000003,111.4375 L 80.000003,117.125 L 85.718753,117.125 L 85.718753,111.4375 L 80.000003,111.4375 z M 237.15625,111.4375 L 237.15625,117.125 L 242.875,117.125 L 242.875,111.4375 L 237.15625,111.4375 z M 345.71875,111.4375 L 345.71875,117.125 L 351.4375,117.125 L 351.4375,111.4375 L 345.71875,111.4375 z M 45.71875,117.125 L 45.71875,122.84375 L 51.4375,122.84375 L 51.4375,117.125 L 45.71875,117.125 z M 117.15625,117.125 L 117.15625,122.84375 L 122.875,122.84375 L 122.875,117.125 L 117.15625,117.125 z M 271.4375,117.125 L 271.4375,122.84375 L 277.15625,122.84375 L 277.15625,117.125 L 271.4375,117.125 z M 5.71875,122.84375 L 5.71875,128.5625 L 11.4375,128.5625 L 11.4375,122.84375 L 5.71875,122.84375 z M 134.28125,128.5625 L 134.28125,134.28125 L 140,134.28125 L 140,128.5625 L 134.28125,128.5625 z M 205.71875,128.5625 L 205.71875,134.28125 L 211.4375,134.28125 L 211.4375,128.5625 L 205.71875,128.5625 z M 331.4375,128.5625 L 331.4375,134.28125 L 337.15625,134.28125 L 337.15625,128.5625 L 331.4375,128.5625 z M 117.15625,134.28125 L 117.15625,140 L 122.875,140 L 122.875,134.28125 L 117.15625,134.28125 z M 151.4375,134.28125 L 151.4375,140 L 157.15625,140 L 157.15625,134.28125 L 151.4375,134.28125 z M 71.437503,137.125 L 71.437503,142.84375 L 77.156253,142.84375 L 77.156253,137.125 L 71.437503,137.125 z M 91.437503,137.125 L 91.437503,142.84375 L 97.156253,142.84375 L 97.156253,137.125 L 91.437503,137.125 z M 177.15625,140 L 177.15625,145.71875 L 182.875,145.71875 L 182.875,140 L 177.15625,140 z M 380,142.84375 L 380,148.5625 L 385.71875,148.5625 L 385.71875,142.84375 L 380,142.84375 z M 245.71875,151.4375 L 245.71875,157.125 L 251.4375,157.125 L 251.4375,151.4375 L 245.71875,151.4375 z M 48.59375,157.125 L 48.59375,162.84375 L 54.28125,162.84375 L 54.28125,157.125 L 48.59375,157.125 z M 354.28125,162.84375 L 354.28125,168.5625 L 360,168.5625 L 360,162.84375 L 354.28125,162.84375 z M 68.593753,165.71875 L 68.593753,168.5625 L 65.718753,168.5625 L 65.718753,174.28125 L 71.437503,174.28125 L 71.437503,171.4375 L 74.281253,171.4375 L 74.281253,165.71875 L 68.593753,165.71875 z M 154.28125,165.71875 L 154.28125,171.4375 L 160,171.4375 L 160,165.71875 L 154.28125,165.71875 z M 254.28125,165.71875 L 254.28125,171.4375 L 260,171.4375 L 260,165.71875 L 254.28125,165.71875 z M 305.71875,171.4375 L 305.71875,177.125 L 311.4375,177.125 L 311.4375,171.4375 L 305.71875,171.4375 z M 17.15625,174.28125 L 17.15625,180 L 22.875,180 L 22.875,174.28125 L 17.15625,174.28125 z M 331.4375,180 L 331.4375,185.71875 L 337.15625,185.71875 L 337.15625,180 L 331.4375,180 z M 385.71875,180 L 385.71875,185.71875 L 391.4375,185.71875 L 391.4375,180 L 385.71875,180 z M 202.875,182.84375 L 202.875,188.5625 L 208.59375,188.5625 L 208.59375,182.84375 L 202.875,182.84375 z M 194.28125,191.4375 L 194.28125,197.125 L 200,197.125 L 200,191.4375 L 194.28125,191.4375 z M 77.156253,194.28125 L 77.156253,200 L 82.875003,200 L 82.875003,194.28125 L 77.156253,194.28125 z M 291.4375,197.125 L 291.4375,202.84375 L 297.15625,202.84375 L 297.15625,197.125 L 291.4375,197.125 z M 131.4375,205.71875 L 131.4375,211.4375 L 137.15625,211.4375 L 137.15625,205.71875 L 131.4375,205.71875 z M 20,214.28125 L 20,220 L 25.71875,220 L 28.59375,220 L 28.59375,214.28125 L 25.71875,214.28125 L 20,214.28125 z M 65.718753,220 L 65.718753,225.71875 L 71.437503,225.71875 L 71.437503,220 L 65.718753,220 z M 91.437503,220 L 91.437503,225.71875 L 97.156253,225.71875 L 97.156253,220 L 91.437503,220 z M 380,228.5625 L 380,234.28125 L 385.71875,234.28125 L 385.71875,228.5625 L 380,228.5625 z M 317.15625,234.28125 L 317.15625,240 L 322.875,240 L 322.875,234.28125 L 317.15625,234.28125 z M 368.59375,237.125 L 368.59375,242.84375 L 374.28125,242.84375 L 374.28125,237.125 L 368.59375,237.125 z M 228.59375,242.84375 L 228.59375,248.5625 L 234.28125,248.5625 L 234.28125,242.84375 L 228.59375,242.84375 z M 288.59375,245.71875 L 288.59375,251.4375 L 285.71875,251.4375 L 285.71875,257.125 L 291.4375,257.125 L 291.4375,251.4375 L 294.28125,251.4375 L 294.28125,245.71875 L 288.59375,245.71875 z M 114.28125,251.4375 L 114.28125,257.125 L 120,257.125 L 120,251.4375 L 114.28125,251.4375 z M 337.15625,257.125 L 337.15625,262.84375 L 342.875,262.84375 L 342.875,257.125 L 337.15625,257.125 z M 74.281253,262.84375 L 74.281253,268.5625 L 80.000003,268.5625 L 80.000003,262.84375 L 74.281253,262.84375 z M 245.71875,265.71875 L 245.71875,271.4375 L 251.4375,271.4375 L 251.4375,265.71875 L 245.71875,265.71875 z M 171.4375,268.5625 L 171.4375,274.28125 L 177.15625,274.28125 L 177.15625,268.5625 L 171.4375,268.5625 z M 357.15625,268.5625 L 357.15625,274.28125 L 362.875,274.28125 L 365.71875,274.28125 L 365.71875,268.5625 L 362.875,268.5625 L 357.15625,268.5625 z M 17.15625,271.4375 L 17.15625,277.125 L 22.875,277.125 L 22.875,271.4375 L 17.15625,271.4375 z M 60.000003,277.125 L 60.000003,282.84375 L 65.718753,282.84375 L 65.718753,277.125 L 60.000003,277.125 z M 308.59375,277.125 L 308.59375,282.84375 L 314.28125,282.84375 L 314.28125,277.125 L 308.59375,277.125 z M 200,285.71875 L 200,291.4375 L 205.71875,291.4375 L 205.71875,285.71875 L 200,285.71875 z M 131.4375,291.4375 L 131.4375,297.125 L 137.15625,297.125 L 137.15625,291.4375 L 131.4375,291.4375 z M 31.4375,294.28125 L 31.4375,300 L 37.15625,300 L 37.15625,294.28125 L 31.4375,294.28125 z M 188.59375,294.28125 L 188.59375,300 L 194.28125,300 L 194.28125,294.28125 L 188.59375,294.28125 z M 297.15625,297.125 L 297.15625,302.84375 L 302.875,302.84375 L 302.875,297.125 L 297.15625,297.125 z M 85.718753,300 L 85.718753,305.71875 L 91.437503,305.71875 L 91.437503,300 L 85.718753,300 z M 162.875,302.84375 L 162.875,308.5625 L 168.59375,308.5625 L 168.59375,302.84375 L 162.875,302.84375 z M 340,305.71875 L 340,311.4375 L 345.71875,311.4375 L 345.71875,305.71875 L 340,305.71875 z M 94.281253,308.5625 L 94.281253,314.28125 L 100,314.28125 L 100,308.5625 L 94.281253,308.5625 z M 108.59375,311.4375 L 108.59375,317.125 L 114.28125,317.125 L 114.28125,311.4375 L 108.59375,311.4375 z M 37.15625,314.28125 L 37.15625,320 L 42.875,320 L 42.875,314.28125 L 37.15625,314.28125 z M 317.15625,314.28125 L 317.15625,320 L 322.875,320 L 322.875,314.28125 L 317.15625,314.28125 z M 165.71875,320 L 165.71875,325.71875 L 171.4375,325.71875 L 171.4375,320 L 165.71875,320 z M 262.875,322.84375 L 262.875,328.5625 L 268.59375,328.5625 L 268.59375,322.84375 L 262.875,322.84375 z M 0,328.5625 L 0,334.28125 L 5.71875,334.28125 L 5.71875,328.5625 L 0,328.5625 z M 162.875,331.4375 L 162.875,337.125 L 168.59375,337.125 L 168.59375,331.4375 L 162.875,331.4375 z M 274.28125,331.4375 L 274.28125,337.125 L 280,337.125 L 280,331.4375 L 274.28125,331.4375 z M 288.59375,331.4375 L 288.59375,337.125 L 294.28125,337.125 L 294.28125,331.4375 L 288.59375,331.4375 z M 262.875,340 L 262.875,345.71875 L 268.59375,345.71875 L 268.59375,340 L 262.875,340 z M 77.156253,342.84375 L 77.156253,348.5625 L 82.875003,348.5625 L 82.875003,342.84375 L 77.156253,342.84375 z M 220,348.5625 L 220,354.28125 L 225.71875,354.28125 L 225.71875,348.5625 L 220,348.5625 z M 308.59375,348.5625 L 308.59375,354.28125 L 314.28125,354.28125 L 314.28125,348.5625 L 308.59375,348.5625 z M 337.15625,357.125 L 337.15625,362.84375 L 342.875,362.84375 L 342.875,357.125 L 337.15625,357.125 z M 374.28125,357.125 L 374.28125,362.84375 L 380,362.84375 L 380,357.125 L 374.28125,357.125 z "
-         id="rect3136" />
-    </pattern>
-    <pattern
-       patternTransform="matrix(0.3515627,0,0,0.3515627,9.1512374,6.3892626)"
-       id="pattern3414"
-       xlink:href="#pattern3407"
-       inkscape:collect="always" />
-    <pattern
-       patternTransform="matrix(0.4639195,0,0,0.4639195,9.1512374,6.3892626)"
-       id="pattern3418"
-       xlink:href="#pattern3414"
-       inkscape:collect="always" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient14520"
-       id="linearGradient18449"
-       gradientUnits="userSpaceOnUse"
-       x1="849.6745"
-       y1="820.70679"
-       x2="764.97351"
-       y2="669.71338" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient14520"
-       id="radialGradient18451"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.465337,-4.4851761e-2,2.8272067e-2,0.9236673,-339.78087,55.986883)"
-       cx="867.22797"
-       cy="758.75977"
-       fx="867.22797"
-       fy="758.75977"
-       r="119.02369" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient17452"
-       id="radialGradient18453"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2.4594764,-0.3750599,0.1598312,1.0481023,-1250.0666,250.98679)"
-       cx="836.89771"
-       cy="645.05157"
-       fx="836.89771"
-       fy="645.05157"
-       r="119.02369" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient13482"
-       id="radialGradient20397"
-       cx="788.81738"
-       cy="718.14355"
-       fx="788.81738"
-       fy="718.14355"
-       r="119.0237"
-       gradientTransform="matrix(1.6816886,-0.9605013,0.8206252,1.4367874,-1190.1246,460.58155)"
-       gradientUnits="userSpaceOnUse" />
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient17452"
@@ -573,398 +368,6 @@
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient25599"
-       id="radialGradient28522"
-       cx="1321.3185"
-       cy="649.46661"
-       fx="1321.3185"
-       fy="649.46661"
-       r="142.59441"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient29499"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient30476"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient31453"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32434"
-       id="linearGradient32440"
-       x1="1533.8383"
-       y1="671.96539"
-       x2="1602.8722"
-       y2="664.97888"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0,-1.6467694)" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25599"
-       id="radialGradient35358"
-       gradientUnits="userSpaceOnUse"
-       cx="1321.3185"
-       cy="649.46661"
-       fx="1321.3185"
-       fy="649.46661"
-       r="142.59441" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient35360"
-       gradientUnits="userSpaceOnUse"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient35362"
-       gradientUnits="userSpaceOnUse"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient35364"
-       gradientUnits="userSpaceOnUse"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32434"
-       id="linearGradient35366"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0,-1.6467694)"
-       x1="1533.8383"
-       y1="671.96539"
-       x2="1602.8722"
-       y2="664.97888" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25599"
-       id="radialGradient35384"
-       gradientUnits="userSpaceOnUse"
-       cx="1321.3185"
-       cy="649.46661"
-       fx="1321.3185"
-       fy="649.46661"
-       r="142.59441" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient35386"
-       gradientUnits="userSpaceOnUse"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient35388"
-       gradientUnits="userSpaceOnUse"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient35390"
-       gradientUnits="userSpaceOnUse"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32434"
-       id="linearGradient35392"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0,-1.6467694)"
-       x1="1533.8383"
-       y1="671.96539"
-       x2="1602.8722"
-       y2="664.97888" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32434"
-       id="linearGradient35395"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,610.96222)"
-       x1="1533.8383"
-       y1="671.96539"
-       x2="1602.8722"
-       y2="664.97888" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25599"
-       id="radialGradient35403"
-       gradientUnits="userSpaceOnUse"
-       cx="1321.3185"
-       cy="649.46661"
-       fx="1321.3185"
-       fy="649.46661"
-       r="142.59441" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient35405"
-       gradientUnits="userSpaceOnUse"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient35407"
-       gradientUnits="userSpaceOnUse"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient35409"
-       gradientUnits="userSpaceOnUse"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient36391"
-       id="linearGradient35413"
-       gradientUnits="userSpaceOnUse"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,611.10657)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient36391"
-       id="linearGradient35416"
-       gradientUnits="userSpaceOnUse"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,611.10657)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient36391"
-       id="linearGradient35419"
-       gradientUnits="userSpaceOnUse"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,611.10657)" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25599"
-       id="radialGradient38354"
-       gradientUnits="userSpaceOnUse"
-       cx="1321.3185"
-       cy="649.46661"
-       fx="1321.3185"
-       fy="649.46661"
-       r="142.59441" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient36391"
-       id="linearGradient38356"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,611.10657)"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient36391"
-       id="linearGradient38358"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,611.10657)"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient36391"
-       id="linearGradient38360"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,611.10657)"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32434"
-       id="linearGradient38362"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,610.96222)"
-       x1="1533.8383"
-       y1="671.96539"
-       x2="1602.8722"
-       y2="664.97888" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25599"
-       id="radialGradient38408"
-       gradientUnits="userSpaceOnUse"
-       cx="1321.3185"
-       cy="649.46661"
-       fx="1321.3185"
-       fy="649.46661"
-       r="142.59441" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38410"
-       gradientUnits="userSpaceOnUse"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38412"
-       gradientUnits="userSpaceOnUse"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38414"
-       gradientUnits="userSpaceOnUse"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32434"
-       id="linearGradient38416"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(0,-1.6467694)"
-       x1="1533.8383"
-       y1="671.96539"
-       x2="1602.8722"
-       y2="664.97888" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32434"
-       id="linearGradient38419"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,200.01754,617.13761)"
-       x1="1533.8383"
-       y1="671.96539"
-       x2="1602.8722"
-       y2="664.97888" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25599"
-       id="radialGradient38427"
-       gradientUnits="userSpaceOnUse"
-       cx="1321.3185"
-       cy="649.46661"
-       fx="1321.3185"
-       fy="649.46661"
-       r="142.59441" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38429"
-       gradientUnits="userSpaceOnUse"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38431"
-       gradientUnits="userSpaceOnUse"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38433"
-       gradientUnits="userSpaceOnUse"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38437"
-       gradientUnits="userSpaceOnUse"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,200.01754,617.28196)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38440"
-       gradientUnits="userSpaceOnUse"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,200.01754,617.28196)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38443"
-       gradientUnits="userSpaceOnUse"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,200.01754,617.28196)" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25599"
        id="radialGradient38453"
        gradientUnits="userSpaceOnUse"
        cx="1321.3185"
@@ -972,96 +375,6 @@
        fx="1321.3185"
        fy="649.46661"
        r="142.59441" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38455"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,200.01754,617.28196)"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38457"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,200.01754,617.28196)"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient29493"
-       id="linearGradient38459"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,200.01754,617.28196)"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32434"
-       id="linearGradient38461"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,200.01754,617.13761)"
-       x1="1533.8383"
-       y1="671.96539"
-       x2="1602.8722"
-       y2="664.97888" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25599"
-       id="radialGradient38463"
-       gradientUnits="userSpaceOnUse"
-       cx="1321.3185"
-       cy="649.46661"
-       fx="1321.3185"
-       fy="649.46661"
-       r="142.59441" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient36391"
-       id="linearGradient38465"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,611.10657)"
-       x1="1645.5564"
-       y1="571.65369"
-       x2="1689.3956"
-       y2="642.05267" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient36391"
-       id="linearGradient38467"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,611.10657)"
-       x1="1456.5565"
-       y1="718.6712"
-       x2="1684.8689"
-       y2="718.6712" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient36391"
-       id="linearGradient38469"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,611.10657)"
-       x1="1715.2443"
-       y1="762.31921"
-       x2="1697.4951"
-       y2="680.80829" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32434"
-       id="linearGradient38471"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.7657835e-2,0,0,8.7658839e-2,260.23027,610.96222)"
-       x1="1533.8383"
-       y1="671.96539"
-       x2="1602.8722"
-       y2="664.97888" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient32434"
@@ -1247,42 +560,6 @@
        x2="317.91296"
        y2="641.49323"
        gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient57663"
-       id="linearGradient59627"
-       x1="764.85968"
-       y1="696.82928"
-       x2="584.80212"
-       y2="584.43958"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient57663"
-       id="linearGradient61588"
-       gradientUnits="userSpaceOnUse"
-       x1="764.85968"
-       y1="696.82928"
-       x2="584.80212"
-       y2="584.43958" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient57663"
-       id="linearGradient64561"
-       gradientUnits="userSpaceOnUse"
-       x1="764.85968"
-       y1="696.82928"
-       x2="584.80212"
-       y2="584.43958" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient57663"
-       id="linearGradient64623"
-       gradientUnits="userSpaceOnUse"
-       x1="764.85968"
-       y1="696.82928"
-       x2="584.80212"
-       y2="584.43958" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient9091"
@@ -1680,7 +957,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.0133002"
      inkscape:cx="57.188063"
-     inkscape:cy="458.82242"
+     inkscape:cy="438.95454"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showborder="false"
@@ -1732,7 +1009,7 @@
            sodipodi:cy="709.57367"
            sodipodi:rx="142.59441"
            sodipodi:ry="142.59441"
-           d="M 1406.2759 709.57367 A 142.59441 142.59441 0 1 1  1121.0871,709.57367 A 142.59441 142.59441 0 1 1  1406.2759 709.57367 z"
+           d="m 1406.2759,709.57367 c 0,78.75272 -63.8417,142.59441 -142.5944,142.59441 -78.7527,0 -142.5944,-63.84169 -142.5944,-142.59441 0,-78.75272 63.8417,-142.59441 142.5944,-142.59441 78.7527,0 142.5944,63.84169 142.5944,142.59441 z"
            transform="matrix(8.7657835e-2,0,0,8.7658839e-2,240.74657,614.98331)" />
         <path
            style="fill:url(#linearGradient38483);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1759,7 +1036,7 @@
            sodipodi:cy="673.19354"
            sodipodi:rx="23.878157"
            sodipodi:ry="30.053541"
-           d="M 1375.8758 673.19354 A 23.878157 30.053541 0 1 1  1328.1195,673.19354 A 23.878157 30.053541 0 1 1  1375.8758 673.19354 z"
+           d="m 1375.8758,673.19354 c 0,16.59811 -10.6906,30.05354 -23.8781,30.05354 -13.1876,0 -23.8782,-13.45543 -23.8782,-30.05354 0,-16.59811 10.6906,-30.05354 23.8782,-30.05354 13.1875,0 23.8781,13.45543 23.8781,30.05354 z"
            transform="matrix(9.7749779e-2,-3.2496406e-2,3.2496406e-2,9.7749779e-2,205.12494,651.19253)" />
       </g>
     </g>
@@ -1780,7 +1057,7 @@
          id="000">
         <path
            transform="matrix(8.7657835e-2,0,0,8.7658839e-2,240.74657,614.98331)"
-           d="M 1406.2759 709.57367 A 142.59441 142.59441 0 1 1  1121.0871,709.57367 A 142.59441 142.59441 0 1 1  1406.2759 709.57367 z"
+           d="m 1406.2759,709.57367 c 0,78.75272 -63.8417,142.59441 -142.5944,142.59441 -78.7527,0 -142.5944,-63.84169 -142.5944,-142.59441 0,-78.75272 63.8417,-142.59441 142.5944,-142.59441 78.7527,0 142.5944,63.84169 142.5944,142.59441 z"
            sodipodi:ry="142.59441"
            sodipodi:rx="142.59441"
            sodipodi:cy="709.57367"
@@ -1807,7 +1084,7 @@
            style="opacity:0.3;fill:url(#linearGradient39759);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:12.00000015;stroke-opacity:1" />
         <path
            transform="matrix(9.7749779e-2,-3.2496406e-2,3.2496406e-2,9.7749779e-2,205.12494,651.19253)"
-           d="M 1375.8758 673.19354 A 23.878157 30.053541 0 1 1  1328.1195,673.19354 A 23.878157 30.053541 0 1 1  1375.8758 673.19354 z"
+           d="m 1375.8758,673.19354 c 0,16.59811 -10.6906,30.05354 -23.8781,30.05354 -13.1876,0 -23.8782,-13.45543 -23.8782,-30.05354 0,-16.59811 10.6906,-30.05354 23.8782,-30.05354 13.1875,0 23.8781,13.45543 23.8781,30.05354 z"
            sodipodi:ry="30.053541"
            sodipodi:rx="23.878157"
            sodipodi:cy="673.19354"
@@ -1840,7 +1117,7 @@
            sodipodi:cy="709.57367"
            sodipodi:rx="142.59441"
            sodipodi:ry="142.59441"
-           d="M 1406.2759 709.57367 A 142.59441 142.59441 0 1 1  1121.0871,709.57367 A 142.59441 142.59441 0 1 1  1406.2759 709.57367 z"
+           d="m 1406.2759,709.57367 c 0,78.75272 -63.8417,142.59441 -142.5944,142.59441 -78.7527,0 -142.5944,-63.84169 -142.5944,-142.59441 0,-78.75272 63.8417,-142.59441 142.5944,-142.59441 78.7527,0 142.5944,63.84169 142.5944,142.59441 z"
            transform="matrix(8.7657835e-2,0,0,8.7658839e-2,240.74657,614.98331)" />
         <path
            style="fill:url(#linearGradient42686);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1867,7 +1144,7 @@
            sodipodi:cy="673.19354"
            sodipodi:rx="23.878157"
            sodipodi:ry="30.053541"
-           d="M 1375.8758 673.19354 A 23.878157 30.053541 0 1 1  1328.1195,673.19354 A 23.878157 30.053541 0 1 1  1375.8758 673.19354 z"
+           d="m 1375.8758,673.19354 c 0,16.59811 -10.6906,30.05354 -23.8781,30.05354 -13.1876,0 -23.8782,-13.45543 -23.8782,-30.05354 0,-16.59811 10.6906,-30.05354 23.8782,-30.05354 13.1875,0 23.8781,13.45543 23.8781,30.05354 z"
            transform="matrix(9.7749779e-2,-3.2496406e-2,3.2496406e-2,9.7749779e-2,205.12494,651.19253)" />
       </g>
     </g>
@@ -17544,7 +16821,7 @@
          inkscape:export-ydpi="120">
         <path
            transform="matrix(8.7657835e-2,0,0,8.7658839e-2,240.74657,614.98331)"
-           d="M 1406.2759 709.57367 A 142.59441 142.59441 0 1 1  1121.0871,709.57367 A 142.59441 142.59441 0 1 1  1406.2759 709.57367 z"
+           d="m 1406.2759,709.57367 c 0,78.75272 -63.8417,142.59441 -142.5944,142.59441 -78.7527,0 -142.5944,-63.84169 -142.5944,-142.59441 0,-78.75272 63.8417,-142.59441 142.5944,-142.59441 78.7527,0 142.5944,63.84169 142.5944,142.59441 z"
            sodipodi:ry="142.59441"
            sodipodi:rx="142.59441"
            sodipodi:cy="709.57367"
@@ -17571,7 +16848,7 @@
            style="opacity:0.3;fill:url(#linearGradient4292);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:12.00000015;stroke-opacity:1" />
         <path
            transform="matrix(9.7749779e-2,-3.2496406e-2,3.2496406e-2,9.7749779e-2,205.12494,651.19253)"
-           d="M 1375.8758 673.19354 A 23.878157 30.053541 0 1 1  1328.1195,673.19354 A 23.878157 30.053541 0 1 1  1375.8758 673.19354 z"
+           d="m 1375.8758,673.19354 c 0,16.59811 -10.6906,30.05354 -23.8781,30.05354 -13.1876,0 -23.8782,-13.45543 -23.8782,-30.05354 0,-16.59811 10.6906,-30.05354 23.8782,-30.05354 13.1875,0 23.8781,13.45543 23.8781,30.05354 z"
            sodipodi:ry="30.053541"
            sodipodi:rx="23.878157"
            sodipodi:cy="673.19354"
