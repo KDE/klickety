@@ -3,11 +3,17 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <kcfgfile name="klicketyrc"/>
+  <kcfgfile arg="true"/>
   <include>KGameDifficulty</include>
   <group name="General">
     <entry name="ShowBoundLines" type="Bool" key="showboundlines">
-      <default>true</default>
+      <default code="true">
+        <code>
+            ( s_globalSettings->q->config()->name() == QLatin1String( "ksamerc" ) )
+            ? false
+            : true
+        </code>
+      </default>
     </entry>
     <entry name="EnableAnimation" type="Bool" key="enableanimation">
       <default>true</default>
@@ -19,7 +25,13 @@
   <group name="Themes">
     <entry name="Theme" type="String" key="Theme">
       <label>The graphical theme to be used.</label>
-      <default>themes/default.desktop</default>
+      <default code="true">
+        <code>
+            ( s_globalSettings->q->config()->name() == QLatin1String( "ksamerc" ) )
+            ? QLatin1String( "themes/ksame.desktop" )
+            : QLatin1String( "themes/default.desktop" )
+        </code>
+      </default>
     </entry>
   </group>
   <group name="Background">
@@ -30,7 +42,7 @@
         <choice name="color"/>
         <choice name="image"/>
       </choices>
-      <default>color</default>
+      <default>theme</default>
     </entry>
     <entry name="BgColor" type="Color" key="Background Color">
       <label>The background color to be used.</label>

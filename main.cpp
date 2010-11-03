@@ -47,19 +47,26 @@ int main( int argc, char* argv[] )
     KCmdLineArgs::addCmdLineOptions( options );
 
     KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
-    if ( args->isSet( "VeryEasy" ) )
-        Settings::setLevel( KGameDifficulty::VeryEasy );
-    if ( args->isSet( "Easy" ) )
-        Settings::setLevel( KGameDifficulty::Easy );
-    if ( args->isSet( "Medium" ) )
-        Settings::setLevel( KGameDifficulty::Medium );
-    if ( args->isSet( "Hard" ) )
-        Settings::setLevel( KGameDifficulty::Hard );
     bool KSameMode = args->isSet( "KSameMode" );
+
+    // set kconfig instance
+    // we use different file for storing ksame mode configuration
+    if ( KSameMode )
+        Settings::instance( QLatin1String( "ksamerc" ) );
+    else {
+        Settings::instance( QLatin1String( "klicketyrc" ) );
+        if ( args->isSet( "VeryEasy" ) )
+            Settings::setLevel( KGameDifficulty::VeryEasy );
+        if ( args->isSet( "Easy" ) )
+            Settings::setLevel( KGameDifficulty::Easy );
+        if ( args->isSet( "Medium" ) )
+            Settings::setLevel( KGameDifficulty::Medium );
+        if ( args->isSet( "Hard" ) )
+            Settings::setLevel( KGameDifficulty::Hard );
+    }
     args->clear();
 
-    if ( KSameMode )
-    {
+    if ( KSameMode ) {
         aboutData.setProgramName( ki18n( "SameGame" ) );
         aboutData.setProgramIconName( "ksame" );
         aboutData.setShortDescription( ki18n( "A little game about balls and how to get rid of them" ) );
@@ -68,8 +75,7 @@ int main( int argc, char* argv[] )
         aboutData.addAuthor( ki18n( "Ni Hui" ), ki18n( "Integration with Klickety. Current maintainer" ), "shuizhuyuanluo@126.com" );
         aboutData.addCredit( ki18n( "Johann Ollivier Lapeyre"), ki18n("Artwork"), "johann.ollivierlapeyre@gmail.com" );
     }
-    else
-    {
+    else {
         aboutData.addAuthor( ki18n( "Nicolas Hadacek" ), ki18n( "Original author" ), "hadacek@kde.org" );
         aboutData.addAuthor( ki18n( "Ni Hui" ), ki18n( "Rewrite for KDE4. Current maintainer" ), "shuizhuyuanluo@126.com" );
         aboutData.addCredit( ki18n( "Dan Hill" ), ki18n( "Icons" ) );

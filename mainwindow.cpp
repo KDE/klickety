@@ -103,7 +103,8 @@ void MainWindow::configureSettings()
     dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QLatin1String( "games-config-options" ) );
     dialog->addPage( new KGameThemeSelector( dialog, Settings::self(), KGameThemeSelector::NewStuffDisableDownload ), i18n( "Theme" ), QLatin1String( "games-config-theme" ) );
     dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QLatin1String( "games-config-background" ) );
-    dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
+    if ( !m_KSameMode )
+        dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
     connect( dialog, SIGNAL(settingsChanged(const QString&)), this, SLOT(loadSettings()) );
     dialog->setHelp( QString(), QLatin1String( "klickety" ) );
     dialog->show();
@@ -126,11 +127,11 @@ void MainWindow::levelChanged( KGameDifficulty::standardLevel level )
 void MainWindow::loadSettings()
 {
     if ( m_KSameMode ) {
-        m_scene->setRendererTheme( QLatin1String( "themes/ksame.desktop" ) );
-        m_scene->setShowBoundLines( false );
-        m_scene->setEnableAnimation( true );
-        m_scene->setEnableHighlight( true );
-        m_scene->setBackgroundType( 0 );
+        m_scene->setRendererTheme( Settings::theme() );
+        m_scene->setShowBoundLines( Settings::showBoundLines() );
+        m_scene->setEnableAnimation( Settings::enableAnimation() );
+        m_scene->setEnableHighlight( Settings::enableHighlight() );
+        m_scene->setBackgroundType( Settings::bgType() );
         return;
     }
 
@@ -403,8 +404,7 @@ void MainWindow::setupActions()
     connect( redoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(redoAllMove()) );
 
     // settings menu
-    if ( !m_KSameMode )
-        KStandardAction::preferences( this, SLOT(configureSettings()), actionCollection() );
+    KStandardAction::preferences( this, SLOT(configureSettings()), actionCollection() );
     KStandardAction::configureNotifications( this, SLOT(configureNotifications()), actionCollection() );
 
     if ( m_KSameMode ) {
