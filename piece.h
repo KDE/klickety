@@ -35,6 +35,8 @@ class Piece : public KGameRenderedObjectItem
         explicit Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent = 0 );
         /** Destructor */
         ~Piece();
+        /** Reimplemented for using bounding rect for detecting hovering and mouse clicking */
+        virtual QPainterPath shape() const;
         /** The current column in the game scene, from left to right, starts from 0 */
         int m_x;
         /** The current row in the game scene, from top to bottom, starts from 0 */

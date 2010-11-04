@@ -44,6 +44,13 @@ Piece::~Piece()
     delete m_highlighter;
 }
 
+QPainterPath Piece::shape() const
+{
+    QPainterPath path;
+    path.addRect( boundingRect() );
+    return path;
+}
+
 void Piece::hoverEnterEvent( QGraphicsSceneHoverEvent* event )
 {
     Q_UNUSED(event)
