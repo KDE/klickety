@@ -1,6 +1,7 @@
 [Global]
 IconName=klickety
 Comment=Board Game
+Comment[de]=Brettspiel
 Comment[pt]=Jogo de Tabuleiro
 Comment[pt_BR]=Jogo de tabuleiro
 Comment[sv]=Brädspel
@@ -101,12 +102,14 @@ Comment[zh_TW]=遊戲間的音效
 
 [Event/remove]
 Name=Pieces removed
+Name[de]=Entfernte Stücke
 Name[pt]=Peças removidas
 Name[pt_BR]=Peças removidas
 Name[sv]=Bitar borttagna
 Name[uk]=Шматочки вилучено
 Name[x-test]=xxPieces removedxx
 Comment=Pieces were removed.
+Comment[de]=Die Anzahl der entfernten Stücke.
 Comment[pt]=Foram removidas as peças.
 Comment[pt_BR]=As peças foram removidas.
 Comment[sv]=Bitar togs bort.
