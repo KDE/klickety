@@ -2,11 +2,13 @@
 IconName=klickety
 Comment=Board Game
 Comment[de]=Brettspiel
+Comment[es]=Juego de tablero
 Comment[pt]=Jogo de Tabuleiro
 Comment[pt_BR]=Jogo de tabuleiro
 Comment[sv]=Brädspel
 Comment[uk]=Гра на дошці
 Comment[x-test]=xxBoard Gamexx
+Comment[zh_TW]=棋盤遊戲
 
 [Context/game]
 Name=Game
@@ -103,18 +105,22 @@ Comment[zh_TW]=遊戲間的音效
 [Event/remove]
 Name=Pieces removed
 Name[de]=Entfernte Stücke
+Name[es]=Piezas eliminadas
 Name[pt]=Peças removidas
 Name[pt_BR]=Peças removidas
 Name[sv]=Bitar borttagna
 Name[uk]=Шматочки вилучено
 Name[x-test]=xxPieces removedxx
+Name[zh_TW]=已移除
 Comment=Pieces were removed.
 Comment[de]=Die Anzahl der entfernten Stücke.
+Comment[es]=Las piezas han sido eliminadas.
 Comment[pt]=Foram removidas as peças.
 Comment[pt_BR]=As peças foram removidas.
 Comment[sv]=Bitar togs bort.
 Comment[uk]=Шматочки було вилучено.
 Comment[x-test]=xxPieces were removed.xx
+Comment[zh_TW]=已被移除。
 Contexts=game
 Sound=KDE-Window-Shade-Down.ogg
 Action=Sound
