@@ -8,6 +8,7 @@ Comment[pt_BR]=Jogo de tabuleiro
 Comment[sv]=Brädspel
 Comment[uk]=Гра на дошці
 Comment[x-test]=xxBoard Gamexx
+Comment[zh_CN]=版块游戏
 Comment[zh_TW]=棋盤遊戲
 
 [Context/game]
@@ -111,6 +112,7 @@ Name[pt_BR]=Peças removidas
 Name[sv]=Bitar borttagna
 Name[uk]=Шматочки вилучено
 Name[x-test]=xxPieces removedxx
+Name[zh_CN]=已消去块数
 Name[zh_TW]=已移除
 Comment=Pieces were removed.
 Comment[de]=Die Anzahl der entfernten Stücke.
@@ -120,6 +122,7 @@ Comment[pt_BR]=As peças foram removidas.
 Comment[sv]=Bitar togs bort.
 Comment[uk]=Шматочки було вилучено.
 Comment[x-test]=xxPieces were removed.xx
+Comment[zh_CN]=已消去块。
 Comment[zh_TW]=已被移除。
 Contexts=game
 Sound=KDE-Window-Shade-Down.ogg
