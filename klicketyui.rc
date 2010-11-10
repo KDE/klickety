@@ -23,8 +23,6 @@
         <Separator/>
         <Action name="move_undo" />
         <Action name="move_redo" />
-        <Separator/>
-        <Action name="game_quit"/>
     </ToolBar>
 
 </gui>
