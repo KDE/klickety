@@ -1,5 +1,6 @@
 [KGameTheme]
 Name=KSame Old
+Name[ca]=KSame antic
 Name[de]=KSame (alt)
 Name[es]=Ksame antiguo
 Name[et]=Vana KSame
@@ -12,6 +13,7 @@ Name[x-test]=xxKSame Oldxx
 Name[zh_CN]=KSame 旧版
 Name[zh_TW]=KSame 舊式
 Description=Klickety KSame Old Theme
+Description[ca]=Tema KSame antic del Klickety
 Description[de]=Das alte KSame-Design für Klickety.
 Description[es]=Tema antiguo de KSame para Klickety
 Description[et]=Klickety KSame'i vana teema

@@ -1,6 +1,7 @@
 [Global]
 IconName=klickety
 Comment=Board Game
+Comment[ca]=Joc de taula
 Comment[de]=Brettspiel
 Comment[es]=Juego de tablero
 Comment[et]=Lauamäng
@@ -107,6 +108,7 @@ Comment[zh_TW]=遊戲間的音效
 
 [Event/remove]
 Name=Pieces removed
+Name[ca]=Peces eliminades
 Name[de]=Entfernte Stücke
 Name[es]=Piezas eliminadas
 Name[et]=Tükid eemaldati
@@ -119,6 +121,7 @@ Name[x-test]=xxPieces removedxx
 Name[zh_CN]=已消去块数
 Name[zh_TW]=已移除
 Comment=Pieces were removed.
+Comment[ca]=S'han eliminat les peces.
 Comment[de]=Die Anzahl der entfernten Stücke.
 Comment[es]=Las piezas han sido eliminadas.
 Comment[et]=Tükid eemaldati.
