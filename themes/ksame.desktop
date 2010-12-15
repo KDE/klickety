@@ -1,6 +1,7 @@
 [KGameTheme]
 Name=KSame
 Name[ca]=KSame
+Name[da]=KSame
 Name[de]=KSame
 Name[en_GB]=KSame
 Name[es]=KSame
@@ -18,6 +19,7 @@ Name[zh_CN]=KSame
 Name[zh_TW]=KSame
 Description=Klickety KSame Theme
 Description[ca]=Tema KSame del Klickety
+Description[da]=KSame-tema til Klickety
 Description[de]=Das KSame-Design für Klickety.
 Description[en_GB]=Klickety KSame Theme
 Description[es]=Tema de KSame para Klickety
