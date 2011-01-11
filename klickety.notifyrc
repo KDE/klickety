@@ -2,6 +2,7 @@
 IconName=klickety
 Comment=Board Game
 Comment[ca]=Joc de taula
+Comment[ca@valencia]=Joc de taula
 Comment[da]=Brætspil
 Comment[de]=Brettspiel
 Comment[en_GB]=Board Game
@@ -119,6 +120,7 @@ Comment[zh_TW]=遊戲間的音效
 [Event/remove]
 Name=Pieces removed
 Name[ca]=Peces eliminades
+Name[ca@valencia]=Peces eliminades
 Name[da]=Brikker fjernet
 Name[de]=Entfernte Stücke
 Name[en_GB]=Pieces removed
@@ -141,6 +143,7 @@ Name[zh_CN]=已消去块数
 Name[zh_TW]=已移除
 Comment=Pieces were removed.
 Comment[ca]=S'han eliminat les peces.
+Comment[ca@valencia]=S'han eliminat les peces.
 Comment[da]=Der blev fjernet brikker.
 Comment[de]=Die Anzahl der entfernten Stücke.
 Comment[en_GB]=Pieces were removed.
