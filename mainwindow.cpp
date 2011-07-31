@@ -73,7 +73,7 @@ m_lastRemainCount(0)
         statusBar()->insertItem( i18n( "Pieces: 0" ), 0 );
         statusBar()->insertItem( i18n( "Time: 00:00" ), 1 );
         connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeRemainCount(int)) );
-        connect( m_gameClock, SIGNAL(timeChanged(const QString&)), this, SLOT(changeTime(const QString&)) );
+        connect( m_gameClock, SIGNAL(timeChanged(QString)), this, SLOT(changeTime(QString)) );
     }
 
     connect( m_scene, SIGNAL(gameFinished(int)), this, SLOT(onGameOver(int)) );
@@ -105,7 +105,7 @@ void MainWindow::configureSettings()
     dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QLatin1String( "games-config-background" ) );
     if ( !m_KSameMode )
         dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
-    connect( dialog, SIGNAL(settingsChanged(const QString&)), this, SLOT(loadSettings()) );
+    connect( dialog, SIGNAL(settingsChanged(QString)), this, SLOT(loadSettings()) );
     dialog->setHelp( QString(), QLatin1String( "klickety" ) );
     dialog->show();
 }

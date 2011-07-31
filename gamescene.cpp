@@ -57,7 +57,7 @@ m_animation(new QSequentialAnimationGroup)
     m_renderer.setTheme( Settings::theme() );
     connect( &m_undoStack, SIGNAL(canUndoChanged(bool)), this, SIGNAL(canUndoChanged(bool)) );
     connect( &m_undoStack, SIGNAL(canRedoChanged(bool)), this, SIGNAL(canRedoChanged(bool)) );
-    connect( this, SIGNAL(sceneRectChanged(const QRectF&)), SLOT(resize(const QRectF&)) );
+    connect( this, SIGNAL(sceneRectChanged(QRectF)), SLOT(resize(QRectF)) );
 
     connect( m_animation, SIGNAL(finished()), this, SLOT(updateScene()) );
     connect( m_animation, SIGNAL(finished()), this, SLOT(checkGameFinished()) );
