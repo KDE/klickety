@@ -19,7 +19,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <KGameDifficulty>
 #include <KXmlGuiWindow>
 
 class KAction;
@@ -34,8 +33,6 @@ class MainWindow : public KXmlGuiWindow
     private Q_SLOTS:
         void configureNotifications();
         void configureSettings();
-        void customLevelChanged( int key );
-        void levelChanged( KGameDifficulty::standardLevel level );
         void loadSettings();
         void newGame( int gameId = qrand() );
         void newNumGame();

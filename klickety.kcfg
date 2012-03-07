@@ -4,7 +4,6 @@
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile arg="true"/>
-  <include>KGameDifficulty</include>
   <group name="General">
     <entry name="ShowBoundLines" type="Bool" key="showboundlines">
       <default code="true">
@@ -69,10 +68,6 @@
       <label>The number of colors in the playing field.</label>
       <min>1</min>
       <default>5</default>
-    </entry>
-    <entry name="level" type="Int">
-      <label>The difficulty level.</label>
-      <default code="true">KGameDifficulty::Medium</default>
     </entry>
   </group>
 </kcfg>

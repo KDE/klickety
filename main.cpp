@@ -38,11 +38,6 @@ int main( int argc, char* argv[] )
     KCmdLineArgs::init( argc, argv, &aboutData );
 
     KCmdLineOptions options;
-    options.add( "VeryEasy", ki18n( "Start with Very Easy difficulty level" ) );
-    options.add( "Easy", ki18n( "Start with Easy difficulty level" ) );
-    options.add( "Medium", ki18n( "Start with Medium difficulty level" ) );
-    options.add( "Hard", ki18n( "Start with Hard difficulty level" ) );
-
     options.add( "KSameMode", ki18n( "Start with KSame compatibility mode" ) );
     KCmdLineArgs::addCmdLineOptions( options );
 
@@ -55,14 +50,6 @@ int main( int argc, char* argv[] )
         Settings::instance( QLatin1String( "ksamerc" ) );
     else {
         Settings::instance( QLatin1String( "klicketyrc" ) );
-        if ( args->isSet( "VeryEasy" ) )
-            Settings::setLevel( KGameDifficulty::VeryEasy );
-        if ( args->isSet( "Easy" ) )
-            Settings::setLevel( KGameDifficulty::Easy );
-        if ( args->isSet( "Medium" ) )
-            Settings::setLevel( KGameDifficulty::Medium );
-        if ( args->isSet( "Hard" ) )
-            Settings::setLevel( KGameDifficulty::Hard );
     }
     args->clear();
 
