@@ -52,8 +52,6 @@ class GameScene : public QGraphicsScene
         void setPaused( bool isPaused );
         /** @return whether the current game has been finished */
         bool isGameFinished() const;
-        /** Change the theme used */
-        void setRendererTheme( const QString& theme );
         /** Change the background type */
         void setBackgroundType( int type );
         /** Determine whether to show the bound lines between different colors */
@@ -62,6 +60,8 @@ class GameScene : public QGraphicsScene
         void setEnableAnimation( bool isEnabled );
         /** Determine whether the pieces should be highlighted when hovered */
         void setEnableHighlight( bool isEnabled );
+        /** The MainWindow needs a ref. to this for KgThemeSelector */
+        KgThemeProvider* themeProvider() const;
     Q_SIGNALS:
         /** Emitted when undo action enable or disable */
         void canUndoChanged( bool canUndo );

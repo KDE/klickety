@@ -25,6 +25,8 @@
 #include <KConfigGroup>
 #include <KGamePopupItem>
 #include <KGameRenderedObjectItem>
+#include <KgTheme>
+#include <KgThemeProvider>
 #include <KNotification>
 #include <KRandomSequence>
 #include <KLocale>
@@ -38,9 +40,20 @@
 #include <QPropertyAnimation>
 #include <QSequentialAnimationGroup>
 
+static KgThemeProvider* provider()
+{
+    //TODO: Do we want to store separate theme choices for Klickety and KSame?
+    const QLatin1String defaultTheme =
+        Settings::self()->config()->name() == QLatin1String("ksamerc")
+        ? QLatin1String("ksame") : QLatin1String("default");
+    KgThemeProvider* prov = new KgThemeProvider;
+    prov->discoverThemes("appdata", QLatin1String("themes"), defaultTheme);
+    return prov;
+}
+
 GameScene::GameScene( QObject* parent )
 : QGraphicsScene(parent),
-m_renderer(Settings::defaultThemeValue()),
+m_renderer(provider()),
 m_messenger(new KGamePopupItem),
 m_showBoundLines(true),
 m_enableAnimation(true),
@@ -54,7 +67,6 @@ m_isPaused(false),
 m_isFinished(false),
 m_animation(new QSequentialAnimationGroup)
 {
-    m_renderer.setTheme( Settings::theme() );
     connect( &m_undoStack, SIGNAL(canUndoChanged(bool)), this, SIGNAL(canUndoChanged(bool)) );
     connect( &m_undoStack, SIGNAL(canRedoChanged(bool)), this, SIGNAL(canRedoChanged(bool)) );
     connect( this, SIGNAL(sceneRectChanged(QRectF)), SLOT(resize(QRectF)) );
@@ -269,9 +281,9 @@ bool GameScene::isGameFinished() const
     return true;
 }
 
-void GameScene::setRendererTheme( const QString& theme )
+KgThemeProvider* GameScene::themeProvider() const
 {
-    m_renderer.setTheme( theme );
+    return m_renderer.themeProvider();
 }
 
 void GameScene::setBackgroundType( int type )
@@ -678,13 +690,13 @@ void GameScene::drawBackground( QPainter* painter, const QRectF& rect )
         case Settings::EnumBgType::theme: {
             // NOTE: the following is a workaround for https://bugs.kde.org/show_bug.cgi?id=243573
             // cache the background pixmap locally in order to reduce the spritePixmap traffic when resizing
-            static QString theme_pre( m_renderer.theme() );
+            static QByteArray theme_pre( m_renderer.theme()->identifier() );
             static QSize size_pre( rect.toRect().size() );
             static QPixmap pix( m_renderer.spritePixmap( QLatin1String( "BACKGROUND" ), size_pre ) );
             QSize size_offset = size_pre - rect.toRect().size();
-            if ( size_offset.width() < -100 || size_offset.height() < -100 || theme_pre != m_renderer.theme() ) {
+            if ( size_offset.width() < -100 || size_offset.height() < -100 || theme_pre != m_renderer.theme()->identifier() ) {
                 qWarning() << "export";
-                theme_pre = m_renderer.theme();
+                theme_pre = m_renderer.theme()->identifier();
                 size_pre = rect.toRect().size();
                 pix = m_renderer.spritePixmap( QLatin1String( "BACKGROUND" ), size_pre );
                 painter->drawPixmap( rect.topLeft(), pix );

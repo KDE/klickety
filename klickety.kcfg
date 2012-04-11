@@ -21,18 +21,6 @@
       <default>true</default>
     </entry>
   </group>
-  <group name="Themes">
-    <entry name="Theme" type="String" key="Theme">
-      <label>The graphical theme to be used.</label>
-      <default code="true">
-        <code>
-            ( s_globalSettings->q->config()->name() == QLatin1String( "ksamerc" ) )
-            ? QLatin1String( "themes/ksame.desktop" )
-            : QLatin1String( "themes/default.desktop" )
-        </code>
-      </default>
-    </entry>
-  </group>
   <group name="Background">
     <entry name="BgType" type="Enum" key="Background Type">
       <label>The background type to be used.</label>

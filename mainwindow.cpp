@@ -32,7 +32,7 @@
 #include <KFileDialog>
 #include <KGameClock>
 #include <KgDifficulty>
-#include <KGameThemeSelector>
+#include <KgThemeSelector>
 #include <KInputDialog>
 #include <KLocale>
 #include <KMessageBox>
@@ -101,10 +101,11 @@ void MainWindow::configureSettings()
 
     KConfigDialog* dialog = new KConfigDialog( this, QLatin1String( "settings" ), Settings::self() );
     dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QLatin1String( "games-config-options" ) );
-    dialog->addPage( new KGameThemeSelector( dialog, Settings::self(), KGameThemeSelector::NewStuffDisableDownload ), i18n( "Theme" ), QLatin1String( "games-config-theme" ) );
+    dialog->addPage( new KgThemeSelector( m_scene->themeProvider() ), i18n( "Theme" ), QLatin1String( "games-config-theme" ) );
     dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QLatin1String( "games-config-background" ) );
     if ( !m_KSameMode )
         dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
+    connect(m_scene->themeProvider(), SIGNAL(currentThemeChanged(const KgTheme*)), SLOT(loadSettings())); //setBackgroundType!
     connect( dialog, SIGNAL(settingsChanged(QString)), this, SLOT(loadSettings()) );
     dialog->setHelp( QString(), QLatin1String( "klickety" ) );
     dialog->show();
@@ -112,7 +113,6 @@ void MainWindow::configureSettings()
 
 void MainWindow::loadSettings()
 {
-    m_scene->setRendererTheme( Settings::theme() );
     m_scene->setShowBoundLines( Settings::showBoundLines() );
     m_scene->setEnableAnimation( Settings::enableAnimation() );
     m_scene->setEnableHighlight( Settings::enableHighlight() );
