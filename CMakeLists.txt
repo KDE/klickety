@@ -43,3 +43,4 @@ endif(NOT WIN32)
 
 add_subdirectory(pics)
 add_subdirectory(themes)
+add_subdirectory(doc)
