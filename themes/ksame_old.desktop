@@ -1,6 +1,10 @@
 [KGameTheme]
 Name=KSame Old
+Name[uk]=Стара «Та сама гра»
+Name[x-test]=xxKSame Oldxx
 Description=Klickety KSame Old Theme
+Description[uk]=Стара тема «Тієї самої гри» Klickety
+Description[x-test]=xxKlickety KSame Old Themexx
 VersionFormat=1
 Author=Ni Hui
 AuthorEmail=shuizhuyuanluo@126.com

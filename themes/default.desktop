@@ -1,6 +1,10 @@
 [KGameTheme]
 Name=Classic
+Name[uk]=Класична
+Name[x-test]=xxClassicxx
 Description=Klickety Classic Theme
+Description[uk]=Класична тема Klickety
+Description[x-test]=xxKlickety Classic Themexx
 VersionFormat=1
 Author=Ni Hui
 AuthorEmail=shuizhuyuanluo@126.com
