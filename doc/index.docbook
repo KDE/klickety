@@ -10,7 +10,7 @@
 ]>
 
 <book id="klickety" lang="&language;"><!-- do not change this! -->
-<book id="klickety"info>
+<bookinfo>
 <title>The &klickety; Handbook</title><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
 <!-- List of immediate authors begins here. -->
 <authorgroup>
