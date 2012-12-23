@@ -1,7 +1,6 @@
 [Global]
 IconName=klickety
 Comment=Board Game
-Comment[bs]=Igra na ploči
 Comment[ca]=Joc de taula
 Comment[ca@valencia]=Joc de taula
 Comment[da]=Brætspil
@@ -44,7 +43,6 @@ Comment[zh_TW]=棋盤遊戲
 [Context/game]
 Name=Game
 Name[ast]=Xuegu
-Name[bs]=Igra
 Name[ca]=Joc
 Name[ca@valencia]=Joc
 Name[cs]=Hra
@@ -97,7 +95,6 @@ Name[zh_CN]=游戏
 Name[zh_TW]=遊戲
 Comment=Sounds that appear during a game
 Comment[ast]=Soníos qu'apaecen durante el xuegu
-Comment[bs]=Zvukovi koji se pojavljuju tokom igre
 Comment[ca]=Sons que apareixen durant la partida
 Comment[ca@valencia]=Sons que apareixen durant la partida
 Comment[da]=Lyde der fremkommer under et spil
@@ -143,7 +140,6 @@ Comment[zh_TW]=遊戲間的音效
 
 [Event/remove]
 Name=Pieces removed
-Name[bs]=Dijelovi uklonjeni
 Name[ca]=Peces eliminades
 Name[ca@valencia]=Peces eliminades
 Name[da]=Brikker fjernet
@@ -181,7 +177,6 @@ Name[x-test]=xxPieces removedxx
 Name[zh_CN]=已消去块数
 Name[zh_TW]=已移除
 Comment=Pieces were removed.
-Comment[bs]=Dijelovi su uklonjeni.
 Comment[ca]=S'han eliminat les peces.
 Comment[ca@valencia]=S'han eliminat les peces.
 Comment[da]=Der blev fjernet brikker.
@@ -225,7 +220,6 @@ Action=Sound
 [Event/gamefinished]
 Name=Game over
 Name[ast]=Partida finada
-Name[bs]=Igra je završena
 Name[ca]=Fi de la partida
 Name[ca@valencia]=Fi de la partida
 Name[cs]=Konec hry
@@ -277,7 +271,6 @@ Name[zh_CN]=游戏结束
 Name[zh_TW]=遊戲結束
 Comment=Time is up.
 Comment[ast]=El tiempu aumentó.
-Comment[bs]=Vrijeme je isteklo.
 Comment[ca]=S'ha esgotat el temps.
 Comment[ca@valencia]=S'ha esgotat el temps.
 Comment[da]=Tiden er gået.
