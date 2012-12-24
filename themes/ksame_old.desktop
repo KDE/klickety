@@ -1,5 +1,6 @@
 [KGameTheme]
 Name=KSame Old
+Name[bs]=KSame stari
 Name[ca]=KSame antic
 Name[ca@valencia]=KSame antic
 Name[da]=Gammelt KSame
@@ -36,6 +37,7 @@ Name[x-test]=xxKSame Oldxx
 Name[zh_CN]=KSame 旧版
 Name[zh_TW]=KSame 舊式
 Description=Klickety KSame Old Theme
+Description[bs]=Stara tema KSame za Klickety
 Description[ca]=Tema KSame antic del Klickety
 Description[ca@valencia]=Tema KSame antic del Klickety
 Description[cs]=Starý motiv Klickety pro KDE 4
