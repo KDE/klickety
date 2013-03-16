@@ -314,9 +314,11 @@ void GameScene::setEnableHighlight( bool isEnabled )
 
 void GameScene::undoMove()
 {
+    unhighlightPieces( m_currentlyHoveredPieceX, m_currentlyHoveredPieceY );
     m_undoStack.undo();
     emit remainCountChanged( currentRemainCount() );
     updateScene();
+    highlightPieces( m_currentlyHoveredPieceX, m_currentlyHoveredPieceY );
 }
 
 void GameScene::redoMove()
@@ -414,6 +416,8 @@ bool GameScene::canRemovePiece( int x, int y )
 
 void GameScene::highlightPieces( int x, int y )
 {
+    m_currentlyHoveredPieceX = x;
+    m_currentlyHoveredPieceY = y;
     if ( !m_enableHighlight )
         return;
 

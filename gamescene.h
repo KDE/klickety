@@ -131,6 +131,10 @@ class GameScene : public QGraphicsScene
         bool m_enableHighlight;
         /** The background type */
         int m_backgroundType;
+        /** The x-position of the currently hovered piece */
+        int m_currentlyHoveredPieceX;
+        /** The y-position of the currently hovered piece */
+        int m_currentlyHoveredPieceY;
         /** The count of pieces in a row */
         int PWC;
         /** The count of pieces in a column */
