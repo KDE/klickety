@@ -318,7 +318,6 @@ void GameScene::undoMove()
     m_undoStack.undo();
     emit remainCountChanged( currentRemainCount() );
     updateScene();
-    highlightPieces( m_currentlyHoveredPieceX, m_currentlyHoveredPieceY );
 }
 
 void GameScene::redoMove()
