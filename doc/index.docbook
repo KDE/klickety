@@ -42,8 +42,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2010-09-25</date><!-- Date of (re)writing, or update.-->
-<releaseinfo>&kappversion;</releaseinfo><!-- Application version number. Use the variable definitions within header to change this value.-->
+<date>2013-05-06</date><!-- Date of (re)writing, or update.-->
+<releaseinfo>&kappversion; (4.11)</releaseinfo><!-- Application version number. Use the variable definitions within header to change this value.-->
 
 <abstract>
 <para>&klickety; is a strategy game for &kde;, an adaption of the <application>Clickomania</application> game.</para>
@@ -176,20 +176,16 @@ score.
 <!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist> and <varlistentry>. Split the chapter into sections using <sect1(2,3)> for better viewing.-->
 <sect1 id="default-keybindings">
 <title id="keybindings-title">Default Keybindings</title>
-<screenshot>
-<screeninfo>Keybindings Configure Dialog</screeninfo>
-<mediaobject>
-<imageobject><imagedata fileref="shortcuts.png" format="PNG"/></imageobject>
-<textobject><phrase>Keybindings Configure Dialog</phrase></textobject>
-</mediaobject>
-</screenshot>
-
 <para>Default shortcuts are:</para>
 
 <table>
 <title>Shortcuts</title>
 <tgroup cols="2">
 <tbody>
+<row>
+<entry>New</entry>
+<entry><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></entry>
+</row>
 <row>
 <entry>Load</entry>
 <entry><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo></entry>
@@ -205,6 +201,10 @@ score.
 <row>
 <entry>Pause</entry>
 <entry><keycap>P</keycap></entry>
+</row>
+<row>
+<entry>Show High Scores</entry>
+<entry><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></entry>
 </row>
 <row>
 <entry>Quit</entry>
@@ -231,9 +231,19 @@ score.
 </table>
 </sect1>
 
-<sect1 id="game-menu">
-<title>The Game Menu</title>
+<sect1 id="menu">
+<title>Menu Items</title>
+
 <variablelist>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut>
+<guimenu>Game</guimenu>
+<guimenuitem>New</guimenuitem>
+</menuchoice></term>
+<listitem><para>Starts a new game.</para></listitem>
+</varlistentry>
 
 <varlistentry>
 <term><menuchoice>
@@ -316,13 +326,6 @@ When your game scores exceed the top ten scores listed, you are prompted to ente
 <listitem><para>Selecting this item will end your current game, and exit &klickety;.</para></listitem>
 </varlistentry>
 
-</variablelist>
-</sect1>
-
-<sect1 id="move-menu">
-<title>The Move Menu</title>
-<variablelist>
-
 <varlistentry>
 <term><menuchoice>
 <shortcut><keycombo action="simul">&Ctrl;<keycap>Z</keycap></keycombo></shortcut>
@@ -357,29 +360,6 @@ When your game scores exceed the top ten scores listed, you are prompted to ente
 <listitem><para><action>Redo</action> all undone moves.</para></listitem>
 </varlistentry>
 
-</variablelist>
-</sect1>
-
-<sect1 id="settings-menu">
-<title>The Settings Menu</title>
-<variablelist>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Show Toolbar</guimenuitem>
-</menuchoice></term>
-<listitem><para>Shows or hides the Toolbar.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Show Statusbar</guimenuitem>
-</menuchoice></term>
-<listitem><para>Shows or hides the Statusbar.</para></listitem>
-</varlistentry>
-
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
@@ -401,48 +381,15 @@ settings you have configured in the <guimenuitem>Configure &klickety;</guimenuit
 </listitem>
 </varlistentry>
 
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure Shortcuts...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Displays a standard &kde; shortcut configuration dialog</action> to change the <link linkend="default-keybindings">keyboard shortcuts</link> for &klickety;.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure Toolbars...</guimenuitem>
-</menuchoice></term>
-<listitem><para>Displays a standard &kde; dialog where you can configure the toolbar icons.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure Notifications...</guimenuitem>
-</menuchoice></term>
-<listitem><para>This item displays a standard &kde; notifications configuration
-dialog, where you can change the notifications (sounds, visible messages,
-&etc;) used by &klickety;.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure &klickety;...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Opens a dialog to configure &klickety;.</action> For details, see <link linkend="configuration">here</link>.</para></listitem>
-</varlistentry>
 </variablelist>
 
-</sect1>
+<para>
+Additionally &kappname; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+menu items, for more information read the sections about the <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Settings Menu</ulink> and <ulink url="help:/fundamentals/ui.html#menus-help">Help Menu</ulink>
+of the &kde; Fundamentals.
+</para>
 
-
-<sect1 id="help"><!--This is a standard Help menubar entry. Only change if needed.-->
-<title>The Help Menu</title>
-&help.menu.documentation;
 </sect1>
 
 </chapter>
@@ -455,7 +402,7 @@ dialog, where you can change the notifications (sounds, visible messages,
 <!--Following is a standard list of FAQ questions.-->
 <qandaentry>
 <question><para>I want to change the way this game looks. Can I? </para></question>
-<answer><para>Yes. To change the way &klickety; looks use the <link linkend="settings-menu">menubar</link> to open the <link linkend="configuration">configuration utility</link>.</para></answer>
+<answer><para>Yes. To change the way &klickety; looks use the menubar to open the <link linkend="configuration">configuration utility</link>.</para></answer>
 </qandaentry>
 <qandaentry>
 <question><para>Can I use the keyboard to play the game?</para></question>
