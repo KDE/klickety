@@ -55,7 +55,7 @@ target_link_libraries(klickety  KF5::NotifyConfig KF5KDEGames KF5::KIOCore KF5::
 
 install(TARGETS klickety ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES klickety.kcfg klickety.notifyrc klicketyui.rc DESTINATION ${DATA_INSTALL_DIR}/klickety)
-install(PROGRAMS klickety.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(PROGRAMS org.kde.klickety.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(PROGRAMS ksame.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 if(NOT WIN32)
