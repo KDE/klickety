@@ -19,7 +19,7 @@
 #include "mainwindow.h"
 #include "settings.h"
 
-#include <KAboutData>
+#include <K4AboutData>
 #include <KApplication>
 #include <KCmdLineArgs>
 #include <KLocale>
@@ -29,9 +29,9 @@
 int main( int argc, char* argv[] )
 {
     qsrand( time(0) );
-    KAboutData aboutData( "klickety", 0, ki18n( "Klickety" ), "2.0",
+    K4AboutData aboutData( "klickety", 0, ki18n( "Klickety" ), "2.0",
                           ki18n( "Klickety is an adaptation of the \"clickomania\" game" ),
-                          KAboutData::License_GPL,
+                          K4AboutData::License_GPL,
                           ki18n( "(c) 2002-2005, Nicolas Hadacek\n(c) 2010, Ni Hui" ),
                           KLocalizedString(), "http://games.kde.org/klickety" );
 
@@ -70,7 +70,6 @@ int main( int argc, char* argv[] )
 
     KApplication app;
 
-    KGlobal::locale()->insertCatalog( QLatin1String( "libkdegames" ) );
 
     //resource directory for KNewStuff2
 //     KStandardDirs::locateLocal("appdata", "themes/");

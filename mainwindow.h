@@ -21,7 +21,7 @@
 
 #include <KXmlGuiWindow>
 
-class KAction;
+class KToggleAction;
 class KGameClock;
 class GameScene;
 class MainWindow : public KXmlGuiWindow
@@ -56,7 +56,7 @@ class MainWindow : public KXmlGuiWindow
         KGameClock* m_gameClock;
         /** KSame mode only */
         int m_gameScore, m_lastRemainCount;
-        KAction* m_pauseAction;
+        KToggleAction* m_pauseAction;
 };
 
 #endif // MAINWINDOW_H

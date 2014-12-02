@@ -25,7 +25,7 @@
 #include "gameview.h"
 #include "settings.h"
 
-#include <KAction>
+#include <QAction>
 #include <KActionCollection>
 #include <KApplication>
 #include <KConfigDialog>
@@ -42,7 +42,8 @@
 #include <KStandardGameAction>
 #include <KStatusBar>
 #include <KToggleAction>
-
+#include <KUrl>
+#include <KIcon>
 #include <QPointer>
 
 MainWindow::MainWindow( bool KSameMode, QWidget* parent )
@@ -63,15 +64,15 @@ m_lastRemainCount(0)
     if ( m_KSameMode ) {
 //         statusBar()->insertItem( i18n( "Colors: XX" ), 1 );
 //         statusBar()->insertItem( i18n( "Board: XXXXXX" ), 2 );
-        statusBar()->insertItem( i18n( "Marked: 0" ), 3 );
-        statusBar()->insertItem( i18n( "Score: 0" ), 4 );
+        //QT5 statusBar()->insertItem( i18n( "Marked: 0" ), 3 );
+        //QT5 statusBar()->insertItem( i18n( "Score: 0" ), 4 );
         connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeScore(int)) );
         connect( m_scene, SIGNAL(markedCountChanged(int)), this, SLOT(changeMarkedCount(int)) );
     }
     else {
         m_gameClock = new KGameClock( this, KGameClock::MinSecOnly );
-        statusBar()->insertItem( i18n( "Pieces: 0" ), 0 );
-        statusBar()->insertItem( i18n( "Time: 00:00" ), 1 );
+        //QT5 statusBar()->insertItem( i18n( "Pieces: 0" ), 0 );
+        //QT5 statusBar()->insertItem( i18n( "Time: 00:00" ), 1 );
         connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeRemainCount(int)) );
         connect( m_gameClock, SIGNAL(timeChanged(QString)), this, SLOT(changeTime(QString)) );
     }
@@ -107,7 +108,7 @@ void MainWindow::configureSettings()
         dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
     connect(m_scene->themeProvider(), SIGNAL(currentThemeChanged(const KgTheme*)), SLOT(loadSettings())); //setBackgroundType!
     connect( dialog, SIGNAL(settingsChanged(QString)), this, SLOT(loadSettings()) );
-    dialog->setHelp( QString(), QLatin1String( "klickety" ) );
+    //QT5 dialog->setHelp( QString(), QLatin1String( "klickety" ) );
     dialog->show();
 }
 
@@ -226,7 +227,7 @@ void MainWindow::saveGame()
 void MainWindow::changeMarkedCount( int markedCount )
 {
     int markedScore = ( markedCount < 2 ) ? 0 : ( ( markedCount - 2 ) * ( markedCount - 2 ) );
-    statusBar()->changeItem( i18np( "Marked: %2 (1 Point)", "Marked: %2 (%1 Points)", markedScore, markedCount ), 3 );
+    //QT5 statusBar()->changeItem( i18np( "Marked: %2 (1 Point)", "Marked: %2 (%1 Points)", markedScore, markedCount ), 3 );
 }
 
 void MainWindow::changeScore( int remainCount )
@@ -234,7 +235,7 @@ void MainWindow::changeScore( int remainCount )
     if ( m_lastRemainCount == 0 ) {
         // new game or restart
         m_lastRemainCount = remainCount;
-        statusBar()->changeItem( i18n( "Score: 0" ), 4 );
+        //QT5 statusBar()->changeItem( i18n( "Score: 0" ), 4 );
         return;
     }
     int removedCount = m_lastRemainCount - remainCount;
@@ -248,18 +249,18 @@ void MainWindow::changeScore( int remainCount )
         int score = ( removedCount > -2 ) ? 0 : ( ( removedCount + 2 ) * ( removedCount + 2 ) );
         m_gameScore -= score;
     }
-    statusBar()->changeItem( i18n( "Score: %1", m_gameScore ), 4 );
+    //QT5 statusBar()->changeItem( i18n( "Score: %1", m_gameScore ), 4 );
     m_lastRemainCount = remainCount;
 }
 
 void MainWindow::changeRemainCount( int remainCount )
 {
-    statusBar()->changeItem( i18n( "Pieces: %1", remainCount ), 0 );
+    //QT5 statusBar()->changeItem( i18n( "Pieces: %1", remainCount ), 0 );
 }
 
 void MainWindow::changeTime( const QString& newTime )
 {
-    statusBar()->changeItem( i18n( "Time: %1", newTime ), 1 );
+    //QT5 statusBar()->changeItem( i18n( "Time: %1", newTime ), 1 );
 }
 
 void MainWindow::showHighscores()
@@ -345,25 +346,25 @@ void MainWindow::setupActions()
     KStandardGameAction::highscores( this, SLOT(showHighscores()), actionCollection() );
     m_pauseAction = KStandardGameAction::pause( this, SLOT(pauseGame(bool)), actionCollection() );
     KStandardGameAction::quit( this, SLOT(close()), actionCollection() );
-    KAction* m_newNumGameAction = new KAction( i18n( "New Numbered Game..." ), actionCollection() );
+    QAction * m_newNumGameAction = new QAction( i18n( "New Numbered Game..." ), actionCollection() );
     actionCollection()->addAction( QLatin1String( "game_new_numeric" ), m_newNumGameAction );
     connect( m_newNumGameAction, SIGNAL(triggered(bool)), this, SLOT(newNumGame()) );
 
     // move menu
-    KAction* undoAction = KStandardGameAction::undo( m_scene, SLOT(undoMove()), actionCollection() );
+    QAction * undoAction = KStandardGameAction::undo( m_scene, SLOT(undoMove()), actionCollection() );
     undoAction->setEnabled( false );
     connect( m_scene, SIGNAL(canUndoChanged(bool)), undoAction, SLOT(setEnabled(bool)) );
-    KAction* redoAction = KStandardGameAction::redo( m_scene, SLOT(redoMove()), actionCollection() );
+    QAction * redoAction = KStandardGameAction::redo( m_scene, SLOT(redoMove()), actionCollection() );
     redoAction->setEnabled( false );
     connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAction, SLOT(setEnabled(bool)) );
 
-    KAction* undoAllAction = actionCollection()->addAction( QLatin1String( "move_undo_all" ) );
+    QAction * undoAllAction = actionCollection()->addAction( QLatin1String( "move_undo_all" ) );
     undoAllAction->setIcon( KIcon( QLatin1String(  "media-skip-backward" ) ) );
     undoAllAction->setText( i18n( "Undo All" ) );
     undoAllAction->setEnabled( false );
     connect( m_scene, SIGNAL(canUndoChanged(bool)), undoAllAction, SLOT(setEnabled(bool)) );
     connect( undoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(undoAllMove()) );
-    KAction* redoAllAction = actionCollection()->addAction( QLatin1String( "move_redo_all" ) );
+    QAction * redoAllAction = actionCollection()->addAction( QLatin1String( "move_redo_all" ) );
     redoAllAction->setIcon( KIcon( QLatin1String(  "media-skip-forward" ) ) );
     redoAllAction->setText( i18n( "Redo All" ) );
     redoAllAction->setEnabled( false );
