@@ -34,16 +34,16 @@
 #include <KgDifficulty>
 #include <KgThemeSelector>
 #include <KInputDialog>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KNotifyConfigWidget>
 #include <KScoreDialog>
 #include <KStandardAction>
 #include <KStandardGameAction>
-#include <KStatusBar>
+#include <QStatusBar>
 #include <KToggleAction>
 #include <KUrl>
-#include <KIcon>
+#include <QIcon>
 #include <QPointer>
 
 MainWindow::MainWindow( bool KSameMode, QWidget* parent )
@@ -359,13 +359,13 @@ void MainWindow::setupActions()
     connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAction, SLOT(setEnabled(bool)) );
 
     QAction * undoAllAction = actionCollection()->addAction( QLatin1String( "move_undo_all" ) );
-    undoAllAction->setIcon( KIcon( QLatin1String(  "media-skip-backward" ) ) );
+    undoAllAction->setIcon( QIcon::fromTheme( QLatin1String(  "media-skip-backward" ) ) );
     undoAllAction->setText( i18n( "Undo All" ) );
     undoAllAction->setEnabled( false );
     connect( m_scene, SIGNAL(canUndoChanged(bool)), undoAllAction, SLOT(setEnabled(bool)) );
     connect( undoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(undoAllMove()) );
     QAction * redoAllAction = actionCollection()->addAction( QLatin1String( "move_redo_all" ) );
-    redoAllAction->setIcon( KIcon( QLatin1String(  "media-skip-forward" ) ) );
+    redoAllAction->setIcon( QIcon::fromTheme( QLatin1String(  "media-skip-forward" ) ) );
     redoAllAction->setText( i18n( "Redo All" ) );
     redoAllAction->setEnabled( false );
     connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAllAction, SLOT(setEnabled(bool)) );

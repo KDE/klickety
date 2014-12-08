@@ -54,7 +54,9 @@ add_executable(klickety ${klickety_SRCS})
 target_link_libraries(klickety  KF5::NotifyConfig KF5KDEGames KF5::KIOCore KF5::KDELibs4Support)
 
 install(TARGETS klickety ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES klickety.kcfg klickety.notifyrc klicketyui.rc DESTINATION ${DATA_INSTALL_DIR}/klickety)
+install(FILES klickety.kcfg klickety.notifyrc DESTINATION ${DATA_INSTALL_DIR}/klickety)
+install(FILES klicketyui.rc DESTINATION ${KXMLGUI_INSTALL_DIR}/klickety)
+
 install(PROGRAMS org.kde.klickety.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(PROGRAMS ksame.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 

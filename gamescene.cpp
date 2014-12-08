@@ -29,9 +29,7 @@
 #include <KgThemeProvider>
 #include <KNotification>
 #include <KRandomSequence>
-#include <KLocale>
-
-#include <KDebug>
+#include <KLocalizedString>
 
 #include <QEasingCurve>
 #include <QGraphicsColorizeEffect>

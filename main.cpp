@@ -19,30 +19,37 @@
 #include "mainwindow.h"
 #include "settings.h"
 
-#include <K4AboutData>
-#include <KApplication>
-#include <KCmdLineArgs>
-#include <KLocale>
+#include <KAboutData>
+
+
+#include <KLocalizedString>
 
 #include <ctime>
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QCommandLineOption>
 
 int main( int argc, char* argv[] )
 {
     qsrand( time(0) );
-    K4AboutData aboutData( "klickety", 0, ki18n( "Klickety" ), "2.0",
-                          ki18n( "Klickety is an adaptation of the \"clickomania\" game" ),
-                          K4AboutData::License_GPL,
-                          ki18n( "(c) 2002-2005, Nicolas Hadacek\n(c) 2010, Ni Hui" ),
-                          KLocalizedString(), "http://games.kde.org/klickety" );
+    KAboutData aboutData( "klickety", i18n( "Klickety" ), "2.0",
+                          i18n( "Klickety is an adaptation of the \"clickomania\" game" ),
+                          KAboutLicense::GPL,
+                          i18n( "(c) 2002-2005, Nicolas Hadacek\n(c) 2010, Ni Hui" ),
+                          "http://games.kde.org/klickety" );
 
-    KCmdLineArgs::init( argc, argv, &aboutData );
+    QApplication app(argc, argv);
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(aboutData);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    parser.addOption(QCommandLineOption(QStringList() <<  QLatin1String("KSameMode"), i18n( "Start with KSame compatibility mode" )));
 
-    KCmdLineOptions options;
-    options.add( "KSameMode", ki18n( "Start with KSame compatibility mode" ) );
-    KCmdLineArgs::addCmdLineOptions( options );
+    aboutData.setupCommandLine(&parser);
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
 
-    KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
-    bool KSameMode = args->isSet( "KSameMode" );
+    bool KSameMode = parser.isSet( "KSameMode" );
 
     // set kconfig instance
     // we use different file for storing ksame mode configuration
@@ -51,24 +58,22 @@ int main( int argc, char* argv[] )
     else {
         Settings::instance( QLatin1String( "klicketyrc" ) );
     }
-    args->clear();
+    
 
     if ( KSameMode ) {
-        aboutData.setProgramName( ki18n( "SameGame" ) );
         aboutData.setProgramIconName( "ksame" );
-        aboutData.setShortDescription( ki18n( "A little game about balls and how to get rid of them" ) );
-        aboutData.addAuthor( ki18n( "Marcus Kreutzberger"), ki18n( "Original author" ), "kreutzbe@informatik.mu-luebeck.de" );
-        aboutData.addAuthor( ki18n( "Henrique Pinto"), ki18n( "Past maintainer" ), "henrique.pinto@kdemail.net" );
-        aboutData.addAuthor( ki18n( "Ni Hui" ), ki18n( "Integration with Klickety. Current maintainer" ), "shuizhuyuanluo@126.com" );
-        aboutData.addCredit( ki18n( "Johann Ollivier Lapeyre"), ki18n("Artwork"), "johann.ollivierlapeyre@gmail.com" );
+        aboutData.setShortDescription( i18n( "A little game about balls and how to get rid of them" ) );
+        aboutData.addAuthor( i18n( "Marcus Kreutzberger"), i18n( "Original author" ), "kreutzbe@informatik.mu-luebeck.de" );
+        aboutData.addAuthor( i18n( "Henrique Pinto"), i18n( "Past maintainer" ), "henrique.pinto@kdemail.net" );
+        aboutData.addAuthor( i18n( "Ni Hui" ), i18n( "Integration with Klickety. Current maintainer" ), "shuizhuyuanluo@126.com" );
+        aboutData.addCredit( i18n( "Johann Ollivier Lapeyre"), i18n("Artwork"), "johann.ollivierlapeyre@gmail.com" );
     }
     else {
-        aboutData.addAuthor( ki18n( "Nicolas Hadacek" ), ki18n( "Original author" ), "hadacek@kde.org" );
-        aboutData.addAuthor( ki18n( "Ni Hui" ), ki18n( "Rewrite for KDE4. Current maintainer" ), "shuizhuyuanluo@126.com" );
-        aboutData.addCredit( ki18n( "Dan Hill" ), ki18n( "Icons" ) );
+        aboutData.addAuthor( i18n( "Nicolas Hadacek" ), i18n( "Original author" ), "hadacek@kde.org" );
+        aboutData.addAuthor( i18n( "Ni Hui" ), i18n( "Rewrite for KDE4. Current maintainer" ), "shuizhuyuanluo@126.com" );
+        aboutData.addCredit( i18n( "Dan Hill" ), i18n( "Icons" ) );
     }
 
-    KApplication app;
 
 
     //resource directory for KNewStuff2
