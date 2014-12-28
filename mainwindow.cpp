@@ -66,18 +66,18 @@ m_lastRemainCount(0)
 //         statusBar()->insertItem( i18n( "Board: XXXXXX" ), 2 );
         //QT5 statusBar()->insertItem( i18n( "Marked: 0" ), 3 );
         //QT5 statusBar()->insertItem( i18n( "Score: 0" ), 4 );
-        connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeScore(int)) );
-        connect( m_scene, SIGNAL(markedCountChanged(int)), this, SLOT(changeMarkedCount(int)) );
+        connect(m_scene, &GameScene::remainCountChanged, this, &MainWindow::changeScore);
+        connect(m_scene, &GameScene::markedCountChanged, this, &MainWindow::changeMarkedCount);
     }
     else {
         m_gameClock = new KGameClock( this, KGameClock::MinSecOnly );
         //QT5 statusBar()->insertItem( i18n( "Pieces: 0" ), 0 );
         //QT5 statusBar()->insertItem( i18n( "Time: 00:00" ), 1 );
-        connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeRemainCount(int)) );
-        connect( m_gameClock, SIGNAL(timeChanged(QString)), this, SLOT(changeTime(QString)) );
+        connect(m_scene, &GameScene::remainCountChanged, this, &MainWindow::changeRemainCount);
+        connect(m_gameClock, &KGameClock::timeChanged, this, &MainWindow::changeTime);
     }
 
-    connect( m_scene, SIGNAL(gameFinished(int)), this, SLOT(onGameOver(int)) );
+    connect(m_scene, &GameScene::gameFinished, this, &MainWindow::onGameOver);
 
     setupActions();
 
@@ -107,7 +107,7 @@ void MainWindow::configureSettings()
     if ( !m_KSameMode )
         dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
     connect(m_scene->themeProvider(), SIGNAL(currentThemeChanged(const KgTheme*)), SLOT(loadSettings())); //setBackgroundType!
-    connect( dialog, SIGNAL(settingsChanged(QString)), this, SLOT(loadSettings()) );
+    connect(dialog, &KConfigDialog::settingsChanged, this, &MainWindow::loadSettings);
     //QT5 dialog->setHelp( QString(), QLatin1String( "klickety" ) );
     dialog->show();
 }
@@ -348,28 +348,28 @@ void MainWindow::setupActions()
     KStandardGameAction::quit( this, SLOT(close()), actionCollection() );
     QAction * m_newNumGameAction = new QAction( i18n( "New Numbered Game..." ), actionCollection() );
     actionCollection()->addAction( QLatin1String( "game_new_numeric" ), m_newNumGameAction );
-    connect( m_newNumGameAction, SIGNAL(triggered(bool)), this, SLOT(newNumGame()) );
+    connect(m_newNumGameAction, &QAction::triggered, this, &MainWindow::newNumGame);
 
     // move menu
     QAction * undoAction = KStandardGameAction::undo( m_scene, SLOT(undoMove()), actionCollection() );
     undoAction->setEnabled( false );
-    connect( m_scene, SIGNAL(canUndoChanged(bool)), undoAction, SLOT(setEnabled(bool)) );
+    connect(m_scene, &GameScene::canUndoChanged, undoAction, &QAction::setEnabled);
     QAction * redoAction = KStandardGameAction::redo( m_scene, SLOT(redoMove()), actionCollection() );
     redoAction->setEnabled( false );
-    connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAction, SLOT(setEnabled(bool)) );
+    connect(m_scene, &GameScene::canRedoChanged, redoAction, &QAction::setEnabled);
 
     QAction * undoAllAction = actionCollection()->addAction( QLatin1String( "move_undo_all" ) );
     undoAllAction->setIcon( QIcon::fromTheme( QLatin1String(  "media-skip-backward" ) ) );
     undoAllAction->setText( i18n( "Undo All" ) );
     undoAllAction->setEnabled( false );
-    connect( m_scene, SIGNAL(canUndoChanged(bool)), undoAllAction, SLOT(setEnabled(bool)) );
-    connect( undoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(undoAllMove()) );
+    connect(m_scene, &GameScene::canUndoChanged, undoAllAction, &QAction::setEnabled);
+    connect(undoAllAction, &QAction::triggered, m_scene, &GameScene::undoAllMove);
     QAction * redoAllAction = actionCollection()->addAction( QLatin1String( "move_redo_all" ) );
     redoAllAction->setIcon( QIcon::fromTheme( QLatin1String(  "media-skip-forward" ) ) );
     redoAllAction->setText( i18n( "Redo All" ) );
     redoAllAction->setEnabled( false );
-    connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAllAction, SLOT(setEnabled(bool)) );
-    connect( redoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(redoAllMove()) );
+    connect(m_scene, &GameScene::canRedoChanged, redoAllAction, &QAction::setEnabled);
+    connect(redoAllAction, &QAction::triggered, m_scene, &GameScene::redoAllMove);
 
     // settings menu
     KStandardAction::preferences( this, SLOT(configureSettings()), actionCollection() );
