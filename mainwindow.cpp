@@ -42,7 +42,7 @@
 #include <KStandardGameAction>
 #include <QStatusBar>
 #include <KToggleAction>
-#include <KUrl>
+#include <QUrl>
 #include <QIcon>
 #include <QPointer>
 
@@ -203,7 +203,7 @@ void MainWindow::restartGame()
 
 void MainWindow::loadGame()
 {
-    QString fileName = KFileDialog::getOpenFileName( KUrl(), QLatin1String( "*.klickety" ), this );
+    QString fileName = KFileDialog::getOpenFileName( QUrl(), QLatin1String( "*.klickety" ), this );
     if ( fileName.isEmpty() || !confirmAbort() )
         return;
 
@@ -216,7 +216,7 @@ void MainWindow::loadGame()
 
 void MainWindow::saveGame()
 {
-    QString fileName = KFileDialog::getSaveFileName( KUrl(), QLatin1String( "*.klickety" ), this );
+    QString fileName = KFileDialog::getSaveFileName( QUrl(), QLatin1String( "*.klickety" ), this );
     if ( fileName.isEmpty() )
         return;
     KConfig config( fileName, KConfig::SimpleConfig );
