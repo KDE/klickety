@@ -76,9 +76,6 @@ int main( int argc, char* argv[] )
 
 
 
-    //resource directory for KNewStuff2
-//     KStandardDirs::locateLocal("appdata", "themes/");
-
     // see if we are starting with session management
     if ( app.isSessionRestored() ) {
         RESTORE(MainWindow( KSameMode ));
