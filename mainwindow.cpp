@@ -27,7 +27,6 @@
 
 #include <QAction>
 #include <KActionCollection>
-#include <KApplication>
 #include <KConfigDialog>
 #include <KFileDialog>
 #include <KGameClock>
