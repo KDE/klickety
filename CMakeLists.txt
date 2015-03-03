@@ -4,7 +4,7 @@ project(klickety)
 cmake_minimum_required (VERSION 2.8.12 FATAL_ERROR)
 set (QT_MIN_VERSION "5.3.0")
 
-find_package(ECM 1.3.0 REQUIRED CONFIG)
+find_package(ECM 1.7.0 REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets )
@@ -26,6 +26,7 @@ find_package(KF5 REQUIRED COMPONENTS
 find_package(KF5KDEGames 4.9.0 REQUIRED)
 
 include(FeatureSummary)
+include(ECMAddAppIcon)
 include(ECMInstallIcons)
 include(KDEInstallDirs)
 include(KDECompilerSettings)
@@ -47,22 +48,23 @@ ki18n_wrap_ui(klickety_SRCS bgselector.ui customgame.ui gameconfig.ui)
 
 kconfig_add_kcfg_files(klickety_SRCS settings.kcfgc)
 
-kde4_add_app_icon(klickety_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/pics/hi*-app-klickety.png")
+file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/pics/hi*-apps-klickety.png")
+ecm_add_app_icon(klickety_SRCS ICONS ${ICONS_SRCS})
 
 add_executable(klickety ${klickety_SRCS})
 
 target_link_libraries(klickety  KF5::NotifyConfig KF5KDEGames KF5::KIOCore KF5::KDELibs4Support)
 
-install(TARGETS klickety ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES klickety.kcfg klickety.notifyrc DESTINATION ${DATA_INSTALL_DIR}/klickety)
-install(FILES klicketyui.rc DESTINATION ${KXMLGUI_INSTALL_DIR}/klickety)
+install(TARGETS klickety ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES klickety.kcfg klickety.notifyrc DESTINATION ${KDE_INSTALL_DATADIR}/klickety)
+install(FILES klicketyui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/klickety)
 
-install(PROGRAMS org.kde.klickety.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-install(PROGRAMS ksame.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(PROGRAMS org.kde.klickety.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(PROGRAMS ksame.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 if(NOT WIN32)
-    install(PROGRAMS klickety-2.0-inherit-ksame-highscore.pl DESTINATION ${KCONF_UPDATE_INSTALL_DIR})
-    install(FILES klickety.upd DESTINATION ${KCONF_UPDATE_INSTALL_DIR})
+    install(PROGRAMS klickety-2.0-inherit-ksame-highscore.pl DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+    install(FILES klickety.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 endif(NOT WIN32)
 
 add_subdirectory(pics)
