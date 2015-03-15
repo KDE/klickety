@@ -48,7 +48,7 @@ ki18n_wrap_ui(klickety_SRCS bgselector.ui customgame.ui gameconfig.ui)
 
 kconfig_add_kcfg_files(klickety_SRCS settings.kcfgc)
 
-file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/pics/hi*-apps-klickety.png")
+file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/pics/*-apps-klickety.png")
 ecm_add_app_icon(klickety_SRCS ICONS ${ICONS_SRCS})
 
 add_executable(klickety ${klickety_SRCS})
