@@ -28,11 +28,11 @@
 #include <QAction>
 #include <KActionCollection>
 #include <KConfigDialog>
-#include <KFileDialog>
+#include <QFileDialog>
 #include <KGameClock>
 #include <KgDifficulty>
 #include <KgThemeSelector>
-#include <KInputDialog>
+#include <QInputDialog>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KNotifyConfigWidget>
@@ -165,10 +165,10 @@ void MainWindow::newNumGame()
         return;
 
     bool ok = false;
-    int userGameId = KInputDialog::getInteger( i18n( "Select Board" ),
+    int userGameId = QInputDialog::getInt( this, i18n( "Select Board" ),
                                                 i18n( "Select a board number:" ),
                                                 qrand(), 1, RAND_MAX, 1,
-                                                &ok, this );
+                                                &ok );
     if ( ok )
         newGame( userGameId );
 }
@@ -202,7 +202,7 @@ void MainWindow::restartGame()
 
 void MainWindow::loadGame()
 {
-    QString fileName = KFileDialog::getOpenFileName( QUrl(), QLatin1String( "*.klickety" ), this );
+    QString fileName = QFileDialog::getOpenFileName( this, QString(), QString() , i18n( "Klickety Game Files | *.klickety" ) );
     if ( fileName.isEmpty() || !confirmAbort() )
         return;
 
@@ -215,7 +215,7 @@ void MainWindow::loadGame()
 
 void MainWindow::saveGame()
 {
-    QString fileName = KFileDialog::getSaveFileName( QUrl(), QLatin1String( "*.klickety" ), this );
+    QString fileName = QFileDialog::getSaveFileName( this, QString(), QString(), i18n( "Klickety Game Files | *.klickety" ) );
     if ( fileName.isEmpty() )
         return;
     KConfig config( fileName, KConfig::SimpleConfig );
