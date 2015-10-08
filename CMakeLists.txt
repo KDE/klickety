@@ -62,7 +62,7 @@ install(FILES klickety.kcfg DESTINATION ${KDE_INSTALL_DATADIR}/klickety)
 install(FILES klicketyui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/klickety)
 
 install(PROGRAMS org.kde.klickety.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(PROGRAMS ksame.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(PROGRAMS org.kde.ksame.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 if(NOT WIN32)
     install(PROGRAMS klickety-2.0-inherit-ksame-highscore.pl DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
