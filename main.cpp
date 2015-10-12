@@ -20,21 +20,20 @@
 #include "settings.h"
 
 #include <KAboutData>
-
-
 #include <KLocalizedString>
 
-#include <ctime>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
 
+#include <ctime>
+
 int main( int argc, char* argv[] )
 {
-    QApplication app(argc, argv);
+    QApplication app( argc, argv );
     app.setWindowIcon(QIcon::fromTheme(QLatin1String( "klickety" )));
 
-    qsrand( std::time(nullptr) );
+    qsrand( std::time( nullptr ) );
     KAboutData aboutData( "klickety", i18n( "Klickety" ), "2.0",
                           i18n( "Klickety is an adaptation of the \"clickomania\" game" ),
                           KAboutLicense::GPL,
@@ -42,14 +41,14 @@ int main( int argc, char* argv[] )
                           "http://games.kde.org/klickety" );
 
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
+    KAboutData::setApplicationData( aboutData );
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.addOption(QCommandLineOption(QStringList() <<  QLatin1String("KSameMode"), i18n( "Start with KSame compatibility mode" )));
+    parser.addOption( QCommandLineOption( QStringList() <<  QLatin1String( "KSameMode" ), i18n( "Start with KSame compatibility mode" ) ) );
 
-    aboutData.setupCommandLine(&parser);
-    parser.process(app);
-    aboutData.processCommandLine(&parser);
+    aboutData.setupCommandLine( &parser );
+    parser.process( app );
+    aboutData.processCommandLine( &parser );
 
     bool KSameMode = parser.isSet( "KSameMode" );
 
@@ -68,8 +67,6 @@ int main( int argc, char* argv[] )
         aboutData.addAuthor( i18n( "Ni Hui" ), i18n( "Rewrite for KDE4. Current maintainer" ), "shuizhuyuanluo@126.com" );
         aboutData.addCredit( i18n( "Dan Hill" ), i18n( "Icons" ) );
     }
-
-
 
     // see if we are starting with session management
     if ( app.isSessionRestored() ) {

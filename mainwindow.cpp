@@ -330,7 +330,7 @@ void MainWindow::onGameOver( int remainCount )
 bool MainWindow::confirmAbort()
 {
     return m_scene->isGameFinished() || ( KMessageBox::questionYesNo( this, i18n( "Do you want to resign?" ),
-        i18n( "New Game" ),KGuiItem( i18n( "Resign" ) ), KStandardGuiItem::cancel() ) == KMessageBox::Yes );
+        i18n( "New Game" ), KGuiItem( i18n( "Resign" ) ), KStandardGuiItem::cancel() ) == KMessageBox::Yes );
 }
 
 void MainWindow::setupActions()
@@ -358,13 +358,13 @@ void MainWindow::setupActions()
     connect(m_scene, &GameScene::canRedoChanged, redoAction, &QAction::setEnabled);
 
     QAction * undoAllAction = actionCollection()->addAction( QLatin1String( "move_undo_all" ) );
-    undoAllAction->setIcon( QIcon::fromTheme( QLatin1String(  "media-skip-backward" ) ) );
+    undoAllAction->setIcon( QIcon::fromTheme( QLatin1String( "media-skip-backward" ) ) );
     undoAllAction->setText( i18n( "Undo All" ) );
     undoAllAction->setEnabled( false );
     connect(m_scene, &GameScene::canUndoChanged, undoAllAction, &QAction::setEnabled);
     connect(undoAllAction, &QAction::triggered, m_scene, &GameScene::undoAllMove);
     QAction * redoAllAction = actionCollection()->addAction( QLatin1String( "move_redo_all" ) );
-    redoAllAction->setIcon( QIcon::fromTheme( QLatin1String(  "media-skip-forward" ) ) );
+    redoAllAction->setIcon( QIcon::fromTheme( QLatin1String( "media-skip-forward" ) ) );
     redoAllAction->setText( i18n( "Redo All" ) );
     redoAllAction->setEnabled( false );
     connect(m_scene, &GameScene::canRedoChanged, redoAllAction, &QAction::setEnabled);
