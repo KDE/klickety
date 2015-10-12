@@ -34,7 +34,7 @@ int main( int argc, char* argv[] )
     QApplication app(argc, argv);
     app.setWindowIcon(QIcon::fromTheme(QLatin1String( "klickety" )));
 
-    qsrand( time(0) );
+    qsrand( std::time(nullptr) );
     KAboutData aboutData( "klickety", i18n( "Klickety" ), "2.0",
                           i18n( "Klickety is an adaptation of the \"clickomania\" game" ),
                           KAboutLicense::GPL,
