@@ -53,16 +53,9 @@ int main( int argc, char* argv[] )
 
     bool KSameMode = parser.isSet( "KSameMode" );
 
-    // set kconfig instance
     // we use different file for storing ksame mode configuration
-    if ( KSameMode )
-        Settings::instance( QLatin1String( "ksamerc" ) );
-    else {
-        Settings::instance( QLatin1String( "klicketyrc" ) );
-    }
-    
-
     if ( KSameMode ) {
+        Settings::instance( QLatin1String( "ksamerc" ) );
         aboutData.setShortDescription( i18n( "A little game about balls and how to get rid of them" ) );
         aboutData.addAuthor( i18n( "Marcus Kreutzberger"), i18n( "Original author" ), "kreutzbe@informatik.mu-luebeck.de" );
         aboutData.addAuthor( i18n( "Henrique Pinto"), i18n( "Past maintainer" ), "henrique.pinto@kdemail.net" );
@@ -70,6 +63,7 @@ int main( int argc, char* argv[] )
         aboutData.addCredit( i18n( "Johann Ollivier Lapeyre"), i18n("Artwork"), "johann.ollivierlapeyre@gmail.com" );
     }
     else {
+        Settings::instance( QLatin1String( "klicketyrc" ) );
         aboutData.addAuthor( i18n( "Nicolas Hadacek" ), i18n( "Original author" ), "hadacek@kde.org" );
         aboutData.addAuthor( i18n( "Ni Hui" ), i18n( "Rewrite for KDE4. Current maintainer" ), "shuizhuyuanluo@126.com" );
         aboutData.addCredit( i18n( "Dan Hill" ), i18n( "Icons" ) );
