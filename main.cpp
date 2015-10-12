@@ -32,6 +32,7 @@
 int main( int argc, char* argv[] )
 {
     QApplication app(argc, argv);
+    app.setWindowIcon(QIcon::fromTheme(QLatin1String( "klickety" )));
 
     qsrand( time(0) );
     KAboutData aboutData( "klickety", i18n( "Klickety" ), "2.0",
@@ -62,7 +63,6 @@ int main( int argc, char* argv[] )
     
 
     if ( KSameMode ) {
-        aboutData.setProgramIconName( "ksame" );
         aboutData.setShortDescription( i18n( "A little game about balls and how to get rid of them" ) );
         aboutData.addAuthor( i18n( "Marcus Kreutzberger"), i18n( "Original author" ), "kreutzbe@informatik.mu-luebeck.de" );
         aboutData.addAuthor( i18n( "Henrique Pinto"), i18n( "Past maintainer" ), "henrique.pinto@kdemail.net" );
