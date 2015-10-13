@@ -484,8 +484,8 @@ void GameScene::removePieces( int x, int y )
     int gameAreaHeight = PHC * elementsSize;
     int yShift = ( sceneRect().height() - gameAreaHeight ) / 2;
 
-    QParallelAnimationGroup* gravityAnimationGroup = NULL;
-    QParallelAnimationGroup* removeColumnsAnimationGroup = NULL;
+    QParallelAnimationGroup* gravityAnimationGroup = nullptr;
+    QParallelAnimationGroup* removeColumnsAnimationGroup = nullptr;
     if ( m_enableAnimation ) {
         // remove previous animations if any
         m_animation->clear();

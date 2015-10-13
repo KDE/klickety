@@ -48,7 +48,7 @@
 MainWindow::MainWindow( bool KSameMode, QWidget* parent )
 : KXmlGuiWindow(parent),
 m_KSameMode(KSameMode),
-m_gameClock(NULL),
+m_gameClock(nullptr),
 m_gameScore(0),
 m_lastRemainCount(0),
 m_statusBarLabelLeft(new QLabel()),
