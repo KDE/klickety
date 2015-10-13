@@ -50,7 +50,9 @@ MainWindow::MainWindow( bool KSameMode, QWidget* parent )
 m_KSameMode(KSameMode),
 m_gameClock(NULL),
 m_gameScore(0),
-m_lastRemainCount(0)
+m_lastRemainCount(0),
+m_statusBarLabelLeft(0),
+m_statusBarLabelRight(0)
 {
     m_scene = new GameScene;
     GameView* view = new GameView( m_scene );
@@ -60,18 +62,23 @@ m_lastRemainCount(0)
     view->setCacheMode( QGraphicsView::CacheBackground );
     setCentralWidget( view );
 
+    m_statusBarLabelLeft = new QLabel();
+    m_statusBarLabelRight = new QLabel();
+    statusBar()->addPermanentWidget( m_statusBarLabelLeft );
+    statusBar()->addPermanentWidget( m_statusBarLabelRight );
+
     if ( m_KSameMode ) {
 //         statusBar()->insertItem( i18n( "Colors: XX" ), 1 );
 //         statusBar()->insertItem( i18n( "Board: XXXXXX" ), 2 );
-        //QT5 statusBar()->insertItem( i18n( "Marked: 0" ), 3 );
-        //QT5 statusBar()->insertItem( i18n( "Score: 0" ), 4 );
+        m_statusBarLabelLeft->setText( i18n( "Marked: 0" ) );
+        m_statusBarLabelRight->setText( i18n( "Score: 0" ) );
         connect(m_scene, &GameScene::remainCountChanged, this, &MainWindow::changeScore);
         connect(m_scene, &GameScene::markedCountChanged, this, &MainWindow::changeMarkedCount);
     }
     else {
         m_gameClock = new KGameClock( this, KGameClock::MinSecOnly );
-        //QT5 statusBar()->insertItem( i18n( "Pieces: 0" ), 0 );
-        //QT5 statusBar()->insertItem( i18n( "Time: 00:00" ), 1 );
+        m_statusBarLabelLeft->setText( i18n( "Pieces: 0" ) );
+        m_statusBarLabelRight->setText( i18n( "Time: 00:00" ) );
         connect(m_scene, &GameScene::remainCountChanged, this, &MainWindow::changeRemainCount);
         connect(m_gameClock, &KGameClock::timeChanged, this, &MainWindow::changeTime);
     }
@@ -226,7 +233,7 @@ void MainWindow::saveGame()
 void MainWindow::changeMarkedCount( int markedCount )
 {
     int markedScore = ( markedCount < 2 ) ? 0 : ( ( markedCount - 2 ) * ( markedCount - 2 ) );
-    //QT5 statusBar()->changeItem( i18np( "Marked: %2 (1 Point)", "Marked: %2 (%1 Points)", markedScore, markedCount ), 3 );
+    m_statusBarLabelLeft->setText( i18np( "Marked: %2 (1 Point)", "Marked: %2 (%1 Points)", markedScore, markedCount ) );
 }
 
 void MainWindow::changeScore( int remainCount )
@@ -234,7 +241,7 @@ void MainWindow::changeScore( int remainCount )
     if ( m_lastRemainCount == 0 ) {
         // new game or restart
         m_lastRemainCount = remainCount;
-        //QT5 statusBar()->changeItem( i18n( "Score: 0" ), 4 );
+        m_statusBarLabelRight->setText( i18n( "Score: 0" ) );
         return;
     }
     int removedCount = m_lastRemainCount - remainCount;
@@ -248,18 +255,18 @@ void MainWindow::changeScore( int remainCount )
         int score = ( removedCount > -2 ) ? 0 : ( ( removedCount + 2 ) * ( removedCount + 2 ) );
         m_gameScore -= score;
     }
-    //QT5 statusBar()->changeItem( i18n( "Score: %1", m_gameScore ), 4 );
+    m_statusBarLabelRight->setText( i18n( "Score: %1", m_gameScore ) );
     m_lastRemainCount = remainCount;
 }
 
 void MainWindow::changeRemainCount( int remainCount )
 {
-    //QT5 statusBar()->changeItem( i18n( "Pieces: %1", remainCount ), 0 );
+    m_statusBarLabelLeft->setText( i18n( "Pieces: %1", remainCount ) );
 }
 
 void MainWindow::changeTime( const QString& newTime )
 {
-    //QT5 statusBar()->changeItem( i18n( "Time: %1", newTime ), 1 );
+    m_statusBarLabelRight->setText( i18n( "Time: %1", newTime ) );
 }
 
 void MainWindow::showHighscores()

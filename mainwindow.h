@@ -21,6 +21,8 @@
 
 #include <KXmlGuiWindow>
 
+#include <QLabel>
+
 class KToggleAction;
 class KGameClock;
 class GameScene;
@@ -57,6 +59,8 @@ class MainWindow : public KXmlGuiWindow
         /** KSame mode only */
         int m_gameScore, m_lastRemainCount;
         KToggleAction* m_pauseAction;
+        QLabel* m_statusBarLabelLeft;
+        QLabel* m_statusBarLabelRight;
 };
 
 #endif // MAINWINDOW_H
