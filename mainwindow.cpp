@@ -51,8 +51,8 @@ m_KSameMode(KSameMode),
 m_gameClock(NULL),
 m_gameScore(0),
 m_lastRemainCount(0),
-m_statusBarLabelLeft(0),
-m_statusBarLabelRight(0)
+m_statusBarLabelLeft(new QLabel()),
+m_statusBarLabelRight(new QLabel())
 {
     m_scene = new GameScene;
     GameView* view = new GameView( m_scene );
@@ -62,8 +62,6 @@ m_statusBarLabelRight(0)
     view->setCacheMode( QGraphicsView::CacheBackground );
     setCentralWidget( view );
 
-    m_statusBarLabelLeft = new QLabel();
-    m_statusBarLabelRight = new QLabel();
     statusBar()->addPermanentWidget( m_statusBarLabelLeft );
     statusBar()->addPermanentWidget( m_statusBarLabelRight );
 
