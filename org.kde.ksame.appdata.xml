@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop">
+  <id>org.kde.ksame.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>KSame</name>
+  <summary>KSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game.</summary>
+  <description>
+    <p>
+      KSame is a simple, yet challenging color matching game modeled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicolored marbles.
+    </p>
+  </description>
+  <url type="homepage">http://games.kde.org/game.php?game=ksame</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
+  <url type="help">https://docs.kde.org/stable4/en/kdegames/klickety/ksame_mode.html</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>http://kde.org/images/screenshots/ksame.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>klickety --KSameMode</binary>
+  </provides>
+</component>
