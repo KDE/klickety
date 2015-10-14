@@ -14,10 +14,7 @@ find_package(KF5 REQUIRED COMPONENTS
     WidgetsAddons 
     Config 
     I18n 
-    GuiAddons 
     ConfigWidgets 
-    ItemViews 
-    IconThemes 
     XmlGui
     KIO
     DocTools
