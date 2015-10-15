@@ -62,8 +62,8 @@ m_statusBarLabelRight(new QLabel())
     view->setCacheMode( QGraphicsView::CacheBackground );
     setCentralWidget( view );
 
-    statusBar()->addPermanentWidget( m_statusBarLabelLeft );
-    statusBar()->addPermanentWidget( m_statusBarLabelRight );
+    statusBar()->addPermanentWidget( m_statusBarLabelLeft, 1 );
+    statusBar()->addPermanentWidget( m_statusBarLabelRight, 1 );
 
     if ( m_KSameMode ) {
 //         statusBar()->insertItem( i18n( "Colors: XX" ), 1 );
