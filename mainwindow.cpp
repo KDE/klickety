@@ -43,7 +43,6 @@
 #include <KToggleAction>
 #include <QUrl>
 #include <QIcon>
-#include <QPointer>
 
 MainWindow::MainWindow( bool KSameMode, QWidget* parent )
 : KXmlGuiWindow(parent),
@@ -270,23 +269,21 @@ void MainWindow::changeTime( const QString& newTime )
 void MainWindow::showHighscores()
 {
     if ( m_KSameMode ) {
-        QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
-        d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
-        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
-        d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
-        d->exec();
-        delete d;
+        KScoreDialog ksdialog( KScoreDialog::Name | KScoreDialog::Score, this );
+        ksdialog.initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
+        ksdialog.setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
+        ksdialog.setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
+        ksdialog.exec();
         return;
     }
 
-    QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
-    d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
-    d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
-    d->hideField( KScoreDialog::Score );
-    d->exec();
-    delete d;
+    KScoreDialog ksdialog( KScoreDialog::Name, this );
+    ksdialog.addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
+    ksdialog.addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
+    ksdialog.initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
+    ksdialog.setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
+    ksdialog.hideField( KScoreDialog::Score );
+    ksdialog.exec();
 }
 
 void MainWindow::onGameOver( int remainCount )
@@ -299,37 +296,35 @@ void MainWindow::onGameOver( int remainCount )
             m_gameScore += 1000;
         }
 
-        QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
-        d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
-        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
-        d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
+        KScoreDialog ksdialog( KScoreDialog::Name | KScoreDialog::Score, this );
+        ksdialog.initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
+        ksdialog.setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
+        ksdialog.setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
 
         KScoreDialog::FieldInfo scoreInfo;
         scoreInfo[ KScoreDialog::Score ].setNum( m_gameScore );
 
-        if ( d->addScore( scoreInfo ) )
-            d->exec();
-        delete d;
+        if ( ksdialog.addScore( scoreInfo ) )
+            ksdialog.exec();
         return;
     }
 
     m_gameClock->pause();
 
-    QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
-    d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
-    d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
-    d->hideField( KScoreDialog::Score );
+    KScoreDialog ksdialog( KScoreDialog::Name, this );
+    ksdialog.addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
+    ksdialog.addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
+    ksdialog.initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
+    ksdialog.setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
+    ksdialog.hideField( KScoreDialog::Score );
 
     KScoreDialog::FieldInfo scoreInfo;
     scoreInfo[KScoreDialog::Custom1].setNum( remainCount );
     scoreInfo[KScoreDialog::Custom2] = m_gameClock->timeString();
     // remainCount*10000000 is much bigger than a usual time seconds
     scoreInfo[KScoreDialog::Score].setNum( remainCount*10000000 + m_gameClock->seconds() );
-    if ( d->addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 )
-        d->exec();
-    delete d;
+    if ( ksdialog.addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 )
+        ksdialog.exec();
 }
 
 bool MainWindow::confirmAbort()
