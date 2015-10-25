@@ -375,6 +375,10 @@ void MainWindow::setupActions()
     KStandardAction::configureNotifications( this, SLOT(configureNotifications()), actionCollection() );
 
     if ( m_KSameMode ) {
+        Kg::difficulty()->addLevel(new KgDifficultyLevel(0,
+            QByteArray( "KSame" ), i18n( "High Scores" )
+        ));
+        KgDifficultyGUI::init(this);
         setupGUI( QSize( 576, 384 ) );
         return;
     }
