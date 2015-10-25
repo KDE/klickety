@@ -378,7 +378,6 @@ void MainWindow::setupActions()
         Kg::difficulty()->addLevel(new KgDifficultyLevel(0,
             QByteArray( "KSame" ), i18n( "High Scores" )
         ));
-        KgDifficultyGUI::init(this);
         setupGUI( QSize( 576, 384 ) );
         return;
     }
