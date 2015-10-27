@@ -20,6 +20,7 @@
 #include "settings.h"
 
 #include <KAboutData>
+#include <KDBusService>
 #include <Kdelibs4ConfigMigrator>
 #include <KLocalizedString>
 
@@ -87,6 +88,8 @@ int main( int argc, char* argv[] )
         MainWindow* window = new MainWindow( kSameMode );
         window->show();
     }
+
+    KDBusService service;
 
     return app.exec();
 }

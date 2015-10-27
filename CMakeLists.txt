@@ -19,6 +19,7 @@ find_package(KF5 REQUIRED COMPONENTS
     KIO
     DocTools
     NotifyConfig
+    DBusAddons
     Notifications)
 
 find_package(KF5KDEGames 4.9.0 REQUIRED)
@@ -51,7 +52,7 @@ ecm_add_app_icon(klickety_SRCS ICONS ${ICONS_SRCS})
 
 add_executable(klickety ${klickety_SRCS})
 
-target_link_libraries(klickety  KF5::NotifyConfig KF5::Notifications KF5KDEGames KF5::KIOCore KF5::KIOFileWidgets KF5::KIOWidgets KF5::KIONTLM KF5::XmlGui)
+target_link_libraries(klickety  KF5::NotifyConfig KF5::Notifications KF5KDEGames KF5::KIOCore KF5::KIOFileWidgets KF5::KIOWidgets KF5::KIONTLM KF5::XmlGui KF5::DBusAddons)
 
 install(TARGETS klickety ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES klickety.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR} )
