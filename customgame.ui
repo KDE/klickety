@@ -19,7 +19,7 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="KIntSpinBox" name="kcfg_CustomWidth">
+    <widget class="QSpinBox" name="kcfg_CustomWidth">
      <property name="minimum">
       <number>2</number>
      </property>
@@ -36,7 +36,7 @@
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="KIntSpinBox" name="kcfg_CustomHeight">
+    <widget class="QSpinBox" name="kcfg_CustomHeight">
      <property name="minimum">
       <number>2</number>
      </property>
@@ -53,7 +53,7 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="KIntSpinBox" name="kcfg_CustomColorCount">
+    <widget class="QSpinBox" name="kcfg_CustomColorCount">
      <property name="minimum">
       <number>2</number>
      </property>
@@ -90,13 +90,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KIntSpinBox</class>
-   <extends>QSpinBox</extends>
-   <header>knuminput.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -11,20 +11,33 @@
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="0">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
    <item row="3" column="0">
-    <widget class="KButtonGroup" name="kcfg_BgType">
+    <widget class="QGroupBox" name="kcfg_BgType">
      <layout class="QGridLayout" name="gridLayout1">
       <item row="0" column="0">
        <widget class="QRadioButton" name="theme">
         <property name="text">
-         <string>Theme</string>
+         <string>&amp;Theme</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
        <widget class="QRadioButton" name="color">
         <property name="text">
-         <string>Color</string>
+         <string>&amp;Color</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -34,7 +47,7 @@
       <item row="2" column="0">
        <widget class="QRadioButton" name="image">
         <property name="text">
-         <string>Image</string>
+         <string>Ima&amp;ge</string>
         </property>
        </widget>
       </item>
@@ -49,25 +62,7 @@
        <widget class="KColorButton" name="kcfg_BgColor"/>
       </item>
      </layout>
-     <zorder>theme</zorder>
-     <zorder>color</zorder>
-     <zorder>image</zorder>
-     <zorder>kcfg_BgImage</zorder>
-     <zorder>kcfg_BgColor</zorder>
     </widget>
-   </item>
-   <item row="4" column="0">
-    <spacer>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>
@@ -76,11 +71,6 @@
    <class>KUrlRequester</class>
    <extends>QFrame</extends>
    <header>kurlrequester.h</header>
-  </customwidget>
-  <customwidget>
-   <class>KButtonGroup</class>
-   <extends>QGroupBox</extends>
-   <header>kbuttongroup.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
@@ -90,38 +80,5 @@
   </customwidget>
  </customwidgets>
  <resources/>
- <connections>
-  <connection>
-   <sender>color</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>kcfg_BgColor</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>51</x>
-     <y>64</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>194</x>
-     <y>64</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>image</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>kcfg_BgImage</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>51</x>
-     <y>97</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>194</x>
-     <y>97</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

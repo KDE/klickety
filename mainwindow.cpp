@@ -25,32 +25,33 @@
 #include "gameview.h"
 #include "settings.h"
 
-#include <KAction>
+#include <QAction>
 #include <KActionCollection>
-#include <KApplication>
 #include <KConfigDialog>
-#include <KFileDialog>
+#include <QFileDialog>
 #include <KGameClock>
 #include <KgDifficulty>
 #include <KgThemeSelector>
-#include <KInputDialog>
-#include <KLocale>
+#include <QInputDialog>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KNotifyConfigWidget>
 #include <KScoreDialog>
 #include <KStandardAction>
 #include <KStandardGameAction>
-#include <KStatusBar>
+#include <QStatusBar>
 #include <KToggleAction>
+#include <QUrl>
+#include <QIcon>
 
-#include <QPointer>
-
-MainWindow::MainWindow( bool KSameMode, QWidget* parent )
+MainWindow::MainWindow( bool kSameMode, QWidget* parent )
 : KXmlGuiWindow(parent),
-m_KSameMode(KSameMode),
-m_gameClock(NULL),
+m_kSameMode(kSameMode),
+m_gameClock(nullptr),
 m_gameScore(0),
-m_lastRemainCount(0)
+m_lastRemainCount(0),
+m_statusBarLabelLeft(new QLabel()),
+m_statusBarLabelRight(new QLabel())
 {
     m_scene = new GameScene;
     GameView* view = new GameView( m_scene );
@@ -60,23 +61,26 @@ m_lastRemainCount(0)
     view->setCacheMode( QGraphicsView::CacheBackground );
     setCentralWidget( view );
 
-    if ( m_KSameMode ) {
+    statusBar()->addPermanentWidget( m_statusBarLabelLeft, 1 );
+    statusBar()->addPermanentWidget( m_statusBarLabelRight, 1 );
+
+    if ( m_kSameMode ) {
 //         statusBar()->insertItem( i18n( "Colors: XX" ), 1 );
 //         statusBar()->insertItem( i18n( "Board: XXXXXX" ), 2 );
-        statusBar()->insertItem( i18n( "Marked: 0" ), 3 );
-        statusBar()->insertItem( i18n( "Score: 0" ), 4 );
-        connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeScore(int)) );
-        connect( m_scene, SIGNAL(markedCountChanged(int)), this, SLOT(changeMarkedCount(int)) );
+        m_statusBarLabelLeft->setText( i18n( "Marked: 0" ) );
+        m_statusBarLabelRight->setText( i18n( "Score: 0" ) );
+        connect(m_scene, &GameScene::remainCountChanged, this, &MainWindow::changeScore);
+        connect(m_scene, &GameScene::markedCountChanged, this, &MainWindow::changeMarkedCount);
     }
     else {
         m_gameClock = new KGameClock( this, KGameClock::MinSecOnly );
-        statusBar()->insertItem( i18n( "Pieces: 0" ), 0 );
-        statusBar()->insertItem( i18n( "Time: 00:00" ), 1 );
-        connect( m_scene, SIGNAL(remainCountChanged(int)), this, SLOT(changeRemainCount(int)) );
-        connect( m_gameClock, SIGNAL(timeChanged(QString)), this, SLOT(changeTime(QString)) );
+        m_statusBarLabelLeft->setText( i18n( "Pieces: 0" ) );
+        m_statusBarLabelRight->setText( i18n( "Time: 00:00" ) );
+        connect(m_scene, &GameScene::remainCountChanged, this, &MainWindow::changeRemainCount);
+        connect(m_gameClock, &KGameClock::timeChanged, this, &MainWindow::changeTime);
     }
 
-    connect( m_scene, SIGNAL(gameFinished(int)), this, SLOT(onGameOver(int)) );
+    connect(m_scene, &GameScene::gameFinished, this, &MainWindow::onGameOver);
 
     setupActions();
 
@@ -103,11 +107,11 @@ void MainWindow::configureSettings()
     dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QLatin1String( "games-config-options" ) );
     dialog->addPage( new KgThemeSelector( m_scene->themeProvider() ), i18n( "Theme" ), QLatin1String( "games-config-theme" ) );
     dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QLatin1String( "games-config-background" ) );
-    if ( !m_KSameMode )
+    if ( !m_kSameMode )
         dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
     connect(m_scene->themeProvider(), SIGNAL(currentThemeChanged(const KgTheme*)), SLOT(loadSettings())); //setBackgroundType!
-    connect( dialog, SIGNAL(settingsChanged(QString)), this, SLOT(loadSettings()) );
-    dialog->setHelp( QString(), QLatin1String( "klickety" ) );
+    connect(dialog, &KConfigDialog::settingsChanged, this, &MainWindow::loadSettings);
+    //QT5 dialog->setHelp( QString(), QLatin1String( "klickety" ) );
     dialog->show();
 }
 
@@ -127,7 +131,7 @@ void MainWindow::newGame( int gameId )
     m_pauseAction->setChecked( false );
     m_pauseAction->setEnabled( true );
 
-    if ( m_KSameMode ) {
+    if ( m_kSameMode ) {
         m_gameScore = 0;
         m_lastRemainCount = 15 * 10;
         m_scene->startNewGame( 15, 10, 3, gameId );
@@ -165,10 +169,10 @@ void MainWindow::newNumGame()
         return;
 
     bool ok = false;
-    int userGameId = KInputDialog::getInteger( i18n( "Select Board" ),
+    int userGameId = QInputDialog::getInt( this, i18n( "Select Board" ),
                                                 i18n( "Select a board number:" ),
                                                 qrand(), 1, RAND_MAX, 1,
-                                                &ok, this );
+                                                &ok );
     if ( ok )
         newGame( userGameId );
 }
@@ -176,7 +180,7 @@ void MainWindow::newNumGame()
 void MainWindow::pauseGame( bool isPaused )
 {
     m_scene->setPaused( isPaused );
-    if ( !m_KSameMode ) {
+    if ( !m_kSameMode ) {
         if ( isPaused )
             m_gameClock->pause();
         else
@@ -189,7 +193,7 @@ void MainWindow::restartGame()
     if ( confirmAbort() ) {
         m_pauseAction->setChecked( false );
         m_pauseAction->setEnabled( true );
-        if ( m_KSameMode ) {
+        if ( m_kSameMode ) {
             m_gameScore = 0;
             m_lastRemainCount = 0;
         }
@@ -202,7 +206,7 @@ void MainWindow::restartGame()
 
 void MainWindow::loadGame()
 {
-    QString fileName = KFileDialog::getOpenFileName( KUrl(), QLatin1String( "*.klickety" ), this );
+    QString fileName = QFileDialog::getOpenFileName( this, QString(), QString() , i18n( "Klickety Game Files | *.klickety" ) );
     if ( fileName.isEmpty() || !confirmAbort() )
         return;
 
@@ -215,7 +219,7 @@ void MainWindow::loadGame()
 
 void MainWindow::saveGame()
 {
-    QString fileName = KFileDialog::getSaveFileName( KUrl(), QLatin1String( "*.klickety" ), this );
+    QString fileName = QFileDialog::getSaveFileName( this, QString(), QString(), i18n( "Klickety Game Files | *.klickety" ) );
     if ( fileName.isEmpty() )
         return;
     KConfig config( fileName, KConfig::SimpleConfig );
@@ -226,7 +230,7 @@ void MainWindow::saveGame()
 void MainWindow::changeMarkedCount( int markedCount )
 {
     int markedScore = ( markedCount < 2 ) ? 0 : ( ( markedCount - 2 ) * ( markedCount - 2 ) );
-    statusBar()->changeItem( i18np( "Marked: %2 (1 Point)", "Marked: %2 (%1 Points)", markedScore, markedCount ), 3 );
+    m_statusBarLabelLeft->setText( i18np( "Marked: %2 (1 Point)", "Marked: %2 (%1 Points)", markedScore, markedCount ) );
 }
 
 void MainWindow::changeScore( int remainCount )
@@ -234,7 +238,7 @@ void MainWindow::changeScore( int remainCount )
     if ( m_lastRemainCount == 0 ) {
         // new game or restart
         m_lastRemainCount = remainCount;
-        statusBar()->changeItem( i18n( "Score: 0" ), 4 );
+        m_statusBarLabelRight->setText( i18n( "Score: 0" ) );
         return;
     }
     int removedCount = m_lastRemainCount - remainCount;
@@ -248,96 +252,92 @@ void MainWindow::changeScore( int remainCount )
         int score = ( removedCount > -2 ) ? 0 : ( ( removedCount + 2 ) * ( removedCount + 2 ) );
         m_gameScore -= score;
     }
-    statusBar()->changeItem( i18n( "Score: %1", m_gameScore ), 4 );
+    m_statusBarLabelRight->setText( i18n( "Score: %1", m_gameScore ) );
     m_lastRemainCount = remainCount;
 }
 
 void MainWindow::changeRemainCount( int remainCount )
 {
-    statusBar()->changeItem( i18n( "Pieces: %1", remainCount ), 0 );
+    m_statusBarLabelLeft->setText( i18n( "Pieces: %1", remainCount ) );
 }
 
 void MainWindow::changeTime( const QString& newTime )
 {
-    statusBar()->changeItem( i18n( "Time: %1", newTime ), 1 );
+    m_statusBarLabelRight->setText( i18n( "Time: %1", newTime ) );
 }
 
 void MainWindow::showHighscores()
 {
-    if ( m_KSameMode ) {
-        QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
-        d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
-        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
-        d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
-        d->exec();
-        delete d;
+    if ( m_kSameMode ) {
+        KScoreDialog ksdialog( KScoreDialog::Name | KScoreDialog::Score, this );
+        ksdialog.initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
+        ksdialog.setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
+        ksdialog.setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
+        ksdialog.exec();
         return;
     }
 
-    QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
-    d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
-    d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
-    d->hideField( KScoreDialog::Score );
-    d->exec();
-    delete d;
+    KScoreDialog ksdialog( KScoreDialog::Name, this );
+    ksdialog.addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
+    ksdialog.addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
+    ksdialog.initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
+    ksdialog.setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
+    ksdialog.hideField( KScoreDialog::Score );
+    ksdialog.exec();
 }
 
 void MainWindow::onGameOver( int remainCount )
 {
     m_pauseAction->setEnabled( false );
 
-    if ( m_KSameMode ) {
+    if ( m_kSameMode ) {
         if ( remainCount == 0 ) {
             // if the board is empty, give a bonus
             m_gameScore += 1000;
         }
 
-        QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
-        d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
-        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
-        d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
+        KScoreDialog ksdialog( KScoreDialog::Name | KScoreDialog::Score, this );
+        ksdialog.initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
+        ksdialog.setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
+        ksdialog.setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
 
         KScoreDialog::FieldInfo scoreInfo;
         scoreInfo[ KScoreDialog::Score ].setNum( m_gameScore );
 
-        if ( d->addScore( scoreInfo ) )
-            d->exec();
-        delete d;
+        if ( ksdialog.addScore( scoreInfo ) )
+            ksdialog.exec();
         return;
     }
 
     m_gameClock->pause();
 
-    QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
-    d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
-    d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
-    d->hideField( KScoreDialog::Score );
+    KScoreDialog ksdialog( KScoreDialog::Name, this );
+    ksdialog.addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
+    ksdialog.addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
+    ksdialog.initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
+    ksdialog.setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
+    ksdialog.hideField( KScoreDialog::Score );
 
     KScoreDialog::FieldInfo scoreInfo;
     scoreInfo[KScoreDialog::Custom1].setNum( remainCount );
     scoreInfo[KScoreDialog::Custom2] = m_gameClock->timeString();
     // remainCount*10000000 is much bigger than a usual time seconds
     scoreInfo[KScoreDialog::Score].setNum( remainCount*10000000 + m_gameClock->seconds() );
-    if ( d->addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 )
-        d->exec();
-    delete d;
+    if ( ksdialog.addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 )
+        ksdialog.exec();
 }
 
 bool MainWindow::confirmAbort()
 {
     return m_scene->isGameFinished() || ( KMessageBox::questionYesNo( this, i18n( "Do you want to resign?" ),
-        i18n( "New Game" ),KGuiItem( i18n( "Resign" ) ), KStandardGuiItem::cancel() ) == KMessageBox::Yes );
+        i18n( "New Game" ), KGuiItem( i18n( "Resign" ) ), KStandardGuiItem::cancel() ) == KMessageBox::Yes );
 }
 
 void MainWindow::setupActions()
 {
     // game menu
     KStandardGameAction::gameNew( this, SLOT(newGame()), actionCollection() );
-    if ( !m_KSameMode ) {
+    if ( !m_kSameMode ) {
         KStandardGameAction::load( this, SLOT(loadGame()), actionCollection() );
         KStandardGameAction::save( this, SLOT(saveGame()), actionCollection() );
     }
@@ -345,36 +345,39 @@ void MainWindow::setupActions()
     KStandardGameAction::highscores( this, SLOT(showHighscores()), actionCollection() );
     m_pauseAction = KStandardGameAction::pause( this, SLOT(pauseGame(bool)), actionCollection() );
     KStandardGameAction::quit( this, SLOT(close()), actionCollection() );
-    KAction* m_newNumGameAction = new KAction( i18n( "New Numbered Game..." ), actionCollection() );
+    QAction * m_newNumGameAction = new QAction( i18n( "New Numbered Game..." ), actionCollection() );
     actionCollection()->addAction( QLatin1String( "game_new_numeric" ), m_newNumGameAction );
-    connect( m_newNumGameAction, SIGNAL(triggered(bool)), this, SLOT(newNumGame()) );
+    connect(m_newNumGameAction, &QAction::triggered, this, &MainWindow::newNumGame);
 
     // move menu
-    KAction* undoAction = KStandardGameAction::undo( m_scene, SLOT(undoMove()), actionCollection() );
+    QAction * undoAction = KStandardGameAction::undo( m_scene, SLOT(undoMove()), actionCollection() );
     undoAction->setEnabled( false );
-    connect( m_scene, SIGNAL(canUndoChanged(bool)), undoAction, SLOT(setEnabled(bool)) );
-    KAction* redoAction = KStandardGameAction::redo( m_scene, SLOT(redoMove()), actionCollection() );
+    connect(m_scene, &GameScene::canUndoChanged, undoAction, &QAction::setEnabled);
+    QAction * redoAction = KStandardGameAction::redo( m_scene, SLOT(redoMove()), actionCollection() );
     redoAction->setEnabled( false );
-    connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAction, SLOT(setEnabled(bool)) );
+    connect(m_scene, &GameScene::canRedoChanged, redoAction, &QAction::setEnabled);
 
-    KAction* undoAllAction = actionCollection()->addAction( QLatin1String( "move_undo_all" ) );
-    undoAllAction->setIcon( KIcon( QLatin1String(  "media-skip-backward" ) ) );
+    QAction * undoAllAction = actionCollection()->addAction( QLatin1String( "move_undo_all" ) );
+    undoAllAction->setIcon( QIcon::fromTheme( QLatin1String( "media-skip-backward" ) ) );
     undoAllAction->setText( i18n( "Undo All" ) );
     undoAllAction->setEnabled( false );
-    connect( m_scene, SIGNAL(canUndoChanged(bool)), undoAllAction, SLOT(setEnabled(bool)) );
-    connect( undoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(undoAllMove()) );
-    KAction* redoAllAction = actionCollection()->addAction( QLatin1String( "move_redo_all" ) );
-    redoAllAction->setIcon( KIcon( QLatin1String(  "media-skip-forward" ) ) );
+    connect(m_scene, &GameScene::canUndoChanged, undoAllAction, &QAction::setEnabled);
+    connect(undoAllAction, &QAction::triggered, m_scene, &GameScene::undoAllMove);
+    QAction * redoAllAction = actionCollection()->addAction( QLatin1String( "move_redo_all" ) );
+    redoAllAction->setIcon( QIcon::fromTheme( QLatin1String( "media-skip-forward" ) ) );
     redoAllAction->setText( i18n( "Redo All" ) );
     redoAllAction->setEnabled( false );
-    connect( m_scene, SIGNAL(canRedoChanged(bool)), redoAllAction, SLOT(setEnabled(bool)) );
-    connect( redoAllAction, SIGNAL(triggered(bool)), m_scene, SLOT(redoAllMove()) );
+    connect(m_scene, &GameScene::canRedoChanged, redoAllAction, &QAction::setEnabled);
+    connect(redoAllAction, &QAction::triggered, m_scene, &GameScene::redoAllMove);
 
     // settings menu
     KStandardAction::preferences( this, SLOT(configureSettings()), actionCollection() );
     KStandardAction::configureNotifications( this, SLOT(configureNotifications()), actionCollection() );
 
-    if ( m_KSameMode ) {
+    if ( m_kSameMode ) {
+        Kg::difficulty()->addLevel(new KgDifficultyLevel(0,
+            QByteArray( "KSame" ), i18n( "High Scores" )
+        ));
         setupGUI( QSize( 576, 384 ) );
         return;
     }

@@ -29,9 +29,7 @@
 #include <KgThemeProvider>
 #include <KNotification>
 #include <KRandomSequence>
-#include <KLocale>
-
-#include <KDebug>
+#include <KLocalizedString>
 
 #include <QEasingCurve>
 #include <QGraphicsColorizeEffect>
@@ -67,12 +65,12 @@ m_isPaused(false),
 m_isFinished(false),
 m_animation(new QSequentialAnimationGroup)
 {
-    connect( &m_undoStack, SIGNAL(canUndoChanged(bool)), this, SIGNAL(canUndoChanged(bool)) );
-    connect( &m_undoStack, SIGNAL(canRedoChanged(bool)), this, SIGNAL(canRedoChanged(bool)) );
-    connect( this, SIGNAL(sceneRectChanged(QRectF)), SLOT(resize(QRectF)) );
+    connect(&m_undoStack, &QUndoStack::canUndoChanged, this, &GameScene::canUndoChanged);
+    connect(&m_undoStack, &QUndoStack::canRedoChanged, this, &GameScene::canRedoChanged);
+    connect(this, &GameScene::sceneRectChanged, this, &GameScene::resize);
 
-    connect( m_animation, SIGNAL(finished()), this, SLOT(updateScene()) );
-    connect( m_animation, SIGNAL(finished()), this, SLOT(checkGameFinished()) );
+    connect(m_animation, &QSequentialAnimationGroup::finished, this, &GameScene::updateScene);
+    connect(m_animation, &QSequentialAnimationGroup::finished, this, &GameScene::checkGameFinished);
 
     // init messenger
     m_messenger->setMessageOpacity( 0.8 );
@@ -120,9 +118,9 @@ void GameScene::startNewGame( int pwc, int phc, int colorCount, int gameId )
         for ( int i = 0; i < PWC; ++i ) {
             // piece item
             Piece* item = new Piece( &m_renderer, i, j, s.getLong( m_colorCount ) );
-            connect( item, SIGNAL(pieceClicked(int,int)), this, SLOT(removePieces(int,int)) );
-            connect( item, SIGNAL(pieceHovered(int,int)), this, SLOT(highlightPieces(int,int)) );
-            connect( item, SIGNAL(pieceUnhovered(int,int)), this, SLOT(unhighlightPieces(int,int)) );
+            connect(item, &Piece::pieceClicked, this, &GameScene::removePieces);
+            connect(item, &Piece::pieceHovered, this, &GameScene::highlightPieces);
+            connect(item, &Piece::pieceUnhovered, this, &GameScene::unhighlightPieces);
             m_pieces << item;
             addItem( item );
 
@@ -486,8 +484,8 @@ void GameScene::removePieces( int x, int y )
     int gameAreaHeight = PHC * elementsSize;
     int yShift = ( sceneRect().height() - gameAreaHeight ) / 2;
 
-    QParallelAnimationGroup* gravityAnimationGroup = NULL;
-    QParallelAnimationGroup* removeColumnsAnimationGroup = NULL;
+    QParallelAnimationGroup* gravityAnimationGroup = nullptr;
+    QParallelAnimationGroup* removeColumnsAnimationGroup = nullptr;
     if ( m_enableAnimation ) {
         // remove previous animations if any
         m_animation->clear();

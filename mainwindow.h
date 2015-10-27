@@ -21,7 +21,9 @@
 
 #include <KXmlGuiWindow>
 
-class KAction;
+#include <QLabel>
+
+class KToggleAction;
 class KGameClock;
 class GameScene;
 class MainWindow : public KXmlGuiWindow
@@ -50,13 +52,15 @@ class MainWindow : public KXmlGuiWindow
         bool confirmAbort();
         void setupActions();
         void setupDifficulties();
-        bool m_KSameMode;
+        bool m_kSameMode;
         GameScene* m_scene;
         /** Klickety mode only */
         KGameClock* m_gameClock;
         /** KSame mode only */
         int m_gameScore, m_lastRemainCount;
-        KAction* m_pauseAction;
+        KToggleAction* m_pauseAction;
+        QLabel* m_statusBarLabelLeft;
+        QLabel* m_statusBarLabelRight;
 };
 
 #endif // MAINWINDOW_H

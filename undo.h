@@ -21,7 +21,7 @@
 
 #include <QPointF>
 #include <QUndoCommand>
-#include <klocale.h>
+#include <KLocalizedString>
 #include "piece.h"
 
 const int ID_HIDEPIECE = 100;

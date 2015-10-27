@@ -7,11 +7,9 @@
   <group name="General">
     <entry name="ShowBoundLines" type="Bool" key="showboundlines">
       <default code="true">
-        <code>
-            ( s_globalSettings->q->config()->name() == QLatin1String( "ksamerc" ) )
-            ? false
-            : true
-        </code>
+        ( s_globalSettings->q->config()->name() == QLatin1String( "ksamerc" ) )
+        ? false
+        : true
       </default>
     </entry>
     <entry name="EnableAnimation" type="Bool" key="enableanimation">
