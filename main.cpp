@@ -20,6 +20,7 @@
 #include "settings.h"
 
 #include <KAboutData>
+#include <Kdelibs4ConfigMigrator>
 #include <KLocalizedString>
 
 #include <QApplication>
@@ -32,6 +33,16 @@ int main( int argc, char* argv[] )
 {
     QApplication app( argc, argv );
     app.setWindowIcon(QIcon::fromTheme(QLatin1String( "klickety" )));
+
+    // Migrate pre-existing (4.x) configuration
+    QStringList configFiles;
+    configFiles.append(QLatin1String("klicketyrc"));
+    configFiles.append(QLatin1String("klickety.notifyrc"));
+
+    Kdelibs4ConfigMigrator migrate(QLatin1String("klickety"));
+    migrate.setConfigFiles(configFiles);
+    migrate.setUiFiles(QStringList() << QLatin1String("klicketyui.rc"));
+    migrate.migrate();
 
     qsrand( std::time( nullptr ) );
     KAboutData aboutData( "klickety", i18n( "Klickety" ), "2.0",
