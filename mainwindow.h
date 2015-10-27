@@ -52,7 +52,7 @@ class MainWindow : public KXmlGuiWindow
         bool confirmAbort();
         void setupActions();
         void setupDifficulties();
-        bool m_KSameMode;
+        bool m_kSameMode;
         GameScene* m_scene;
         /** Klickety mode only */
         KGameClock* m_gameClock;

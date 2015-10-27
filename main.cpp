@@ -61,10 +61,10 @@ int main( int argc, char* argv[] )
     parser.process( app );
     aboutData.processCommandLine( &parser );
 
-    bool KSameMode = parser.isSet( "KSameMode" );
+    bool kSameMode = parser.isSet( "KSameMode" );
 
     // we use different file for storing ksame mode configuration
-    if ( KSameMode ) {
+    if ( kSameMode ) {
         Settings::instance( QLatin1String( "ksamerc" ) );
         aboutData.setShortDescription( i18n( "A little game about balls and how to get rid of them" ) );
         aboutData.addAuthor( i18n( "Marcus Kreutzberger"), i18n( "Original author" ), "kreutzbe@informatik.mu-luebeck.de" );
@@ -81,10 +81,10 @@ int main( int argc, char* argv[] )
 
     // see if we are starting with session management
     if ( app.isSessionRestored() ) {
-        RESTORE(MainWindow( KSameMode ));
+        RESTORE(MainWindow( kSameMode ));
     }
     else {
-        MainWindow* window = new MainWindow( KSameMode );
+        MainWindow* window = new MainWindow( kSameMode );
         window->show();
     }
 

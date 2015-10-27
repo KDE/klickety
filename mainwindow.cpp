@@ -44,9 +44,9 @@
 #include <QUrl>
 #include <QIcon>
 
-MainWindow::MainWindow( bool KSameMode, QWidget* parent )
+MainWindow::MainWindow( bool kSameMode, QWidget* parent )
 : KXmlGuiWindow(parent),
-m_KSameMode(KSameMode),
+m_kSameMode(kSameMode),
 m_gameClock(nullptr),
 m_gameScore(0),
 m_lastRemainCount(0),
@@ -64,7 +64,7 @@ m_statusBarLabelRight(new QLabel())
     statusBar()->addPermanentWidget( m_statusBarLabelLeft, 1 );
     statusBar()->addPermanentWidget( m_statusBarLabelRight, 1 );
 
-    if ( m_KSameMode ) {
+    if ( m_kSameMode ) {
 //         statusBar()->insertItem( i18n( "Colors: XX" ), 1 );
 //         statusBar()->insertItem( i18n( "Board: XXXXXX" ), 2 );
         m_statusBarLabelLeft->setText( i18n( "Marked: 0" ) );
@@ -107,7 +107,7 @@ void MainWindow::configureSettings()
     dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QLatin1String( "games-config-options" ) );
     dialog->addPage( new KgThemeSelector( m_scene->themeProvider() ), i18n( "Theme" ), QLatin1String( "games-config-theme" ) );
     dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QLatin1String( "games-config-background" ) );
-    if ( !m_KSameMode )
+    if ( !m_kSameMode )
         dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
     connect(m_scene->themeProvider(), SIGNAL(currentThemeChanged(const KgTheme*)), SLOT(loadSettings())); //setBackgroundType!
     connect(dialog, &KConfigDialog::settingsChanged, this, &MainWindow::loadSettings);
@@ -131,7 +131,7 @@ void MainWindow::newGame( int gameId )
     m_pauseAction->setChecked( false );
     m_pauseAction->setEnabled( true );
 
-    if ( m_KSameMode ) {
+    if ( m_kSameMode ) {
         m_gameScore = 0;
         m_lastRemainCount = 15 * 10;
         m_scene->startNewGame( 15, 10, 3, gameId );
@@ -180,7 +180,7 @@ void MainWindow::newNumGame()
 void MainWindow::pauseGame( bool isPaused )
 {
     m_scene->setPaused( isPaused );
-    if ( !m_KSameMode ) {
+    if ( !m_kSameMode ) {
         if ( isPaused )
             m_gameClock->pause();
         else
@@ -193,7 +193,7 @@ void MainWindow::restartGame()
     if ( confirmAbort() ) {
         m_pauseAction->setChecked( false );
         m_pauseAction->setEnabled( true );
-        if ( m_KSameMode ) {
+        if ( m_kSameMode ) {
             m_gameScore = 0;
             m_lastRemainCount = 0;
         }
@@ -268,7 +268,7 @@ void MainWindow::changeTime( const QString& newTime )
 
 void MainWindow::showHighscores()
 {
-    if ( m_KSameMode ) {
+    if ( m_kSameMode ) {
         KScoreDialog ksdialog( KScoreDialog::Name | KScoreDialog::Score, this );
         ksdialog.initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
         ksdialog.setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
@@ -290,7 +290,7 @@ void MainWindow::onGameOver( int remainCount )
 {
     m_pauseAction->setEnabled( false );
 
-    if ( m_KSameMode ) {
+    if ( m_kSameMode ) {
         if ( remainCount == 0 ) {
             // if the board is empty, give a bonus
             m_gameScore += 1000;
@@ -337,7 +337,7 @@ void MainWindow::setupActions()
 {
     // game menu
     KStandardGameAction::gameNew( this, SLOT(newGame()), actionCollection() );
-    if ( !m_KSameMode ) {
+    if ( !m_kSameMode ) {
         KStandardGameAction::load( this, SLOT(loadGame()), actionCollection() );
         KStandardGameAction::save( this, SLOT(saveGame()), actionCollection() );
     }
@@ -374,7 +374,7 @@ void MainWindow::setupActions()
     KStandardAction::preferences( this, SLOT(configureSettings()), actionCollection() );
     KStandardAction::configureNotifications( this, SLOT(configureNotifications()), actionCollection() );
 
-    if ( m_KSameMode ) {
+    if ( m_kSameMode ) {
         Kg::difficulty()->addLevel(new KgDifficultyLevel(0,
             QByteArray( "KSame" ), i18n( "High Scores" )
         ));
