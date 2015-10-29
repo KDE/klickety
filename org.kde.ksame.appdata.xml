@@ -4,11 +4,32 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KSame</name>
+  <name xml:lang="en-GB">KSame</name>
+  <name xml:lang="nl">KSame</name>
+  <name xml:lang="pt">KSame</name>
+  <name xml:lang="pt-BR">KSame</name>
+  <name xml:lang="sv">Ksame</name>
+  <name xml:lang="uk">KSame</name>
+  <name xml:lang="x-test">xxKSamexx</name>
   <summary>KSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game.</summary>
+  <summary xml:lang="en-GB">KSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game.</summary>
+  <summary xml:lang="nl">KSame is spelmodus van het spel Klickety, dat een aanpassing is van het spel "clickomania".</summary>
+  <summary xml:lang="pt">O KSame é um modo de jogo do Klickety, que é uma adaptação do jogo "clickomania".</summary>
+  <summary xml:lang="pt-BR">KSame é um modo de jogo do Klickety, que é uma adaptação do jogo "Clickomania".</summary>
+  <summary xml:lang="sv">Ksame är en spelvariant av spelet Klickety, som är en anpassning av spelet "clickomania".</summary>
+  <summary xml:lang="uk">KSame — режим у грі Klickety, який є адаптацією гри «клікоманія».</summary>
+  <summary xml:lang="x-test">xxKSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game.xx</summary>
   <description>
     <p>
       KSame is a simple, yet challenging color matching game modeled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicolored marbles.
     </p>
+    <p xml:lang="en-GB">KSame is a simple, yet challenging colour matching game modelled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicoloured marbles.</p>
+    <p xml:lang="nl">KSame is een eenvoudig maar toch uitdagend spel met kleur overeenkomst gemodelleerd naar het eens beroemde spel SameGame. Het idee achter KSame is het volledig wissen van het spelbord gevuld met de veelkleurige knikkers.</p>
+    <p xml:lang="pt">O KSame é um jogo de correspondência de cores simples, mas desafiante, modelado com base no famoso jogo SameGame. A ideia por trás do KSame é limpar por completo o tabuleiro do jogo, estando este preenchido com berlindes coloridos.</p>
+    <p xml:lang="pt-BR">KSame é um jogo simples de correspondência de cores, mas desafiante, modelado com base no famoso jogo SameGame. A ideia por trás do KSame é limpar completamente o tabuleiro do jogo, preenchendo-o com bolinhas coloridas.</p>
+    <p xml:lang="sv">Ksame är ett enkelt, men ändå utmanande färgjämförelsespel modellerat enligt det en gång berömda spelet Samegame. Idén bakom Ksame är att helt och hållet tömma spelbrädet, som är fyllt med mångfärgade kulor.</p>
+    <p xml:lang="uk">KSame — проста, але захоплива гра у пошук відповідних кольорів. Джерелом натхнення для створення гри була гра SameGame. Дуже проста умова. На дошці будуть кульки. Приберіть їх всі.</p>
+    <p xml:lang="x-test">xxKSame is a simple, yet challenging color matching game modeled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicolored marbles.xx</p>
   </description>
   <url type="homepage">http://games.kde.org/game.php?game=klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>

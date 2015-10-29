@@ -4,11 +4,32 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>Klickety</name>
+  <name xml:lang="en-GB">Klickety</name>
+  <name xml:lang="nl">Klickety</name>
+  <name xml:lang="pt">Klickety</name>
+  <name xml:lang="pt-BR">Klickety</name>
+  <name xml:lang="sv">Klickety</name>
+  <name xml:lang="uk">Klickety</name>
+  <name xml:lang="x-test">xxKlicketyxx</name>
   <summary>Klickety is an adaptation of the "clickomania" game</summary>
+  <summary xml:lang="en-GB">Klickety is an adaptation of the "clickomania" game</summary>
+  <summary xml:lang="nl">Klickety is een aanpassing van het spel "clickomania"</summary>
+  <summary xml:lang="pt">O Klickety é uma adaptação do jogo "clickomania"</summary>
+  <summary xml:lang="pt-BR">Klickety é uma adaptação do jogo "Clickomania"</summary>
+  <summary xml:lang="sv">Klickety är en anpassning av spelet "clickomania"</summary>
+  <summary xml:lang="uk">Klickety — реалізація гри «клікоманія»</summary>
+  <summary xml:lang="x-test">xxKlickety is an adaptation of the "clickomania" gamexx</summary>
   <description>
     <p>
       Klickety is a strategy game for KDE, an adaption of the Clickomania game.
     </p>
+    <p xml:lang="en-GB">Klickety is a strategy game for KDE, an adaption of the Clickomania game.</p>
+    <p xml:lang="nl">Klickety is een strategiespel voor KDE, een aanpassing van het spel Clickomania.</p>
+    <p xml:lang="pt">O Klickety é um jogo de estratégia para o KDE, sendo uma adaptação do jogo Clickomania.</p>
+    <p xml:lang="pt-BR">Klickety é um jogo de estratégia para o KDE, uma adaptação do jogo Clickomania.</p>
+    <p xml:lang="sv">Klickety är ett strategispel för KDE, en anpassning av spelet Clickomania.</p>
+    <p xml:lang="uk">Klickety — стратегічна гра для KDE, варіант гри Clickomania («Клікоманія»).</p>
+    <p xml:lang="x-test">xxKlickety is a strategy game for KDE, an adaption of the Clickomania game.xx</p>
   </description>
   <url type="homepage">http://games.kde.org/game.php?game=klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
