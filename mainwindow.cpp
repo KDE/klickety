@@ -101,15 +101,15 @@ void MainWindow::configureNotifications()
 
 void MainWindow::configureSettings()
 {
-    if ( KConfigDialog::showDialog( QLatin1String( "settings" ) ) )
+    if ( KConfigDialog::showDialog( QStringLiteral( "settings" ) ) )
         return;
 
-    KConfigDialog* dialog = new KConfigDialog( this, QLatin1String( "settings" ), Settings::self() );
-    dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QLatin1String( "games-config-options" ) );
-    dialog->addPage( new KgThemeSelector( m_scene->themeProvider() ), i18n( "Theme" ), QLatin1String( "games-config-theme" ) );
-    dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QLatin1String( "games-config-background" ) );
+    KConfigDialog* dialog = new KConfigDialog( this, QStringLiteral( "settings" ), Settings::self() );
+    dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QStringLiteral( "games-config-options" ) );
+    dialog->addPage( new KgThemeSelector( m_scene->themeProvider() ), i18n( "Theme" ), QStringLiteral( "games-config-theme" ) );
+    dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QStringLiteral( "games-config-background" ) );
     if ( !m_kSameMode )
-        dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QLatin1String( "games-config-custom" ) );
+        dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QStringLiteral( "games-config-custom" ) );
     connect(m_scene->themeProvider(), SIGNAL(currentThemeChanged(const KgTheme*)), SLOT(loadSettings())); //setBackgroundType!
     connect(dialog, &KConfigDialog::settingsChanged, this, &MainWindow::loadSettings);
     //QT5 dialog->setHelp( QString(), QLatin1String( "klickety" ) );
@@ -280,8 +280,8 @@ void MainWindow::showHighscores()
     }
 
     QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
+    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QStringLiteral( "remains" ) );
+    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QStringLiteral( "time" ) );
     d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
     d->hideField( KScoreDialog::Score );
@@ -316,8 +316,8 @@ void MainWindow::onGameOver( int remainCount )
     m_gameClock->pause();
 
     QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QLatin1String( "remains" ) );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QLatin1String( "time" ) );
+    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QStringLiteral( "remains" ) );
+    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QStringLiteral( "time" ) );
     d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
     d->hideField( KScoreDialog::Score );
@@ -351,7 +351,7 @@ void MainWindow::setupActions()
     m_pauseAction = KStandardGameAction::pause( this, SLOT(pauseGame(bool)), actionCollection() );
     KStandardGameAction::quit( this, SLOT(close()), actionCollection() );
     QAction * m_newNumGameAction = new QAction( i18n( "New Numbered Game..." ), actionCollection() );
-    actionCollection()->addAction( QLatin1String( "game_new_numeric" ), m_newNumGameAction );
+    actionCollection()->addAction( QStringLiteral( "game_new_numeric" ), m_newNumGameAction );
     connect(m_newNumGameAction, &QAction::triggered, this, &MainWindow::newNumGame);
 
     // move menu
@@ -362,14 +362,14 @@ void MainWindow::setupActions()
     redoAction->setEnabled( false );
     connect(m_scene, &GameScene::canRedoChanged, redoAction, &QAction::setEnabled);
 
-    QAction * undoAllAction = actionCollection()->addAction( QLatin1String( "move_undo_all" ) );
-    undoAllAction->setIcon( QIcon::fromTheme( QLatin1String( "media-skip-backward" ) ) );
+    QAction * undoAllAction = actionCollection()->addAction( QStringLiteral( "move_undo_all" ) );
+    undoAllAction->setIcon( QIcon::fromTheme( QStringLiteral( "media-skip-backward" ) ) );
     undoAllAction->setText( i18n( "Undo All" ) );
     undoAllAction->setEnabled( false );
     connect(m_scene, &GameScene::canUndoChanged, undoAllAction, &QAction::setEnabled);
     connect(undoAllAction, &QAction::triggered, m_scene, &GameScene::undoAllMove);
-    QAction * redoAllAction = actionCollection()->addAction( QLatin1String( "move_redo_all" ) );
-    redoAllAction->setIcon( QIcon::fromTheme( QLatin1String( "media-skip-forward" ) ) );
+    QAction * redoAllAction = actionCollection()->addAction( QStringLiteral( "move_redo_all" ) );
+    redoAllAction->setIcon( QIcon::fromTheme( QStringLiteral( "media-skip-forward" ) ) );
     redoAllAction->setText( i18n( "Redo All" ) );
     redoAllAction->setEnabled( false );
     connect(m_scene, &GameScene::canRedoChanged, redoAllAction, &QAction::setEnabled);

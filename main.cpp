@@ -33,16 +33,16 @@
 int main( int argc, char* argv[] )
 {
     QApplication app( argc, argv );
-    app.setWindowIcon(QIcon::fromTheme(QLatin1String( "klickety" )));
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral( "klickety" )));
 
     // Migrate pre-existing (4.x) configuration
     QStringList configFiles;
-    configFiles.append(QLatin1String("klicketyrc"));
-    configFiles.append(QLatin1String("klickety.notifyrc"));
+    configFiles.append(QStringLiteral("klicketyrc"));
+    configFiles.append(QStringLiteral("klickety.notifyrc"));
 
-    Kdelibs4ConfigMigrator migrate(QLatin1String("klickety"));
+    Kdelibs4ConfigMigrator migrate(QStringLiteral("klickety"));
     migrate.setConfigFiles(configFiles);
-    migrate.setUiFiles(QStringList() << QLatin1String("klicketyui.rc"));
+    migrate.setUiFiles(QStringList() << QStringLiteral("klicketyui.rc"));
     migrate.migrate();
 
     qsrand( std::time( nullptr ) );
@@ -56,27 +56,27 @@ int main( int argc, char* argv[] )
     KAboutData::setApplicationData( aboutData );
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.addOption( QCommandLineOption( QStringList() <<  QLatin1String( "KSameMode" ), i18n( "Start with KSame compatibility mode" ) ) );
+    parser.addOption( QCommandLineOption( QStringList() <<  QStringLiteral( "KSameMode" ), i18n( "Start with KSame compatibility mode" ) ) );
 
     aboutData.setupCommandLine( &parser );
     parser.process( app );
     aboutData.processCommandLine( &parser );
 
-    bool kSameMode = parser.isSet( "KSameMode" );
+    bool kSameMode = parser.isSet( QStringLiteral("KSameMode") );
 
     // we use different file for storing ksame mode configuration
     if ( kSameMode ) {
-        Settings::instance( QLatin1String( "ksamerc" ) );
+        Settings::instance( QStringLiteral( "ksamerc" ) );
         aboutData.setShortDescription( i18n( "A little game about balls and how to get rid of them" ) );
-        aboutData.addAuthor( i18n( "Marcus Kreutzberger"), i18n( "Original author" ), "kreutzbe@informatik.mu-luebeck.de" );
-        aboutData.addAuthor( i18n( "Henrique Pinto"), i18n( "Past maintainer" ), "henrique.pinto@kdemail.net" );
-        aboutData.addAuthor( i18n( "Ni Hui" ), i18n( "Integration with Klickety. Current maintainer" ), "shuizhuyuanluo@126.com" );
-        aboutData.addCredit( i18n( "Johann Ollivier Lapeyre"), i18n("Artwork"), "johann.ollivierlapeyre@gmail.com" );
+        aboutData.addAuthor( i18n( "Marcus Kreutzberger"), i18n( "Original author" ), QStringLiteral("kreutzbe@informatik.mu-luebeck.de") );
+        aboutData.addAuthor( i18n( "Henrique Pinto"), i18n( "Past maintainer" ), QStringLiteral("henrique.pinto@kdemail.net") );
+        aboutData.addAuthor( i18n( "Ni Hui" ), i18n( "Integration with Klickety. Current maintainer" ), QStringLiteral("shuizhuyuanluo@126.com") );
+        aboutData.addCredit( i18n( "Johann Ollivier Lapeyre"), i18n("Artwork"), QStringLiteral("johann.ollivierlapeyre@gmail.com") );
     }
     else {
-        Settings::instance( QLatin1String( "klicketyrc" ) );
-        aboutData.addAuthor( i18n( "Nicolas Hadacek" ), i18n( "Original author" ), "hadacek@kde.org" );
-        aboutData.addAuthor( i18n( "Ni Hui" ), i18n( "Rewrite for KDE4. Current maintainer" ), "shuizhuyuanluo@126.com" );
+        Settings::instance( QStringLiteral( "klicketyrc" ) );
+        aboutData.addAuthor( i18n( "Nicolas Hadacek" ), i18n( "Original author" ), QStringLiteral("hadacek@kde.org") );
+        aboutData.addAuthor( i18n( "Ni Hui" ), i18n( "Rewrite for KDE4. Current maintainer" ), QStringLiteral("shuizhuyuanluo@126.com") );
         aboutData.addCredit( i18n( "Dan Hill" ), i18n( "Icons" ) );
     }
 
