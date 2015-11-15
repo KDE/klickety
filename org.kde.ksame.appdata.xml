@@ -16,6 +16,10 @@
   <name xml:lang="pt-BR">KSame</name>
   <name xml:lang="sk">KSame</name>
   <name xml:lang="sl">KSame</name>
+  <name xml:lang="sr">К‑исто‑исто</name>
+  <name xml:lang="sr-Latn">K‑isto‑isto</name>
+  <name xml:lang="sr-ijekavian">К‑исто‑исто</name>
+  <name xml:lang="sr-ijekavianlatin">K‑isto‑isto</name>
   <name xml:lang="sv">Ksame</name>
   <name xml:lang="uk">KSame</name>
   <name xml:lang="x-test">xxKSamexx</name>
@@ -32,6 +36,10 @@
   <summary xml:lang="pt-BR">KSame é um modo de jogo do Klickety, que é uma adaptação do jogo "Clickomania".</summary>
   <summary xml:lang="sk">KSame je herný režim hry Klickety, ktorá je adaptáciou hry "Clickomania".</summary>
   <summary xml:lang="sl">KSame je igralni način za igro Klickety, ki je priredba igre »Clickomania«.</summary>
+  <summary xml:lang="sr">К‑исто‑исто је један режим игре Кликети, која је прерада игре Кликоманија.</summary>
+  <summary xml:lang="sr-Latn">K‑isto‑isto je jedan režim igre Kliketi, koja je prerada igre Klikomanija.</summary>
+  <summary xml:lang="sr-ijekavian">К‑исто‑исто је један режим игре Кликети, која је прерада игре Кликоманија.</summary>
+  <summary xml:lang="sr-ijekavianlatin">K‑isto‑isto je jedan režim igre Kliketi, koja je prerada igre Klikomanija.</summary>
   <summary xml:lang="sv">Ksame är en spelvariant av spelet Klickety, som är en anpassning av spelet "clickomania".</summary>
   <summary xml:lang="uk">KSame — режим у грі Klickety, який є адаптацією гри «клікоманія».</summary>
   <summary xml:lang="x-test">xxKSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game.xx</summary>
@@ -50,6 +58,10 @@
     <p xml:lang="pt-BR">KSame é um jogo simples de correspondência de cores, mas desafiante, modelado com base no famoso jogo SameGame. A ideia por trás do KSame é limpar completamente o tabuleiro do jogo, preenchendo-o com bolinhas coloridas.</p>
     <p xml:lang="sk">KSame je jednoduchá, ale náročná hra na porovnávanie farieb vytvorená podľa známej hry SameGame. Cieľom je úplne vyčistiť hraciu plochu vyplnenú viacfarebnými dlaždicami.</p>
     <p xml:lang="sl">KSame je preprosta igra ujemanja barv, polna izzivov, prirejena po nekoč priljubljeni igri SameGame. Cilj igre je počistiti igralno površino, ki je zapolnjena z raznobarvnimi frnikolami.</p>
+    <p xml:lang="sr">К‑исто‑исто је једноставна, а опет изазовна игра поклапања боја, по узору на некада чувену игру исто‑исто. Идеја иза К‑исто‑истог је да се потпуно очисти играчка табла попуњена разнобојним кликерима.</p>
+    <p xml:lang="sr-Latn">K‑isto‑isto je jednostavna, a opet izazovna igra poklapanja boja, po uzoru na nekada čuvenu igru isto‑isto. Ideja iza K‑isto‑istog je da se potpuno očisti igračka tabla popunjena raznobojnim klikerima.</p>
+    <p xml:lang="sr-ijekavian">К‑исто‑исто је једноставна, а опет изазовна игра поклапања боја, по узору на некада чувену игру исто‑исто. Идеја иза К‑исто‑истог је да се потпуно очисти играчка табла попуњена разнобојним кликерима.</p>
+    <p xml:lang="sr-ijekavianlatin">K‑isto‑isto je jednostavna, a opet izazovna igra poklapanja boja, po uzoru na nekada čuvenu igru isto‑isto. Ideja iza K‑isto‑istog je da se potpuno očisti igračka tabla popunjena raznobojnim klikerima.</p>
     <p xml:lang="sv">Ksame är ett enkelt, men ändå utmanande färgjämförelsespel modellerat enligt det en gång berömda spelet Samegame. Idén bakom Ksame är att helt och hållet tömma spelbrädet, som är fyllt med mångfärgade kulor.</p>
     <p xml:lang="uk">KSame — проста, але захоплива гра у пошук відповідних кольорів. Джерелом натхнення для створення гри була гра SameGame. Дуже проста умова. На дошці будуть кульки. Приберіть їх всі.</p>
     <p xml:lang="x-test">xxKSame is a simple, yet challenging color matching game modeled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicolored marbles.xx</p>
