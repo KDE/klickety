@@ -26,6 +26,7 @@
   <name xml:lang="x-test">xxKlicketyxx</name>
   <name xml:lang="zh-CN">Klickety</name>
   <summary>Klickety is an adaptation of the "clickomania" game</summary>
+  <summary xml:lang="ast">Klickety ye una adautación del xuegu «clickomania»</summary>
   <summary xml:lang="ca">Klickety és una adaptació del joc «Clickomania»</summary>
   <summary xml:lang="ca-valencia">Klickety és una adaptació del joc «Clickomania»</summary>
   <summary xml:lang="de">Klickety ist eine angepasste Version des Spiels „Clickomania“ für KDE.</summary>
@@ -49,6 +50,7 @@
     <p>
       Klickety is a strategy game for KDE, an adaption of the Clickomania game.
     </p>
+    <p xml:lang="ast">Klickety ye un xuegu d'estratexa pa KDE, una adautación del xuegu Clickomania.</p>
     <p xml:lang="ca">El Klickety és un joc d'estratègia per al KDE, una adaptació del joc Clickomania.</p>
     <p xml:lang="ca-valencia">El Klickety és un joc d'estratègia per al KDE, una adaptació del joc Clickomania.</p>
     <p xml:lang="en-GB">Klickety is a strategy game for KDE, an adaption of the Clickomania game.</p>
