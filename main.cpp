@@ -46,7 +46,7 @@ int main( int argc, char* argv[] )
     migrate.migrate();
 
     qsrand( std::time( nullptr ) );
-    KAboutData aboutData( QStringLiteral( "klickety" ), i18n( "Klickety" ), QStringLiteral( "2.0" ),
+    KAboutData aboutData( QStringLiteral( "klickety" ), i18n( "Klickety" ), QStringLiteral( "2.1+" ),
                           i18n( "Klickety is an adaptation of the \"clickomania\" game" ),
                           KAboutLicense::GPL,
                           i18n( "(c) 2002-2005, Nicolas Hadacek\n(c) 2010, Ni Hui" ) );
