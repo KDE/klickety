@@ -24,6 +24,7 @@
   <name xml:lang="uk">Klickety</name>
   <name xml:lang="x-test">xxKlicketyxx</name>
   <name xml:lang="zh-CN">Klickety</name>
+  <name xml:lang="zh-TW">Klickety</name>
   <summary>Klickety is an adaptation of the "clickomania" game</summary>
   <summary xml:lang="ca">Klickety és una adaptació del joc «Clickomania»</summary>
   <summary xml:lang="ca-valencia">Klickety és una adaptació del joc «Clickomania»</summary>
@@ -44,6 +45,7 @@
   <summary xml:lang="sv">Klickety är en anpassning av spelet "clickomania"</summary>
   <summary xml:lang="uk">Klickety — реалізація гри «клікоманія»</summary>
   <summary xml:lang="x-test">xxKlickety is an adaptation of the "clickomania" gamexx</summary>
+  <summary xml:lang="zh-TW">Klickety 是一套 clickomania 的遊戲</summary>
   <description>
     <p>
       Klickety is a strategy game for KDE, an adaption of the Clickomania game.
@@ -66,6 +68,7 @@
     <p xml:lang="sv">Klickety är ett strategispel för KDE, en anpassning av spelet Clickomania.</p>
     <p xml:lang="uk">Klickety — стратегічна гра для KDE, варіант гри Clickomania («Клікоманія»).</p>
     <p xml:lang="x-test">xxKlickety is a strategy game for KDE, an adaption of the Clickomania game.xx</p>
+    <p xml:lang="zh-TW">Klickety 是 KDE 上類似 Clickomania 的策略遊戲。</p>
   </description>
   <url type="homepage">http://games.kde.org/game.php?game=klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
