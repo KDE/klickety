@@ -147,4 +147,4 @@ Icon=ksame
 X-KDE-StartupNotify=true
 X-DBUS-StartupType=Multi
 Categories=Qt;KDE;Game;StrategyGame;
-X-DBUS-ServiceName=org.kde.ksame
+X-DBUS-ServiceName=org.kde.klickety
