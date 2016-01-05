@@ -32,8 +32,6 @@ include(KDECompilerSettings)
 include(KDECMakeSettings)
 
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
-add_definitions(-DTRANSLATION_DOMAIN="klickety")
-
 
 set(klickety_SRCS
     gamescene.cpp

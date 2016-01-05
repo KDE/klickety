@@ -35,6 +35,8 @@ int main( int argc, char* argv[] )
     QApplication app( argc, argv );
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral( "klickety" )));
 
+    KLocalizedString::setApplicationDomain("klickety");
+
     // Migrate pre-existing (4.x) configuration
     QStringList configFiles;
     configFiles.append(QStringLiteral("klicketyrc"));
