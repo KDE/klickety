@@ -16,6 +16,7 @@
   <name xml:lang="pl">Klickety</name>
   <name xml:lang="pt">Klickety</name>
   <name xml:lang="pt-BR">Klickety</name>
+  <name xml:lang="ru">Klickety</name>
   <name xml:lang="sk">Klickety</name>
   <name xml:lang="sl">Klickety</name>
   <name xml:lang="sr">Кликети</name>
@@ -39,6 +40,7 @@
   <summary xml:lang="pl">Klickety są przeróbką gry "clickomania"</summary>
   <summary xml:lang="pt">O Klickety é uma adaptação do jogo "clickomania"</summary>
   <summary xml:lang="pt-BR">Klickety é uma adaptação do jogo "Clickomania"</summary>
+  <summary xml:lang="ru">Klickety — адаптация игры «Clickomania»</summary>
   <summary xml:lang="sk">Klickety je adaptácia hry "clickomania".</summary>
   <summary xml:lang="sl">Klickety je priredba igre »Clickomania«</summary>
   <summary xml:lang="sr">Кликети је прерада игре Кликоманија</summary>
@@ -63,6 +65,7 @@
     <p xml:lang="pl">Klickety jest grą strategiczną dla KDE i adaptacją gry Clickomania.</p>
     <p xml:lang="pt">O Klickety é um jogo de estratégia para o KDE, sendo uma adaptação do jogo Clickomania.</p>
     <p xml:lang="pt-BR">Klickety é um jogo de estratégia para o KDE, uma adaptação do jogo Clickomania.</p>
+    <p xml:lang="ru">Klickety — стратегическая игра от KDE, адаптация игры «Clickomania»</p>
     <p xml:lang="sk">Klickety je strategická hra pre KDE, adaptácia hry Clickomania.</p>
     <p xml:lang="sl">Klickety je strateška igra za KDE. Gre za priredbo igre »Clickomania«.</p>
     <p xml:lang="sr">Кликети је стратешка игра за КДЕ, прерада игре Кликоманија.</p>
