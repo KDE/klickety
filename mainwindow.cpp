@@ -207,7 +207,7 @@ void MainWindow::restartGame()
 
 void MainWindow::loadGame()
 {
-    QString fileName = QFileDialog::getOpenFileName( this, QString(), QString() , i18n( "Klickety Game Files | *.klickety" ) );
+    QString fileName = QFileDialog::getOpenFileName( this, QString(), QString() , i18n( "Klickety Game Files (*.klickety)" ) );
     if ( fileName.isEmpty() || !confirmAbort() )
         return;
 
@@ -220,7 +220,7 @@ void MainWindow::loadGame()
 
 void MainWindow::saveGame()
 {
-    QString fileName = QFileDialog::getSaveFileName( this, QString(), QString(), i18n( "Klickety Game Files | *.klickety" ) );
+    QString fileName = QFileDialog::getSaveFileName( this, QString(), QString(), i18n( "Klickety Game Files (*.klickety)" ) );
     if ( fileName.isEmpty() )
         return;
     KConfig config( fileName, KConfig::SimpleConfig );
