@@ -13,6 +13,7 @@
   <name xml:lang="fi">Klickety</name>
   <name xml:lang="gl">Klickety</name>
   <name xml:lang="nl">Klickety</name>
+  <name xml:lang="nn">Klickety</name>
   <name xml:lang="pl">Klickety</name>
   <name xml:lang="pt">Klickety</name>
   <name xml:lang="pt-BR">Klickety</name>
@@ -37,6 +38,7 @@
   <summary xml:lang="fi">Klickety on sovitus Clickomania-pelistä</summary>
   <summary xml:lang="gl">Klickety é unha adaptación do xogo «SameGame».</summary>
   <summary xml:lang="nl">Klickety is een aanpassing van het spel "clickomania"</summary>
+  <summary xml:lang="nn">Klickety er ei tilpassa utgåve av spelet Clickomania</summary>
   <summary xml:lang="pl">Klickety są przeróbką gry "clickomania"</summary>
   <summary xml:lang="pt">O Klickety é uma adaptação do jogo "clickomania"</summary>
   <summary xml:lang="pt-BR">Klickety é uma adaptação do jogo "Clickomania"</summary>
@@ -62,6 +64,7 @@
     <p xml:lang="fi">Klickety on strategiapeli KDE:lle – sovitus Clickomania-pelistä.</p>
     <p xml:lang="gl">Klickety é un xogo de estratexia para KDE, unha adaptación do xogo «SameGame».</p>
     <p xml:lang="nl">Klickety is een strategiespel voor KDE, een aanpassing van het spel Clickomania.</p>
+    <p xml:lang="nn">Klickety er eit strategispel for KDE, basert på spelet Clickomania.</p>
     <p xml:lang="pl">Klickety jest grą strategiczną dla KDE i adaptacją gry Clickomania.</p>
     <p xml:lang="pt">O Klickety é um jogo de estratégia para o KDE, sendo uma adaptação do jogo Clickomania.</p>
     <p xml:lang="pt-BR">Klickety é um jogo de estratégia para o KDE, uma adaptação do jogo Clickomania.</p>
