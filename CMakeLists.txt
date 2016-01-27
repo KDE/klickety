@@ -3,14 +3,16 @@ project(klickety)
 
 cmake_minimum_required (VERSION 2.8.12 FATAL_ERROR)
 set (QT_MIN_VERSION "5.3.0")
+set (KF5_MIN_VERSION "5.15.0")
 
 find_package(ECM 1.7.0 REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets )
-find_package(KF5 REQUIRED COMPONENTS
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
     Config
+    Crash
     WidgetsAddons
     Config
     I18n
@@ -20,7 +22,8 @@ find_package(KF5 REQUIRED COMPONENTS
     DocTools
     NotifyConfig
     DBusAddons
-    Notifications)
+    Notifications
+)
 
 find_package(KF5KDEGames 4.9.0 REQUIRED)
 
@@ -52,18 +55,20 @@ ecm_add_app_icon(klickety_SRCS ICONS ${ICONS_SRCS})
 add_executable(klickety ${klickety_SRCS})
 
 target_link_libraries(klickety
-    KF5::NotifyConfig
-    KF5::Notifications
-    KF5KDEGames
+    KF5::Crash
+    KF5::DBusAddons
     KF5::KIOCore
     KF5::KIOFileWidgets
-    KF5::KIOWidgets
     KF5::KIONTLM
+    KF5::KIOWidgets
+    KF5::Notifications
+    KF5::NotifyConfig
     KF5::XmlGui
-    KF5::DBusAddons)
+    KF5KDEGames
+)
 
 install(TARGETS klickety ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES klickety.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR} )
+install(FILES klickety.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR})
 install(FILES klickety.kcfg DESTINATION ${KDE_INSTALL_DATADIR}/klickety)
 install(FILES klicketyui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/klickety)
 
