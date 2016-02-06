@@ -101,15 +101,17 @@ void MainWindow::configureNotifications()
 
 void MainWindow::configureSettings()
 {
-    if ( KConfigDialog::showDialog( QStringLiteral( "settings" ) ) )
+    if ( KConfigDialog::showDialog( QStringLiteral( "settings" ) ) ) {
         return;
+    }
 
     KConfigDialog* dialog = new KConfigDialog( this, QStringLiteral( "settings" ), Settings::self() );
     dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QStringLiteral( "games-config-options" ) );
     dialog->addPage( new KgThemeSelector( m_scene->themeProvider() ), i18n( "Theme" ), QStringLiteral( "games-config-theme" ) );
     dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QStringLiteral( "games-config-background" ) );
-    if ( !m_kSameMode )
+    if ( !m_kSameMode ) {
         dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QStringLiteral( "games-config-custom" ) );
+    }
     connect(m_scene->themeProvider(), SIGNAL(currentThemeChanged(const KgTheme*)), SLOT(loadSettings())); //setBackgroundType!
     connect(dialog, &KConfigDialog::settingsChanged, this, &MainWindow::loadSettings);
     dialog->show();
@@ -125,8 +127,9 @@ void MainWindow::loadSettings()
 
 void MainWindow::newGame( int gameId )
 {
-    if ( !confirmAbort() )
+    if ( !confirmAbort() ) {
         return;
+    }
 
     m_pauseAction->setChecked( false );
     m_pauseAction->setEnabled( true );
@@ -165,26 +168,29 @@ void MainWindow::newGame( int gameId )
 
 void MainWindow::newNumGame()
 {
-    if ( !confirmAbort() )
+    if ( !confirmAbort() ) {
         return;
+    }
 
     bool ok = false;
     int userGameId = QInputDialog::getInt( this, i18n( "Select Board" ),
                                                 i18n( "Select a board number:" ),
                                                 qrand(), 1, RAND_MAX, 1,
                                                 &ok );
-    if ( ok )
+    if ( ok ) {
         newGame( userGameId );
+    }
 }
 
 void MainWindow::pauseGame( bool isPaused )
 {
     m_scene->setPaused( isPaused );
     if ( !m_kSameMode ) {
-        if ( isPaused )
+        if ( isPaused ) {
             m_gameClock->pause();
-        else
+        } else {
             m_gameClock->resume();
+        }
     }
 }
 
@@ -207,8 +213,9 @@ void MainWindow::restartGame()
 void MainWindow::loadGame()
 {
     QString fileName = QFileDialog::getOpenFileName( this, QString(), QString() , i18n( "Klickety Game Files (*.klickety)" ) );
-    if ( fileName.isEmpty() || !confirmAbort() )
+    if ( fileName.isEmpty() || !confirmAbort() ) {
         return;
+    }
 
     m_pauseAction->setChecked( false );
     m_pauseAction->setEnabled( true );
@@ -220,8 +227,9 @@ void MainWindow::loadGame()
 void MainWindow::saveGame()
 {
     QString fileName = QFileDialog::getSaveFileName( this, QString(), QString(), i18n( "Klickety Game Files (*.klickety)" ) );
-    if ( fileName.isEmpty() )
+    if ( fileName.isEmpty() ) {
         return;
+    }
     KConfig config( fileName, KConfig::SimpleConfig );
     KConfigGroup group = config.group( "Savegame" );
     m_scene->saveGame( group );
@@ -327,8 +335,9 @@ void MainWindow::onGameOver( int remainCount )
     scoreInfo[KScoreDialog::Custom2] = m_gameClock->timeString();
     // remainCount*10000000 is much bigger than a usual time seconds
     scoreInfo[KScoreDialog::Score].setNum( remainCount*10000000 + m_gameClock->seconds() );
-    if ( d->addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 )
+    if ( d->addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 ) {
         d->exec();
+    }
     delete d;
 }
 

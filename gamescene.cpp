@@ -227,8 +227,9 @@ void GameScene::restartGame()
 
 void GameScene::setPaused( bool isPaused )
 {
-    if ( m_isPaused == isPaused )
+    if ( m_isPaused == isPaused ) {
         return;
+    }
 
     m_isPaused = isPaused;
 
@@ -236,8 +237,9 @@ void GameScene::setPaused( bool isPaused )
     for ( int j = 0; j < PHC; ++j ) {
         for ( int i = 0; i < PWC; ++i ) {
             Piece* item = m_pieces[j*PWC+i];
-            if ( item->isEnabled() )
+            if ( item->isEnabled() ) {
                 item->setVisible( !m_isPaused );
+            }
         }
     }
 
@@ -255,15 +257,17 @@ void GameScene::setPaused( bool isPaused )
 
 bool GameScene::isGameFinished() const
 {
-    if ( m_pieces.isEmpty() || m_undoStack.isClean() )
+    if ( m_pieces.isEmpty() || m_undoStack.isClean() ) {
         return true;
+    }
 
     for ( int j = 0; j < PHC; ++j ) {
         for ( int i = 0; i < PWC; ++i ) {
             Piece* item = m_pieces[j*PWC+i];
             // check same color neighbors, rightside and downside
-            if ( !item->isEnabled() )
+            if ( !item->isEnabled() ) {
                 continue;
+            }
             int rightX = i + 1;
             int downY = j + 1;
             if ( rightX < PWC && m_pieces[j*PWC+rightX]->isEnabled()
@@ -327,16 +331,18 @@ void GameScene::redoMove()
 
 void GameScene::undoAllMove()
 {
-    while ( m_undoStack.canUndo() )
+    while ( m_undoStack.canUndo() ) {
         m_undoStack.undo();
+    }
     emit remainCountChanged( currentRemainCount() );
     updateScene();
 }
 
 void GameScene::redoAllMove()
 {
-    while ( m_undoStack.canRedo() )
+    while ( m_undoStack.canRedo() ) {
         m_undoStack.redo();
+    }
     emit remainCountChanged( currentRemainCount() );
     updateScene();
 }
@@ -358,8 +364,9 @@ void GameScene::checkGameFinished()
 
 void GameScene::traverseNeighbors( int x, int y, int color, bool (GameScene::*func)(Piece*) )
 {
-    if ( x < 0 || x >= PWC || y < 0 || y >= PHC )
+    if ( x < 0 || x >= PWC || y < 0 || y >= PHC ) {
         return;
+    }
 
     int index = y * PWC + x;
     if ( m_pieces[index]->m_color == color ) {
@@ -374,24 +381,27 @@ void GameScene::traverseNeighbors( int x, int y, int color, bool (GameScene::*fu
 
 bool GameScene::highlightPiece( Piece* p )
 {
-    if ( !p->isEnabled() || p->m_highlighter->isVisible() )
+    if ( !p->isEnabled() || p->m_highlighter->isVisible() ) {
         return false;
+    }
     p->m_highlighter->show();
     return true;
 }
 
 bool GameScene::unhighlightPiece( Piece* p )
 {
-    if ( !p->isEnabled() || !p->m_highlighter->isVisible() )
+    if ( !p->isEnabled() || !p->m_highlighter->isVisible() ) {
         return false;
+    }
     p->m_highlighter->hide();
     return true;
 }
 
 bool GameScene::removePiece( Piece* p )
 {
-    if ( !p->isEnabled() )
+    if ( !p->isEnabled() ) {
         return false;
+    }
     m_undoStack.push( new HidePiece( p ) );
     return true;
 }
@@ -415,14 +425,17 @@ void GameScene::highlightPieces( int x, int y )
 {
     m_currentlyHoveredPieceX = x;
     m_currentlyHoveredPieceY = y;
-    if ( !m_enableHighlight )
+    if ( !m_enableHighlight ) {
         return;
+    }
 
-    if ( x < 0 || x >= PWC || y < 0 || y >= PHC )
+    if ( x < 0 || x >= PWC || y < 0 || y >= PHC ) {
         return;
+    }
 
-    if ( !canRemovePiece( x, y ) )
+    if ( !canRemovePiece( x, y ) ) {
         return;
+    }
 
     int index = y * PWC + x;
     m_pieces[index]->m_highlighter->show();
@@ -436,11 +449,13 @@ void GameScene::highlightPieces( int x, int y )
 
 void GameScene::unhighlightPieces( int x, int y )
 {
-    if ( x < 0 || x >= PWC || y < 0 || y >= PHC )
+    if ( x < 0 || x >= PWC || y < 0 || y >= PHC ) {
         return;
+    }
 
-    if ( !canRemovePiece( x, y ) )
+    if ( !canRemovePiece( x, y ) ) {
         return;
+    }
 
     int index = y * PWC + x;
     m_pieces[index]->m_highlighter->hide();
@@ -455,11 +470,13 @@ void GameScene::unhighlightPieces( int x, int y )
 
 void GameScene::removePieces( int x, int y )
 {
-    if ( x < 0 || x >= PWC || y < 0 || y >= PHC )
+    if ( x < 0 || x >= PWC || y < 0 || y >= PHC ) {
         return;
+    }
 
-    if ( !canRemovePiece( x, y ) )
+    if ( !canRemovePiece( x, y ) ) {
         return;
+    }
 
     // unhighlight pieces
     unhighlightPieces( x, y );
@@ -593,8 +610,9 @@ int GameScene::currentMarkedCount() const
 {
     int marked = 0;
     foreach ( const Piece* p, m_pieces ) {
-        if ( p->m_highlighter->isVisible() )
+        if ( p->m_highlighter->isVisible() ) {
             ++marked;
+        }
     }
     return marked;
 }
@@ -603,8 +621,9 @@ int GameScene::currentRemainCount() const
 {
     int remain = 0;
     foreach ( const Piece* p, m_pieces ) {
-        if ( p->isEnabled() )
+        if ( p->isEnabled() ) {
             ++remain;
+        }
     }
     return remain;
 }
@@ -633,8 +652,9 @@ void GameScene::resize( const QRectF& size )
         }
     }
 
-    if ( m_showBoundLines )
+    if ( m_showBoundLines ) {
         updateBoundLines();
+    }
 
     // center the messenger
     m_messenger->setPos( size.width() / 2 - m_messenger->boundingRect().width() / 2,
@@ -671,16 +691,16 @@ void GameScene::updateBoundLines()
                 && m_pieces[j*PWC+rightX]->m_color != item->m_color ) {
                 rightLine->setLine( elementsSize-1, 0-1, elementsSize-1, elementsSize-1 );
                 rightLine->show();
-            }
-            else
+            } else {
                 rightLine->hide();
+            }
             if ( downY < PHC && m_pieces[downY*PWC+i]->isEnabled()
                 && m_pieces[downY*PWC+i]->m_color != item->m_color ) {
                 bottomLine->setLine( 0-1, elementsSize-1, elementsSize-1, elementsSize-1 );
                 bottomLine->show();
-            }
-            else
+            } else {
                 bottomLine->hide();
+            }
         }
     }
 }
@@ -721,10 +741,11 @@ void GameScene::drawBackground( QPainter* painter, const QRectF& rect )
                 img_filepath = Settings::bgImage().path();
                 img = QImage( img_filepath );
             }
-            if ( !img.isNull() )
+            if ( !img.isNull() ) {
                 painter->drawImage( rect, img );
-            else
+            } else {
                 qWarning() << "Null background image " << Settings::bgImage();
+            }
             break;
         }
         default: {
