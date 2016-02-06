@@ -30,7 +30,7 @@ class MainWindow : public KXmlGuiWindow
 {
     Q_OBJECT
     public:
-        explicit MainWindow( bool KSameMode = false, QWidget* parent = 0 );
+        explicit MainWindow( bool kSameMode = false, QWidget* parent = 0 );
         ~MainWindow();
     private Q_SLOTS:
         void configureNotifications();
