@@ -34,7 +34,7 @@ m_highlighter(new KGameRenderedObjectItem(renderer,QStringLiteral( "HIGHLIGHT" )
     setAcceptHoverEvents( true );
     setAcceptedMouseButtons( Qt::LeftButton );
     m_highlighter->setAcceptHoverEvents( false );
-    m_highlighter->setAcceptedMouseButtons( 0 );
+    m_highlighter->setAcceptedMouseButtons( Qt::NoButton );
 }
 
 Piece::~Piece()
