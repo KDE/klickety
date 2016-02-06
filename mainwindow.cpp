@@ -306,8 +306,9 @@ void MainWindow::onGameOver( int remainCount )
         KScoreDialog::FieldInfo scoreInfo;
         scoreInfo[ KScoreDialog::Score ].setNum( m_gameScore );
 
-        if ( d->addScore( scoreInfo ) )
+        if ( d->addScore( scoreInfo ) != 0 ) {
             d->exec();
+}
         delete d;
         return;
     }
