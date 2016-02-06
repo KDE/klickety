@@ -112,7 +112,6 @@ void MainWindow::configureSettings()
         dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QStringLiteral( "games-config-custom" ) );
     connect(m_scene->themeProvider(), SIGNAL(currentThemeChanged(const KgTheme*)), SLOT(loadSettings())); //setBackgroundType!
     connect(dialog, &KConfigDialog::settingsChanged, this, &MainWindow::loadSettings);
-    //QT5 dialog->setHelp( QString(), QLatin1String( "klickety" ) );
     dialog->show();
 }
 
