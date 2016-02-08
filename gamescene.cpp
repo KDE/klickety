@@ -354,7 +354,7 @@ void GameScene::checkGameFinished()
     bool finished = isGameFinished();
     if ( finished && m_isFinished != finished ) {
         KNotification::event( QStringLiteral( "gamefinished" ) );
-        m_messenger->showMessage( i18n( "game finished" ) , KGamePopupItem::Center );
+        m_messenger->showMessage( i18n( "Game finished" ) , KGamePopupItem::Center );
         emit canUndoChanged( false );
         emit canRedoChanged( false );
         emit gameFinished( remain );
