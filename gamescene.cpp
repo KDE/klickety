@@ -96,8 +96,8 @@ void GameScene::startNewGame( int pwc, int phc, int colorCount, int gameId )
     m_isFinished = false;
     m_undoStack.clear();
 
-    for ( int i = 0; i < m_pieces.size(); ++i ) {
-        removeItem( m_pieces[i] );
+    foreach (auto & piece, m_pieces) {
+        removeItem( piece );
     }
     qDeleteAll( m_pieces );
     m_pieces.clear();
