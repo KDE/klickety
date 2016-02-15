@@ -80,5 +80,38 @@
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>color</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_BgColor</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>58</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>image</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_BgImage</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
