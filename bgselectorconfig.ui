@@ -28,7 +28,7 @@
     <widget class="QGroupBox" name="groupBox">
      <layout class="QGridLayout" name="gridLayout1">
       <item row="0" column="0">
-       <widget class="QRadioButton" name="theme">
+       <widget class="QRadioButton" name="kcfg_RadioTheme">
         <property name="text">
          <string>&amp;Theme</string>
         </property>
@@ -36,27 +36,27 @@
          <bool>true</bool>
         </property>
         <attribute name="buttonGroup">
-         <string notr="true">kcfg_BgType</string>
+         <string notr="true">buttonGroup</string>
         </attribute>
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QRadioButton" name="color">
+       <widget class="QRadioButton" name="kcfg_RadioColor">
         <property name="text">
          <string>&amp;Color</string>
         </property>
         <attribute name="buttonGroup">
-         <string notr="true">kcfg_BgType</string>
+         <string notr="true">buttonGroup</string>
         </attribute>
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QRadioButton" name="image">
+       <widget class="QRadioButton" name="kcfg_RadioImage">
         <property name="text">
          <string>&amp;Image</string>
         </property>
         <attribute name="buttonGroup">
-         <string notr="true">kcfg_BgType</string>
+         <string notr="true">buttonGroup</string>
         </attribute>
        </widget>
       </item>
@@ -91,7 +91,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>color</sender>
+   <sender>kcfg_RadioColor</sender>
    <signal>toggled(bool)</signal>
    <receiver>kcfg_BgColor</receiver>
    <slot>setEnabled(bool)</slot>
@@ -107,7 +107,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>image</sender>
+   <sender>kcfg_RadioImage</sender>
    <signal>toggled(bool)</signal>
    <receiver>kcfg_BgImage</receiver>
    <slot>setEnabled(bool)</slot>
@@ -123,7 +123,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>kcfg_BgType</sender>
+   <sender>buttonGroup</sender>
    <signal>buttonToggled(int,bool)</signal>
    <receiver>groupBox</receiver>
    <slot>update()</slot>
@@ -140,6 +140,6 @@
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="kcfg_BgType"/>
+  <buttongroup name="buttonGroup"/>
  </buttongroups>
 </ui>
