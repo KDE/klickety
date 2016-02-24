@@ -687,49 +687,38 @@ void GameScene::updateBoundLines()
 
 void GameScene::drawBackground( QPainter* painter, const QRectF& rect )
 {
-    switch ( m_backgroundType ) {
-        case Settings::EnumBgType::theme: {
-            // NOTE: the following is a workaround for https://bugs.kde.org/show_bug.cgi?id=243573
-            // cache the background pixmap locally in order to reduce the spritePixmap traffic when resizing
-            static QByteArray theme_pre( m_renderer.theme()->identifier() );
-            static QSize size_pre( rect.toRect().size() );
-            static QPixmap pix( m_renderer.spritePixmap( QStringLiteral( "BACKGROUND" ), size_pre ) );
-            QSize size_offset = size_pre - rect.toRect().size();
-            if ( size_offset.width() < -100 || size_offset.height() < -100 || theme_pre != m_renderer.theme()->identifier() ) {
-                qWarning() << "export";
-                theme_pre = m_renderer.theme()->identifier();
-                size_pre = rect.toRect().size();
-                pix = m_renderer.spritePixmap( QStringLiteral( "BACKGROUND" ), size_pre );
-                painter->drawPixmap( rect.topLeft(), pix );
-            }
-            else {
-                painter->drawPixmap( rect.topLeft(), pix.scaled( rect.toRect().size() ) );
-            }
-            break;
+    if ( Settings::radioTheme() == true ) {
+        // NOTE: the following is a workaround for https://bugs.kde.org/show_bug.cgi?id=243573
+        // cache the background pixmap locally in order to reduce the spritePixmap traffic when resizing
+        static QByteArray theme_pre( m_renderer.theme()->identifier() );
+        static QSize size_pre( rect.toRect().size() );
+        static QPixmap pix( m_renderer.spritePixmap( QStringLiteral( "BACKGROUND" ), size_pre ) );
+        QSize size_offset = size_pre - rect.toRect().size();
+        if ( size_offset.width() < -100 || size_offset.height() < -100 || theme_pre != m_renderer.theme()->identifier() ) {
+            qWarning() << "export";
+            theme_pre = m_renderer.theme()->identifier();
+            size_pre = rect.toRect().size();
+            pix = m_renderer.spritePixmap( QStringLiteral( "BACKGROUND" ), size_pre );
+            painter->drawPixmap( rect.topLeft(), pix );
         }
-        case 3: // the color button
-        case Settings::EnumBgType::color: {
-            painter->fillRect( rect, Settings::bgColor() );
-            break;
+        else {
+            painter->drawPixmap( rect.topLeft(), pix.scaled( rect.toRect().size() ) );
         }
-        case 4: // the image url requester
-        case Settings::EnumBgType::image: {
-            // cache the background image locally in order to reduce the file opening traffic when resizing
-            static QString img_filepath( Settings::bgImage().path() );
-            static QImage img( img_filepath );
-            if ( img_filepath != Settings::bgImage().path() ) {
-                img_filepath = Settings::bgImage().path();
-                img = QImage( img_filepath );
-            }
-            if ( !img.isNull() )
-                painter->drawImage( rect, img );
-            else
-                qWarning() << "Null background image " << Settings::bgImage();
-            break;
+    }
+    if ( Settings::radioColor() == true ) {
+        painter->fillRect( rect, Settings::bgColor() );
+    }
+    if ( Settings::radioImage() == true ) {
+        // cache the background image locally in order to reduce the file opening traffic when resizing
+        static QString img_filepath( Settings::bgImage().path() );
+        static QImage img( img_filepath );
+        if ( img_filepath != Settings::bgImage().path() ) {
+            img_filepath = Settings::bgImage().path();
+            img = QImage( img_filepath );
         }
-        default: {
-            // Unexpected background type, no action
-            break;
-        }
+        if ( !img.isNull() )
+            painter->drawImage( rect, img );
+        else
+            qWarning() << "Null background image " << Settings::bgImage();
     }
 }

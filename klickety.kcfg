@@ -20,15 +20,15 @@
     </entry>
   </group>
   <group name="Background">
-    <entry name="BgType" type="Enum" key="Background Type">
-      <label>The background type to be used.</label>
-      <choices>
-        <choice name="theme"/>
-        <choice name="color"/>
-        <choice name="image"/>
-      </choices>
-      <default>theme</default>
-    </entry>
+      <entry name="RadioTheme" type="Bool">
+          <default>true</default>
+      </entry>
+      <entry name="RadioColor" type="Bool">
+          <default>false</default>
+      </entry>
+      <entry name="RadioImage" type="Bool">
+          <default>false</default>
+      </entry>
     <entry name="BgColor" type="Color" key="Background Color">
       <label>The background color to be used.</label>
       <default>#000000</default>

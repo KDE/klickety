@@ -28,24 +28,24 @@
     <widget class="QGroupBox" name="kcfg_BgType">
      <layout class="QGridLayout" name="gridLayout1">
       <item row="0" column="0">
-       <widget class="QRadioButton" name="theme">
+       <widget class="QRadioButton" name="kcfg_RadioTheme">
         <property name="text">
          <string>&amp;Theme</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QRadioButton" name="color">
-        <property name="text">
-         <string>&amp;Color</string>
         </property>
         <property name="checked">
          <bool>true</bool>
         </property>
        </widget>
       </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="kcfg_RadioColor">
+        <property name="text">
+         <string>&amp;Color</string>
+        </property>
+       </widget>
+      </item>
       <item row="2" column="0">
-       <widget class="QRadioButton" name="image">
+       <widget class="QRadioButton" name="kcfg_RadioImage">
         <property name="text">
          <string>Ima&amp;ge</string>
         </property>
@@ -59,7 +59,11 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="KColorButton" name="kcfg_BgColor"/>
+       <widget class="KColorButton" name="kcfg_BgColor">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -80,5 +84,38 @@
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>kcfg_RadioColor</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_BgColor</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>58</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_RadioImage</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_BgImage</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -121,7 +121,14 @@ void MainWindow::loadSettings()
     m_scene->setShowBoundLines( Settings::showBoundLines() );
     m_scene->setEnableAnimation( Settings::enableAnimation() );
     m_scene->setEnableHighlight( Settings::enableHighlight() );
-    m_scene->setBackgroundType( Settings::bgType() );
+
+    int bgType = 0; // Theme Radio Button
+    if ( Settings::radioColor() == true ) {
+        bgType = 1;
+    } else if ( Settings::radioImage() == true ) {
+        bgType = 2;
+    }
+    m_scene->setBackgroundType( bgType );
 }
 
 void MainWindow::newGame( int gameId )
