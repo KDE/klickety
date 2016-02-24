@@ -27,7 +27,6 @@
 #include <KGameRenderedObjectItem>
 #include <KgTheme>
 #include <KgThemeProvider>
-#include <KNotification>
 #include <KRandomSequence>
 #include <KLocalizedString>
 
@@ -37,6 +36,7 @@
 #include <QParallelAnimationGroup>
 #include <QPropertyAnimation>
 #include <QSequentialAnimationGroup>
+#include <QStandardPaths>
 
 static KgThemeProvider* provider()
 {
@@ -63,7 +63,9 @@ m_colorCount(0),
 m_gameId(qrand()),
 m_isPaused(false),
 m_isFinished(false),
-m_animation(new QSequentialAnimationGroup)
+m_animation(new QSequentialAnimationGroup),
+m_soundRemove(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sounds/klickety/remove.ogg"))),
+m_soundGameFinished(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sounds/klickety/game-finished.ogg")))
 {
     connect(&m_undoStack, &QUndoStack::canUndoChanged, this, &GameScene::canUndoChanged);
     connect(&m_undoStack, &QUndoStack::canRedoChanged, this, &GameScene::canRedoChanged);
@@ -353,7 +355,9 @@ void GameScene::checkGameFinished()
     emit remainCountChanged( remain );
     bool finished = isGameFinished();
     if ( finished && m_isFinished != finished ) {
-        KNotification::event( QStringLiteral( "gamefinished" ) );
+        if (Settings::enableSounds()) {
+            m_soundGameFinished.start();
+        }
         m_messenger->showMessage( i18n( "Game finished" ) , KGamePopupItem::Center );
         emit canUndoChanged( false );
         emit canRedoChanged( false );
@@ -587,7 +591,9 @@ void GameScene::removePieces( int x, int y )
     }
 
     m_undoStack.endMacro();
-    KNotification::event( QStringLiteral( "remove" ) );
+    if (Settings::enableSounds()) {
+        m_soundRemove.start();
+    }
 
     if ( m_enableAnimation ) {
         // add new animations

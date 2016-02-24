@@ -68,7 +68,6 @@ target_link_libraries(klickety
 )
 
 install(TARGETS klickety ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES klickety.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR})
 install(FILES klickety.kcfg DESTINATION ${KDE_INSTALL_DATADIR}/klickety)
 install(FILES klicketyui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/klickety)
 
@@ -80,6 +79,7 @@ if(NOT WIN32)
     install(FILES klickety.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 endif(NOT WIN32)
 
+add_subdirectory(sounds)
 add_subdirectory(pics)
 add_subdirectory(themes)
 add_subdirectory(doc)

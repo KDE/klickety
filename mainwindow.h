@@ -33,7 +33,6 @@ class MainWindow : public KXmlGuiWindow
         explicit MainWindow( bool kSameMode = false, QWidget* parent = 0 );
         ~MainWindow();
     private Q_SLOTS:
-        void configureNotifications();
         void configureSettings();
         void loadSettings();
         void newGame( int gameId = qrand() );
@@ -48,6 +47,7 @@ class MainWindow : public KXmlGuiWindow
         void changeTime( const QString& newTime );
         void showHighscores();
         void onGameOver( int remainCount );
+        void setSoundsEnabled( bool enabled );
     private:
         bool confirmAbort();
         void setupActions();

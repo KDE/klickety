@@ -35,7 +35,6 @@
 #include <QInputDialog>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KNotifyConfigWidget>
 #include <KScoreDialog>
 #include <KStandardAction>
 #include <KStandardGameAction>
@@ -92,11 +91,6 @@ m_statusBarLabelRight(new QLabel())
 
 MainWindow::~MainWindow()
 {
-}
-
-void MainWindow::configureNotifications()
-{
-    KNotifyConfigWidget::configure( this );
 }
 
 void MainWindow::configureSettings()
@@ -371,6 +365,11 @@ void MainWindow::setupActions()
     actionCollection()->addAction( QStringLiteral( "game_new_numeric" ), m_newNumGameAction );
     connect(m_newNumGameAction, &QAction::triggered, this, &MainWindow::newNumGame);
 
+    KToggleAction * soundAction = new KToggleAction(QIcon::fromTheme(QStringLiteral("speaker")), i18n("Play Sounds"), this);
+    soundAction->setChecked(Settings::enableSounds());
+    actionCollection()->addAction(QStringLiteral("sounds"), soundAction);
+    connect(soundAction, &KToggleAction::triggered, this, &MainWindow::setSoundsEnabled);
+
     // move menu
     QAction * undoAction = KStandardGameAction::undo( m_scene, SLOT(undoMove()), actionCollection() );
     undoAction->setEnabled( false );
@@ -394,7 +393,6 @@ void MainWindow::setupActions()
 
     // settings menu
     KStandardAction::preferences( this, SLOT(configureSettings()), actionCollection() );
-    KStandardAction::configureNotifications( this, SLOT(configureNotifications()), actionCollection() );
 
     if ( m_kSameMode ) {
         Kg::difficulty()->addLevel(new KgDifficultyLevel(0,
@@ -415,4 +413,10 @@ void MainWindow::setupActions()
     connect(Kg::difficulty(), SIGNAL(currentLevelChanged(const KgDifficultyLevel*)), SLOT(newGame()));
 
     setupGUI( QSize( 340, 510 ) );
+}
+
+void MainWindow::setSoundsEnabled( bool enabled )
+{
+    Settings::setEnableSounds( enabled );
+    Settings::self()->save();
 }

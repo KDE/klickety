@@ -39,12 +39,8 @@ int main( int argc, char* argv[] )
     KLocalizedString::setApplicationDomain("klickety");
 
     // Migrate pre-existing (4.x) configuration
-    QStringList configFiles;
-    configFiles.append(QStringLiteral("klicketyrc"));
-    configFiles.append(QStringLiteral("klickety.notifyrc"));
-
     Kdelibs4ConfigMigrator migrate(QStringLiteral("klickety"));
-    migrate.setConfigFiles(configFiles);
+    migrate.setConfigFiles(QStringList() << QStringLiteral("klicketyrc"));
     migrate.setUiFiles(QStringList() << QStringLiteral("klicketyui.rc"));
     migrate.migrate();
 

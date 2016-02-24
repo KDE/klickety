@@ -23,6 +23,7 @@
 #include <QUndoStack>
 #include <QVector>
 #include <KGameRenderer>
+#include <KgSound>
 
 class QSequentialAnimationGroup;
 class KConfigGroup;
@@ -147,6 +148,9 @@ class GameScene : public QGraphicsScene
         bool m_isFinished;
         /** The animation group holding the animations of removing pieces */
         QSequentialAnimationGroup* const m_animation;
+
+        KgSound m_soundRemove;
+        KgSound m_soundGameFinished;
 };
 
 #endif // GAMESCENE_H

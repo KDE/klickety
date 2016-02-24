@@ -18,6 +18,9 @@
     <entry name="EnableHighlight" type="Bool" key="enablehighlight">
       <default>true</default>
     </entry>
+    <entry name="EnableSounds" type="Bool" key="enablesounds">
+      <default>true</default>
+    </entry>
   </group>
   <group name="Background">
     <entry name="RadioTheme" type="Bool">
