@@ -18,8 +18,8 @@
 
 #include "mainwindow.h"
 
-#include "bgselector.h"
-#include "customgame.h"
+#include "bgselectorconfig.h"
+#include "customgameconfig.h"
 #include "gameconfig.h"
 #include "gamescene.h"
 #include "gameview.h"
@@ -108,10 +108,11 @@ void MainWindow::configureSettings()
     KConfigDialog* dialog = new KConfigDialog( this, QStringLiteral( "settings" ), Settings::self() );
     dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QStringLiteral( "games-config-options" ) );
     dialog->addPage( new KgThemeSelector( m_scene->themeProvider() ), i18n( "Theme" ), QStringLiteral( "games-config-theme" ) );
-    dialog->addPage( new BackgroundSelector( dialog ), i18n( "Background" ), QStringLiteral( "games-config-background" ) );
+    dialog->addPage( new BgSelectorConfig( dialog ), i18n( "Background" ), QStringLiteral( "games-config-background" ) );
     if ( !m_kSameMode ) {
         dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QStringLiteral( "games-config-custom" ) );
     }
+
     connect(m_scene->themeProvider(), &KgThemeProvider::currentThemeChanged, this, &MainWindow::loadSettings); //setBackgroundType!
     connect(dialog, &KConfigDialog::settingsChanged, this, &MainWindow::loadSettings);
     dialog->show();

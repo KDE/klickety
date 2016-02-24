@@ -16,19 +16,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef BGSELECTOR_H
-#define BGSELECTOR_H
+#ifndef CUSTOMGAMECONFIG_H
+#define CUSTOMGAMECONFIG_H
 
 #include <QWidget>
 
-#include "ui_bgselector.h"
+#include "ui_customgameconfig.h"
 
-class BackgroundSelector : public QWidget, private Ui::BackgroundSelector
+class CustomGameConfig : public QWidget, private Ui::CustomGameConfig
 {
     public:
-        explicit BackgroundSelector( QWidget* parent = 0 ) : QWidget(parent) {
+        explicit CustomGameConfig( QWidget* parent = 0 ) : QWidget(parent) {
             setupUi( this );
         }
 };
 
-#endif // BGSELECTOR_H
+#endif // CUSTOMGAMECONFIG_H

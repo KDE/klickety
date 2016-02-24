@@ -45,7 +45,7 @@ set(klickety_SRCS
     piece.cpp
 )
 
-ki18n_wrap_ui(klickety_SRCS bgselector.ui customgame.ui gameconfig.ui)
+ki18n_wrap_ui(klickety_SRCS bgselectorconfig.ui customgameconfig.ui gameconfig.ui)
 
 kconfig_add_kcfg_files(klickety_SRCS settings.kcfgc)
 
