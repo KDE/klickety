@@ -123,14 +123,11 @@ void MainWindow::loadSettings()
     m_scene->setShowBoundLines( Settings::showBoundLines() );
     m_scene->setEnableAnimation( Settings::enableAnimation() );
     m_scene->setEnableHighlight( Settings::enableHighlight() );
-    int bgType;
-    if ( Settings::radioTheme() == true ) {
-        bgType = 0;
-    }
+
+    int bgType = 0; // Theme Radio Button
     if ( Settings::radioColor() == true ) {
         bgType = 1;
-    }
-    if ( Settings::radioImage() == true ) {
+    } else if ( Settings::radioImage() == true ) {
         bgType = 2;
     }
     m_scene->setBackgroundType( bgType );
