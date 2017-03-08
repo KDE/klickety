@@ -14,15 +14,12 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Config
     Crash
     WidgetsAddons
-    Config
     I18n
     ConfigWidgets
     XmlGui
     KIO
     DocTools
-    NotifyConfig
     DBusAddons
-    Notifications
 )
 
 find_package(KF5KDEGames 4.9.0 REQUIRED)
@@ -61,8 +58,6 @@ target_link_libraries(klickety
     KF5::KIOFileWidgets
     KF5::KIONTLM
     KF5::KIOWidgets
-    KF5::Notifications
-    KF5::NotifyConfig
     KF5::XmlGui
     KF5KDEGames
 )
