@@ -35,7 +35,7 @@ class GameView : public QGraphicsView
         explicit GameView( QGraphicsScene* scene, QWidget* parent = 0 );
     protected:
         /** Reimplemented for notifying game scene of the resize event */
-        virtual void resizeEvent( QResizeEvent *event );
+        void resizeEvent( QResizeEvent *event ) Q_DECL_OVERRIDE;
 };
 
 #endif // GAMEVIEW_H

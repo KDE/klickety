@@ -36,7 +36,7 @@ class Piece : public KGameRenderedObjectItem
         /** Destructor */
         ~Piece();
         /** Reimplemented for using bounding rect for detecting hovering and mouse clicking */
-        virtual QPainterPath shape() const;
+        QPainterPath shape() const Q_DECL_OVERRIDE;
         /** The current column in the game scene, from left to right, starts from 0 */
         int m_x;
         /** The current row in the game scene, from top to bottom, starts from 0 */
@@ -58,11 +58,11 @@ class Piece : public KGameRenderedObjectItem
         void pieceUnhovered( int x, int y );
     protected:
         /** Reimplemented for emitting signals if this piece is hovered */
-        virtual void hoverEnterEvent( QGraphicsSceneHoverEvent* event );
+        void hoverEnterEvent( QGraphicsSceneHoverEvent* event ) Q_DECL_OVERRIDE;
         /** Reimplemented for emitting signals if this piece is unhovered */
-        virtual void hoverLeaveEvent( QGraphicsSceneHoverEvent* event );
+        void hoverLeaveEvent( QGraphicsSceneHoverEvent* event ) Q_DECL_OVERRIDE;
         /** Reimplemented for emitting signals if any mouse click event */
-        virtual void mousePressEvent( QGraphicsSceneMouseEvent* event );
+        void mousePressEvent( QGraphicsSceneMouseEvent* event ) Q_DECL_OVERRIDE;
 };
 
 #endif // PIECE_H
