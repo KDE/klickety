@@ -54,8 +54,6 @@ int main( int argc, char* argv[] )
     QCommandLineParser parser;
     KAboutData::setApplicationData( aboutData );
     KCrash::initialize();
-    parser.addVersionOption();
-    parser.addHelpOption();
     parser.addOption( QCommandLineOption( QStringList() <<  QStringLiteral( "KSameMode" ), i18n( "Start with KSame compatibility mode" ) ) );
 
     aboutData.setupCommandLine( &parser );
