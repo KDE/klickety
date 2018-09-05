@@ -36,33 +36,6 @@
   <name xml:lang="zh-CN">KSame</name>
   <name xml:lang="zh-TW">KSame</name>
   <summary>KSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game</summary>
-  <summary xml:lang="ca">El KSame és un mode de partida del joc Klickety, que és una adaptació del joc «Clickomania».</summary>
-  <summary xml:lang="ca-valencia">El KSame és un mode de partida del joc Klickety, que és una adaptació del joc «Clickomania».</summary>
-  <summary xml:lang="de">KSame ist ein Spielmodus von Klickety, der dem Spiel „Clickomania“ nachempfunden ist.</summary>
-  <summary xml:lang="el">Το KSame είναι μια παραλλαγή του Klickety, το οποίο είναι προσαρμογή του "clickomania"</summary>
-  <summary xml:lang="en-GB">KSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game.</summary>
-  <summary xml:lang="es">KSame es un modo de juego de Klickety, que es una adaptación del juego «clickomania».</summary>
-  <summary xml:lang="et">KSame on mängu Klickety üks versioon, mis omakorda on mängu Clickomania mugandus.</summary>
-  <summary xml:lang="fi">KSame on pelitila Klickety-pelissä, joka taas on sovellus Clickomania-pelistä.</summary>
-  <summary xml:lang="fr">KSame est un mode de jeu du jeu Klickety, une adaptation du jeu « clickomania ».</summary>
-  <summary xml:lang="gl">KSame é un modo do xogo Klickety, que é unha adaptación do xogo «SameGame»</summary>
-  <summary xml:lang="it">KSame è una modalità di gioco del gioco Klickety, il quale è un adattamento del gioco «clickomania».</summary>
-  <summary xml:lang="nl">KSame is spelmodus van het spel Klickety, dat een aanpassing is van het spel "clickomania".</summary>
-  <summary xml:lang="nn">KSame er ei tilpassa utgåve spelet Klickety, som er basert på spelet Clickomania.</summary>
-  <summary xml:lang="pl">KSame jest trybem gry Klickety, która jest adaptacją gry "clickomania" .</summary>
-  <summary xml:lang="pt">O KSame é um modo de jogo do Klickety, que é uma adaptação do jogo "clickomania".</summary>
-  <summary xml:lang="pt-BR">KSame é um modo de jogo do Klickety, que é uma adaptação do jogo "Clickomania".</summary>
-  <summary xml:lang="sk">KSame je herný režim hry Klickety, ktorá je adaptáciou hry "Clickomania".</summary>
-  <summary xml:lang="sl">KSame je igralni način za igro Klickety, ki je priredba igre »Clickomania«.</summary>
-  <summary xml:lang="sr">К‑исто‑исто је један режим игре Кликети, која је прерада игре Кликоманија.</summary>
-  <summary xml:lang="sr-Latn">K‑isto‑isto je jedan režim igre Kliketi, koja je prerada igre Klikomanija.</summary>
-  <summary xml:lang="sr-ijekavian">К‑исто‑исто је један режим игре Кликети, која је прерада игре Кликоманија.</summary>
-  <summary xml:lang="sr-ijekavianlatin">K‑isto‑isto je jedan režim igre Kliketi, koja je prerada igre Klikomanija.</summary>
-  <summary xml:lang="sv">Ksame är en spelvariant av spelet Klickety, som är en anpassning av spelet "clickomania".</summary>
-  <summary xml:lang="tr">KSame, "clickomania" oyununun uyarlanması olan Klickety oyununun bir oyun kipidir.</summary>
-  <summary xml:lang="uk">KSame — режим у грі Klickety, який є адаптацією гри «клікоманія».</summary>
-  <summary xml:lang="x-test">xxKSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game.xx</summary>
-  <summary xml:lang="zh-TW">KSame 是 Klickety 的一種遊戲模式，類似 clickomania 遊戲。</summary>
   <description>
     <p>
       KSame is a simple, yet challenging color matching game modeled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicolored marbles.
