@@ -87,6 +87,7 @@
   <url type="homepage">https://games.kde.org/game.php?game=klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
   <url type="help">https://docs.kde.org/?application=klickety&amp;branch=stable&amp;path=ksame_mode.html</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=klickety&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
       <image>https://kde.org/images/screenshots/ksame.png</image>
