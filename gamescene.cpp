@@ -72,7 +72,6 @@ m_soundGameFinished(QStandardPaths::locate(QStandardPaths::GenericDataLocation, 
     connect(this, &GameScene::sceneRectChanged, this, &GameScene::resize);
 
     connect(m_animation, &QSequentialAnimationGroup::finished, this, &GameScene::updateScene);
-    connect(m_animation, &QSequentialAnimationGroup::finished, this, &GameScene::checkGameFinished);
 
     // init messenger
     m_messenger->setMessageOpacity( 0.8 );
@@ -508,6 +507,10 @@ void GameScene::removePieces( int x, int y )
     QParallelAnimationGroup* gravityAnimationGroup = nullptr;
     QParallelAnimationGroup* removeColumnsAnimationGroup = nullptr;
     if ( m_enableAnimation ) {
+        // Clearing next line will trigger checkGameFinished but we don't want that since the user just clicked
+        // on some more tiles to remove, we will trigger another check game finished at the end of this function
+        // either directly or via connection the animation // finished signal again to checkGameFinished
+        disconnect(m_animation, &QSequentialAnimationGroup::finished, this, &GameScene::checkGameFinished);
         // remove previous animations if any
         m_animation->clear();
         gravityAnimationGroup = new QParallelAnimationGroup;
@@ -596,6 +599,8 @@ void GameScene::removePieces( int x, int y )
     }
 
     if ( m_enableAnimation ) {
+        // after finishing the animation we want to check if the game has finished
+        connect(m_animation, &QSequentialAnimationGroup::finished, this, &GameScene::checkGameFinished);
         // add new animations
         m_animation->addAnimation( gravityAnimationGroup );
         m_animation->addAnimation( removeColumnsAnimationGroup );
