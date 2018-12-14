@@ -64,8 +64,8 @@ m_gameId(qrand()),
 m_isPaused(false),
 m_isFinished(false),
 m_animation(new QSequentialAnimationGroup),
-m_soundRemove(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sounds/klickety/remove.ogg"))),
-m_soundGameFinished(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sounds/klickety/game-finished.ogg")))
+m_soundRemove(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sounds/klickety/remove.ogg")), this),
+m_soundGameFinished(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sounds/klickety/game-finished.ogg")), this)
 {
     connect(&m_undoStack, &QUndoStack::canUndoChanged, this, &GameScene::canUndoChanged);
     connect(&m_undoStack, &QUndoStack::canRedoChanged, this, &GameScene::canRedoChanged);

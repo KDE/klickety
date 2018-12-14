@@ -50,10 +50,10 @@ m_kSameMode(kSameMode),
 m_gameClock(nullptr),
 m_gameScore(0),
 m_lastRemainCount(0),
-m_statusBarLabelLeft(new QLabel()),
-m_statusBarLabelRight(new QLabel())
+m_statusBarLabelLeft(new QLabel(this)),
+m_statusBarLabelRight(new QLabel(this))
 {
-    m_scene = new GameScene;
+    m_scene = new GameScene(this);
     GameView* view = new GameView( m_scene );
     view->setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
     view->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
