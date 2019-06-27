@@ -24,7 +24,6 @@
 
 #include <KConfigGroup>
 #include <KGamePopupItem>
-#include <KGameRenderedObjectItem>
 #include <KgTheme>
 #include <KgThemeProvider>
 #include <KRandomSequence>

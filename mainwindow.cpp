@@ -40,7 +40,6 @@
 #include <KStandardGameAction>
 #include <QStatusBar>
 #include <KToggleAction>
-#include <QUrl>
 #include <QIcon>
 #include <QPointer>
 
