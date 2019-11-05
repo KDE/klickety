@@ -80,7 +80,7 @@ int main( int argc, char* argv[] )
 
     // see if we are starting with session management
     if ( app.isSessionRestored() ) {
-        RESTORE(MainWindow( kSameMode ));
+        kRestoreMainWindows<MainWindow>();
     }
     else {
         MainWindow* window = new MainWindow( kSameMode );
