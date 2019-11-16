@@ -49,7 +49,7 @@ int main( int argc, char* argv[] )
                           i18n( "Klickety is an adaptation of the \"clickomania\" game" ),
                           KAboutLicense::GPL,
                           i18n( "(c) 2002-2005, Nicolas Hadacek\n(c) 2010, Ni Hui" ) );
-    aboutData.setHomepage(QStringLiteral( "http://games.kde.org/klickety" ) );
+    aboutData.setHomepage(QStringLiteral( "https://kde.org/applications/games/org.kde.klickety" ) );
 
     QCommandLineParser parser;
     KAboutData::setApplicationData( aboutData );
