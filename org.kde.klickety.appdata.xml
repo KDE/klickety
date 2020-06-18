@@ -33,6 +33,7 @@
   <name xml:lang="sv">Klickety</name>
   <name xml:lang="tr">Klickety</name>
   <name xml:lang="uk">Klickety</name>
+  <name xml:lang="x-test">xxKlicketyxx</name>
   <name xml:lang="zh-CN">Klickety</name>
   <name xml:lang="zh-TW">Klickety</name>
   <summary>Klickety is an adaptation of the "clickomania" game</summary>
@@ -65,6 +66,7 @@
   <summary xml:lang="sv">Klickety är en anpassning av spelet "clickomania"</summary>
   <summary xml:lang="tr">Klickety, "clickomania" oyununa bir benzetmedir</summary>
   <summary xml:lang="uk">Klickety — реалізація гри «клікоманія»</summary>
+  <summary xml:lang="x-test">xxKlickety is an adaptation of the "clickomania" gamexx</summary>
   <summary xml:lang="zh-CN">Klickety 是“clickomania”游戏的又一实作</summary>
   <summary xml:lang="zh-TW">Klickety 是一套 clickomania 的遊戲</summary>
   <description>
@@ -98,6 +100,7 @@
     <p xml:lang="sv">Klickety är ett strategispel av KDE, en anpassning av spelet Clickomania.</p>
     <p xml:lang="tr">Klickety, KDE için bir strateji oyunudur ve Clickomania oyununa bir uyarlamadır.</p>
     <p xml:lang="uk">Klickety — стратегічна гра від KDE, варіант гри Clickomania («Клікоманія»).</p>
+    <p xml:lang="x-test">xxKlickety is a strategy game by KDE, an adaption of the Clickomania game.xx</p>
     <p xml:lang="zh-CN">Klickety是一个改编自Clickomania的KDE桌面战略游戏。</p>
     <p xml:lang="zh-TW">Klickety 是來自 KDE 上類似 Clickomania 的策略遊戲。</p>
   </description>
