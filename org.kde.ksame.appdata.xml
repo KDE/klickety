@@ -33,6 +33,7 @@
   <name xml:lang="sv">Ksame</name>
   <name xml:lang="tr">KSame</name>
   <name xml:lang="uk">KSame</name>
+  <name xml:lang="x-test">xxKSamexx</name>
   <name xml:lang="zh-CN">KSame</name>
   <name xml:lang="zh-TW">KSame</name>
   <summary>KSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game</summary>
@@ -57,6 +58,7 @@
   <summary xml:lang="sl">KSame je igralni način igre Klickety, ki je priredba igre 'Clickomania'</summary>
   <summary xml:lang="sv">Ksame är en spelvariant av spelet Klickety, som är en anpassning av spelet "clickomania".</summary>
   <summary xml:lang="uk">KSame — режим у грі Klickety, який є адаптацією гри «клікоманія»</summary>
+  <summary xml:lang="x-test">xxKSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" gamexx</summary>
   <summary xml:lang="zh-TW">KSame 是 Klickety 的一種遊戲模式，類似 clickomania 遊戲</summary>
   <description>
     <p>
@@ -89,6 +91,7 @@
     <p xml:lang="sv">Ksame är ett enkelt, men ändå utmanande färgjämförelsespel modellerat enligt det en gång berömda spelet Samegame. Idén bakom Ksame är att helt och hållet tömma spelbrädet, som är fyllt med mångfärgade kulor.</p>
     <p xml:lang="tr">KSame, bir zamanların ünlü SameGame oyunundan sonra modellenen, basit, ancak zorlu bir renk eşleştirme oyunudur. KSame'in arkasındaki fikir, çok renkli mermerlerle dolu oyun tahtasını tamamen temizlemektir.</p>
     <p xml:lang="uk">KSame — проста, але захоплива гра у пошук відповідних кольорів. Джерелом натхнення для створення гри була гра SameGame. Дуже проста умова. На дошці будуть кульки. Приберіть їх всі.</p>
+    <p xml:lang="x-test">xxKSame is a simple, yet challenging color matching game modeled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicolored marbles.xx</p>
     <p xml:lang="zh-TW">KSame 是一套簡單但也很有挑戰性的遊戲，從知名的 SameGame 演變而來。KSame 目的是完全清除遊戲棋盤上的各種不同顏色。</p>
   </description>
   <url type="homepage">https://games.kde.org/game.php?game=klickety</url>
