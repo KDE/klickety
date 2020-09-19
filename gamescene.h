@@ -40,7 +40,7 @@ class GameScene : public QGraphicsScene
         explicit GameScene( QObject* parent = nullptr );
         ~GameScene();
         /** Start a new game with custom size, color count and game id */
-        void startNewGame( int pwc = 10, int phc = 16, int colorCount = 5, int gameId = qrand() );
+        void startNewGame( int pwc, int phc, int colorCount, int gameId );
         /** Load a game from config */
         void loadGame( const KConfigGroup& config );
         /** Save the current game to config */

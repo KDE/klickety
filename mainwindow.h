@@ -35,7 +35,7 @@ class MainWindow : public KXmlGuiWindow
     private Q_SLOTS:
         void configureSettings();
         void loadSettings();
-        void newGame( int gameId = qrand() );
+        void newGame( int gameId );
         void newNumGame();
         void pauseGame( bool isPaused );
         void restartGame();

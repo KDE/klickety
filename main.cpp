@@ -30,8 +30,6 @@
 #include <QCommandLineParser>
 #include <QCommandLineOption>
 
-#include <ctime>
-
 int main( int argc, char* argv[] )
 {
     // Fixes blurry icons with fractional scaling
@@ -47,7 +45,6 @@ int main( int argc, char* argv[] )
     migrate.setUiFiles(QStringList() << QStringLiteral("klicketyui.rc"));
     migrate.migrate();
 
-    qsrand( std::time( nullptr ) );
     KAboutData aboutData( QStringLiteral( "klickety" ), i18n( "Klickety" ), QStringLiteral( KLICKETY_VERSION_STRING ),
                           i18n( "Klickety is an adaptation of the \"clickomania\" game" ),
                           KAboutLicense::GPL,
