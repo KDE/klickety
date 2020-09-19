@@ -38,8 +38,8 @@ include(KDEInstallDirs)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 
-add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 add_definitions(
+    -DQT_USE_QSTRINGBUILDER
     -DQT_NO_KEYWORDS
 )
 if (${KF5Config_VERSION} STRGREATER "5.56.0")
