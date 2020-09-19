@@ -26,7 +26,7 @@
 class BgSelectorConfig : public QWidget, private Ui::BgSelectorConfig
 {
     public:
-        explicit BgSelectorConfig( QWidget* parent = 0 ) : QWidget(parent) {
+        explicit BgSelectorConfig( QWidget* parent = nullptr ) : QWidget(parent) {
             setupUi( this );
         }
 };

@@ -32,7 +32,7 @@ class Piece : public KGameRenderedObjectItem
     Q_OBJECT
     public:
         /** Constructor */
-        explicit Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent = 0 );
+        explicit Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent = nullptr );
         /** Destructor */
         ~Piece();
         /** Reimplemented for using bounding rect for detecting hovering and mouse clicking */

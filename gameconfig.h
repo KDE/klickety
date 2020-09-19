@@ -26,7 +26,7 @@
 class GameConfig : public QWidget, private Ui::GameConfig
 {
     public:
-        explicit GameConfig( QWidget* parent = 0 ) : QWidget(parent) {
+        explicit GameConfig( QWidget* parent = nullptr ) : QWidget(parent) {
             setupUi( this );
         }
 };

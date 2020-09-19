@@ -37,7 +37,7 @@ class GameScene : public QGraphicsScene
 {
     Q_OBJECT
     public:
-        explicit GameScene( QObject* parent = 0 );
+        explicit GameScene( QObject* parent = nullptr );
         ~GameScene();
         /** Start a new game with custom size, color count and game id */
         void startNewGame( int pwc = 10, int phc = 16, int colorCount = 5, int gameId = qrand() );
