@@ -119,6 +119,7 @@
   <provides>
     <binary>klickety</binary>
   </provides>
+  <launchable type="desktop-id">org.kde.klickety.desktop</launchable>
   <content_rating type="oars-1.1"/>
   <releases>
     <release version="2.1.20081" date="2020-09-03"/>
