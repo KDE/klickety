@@ -54,17 +54,17 @@ QPainterPath Piece::shape() const
 void Piece::hoverEnterEvent( QGraphicsSceneHoverEvent* event )
 {
     Q_UNUSED(event)
-    emit pieceHovered( m_x, m_y );
+    Q_EMIT pieceHovered( m_x, m_y );
 }
 
 void Piece::hoverLeaveEvent( QGraphicsSceneHoverEvent* event )
 {
     Q_UNUSED(event)
-    emit pieceUnhovered( m_x, m_y );
+    Q_EMIT pieceUnhovered( m_x, m_y );
 }
 
 void Piece::mousePressEvent( QGraphicsSceneMouseEvent* event )
 {
     Q_UNUSED(event)
-    emit pieceClicked( m_x, m_y );
+    Q_EMIT pieceClicked( m_x, m_y );
 }

@@ -138,7 +138,7 @@ void GameScene::startNewGame( int pwc, int phc, int colorCount, int gameId )
         }
     }
 
-    emit remainCountChanged( pwc * phc );
+    Q_EMIT remainCountChanged( pwc * phc );
 
     updateScene();
 }
@@ -190,7 +190,7 @@ void GameScene::loadGame( const KConfigGroup& config )
 
     setEnableAnimation( enableAnimationOld );
 
-    emit remainCountChanged( currentRemainCount() );
+    Q_EMIT remainCountChanged( currentRemainCount() );
 }
 
 void GameScene::saveGame( KConfigGroup& config ) const
@@ -245,13 +245,13 @@ void GameScene::setPaused( bool isPaused )
 
     if ( m_isPaused ) {
         m_messenger->showMessage( i18n( "paused" ), KGamePopupItem::Center );
-        emit canUndoChanged( false );
-        emit canRedoChanged( false );
+        Q_EMIT canUndoChanged( false );
+        Q_EMIT canRedoChanged( false );
     }
     else {
         m_messenger->forceHide();
-        emit canUndoChanged( m_undoStack.canUndo() );
-        emit canRedoChanged( m_undoStack.canRedo() );
+        Q_EMIT canUndoChanged( m_undoStack.canUndo() );
+        Q_EMIT canRedoChanged( m_undoStack.canRedo() );
     }
 }
 
@@ -318,14 +318,14 @@ void GameScene::undoMove()
 {
     unhighlightPieces( m_currentlyHoveredPieceX, m_currentlyHoveredPieceY );
     m_undoStack.undo();
-    emit remainCountChanged( currentRemainCount() );
+    Q_EMIT remainCountChanged( currentRemainCount() );
     updateScene();
 }
 
 void GameScene::redoMove()
 {
     m_undoStack.redo();
-    emit remainCountChanged( currentRemainCount() );
+    Q_EMIT remainCountChanged( currentRemainCount() );
     updateScene();
 }
 
@@ -334,7 +334,7 @@ void GameScene::undoAllMove()
     while ( m_undoStack.canUndo() ) {
         m_undoStack.undo();
     }
-    emit remainCountChanged( currentRemainCount() );
+    Q_EMIT remainCountChanged( currentRemainCount() );
     updateScene();
 }
 
@@ -343,23 +343,23 @@ void GameScene::redoAllMove()
     while ( m_undoStack.canRedo() ) {
         m_undoStack.redo();
     }
-    emit remainCountChanged( currentRemainCount() );
+    Q_EMIT remainCountChanged( currentRemainCount() );
     updateScene();
 }
 
 void GameScene::checkGameFinished()
 {
     int remain = currentRemainCount();
-    emit remainCountChanged( remain );
+    Q_EMIT remainCountChanged( remain );
     bool finished = isGameFinished();
     if ( finished && m_isFinished != finished ) {
         if (Settings::enableSounds()) {
             m_soundGameFinished.start();
         }
         m_messenger->showMessage( i18n( "Game finished" ) , KGamePopupItem::Center );
-        emit canUndoChanged( false );
-        emit canRedoChanged( false );
-        emit gameFinished( remain );
+        Q_EMIT canUndoChanged( false );
+        Q_EMIT canRedoChanged( false );
+        Q_EMIT gameFinished( remain );
     }
     m_isFinished = finished;
 }
@@ -446,7 +446,7 @@ void GameScene::highlightPieces( int x, int y )
     traverseNeighbors( x+1, y, m_pieces[index]->m_color, &GameScene::highlightPiece );// check right neighbor
     traverseNeighbors( x, y+1, m_pieces[index]->m_color, &GameScene::highlightPiece );// check down neighbor
 
-    emit markedCountChanged( currentMarkedCount() );
+    Q_EMIT markedCountChanged( currentMarkedCount() );
 }
 
 void GameScene::unhighlightPieces( int x, int y )
@@ -467,7 +467,7 @@ void GameScene::unhighlightPieces( int x, int y )
     traverseNeighbors( x+1, y, m_pieces[index]->m_color, &GameScene::unhighlightPiece );// check right neighbor
     traverseNeighbors( x, y+1, m_pieces[index]->m_color, &GameScene::unhighlightPiece );// check down neighbor
 
-    emit markedCountChanged( currentMarkedCount() );
+    Q_EMIT markedCountChanged( currentMarkedCount() );
 }
 
 void GameScene::removePieces( int x, int y )
