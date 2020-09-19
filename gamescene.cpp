@@ -26,9 +26,9 @@
 #include <KGamePopupItem>
 #include <KgTheme>
 #include <KgThemeProvider>
-#include <KRandomSequence>
 #include <KLocalizedString>
 
+#include <QRandomGenerator>
 #include <QEasingCurve>
 #include <QGraphicsColorizeEffect>
 #include <QPainter>
@@ -113,11 +113,11 @@ void GameScene::startNewGame( int pwc, int phc, int colorCount, int gameId )
     pen.setCapStyle( Qt::RoundCap );
     pen.setJoinStyle( Qt::RoundJoin );
 
-    KRandomSequence s( gameId );
+    QRandomGenerator s( gameId );
     for ( int j = 0; j < PHC; ++j ) {
         for ( int i = 0; i < PWC; ++i ) {
             // piece item
-            Piece* item = new Piece( &m_renderer, i, j, s.getLong( m_colorCount ) );
+            Piece* item = new Piece( &m_renderer, i, j, s.bounded( m_colorCount ) );
             connect(item, &Piece::pieceClicked, this, &GameScene::removePieces);
             connect(item, &Piece::pieceHovered, this, &GameScene::highlightPieces);
             connect(item, &Piece::pieceUnhovered, this, &GameScene::unhighlightPieces);
