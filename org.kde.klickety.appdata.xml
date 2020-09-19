@@ -112,13 +112,14 @@
   <url type="donation">https://www.kde.org/community/donations/?app=klickety&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://kde.org/images/screenshots/klickety.png</image>
+      <image>https://cdn.kde.org/screenshots/klickety/klickety.png</image>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
   <provides>
     <binary>klickety</binary>
   </provides>
+  <launchable type="desktop-id">org.kde.klickety.desktop</launchable>
   <content_rating type="oars-1.1"/>
   <releases>
     <release version="2.1.20081" date="2020-09-03"/>

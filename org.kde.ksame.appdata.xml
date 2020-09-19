@@ -102,13 +102,14 @@
   <url type="donation">https://www.kde.org/community/donations/?app=klickety&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://cdn.kde.org/screenshots/klickety/ksame.png</image>
+      <image>https://cdn.kde.org/screenshots/ksame/ksame.png</image>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
   <provides>
     <binary>klickety --KSameMode</binary>
   </provides>
+  <launchable type="desktop-id">org.kde.ksame.desktop</launchable>
   <content_rating type="oars-1.1"/>
   <releases>
     <release version="2.1.20081" date="2020-09-03"/>
