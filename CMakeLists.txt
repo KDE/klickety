@@ -108,5 +108,6 @@ add_subdirectory(themes)
 add_subdirectory(doc)
 
 ki18n_install(po)
+kdoctools_install(po)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
