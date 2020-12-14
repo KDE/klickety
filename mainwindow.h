@@ -22,6 +22,8 @@
 #include <KXmlGuiWindow>
 
 #include <QLabel>
+#include <QRandomGenerator>
+#include <cstdlib>
 
 class KToggleAction;
 class KGameClock;
@@ -35,7 +37,7 @@ class MainWindow : public KXmlGuiWindow
     private Q_SLOTS:
         void configureSettings();
         void loadSettings();
-        void newGame( int gameId );
+        void newGame( int gameId = QRandomGenerator::global()->bounded(RAND_MAX));
         void newNumGame();
         void pauseGame( bool isPaused );
         void restartGame();
