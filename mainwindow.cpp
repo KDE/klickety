@@ -411,7 +411,8 @@ void MainWindow::setupActions()
         QByteArray( "Custom" ), i18n( "Custom" )
     ));
     KgDifficultyGUI::init(this);
-    connect(Kg::difficulty(), SIGNAL(currentLevelChanged(const KgDifficultyLevel*)), SLOT(newGame()));
+    connect(Kg::difficulty(), &KgDifficulty::currentLevelChanged,
+            this, [this]() { newGame(QRandomGenerator::global()->bounded(RAND_MAX)); });
 
     setupGUI( QSize( 340, 510 ) );
 }
