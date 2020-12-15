@@ -8,8 +8,8 @@ set (RELEASE_SERVICE_COMPACT_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}${RELEASE_
 
 project(klickety VERSION "2.1.${RELEASE_SERVICE_COMPACT_VERSION}")
 
-set (QT_MIN_VERSION "5.10.0")
-set (KF5_MIN_VERSION "5.46.0")
+set (QT_MIN_VERSION "5.11.0")
+set (KF5_MIN_VERSION "5.64.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
@@ -28,7 +28,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     DBusAddons
 )
 
-find_package(KF5KDEGames 4.9.0 REQUIRED)
+find_package(KF5KDEGames 7.3.0 REQUIRED)
 
 include(FeatureSummary)
 include(ECMAddAppIcon)
@@ -51,12 +51,8 @@ add_definitions(
     -DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x052E00
     -DKF_DEPRECATED_WARNINGS_SINCE=0x060000
     -DQT_NO_KEYWORDS
+    -DQT_NO_FOREACH
 )
-if (${KF5Config_VERSION} STRGREATER "5.56.0")
-        add_definitions(-DQT_NO_FOREACH)
-        MESSAGE(STATUS "compile without foreach")
-endif()
-
 
 set(klickety_SRCS
     gamescene.cpp

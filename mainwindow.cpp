@@ -353,15 +353,15 @@ bool MainWindow::confirmAbort()
 void MainWindow::setupActions()
 {
     // game menu
-    KStandardGameAction::gameNew( this, SLOT(newGame()), actionCollection() );
+    KStandardGameAction::gameNew(this, &MainWindow::newGame, actionCollection());
     if ( !m_kSameMode ) {
-        KStandardGameAction::load( this, SLOT(loadGame()), actionCollection() );
-        KStandardGameAction::save( this, SLOT(saveGame()), actionCollection() );
+        KStandardGameAction::load(this, &MainWindow::loadGame, actionCollection());
+        KStandardGameAction::save(this, &MainWindow::saveGame, actionCollection());
     }
-    KStandardGameAction::restart( this, SLOT(restartGame()), actionCollection() );
-    KStandardGameAction::highscores( this, SLOT(showHighscores()), actionCollection() );
-    m_pauseAction = KStandardGameAction::pause( this, SLOT(pauseGame(bool)), actionCollection() );
-    KStandardGameAction::quit( this, SLOT(close()), actionCollection() );
+    KStandardGameAction::restart(this, &MainWindow::restartGame, actionCollection());
+    KStandardGameAction::highscores(this, &MainWindow::showHighscores, actionCollection());
+    m_pauseAction = KStandardGameAction::pause(this, &MainWindow::pauseGame, actionCollection());
+    KStandardGameAction::quit( this, &MainWindow::close, actionCollection());
     QAction * m_newNumGameAction = new QAction( i18n( "New Numbered Game..." ), actionCollection() );
     actionCollection()->addAction( QStringLiteral( "game_new_numeric" ), m_newNumGameAction );
     connect(m_newNumGameAction, &QAction::triggered, this, &MainWindow::newNumGame);
@@ -372,10 +372,10 @@ void MainWindow::setupActions()
     connect(soundAction, &KToggleAction::triggered, this, &MainWindow::setSoundsEnabled);
 
     // move menu
-    QAction * undoAction = KStandardGameAction::undo( m_scene, SLOT(undoMove()), actionCollection() );
+    QAction * undoAction = KStandardGameAction::undo(m_scene, &GameScene::undoMove, actionCollection());
     undoAction->setEnabled( false );
     connect(m_scene, &GameScene::canUndoChanged, undoAction, &QAction::setEnabled);
-    QAction * redoAction = KStandardGameAction::redo( m_scene, SLOT(redoMove()), actionCollection() );
+    QAction * redoAction = KStandardGameAction::redo(m_scene, &GameScene::redoMove, actionCollection());
     redoAction->setEnabled( false );
     connect(m_scene, &GameScene::canRedoChanged, redoAction, &QAction::setEnabled);
 
@@ -393,7 +393,7 @@ void MainWindow::setupActions()
     connect(redoAllAction, &QAction::triggered, m_scene, &GameScene::redoAllMove);
 
     // settings menu
-    KStandardAction::preferences( this, SLOT(configureSettings()), actionCollection() );
+    KStandardAction::preferences(this, &MainWindow::configureSettings, actionCollection());
 
     if ( m_kSameMode ) {
         Kg::difficulty()->addLevel(new KgDifficultyLevel(0,
