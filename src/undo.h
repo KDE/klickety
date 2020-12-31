@@ -20,14 +20,14 @@ class HidePiece : public QUndoCommand
         explicit HidePiece( Piece* piece ) : m_piece(piece) {
             setText( QStringLiteral( "Hide Piece" ) );
         }
-        int id() const Q_DECL_OVERRIDE {
+        int id() const override {
             return ID_HIDEPIECE;
         }
-        void undo() Q_DECL_OVERRIDE {
+        void undo() override {
             m_piece->setEnabled( true );
             m_piece->show();
         }
-        void redo() Q_DECL_OVERRIDE {
+        void redo() override {
             m_piece->setEnabled( false );
             m_piece->hide();
         }
@@ -44,13 +44,13 @@ class SwapPiece : public QUndoCommand
         : m_pieceA(a), m_pieceB(b), m_posA(posA), m_posB(posB) {
             setText( QStringLiteral( "Swap Piece" ) );
         }
-        int id() const Q_DECL_OVERRIDE {
+        int id() const override {
             return ID_SWAPPIECE;
         }
-        void undo() Q_DECL_OVERRIDE {
+        void undo() override {
             redo();
         }
-        void redo() Q_DECL_OVERRIDE {
+        void redo() override {
             Piece* tmpA = *m_pieceA;
             Piece* tmpB = *m_pieceB;
             int tmpAX = tmpA->m_x;

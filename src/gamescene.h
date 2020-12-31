@@ -71,7 +71,7 @@ class GameScene : public QGraphicsScene
         void redoAllMove();
     protected:
         /** Reimplemented for drawing the background depending on the settings */
-        void drawBackground( QPainter* painter, const QRectF& rect ) Q_DECL_OVERRIDE;
+        void drawBackground( QPainter* painter, const QRectF& rect ) override;
     private Q_SLOTS:
         /** Check whether the player has no way to remove any pieces, emit signals if finished */
         void checkGameFinished();
