@@ -41,7 +41,6 @@ class MainWindow : public KXmlGuiWindow
     private:
         bool confirmAbort();
         void setupActions();
-        void setupDifficulties();
         bool m_kSameMode;
         GameScene* m_scene;
         /** Klickety mode only */
