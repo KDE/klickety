@@ -4,6 +4,7 @@ set(klickety_SRCS
     main.cpp
     mainwindow.cpp
     piece.cpp
+    klickety.qrc
 )
 
 ecm_setup_version(${klickety_VERSION}
@@ -15,9 +16,6 @@ ki18n_wrap_ui(klickety_SRCS
     bgselectorconfig.ui
     customgameconfig.ui
     gameconfig.ui
-)
-qt5_add_resources(klickety_SRCS
-    klickety.qrc
 )
 
 kconfig_add_kcfg_files(klickety_SRCS settings.kcfgc)
