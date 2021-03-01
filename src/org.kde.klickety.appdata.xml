@@ -106,7 +106,7 @@
     <p xml:lang="zh-CN">Klickety是一个改编自Clickomania的KDE桌面战略游戏。</p>
     <p xml:lang="zh-TW">Klickety 是來自 KDE 上類似 Clickomania 的策略遊戲。</p>
   </description>
-  <url type="homepage">https://games.kde.org/game.php?game=klickety</url>
+  <url type="homepage">https://games.kde.org/games/klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
   <url type="help">https://docs.kde.org/?application=klickety</url>
   <url type="donation">https://www.kde.org/community/donations/?app=klickety&amp;source=appdata</url>
