@@ -10,7 +10,6 @@
 #include <KXmlGuiWindow>
 
 #include <QLabel>
-#include <QRandomGenerator>
 #include <cstdlib>
 
 class KToggleAction;
@@ -25,7 +24,7 @@ class MainWindow : public KXmlGuiWindow
     private Q_SLOTS:
         void configureSettings();
         void loadSettings();
-        void newGame( int gameId = QRandomGenerator::global()->bounded(RAND_MAX));
+        void newGame();
         void newNumGame();
         void pauseGame( bool isPaused );
         void restartGame();
@@ -39,6 +38,7 @@ class MainWindow : public KXmlGuiWindow
         void onGameOver( int remainCount );
         void setSoundsEnabled( bool enabled );
     private:
+        void newGameWithId(int gameId);
         bool confirmAbort();
         void setupActions();
         bool m_kSameMode;
