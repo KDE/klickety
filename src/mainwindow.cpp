@@ -74,7 +74,7 @@ m_statusBarLabelRight(new QLabel(this))
 
     loadSettings();
 
-    newGame(QRandomGenerator::global()->bounded(RAND_MAX));
+    newGame();
 }
 
 MainWindow::~MainWindow()
@@ -115,7 +115,12 @@ void MainWindow::loadSettings()
     m_scene->setBackgroundType( bgType );
 }
 
-void MainWindow::newGame( int gameId )
+void MainWindow::newGame()
+{
+    newGameWithId(QRandomGenerator::global()->bounded(RAND_MAX));
+}
+
+void MainWindow::newGameWithId( int gameId )
 {
     if ( !confirmAbort() ) {
         return;
@@ -169,7 +174,7 @@ void MainWindow::newNumGame()
                                                 random, 1, RAND_MAX, 1,
                                                 &ok );
     if ( ok ) {
-        newGame( userGameId );
+        newGameWithId(userGameId);
     }
 }
 
@@ -400,7 +405,7 @@ void MainWindow::setupActions()
     ));
     KgDifficultyGUI::init(this);
     connect(Kg::difficulty(), &KgDifficulty::currentLevelChanged,
-            this, [this]() { newGame(QRandomGenerator::global()->bounded(RAND_MAX)); });
+            this, &MainWindow::newGame);
 
     setupGUI( QSize( 340, 510 ) );
 }
