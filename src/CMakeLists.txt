@@ -1,31 +1,33 @@
-set(klickety_SRCS
-    gamescene.cpp
-    gameview.cpp
-    main.cpp
-    mainwindow.cpp
-    piece.cpp
-    klickety.qrc
-)
-
 ecm_setup_version(${klickety_VERSION}
     VARIABLE_PREFIX KLICKETY
     VERSION_HEADER klickety_version.h
 )
 
-ki18n_wrap_ui(klickety_SRCS
+add_executable(klickety)
+
+target_sources(klickety PRIVATE
+    gamescene.cpp
+    gameview.cpp
+    main.cpp
+    mainwindow.cpp
+    piece.cpp
+
+    klickety.qrc
+)
+
+ki18n_wrap_ui(klickety
     bgselectorconfig.ui
     customgameconfig.ui
     gameconfig.ui
 )
 
-kconfig_add_kcfg_files(klickety_SRCS settings.kcfgc)
+kconfig_add_kcfg_files(klickety settings.kcfgc)
 
 file(GLOB ICONS_SRCS "${CMAKE_SOURCE_DIR}/pics/*-apps-klickety.png")
-ecm_add_app_icon(klickety_SRCS ICONS ${ICONS_SRCS})
-
-add_executable(klickety ${klickety_SRCS})
+ecm_add_app_icon(klickety ICONS ${ICONS_SRCS})
 
 target_link_libraries(klickety
+    KF5KDEGames
     KF5::Crash
     KF5::DBusAddons
     KF5::KIOCore
@@ -33,7 +35,6 @@ target_link_libraries(klickety
     KF5::KIONTLM
     KF5::KIOWidgets
     KF5::XmlGui
-    KF5KDEGames
 )
 
 install(TARGETS klickety ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
