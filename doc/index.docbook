@@ -38,8 +38,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2016-05-09</date>
-<releaseinfo>2.1+ (Applications 16.04)</releaseinfo>
+<date>2021-07-08</date>
+<releaseinfo>2.1 (KDE Gear 21.04)</releaseinfo>
 
 <abstract>
 <para>&klickety; is a strategy game by &kde;, an adaption of the <application>Clickomania</application> game.</para>
@@ -67,8 +67,8 @@
 <note><title>Gametype:</title><para>Board</para></note>
 <note><title>Number of possible players:</title><para>One</para></note>
 <para>
-&klickety; is an adaptation of the Clickomania game. The rules are similar to
-those of the Same game: your goal is to clear the board by clicking on groups
+&klickety; is an adaptation of the <application>Clickomania</application> game. The rules are similar to
+those of the <literal>Same</literal> game: your goal is to clear the board by clicking on groups
 to destroy them. The overall aim is to get the lowest score
 possible. It will provide entertainment for all abilities, but a
 challenge in logical thought if you want to get a really low score.
@@ -145,8 +145,8 @@ the start of the game until the game is finished.
 <para>Subtract 2 from the number of marbles erased, and square the result.
 </para>
 <para>As an example, if you erase 7 balls, then you get 25 points
-(7 minus 2 = 5. 5 squared is 25 points).If you erase 8
-balls, then you get 36 points (8 minus 2 = 6. 6 squared is 36 points.
+(7 minus 2 = 5, 5 squared is 25 points). If you erase 8
+balls, then you get 36 points (8 minus 2 = 6, 6 squared is 36 points).
 </para>
 <para>
 Get as many of the same pieces as you can, and then erase them
@@ -215,11 +215,11 @@ score.
 <entry><keycombo action="simul">&Ctrl;&Shift;<keycap>Z</keycap></keycombo></entry>
 </row>
 <row>
-<entry>Help</entry>
+<entry>&klickety; Manual</entry>
 <entry><keycap>F1</keycap></entry>
 </row>
 <row>
-<entry>What's this?</entry>
+<entry>What's this? help</entry>
 <entry><keycombo action="simul">&Shift;<keycap>F1</keycap></keycombo></entry>
 </row>
 </tbody>
@@ -246,7 +246,7 @@ score.
 <shortcut><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo></shortcut>
 <guimenu>Game</guimenu>
 <guimenuitem>Load...</guimenuitem>
-</menuchoice> (not in KSameMode) </term>
+</menuchoice> (not in KSame mode) </term>
 <listitem><para>Loads a previously saved game.</para></listitem>
 </varlistentry>
 
@@ -280,7 +280,7 @@ score.
 <shortcut><keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo></shortcut>
 <guimenu>Game</guimenu>
 <guimenuitem>Save</guimenuitem>
-</menuchoice> (not in KSameMode)</term>
+</menuchoice> (not in KSame mode)</term>
 <listitem><para>Saves the current state of the game to the disk.</para></listitem>
 </varlistentry>
 
@@ -373,7 +373,7 @@ When your game scores exceed the top ten scores listed, you are prompted to ente
 </para>
 <para>There is also a <guimenuitem>Custom</guimenuitem> level settings.</para>
 <para>If you select <guimenuitem>Custom</guimenuitem>, then the
-settings you have configured in the <guimenuitem>Configure &klickety;</guimenuitem> dialog will be used.</para>
+settings you have configured in the <guimenuitem>Configure - &klickety;</guimenuitem> dialog will be used.</para>
 </listitem>
 </varlistentry>
 
@@ -498,8 +498,8 @@ You can choose a background graphic for the game. There are three kinds of backg
 <sect1 id="customgame-options">
 <title>Custom Game options</title>
 <para>
-You can set the <guilabel>Height</guilabel> and <guilabel>Width</guilabel> of the board
-and the <guilabel>Color count</guilabel> used in your custom level.
+You can set the <guilabel>Height:</guilabel> and <guilabel>Width:</guilabel> of the board
+and the <guilabel>Color count:</guilabel> used in your custom level.
 </para>
 <screenshot>
 <screeninfo>Custom game options</screeninfo>
