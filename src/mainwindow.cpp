@@ -169,7 +169,7 @@ void MainWindow::newNumGame()
 
     bool ok = false;
     int random = QRandomGenerator::global()->bounded(1, RAND_MAX);
-    int userGameId = QInputDialog::getInt( this, i18n( "Select Board" ),
+    int userGameId = QInputDialog::getInt( this, i18nc("@title:window", "Select Board" ),
                                                 i18n( "Select a board number:" ),
                                                 random, 1, RAND_MAX, 1,
                                                 &ok );
