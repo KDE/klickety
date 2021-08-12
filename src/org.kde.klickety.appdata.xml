@@ -120,7 +120,6 @@
     <binary>klickety</binary>
   </provides>
   <launchable type="desktop-id">org.kde.klickety.desktop</launchable>
-  <content_rating type="oars-1.1"/>
   <releases>
     <release version="2.1.21080" date="2021-08-12"/>
     <release version="2.1.21043" date="2021-07-08"/>
