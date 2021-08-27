@@ -84,7 +84,7 @@ void GameScene::startNewGame( int pwc, int phc, int colorCount, int gameId )
     m_isFinished = false;
     m_undoStack.clear();
 
-    for (auto & piece : qAsConst(m_pieces)) {
+    for (auto & piece : std::as_const(m_pieces)) {
         removeItem( piece );
     }
     qDeleteAll( m_pieces );
@@ -607,7 +607,7 @@ void GameScene::removePieces( int x, int y )
 int GameScene::currentMarkedCount() const
 {
     int marked = 0;
-    for ( const Piece* p : qAsConst(m_pieces) ) {
+    for ( const Piece* p : std::as_const(m_pieces) ) {
         if ( p->m_highlighter->isVisible() ) {
             ++marked;
         }
@@ -618,7 +618,7 @@ int GameScene::currentMarkedCount() const
 int GameScene::currentRemainCount() const
 {
     int remain = 0;
-    for ( const Piece* p : qAsConst(m_pieces) ) {
+    for ( const Piece* p : std::as_const(m_pieces) ) {
         if ( p->isEnabled() ) {
             ++remain;
         }
