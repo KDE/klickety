@@ -26,7 +26,7 @@ class GameScene : public QGraphicsScene
     Q_OBJECT
     public:
         explicit GameScene( QObject* parent = nullptr );
-        ~GameScene();
+        ~GameScene() override;
         /** Start a new game with custom size, color count and game id */
         void startNewGame( int pwc, int phc, int colorCount, int gameId );
         /** Load a game from config */

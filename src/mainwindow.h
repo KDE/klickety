@@ -20,7 +20,7 @@ class MainWindow : public KXmlGuiWindow
     Q_OBJECT
     public:
         explicit MainWindow( bool kSameMode = false, QWidget* parent = nullptr );
-        ~MainWindow();
+        ~MainWindow() override;
     private Q_SLOTS:
         void configureSettings();
         void loadSettings();

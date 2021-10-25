@@ -22,7 +22,7 @@ class Piece : public KGameRenderedObjectItem
         /** Constructor */
         explicit Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent = nullptr );
         /** Destructor */
-        ~Piece();
+        ~Piece() override;
         /** Reimplemented for using bounding rect for detecting hovering and mouse clicking */
         QPainterPath shape() const override;
         /** The current column in the game scene, from left to right, starts from 0 */
