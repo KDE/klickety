@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Klickety
+Name[ar]=كلاكتي
 Name[bs]=Kliketi
 Name[ca]=Klickety
 Name[ca@valencia]=Klickety
@@ -46,6 +47,7 @@ Name[zh_CN]=Klickety
 Name[zh_TW]=Klickety
 GenericName=Board Game
 GenericName[af]=Bord Speletjie
+GenericName[ar]=لعبة لوحية
 GenericName[be]=Настольная гульня
 GenericName[bn]=ছককেন্দ্রিক খেলা
 GenericName[br]=Ur c'hoari taolenn
