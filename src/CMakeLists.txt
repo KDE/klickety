@@ -30,9 +30,6 @@ target_link_libraries(klickety
     KF5KDEGames
     KF5::Crash
     KF5::DBusAddons
-    KF5::KIOCore
-    KF5::KIOFileWidgets
-    KF5::KIONTLM
     KF5::KIOWidgets
     KF5::XmlGui
 )
