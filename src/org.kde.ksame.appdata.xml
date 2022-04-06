@@ -103,7 +103,7 @@
   </description>
   <url type="homepage">https://games.kde.org/games/klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
-  <url type="help">https://docs.kde.org/?application=klickety&amp;branch=stable&amp;path=ksame_mode.html</url>
+  <url type="help">https://docs.kde.org/stable5/en/klickety/klickety/ksame_mode.html</url>
   <url type="donation">https://www.kde.org/community/donations/?app=klickety&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
