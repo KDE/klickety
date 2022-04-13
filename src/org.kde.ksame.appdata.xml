@@ -61,6 +61,7 @@
   <summary xml:lang="sk">KSame je herný režim hry Klickety, ktorá je adaptáciou hry "clickomania".</summary>
   <summary xml:lang="sl">KSame je igralni način igre Klickety, ki je priredba igre 'Clickomania'</summary>
   <summary xml:lang="sv">Ksame är en spelvariant av spelet Klickety, som är en anpassning av spelet "clickomania".</summary>
+  <summary xml:lang="tr">KSame, "clickomania" oyununun uyarlanması olan Klickety oyununun bir oyun kipidir</summary>
   <summary xml:lang="uk">KSame — режим у грі Klickety, який є адаптацією гри «клікоманія»</summary>
   <summary xml:lang="x-test">xxKSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" gamexx</summary>
   <summary xml:lang="zh-CN">KSame 是游戏 Klickety 的一种游戏模式，它是“clickomania”游戏的改编版本。</summary>
@@ -95,7 +96,7 @@
     <p xml:lang="sr-ijekavian">К‑исто‑исто је једноставна, а опет изазовна игра поклапања боја, по узору на некада чувену игру исто‑исто. Идеја иза К‑исто‑истог је да се потпуно очисти играчка табла попуњена разнобојним кликерима.</p>
     <p xml:lang="sr-ijekavianlatin">K‑isto‑isto je jednostavna, a opet izazovna igra poklapanja boja, po uzoru na nekada čuvenu igru isto‑isto. Ideja iza K‑isto‑istog je da se potpuno očisti igračka tabla popunjena raznobojnim klikerima.</p>
     <p xml:lang="sv">Ksame är ett enkelt, men ändå utmanande färgjämförelsespel modellerat enligt det en gång berömda spelet Samegame. Idén bakom Ksame är att helt och hållet tömma spelbrädet, som är fyllt med mångfärgade kulor.</p>
-    <p xml:lang="tr">KSame, bir zamanların ünlü SameGame oyunundan sonra modellenen, basit, ancak zorlu bir renk eşleştirme oyunudur. KSame'in arkasındaki fikir, çok renkli mermerlerle dolu oyun tahtasını tamamen temizlemektir.</p>
+    <p xml:lang="tr">KSame, bir zamanların ünlü SameGame oyunundan sonra modellenen, basit; ancak zorlu bir renk eşleştirme oyunudur. KSame'in arkasındaki fikir, çok renkli mermerlerle dolu oyun tahtasını tamamen temizlemektir.</p>
     <p xml:lang="uk">KSame — проста, але захоплива гра у пошук відповідних кольорів. Джерелом натхнення для створення гри була гра SameGame. Дуже проста умова. На дошці будуть кульки. Приберіть їх всі.</p>
     <p xml:lang="x-test">xxKSame is a simple, yet challenging color matching game modeled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicolored marbles.xx</p>
     <p xml:lang="zh-CN">KSame 是一个简单但具有挑战性的颜色配对游戏，它仿制了著名的 SameGame。KSame 的游戏目的是完全清空游戏版面中的所有彩色玻璃珠。</p>
