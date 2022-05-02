@@ -16,3 +16,5 @@ Dependencies:
     'frameworks/kio': '@stable'
     'frameworks/kdoctools': '@stable'
     'frameworks/kdbusaddons': '@stable'
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD']
