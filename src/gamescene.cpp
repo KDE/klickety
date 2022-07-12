@@ -474,6 +474,14 @@ void GameScene::removePieces( int x, int y )
         return;
     }
 
+    // If the animation is running we need to emit here the "old"
+    // remaining count otherwise the remainCountChanged won't
+    // be emitted until the "next" animation finishes meaning
+    // that the scores get calculated wrongly because it thinks
+    // you removed more pieces in one go that you really did
+    if (m_animation->state() == QAbstractAnimation::Running) {
+        Q_EMIT remainCountChanged( currentRemainCount() );
+    }
     // unhighlight pieces
     unhighlightPieces( x, y );
 
