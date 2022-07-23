@@ -340,7 +340,7 @@ void MainWindow::onGameOver( int remainCount )
 bool MainWindow::confirmAbort()
 {
     return m_scene->isGameFinished() || ( KMessageBox::questionYesNo( this, i18n( "Do you want to resign?" ),
-        i18n( "New Game" ), KGuiItem( i18n( "Resign" ) ), KStandardGuiItem::cancel() ) == KMessageBox::Yes );
+        i18n( "New Game" ), KGuiItem( i18nc("@action:button", "Resign") ), KStandardGuiItem::cancel() ) == KMessageBox::Yes );
 }
 
 void MainWindow::setupActions()
