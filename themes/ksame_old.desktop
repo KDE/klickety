@@ -1,5 +1,6 @@
 [KGameTheme]
 Name=KSame Old
+Name[ar]=سيم ك قديم
 Name[bg]=KSame стара
 Name[bs]=KSame stari
 Name[ca]=KSame antic
@@ -44,6 +45,7 @@ Name[x-test]=xxKSame Oldxx
 Name[zh_CN]=KSame 旧版
 Name[zh_TW]=KSame 舊式
 Description=Klickety KSame Old Theme
+Description[ar]=سمة كلاكتي سيم ك قديمة
 Description[bg]=Стара тема на Klickety KSame
 Description[bs]=Stara tema KSame za Klickety
 Description[ca]=Tema KSame antic del Klickety
