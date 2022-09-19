@@ -102,7 +102,7 @@
     <p xml:lang="zh-CN">KSame 是一个简单但具有挑战性的颜色配对游戏，它仿制了著名的 SameGame。KSame 的游戏目的是完全清空游戏版面中的所有彩色玻璃珠。</p>
     <p xml:lang="zh-TW">KSame 是一套簡單但也很有挑戰性的遊戲，從知名的 SameGame 演變而來。KSame 目的是完全清除遊戲棋盤上的各種不同顏色。</p>
   </description>
-  <url type="homepage">https://games.kde.org/games/klickety</url>
+  <url type="homepage">https://apps.kde.org/klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
   <url type="help">https://docs.kde.org/?application=klickety&amp;branch=stable&amp;path=ksame_mode.html</url>
   <url type="donation">https://www.kde.org/community/donations/?app=klickety&amp;source=appdata</url>

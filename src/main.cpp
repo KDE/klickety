@@ -40,8 +40,9 @@ int main( int argc, char* argv[] )
     KAboutData aboutData( QStringLiteral( "klickety" ), i18n( "Klickety" ), QStringLiteral( KLICKETY_VERSION_STRING ),
                           i18n( "Klickety is an adaptation of the \"clickomania\" game" ),
                           KAboutLicense::GPL,
-                          i18n( "(c) 2002-2005, Nicolas Hadacek\n(c) 2010, Ni Hui" ) );
-    aboutData.setHomepage(QStringLiteral( "https://kde.org/applications/games/org.kde.klickety" ) );
+                          i18n( "(c) 2002-2005, Nicolas Hadacek\n(c) 2010, Ni Hui" ),
+                          QString(),
+                          QStringLiteral("https://apps.kde.org/klickety"));
 
     QCommandLineParser parser;
     KAboutData::setApplicationData( aboutData );
