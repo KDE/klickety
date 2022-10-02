@@ -1,0 +1,358 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin Weng <franklin@mail.everfocus.com.tw>, 2010.
+# Jeff Huang <s8321414@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:42+0000\n"
+"PO-Revision-Date: 2016-11-14 21:00+0800\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frank Weng (a.k.a. Franklin), Jeff Huang"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
+#: bgselectorconfig.ui:33
+#, kde-format
+msgid "&Theme"
+msgstr "主題(&T)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioColor)
+#: bgselectorconfig.ui:46
+#, kde-format
+msgid "&Color"
+msgstr "顏色(&C)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioImage)
+#: bgselectorconfig.ui:56
+#, kde-format
+msgid "&Image"
+msgstr "影像(&I)"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: customgameconfig.ui:17
+#, kde-format
+msgid "Width:"
+msgstr "寬度："
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: customgameconfig.ui:34
+#, kde-format
+msgid "Height:"
+msgstr "高度："
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: customgameconfig.ui:51
+#, kde-format
+msgid "Color count:"
+msgstr "顏色數量："
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowBoundLines)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowBoundLines)
+#: gameconfig.ui:16 gameconfig.ui:19
+#, kde-format
+msgid "Show bound lines"
+msgstr "顯示邊界線"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableAnimation)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableAnimation)
+#: gameconfig.ui:26 gameconfig.ui:29
+#, kde-format
+msgid "Enable animation"
+msgstr "開啟動畫"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableHighlight)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableHighlight)
+#: gameconfig.ui:36 gameconfig.ui:39
+#, kde-format
+msgid "Enable highlight"
+msgstr "開啟突顯"
+
+#: gamescene.cpp:241
+#, kde-format
+msgid "paused"
+msgstr "暫停"
+
+#: gamescene.cpp:353
+#, kde-format
+msgid "Game finished"
+msgstr "遊戲已完成"
+
+#. i18n: ectx: label, entry (BgColor), group (Background)
+#: klickety.kcfg:36
+#, kde-format
+msgid "The background color to be used."
+msgstr "要使用的背景顏色。"
+
+#. i18n: ectx: label, entry (BgImage), group (Background)
+#: klickety.kcfg:40
+#, kde-format
+msgid "The background image to be used."
+msgstr "要使用的背景影像。"
+
+#. i18n: ectx: label, entry (CustomWidth), group (CustomGame)
+#: klickety.kcfg:45
+#, kde-format
+msgid "The width of the playing field."
+msgstr "遊戲區的寬度"
+
+#. i18n: ectx: label, entry (CustomHeight), group (CustomGame)
+#: klickety.kcfg:51
+#, kde-format
+msgid "The height of the playing field."
+msgstr "遊戲區的高度"
+
+#. i18n: ectx: label, entry (CustomColorCount), group (CustomGame)
+#: klickety.kcfg:57
+#, kde-format
+msgid "The number of colors in the playing field."
+msgstr "遊戲場內的顏色數量。"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: klicketyui.rc:22
+#, kde-format
+msgid "Main Toolbar"
+msgstr "主工具列"
+
+#: main.cpp:40
+#, kde-format
+msgid "Klickety"
+msgstr "Klickety"
+
+#: main.cpp:41
+#, kde-format
+msgid "Klickety is an adaptation of the \"clickomania\" game"
+msgstr "Klickety 是一套 clickomania 的遊戲"
+
+#: main.cpp:43
+#, kde-format
+msgid ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+msgstr ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+
+#: main.cpp:50
+#, kde-format
+msgid "Start with KSame compatibility mode"
+msgstr "以 KSame 相容模式啟動"
+
+#: main.cpp:61
+#, kde-format
+msgid "A little game about balls and how to get rid of them"
+msgstr "一個關於清除球體的小遊戲"
+
+#: main.cpp:62
+#, kde-format
+msgid "Marcus Kreutzberger"
+msgstr "Marcus Kreutzberger"
+
+#: main.cpp:62 main.cpp:69
+#, kde-format
+msgid "Original author"
+msgstr "原始作者"
+
+#: main.cpp:63
+#, kde-format
+msgid "Henrique Pinto"
+msgstr "Henrique Pinto"
+
+#: main.cpp:63
+#, kde-format
+msgid "Past maintainer"
+msgstr "過去維護者"
+
+#: main.cpp:64 main.cpp:70
+#, kde-format
+msgid "Ni Hui"
+msgstr "Ni Hui"
+
+#: main.cpp:64
+#, kde-format
+msgid "Integration with Klickety. Current maintainer"
+msgstr "與 Klickety 整合，目前維護者。"
+
+#: main.cpp:65
+#, kde-format
+msgid "Johann Ollivier Lapeyre"
+msgstr "Johann Ollivier Lapeyre"
+
+#: main.cpp:65
+#, kde-format
+msgid "Artwork"
+msgstr "美工"
+
+#: main.cpp:69
+#, kde-format
+msgid "Nicolas Hadacek"
+msgstr "Nicolas Hadacek"
+
+#: main.cpp:70
+#, kde-format
+msgid "Rewrite for KDE4. Current maintainer"
+msgstr "為 KDE4 重寫遊戲，目前維護者。"
+
+#: main.cpp:71
+#, kde-format
+msgid "Dan Hill"
+msgstr "Dan Hill"
+
+#: main.cpp:71
+#, kde-format
+msgid "Icons"
+msgstr "圖示"
+
+#. i18n( "Colors: XX" ), 1 );
+#. i18n( "Board: XXXXXX" ), 2 );
+#: mainwindow.cpp:58
+#, kde-format
+msgid "Marked: 0"
+msgstr "標記：0"
+
+#: mainwindow.cpp:59 mainwindow.cpp:245
+#, kde-format
+msgid "Score: 0"
+msgstr "分數：0"
+
+#: mainwindow.cpp:65
+#, kde-format
+msgid "Pieces: 0"
+msgstr "數量：0"
+
+#: mainwindow.cpp:66
+#, kde-format
+msgid "Time: 00:00"
+msgstr "時間：00:00"
+
+#: mainwindow.cpp:91
+#, kde-format
+msgid "General"
+msgstr "一般"
+
+#: mainwindow.cpp:92
+#, kde-format
+msgid "Theme"
+msgstr "主題"
+
+#: mainwindow.cpp:93
+#, kde-format
+msgid "Background"
+msgstr "背景"
+
+#: mainwindow.cpp:95
+#, kde-format
+msgid "Custom Game"
+msgstr "自定遊戲"
+
+#: mainwindow.cpp:172
+#, fuzzy, kde-format
+#| msgid "Select Board"
+msgctxt "@title:window"
+msgid "Select Board"
+msgstr "選擇遊戲板"
+
+#: mainwindow.cpp:173
+#, kde-format
+msgid "Select a board number:"
+msgstr "選一個遊戲板編號："
+
+#: mainwindow.cpp:211 mainwindow.cpp:225
+#, kde-format
+msgid "Klickety Game Files (*.klickety)"
+msgstr "Klickety 遊戲檔 (*.klickety)"
+
+#: mainwindow.cpp:237
+#, kde-format
+msgid "Marked: %2 (1 Point)"
+msgid_plural "Marked: %2 (%1 Points)"
+msgstr[0] "標記：%2（%1 分）"
+
+#: mainwindow.cpp:259
+#, kde-format
+msgid "Score: %1"
+msgstr "分數：%1"
+
+#: mainwindow.cpp:265
+#, kde-format
+msgid "Pieces: %1"
+msgstr "數量：%1"
+
+#: mainwindow.cpp:270
+#, kde-format
+msgid "Time: %1"
+msgstr "時間：%1"
+
+#: mainwindow.cpp:278 mainwindow.cpp:307 mainwindow.cpp:393
+#, kde-format
+msgid "High Scores"
+msgstr "高分榜"
+
+#: mainwindow.cpp:286 mainwindow.cpp:323
+#, kde-format
+msgid "Remaining pieces"
+msgstr "剩餘數量"
+
+#: mainwindow.cpp:287 mainwindow.cpp:324
+#, kde-format
+msgid "Time"
+msgstr "時間"
+
+#: mainwindow.cpp:342
+#, kde-format
+msgid "Do you want to resign?"
+msgstr "您是否要放棄？"
+
+#: mainwindow.cpp:343
+#, kde-format
+msgid "New Game"
+msgstr "新遊戲"
+
+#: mainwindow.cpp:343
+#, fuzzy, kde-format
+#| msgid "Resign"
+msgctxt "@action:button"
+msgid "Resign"
+msgstr "放棄"
+
+#: mainwindow.cpp:358
+#, kde-format
+msgid "New Numbered Game..."
+msgstr "新編號的遊戲..."
+
+#: mainwindow.cpp:362
+#, kde-format
+msgid "Play Sounds"
+msgstr "播放音效"
+
+#: mainwindow.cpp:377
+#, kde-format
+msgid "Undo All"
+msgstr "全部回復"
+
+#: mainwindow.cpp:383
+#, kde-format
+msgid "Redo All"
+msgstr "全部重做"
+
+#: mainwindow.cpp:404
+#, kde-format
+msgid "Custom"
+msgstr "自訂"

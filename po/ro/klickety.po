@@ -1,0 +1,369 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:42+0000\n"
+"PO-Revision-Date: 2013-10-27 07:22+0200\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@cip.md"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
+#: bgselectorconfig.ui:33
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "&Theme"
+msgstr "Temă"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioColor)
+#: bgselectorconfig.ui:46
+#, fuzzy, kde-format
+#| msgid "Color"
+msgid "&Color"
+msgstr "Culoare"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioImage)
+#: bgselectorconfig.ui:56
+#, fuzzy, kde-format
+#| msgid "Image"
+msgid "&Image"
+msgstr "Imagine"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: customgameconfig.ui:17
+#, kde-format
+msgid "Width:"
+msgstr "Lățime:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: customgameconfig.ui:34
+#, kde-format
+msgid "Height:"
+msgstr "Înălțime:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: customgameconfig.ui:51
+#, kde-format
+msgid "Color count:"
+msgstr "Număr culori:"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowBoundLines)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowBoundLines)
+#: gameconfig.ui:16 gameconfig.ui:19
+#, kde-format
+msgid "Show bound lines"
+msgstr "Arată linii de demarcare"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableAnimation)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableAnimation)
+#: gameconfig.ui:26 gameconfig.ui:29
+#, kde-format
+msgid "Enable animation"
+msgstr "Activează animații"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableHighlight)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableHighlight)
+#: gameconfig.ui:36 gameconfig.ui:39
+#, kde-format
+msgid "Enable highlight"
+msgstr "Activează evidențierea"
+
+#: gamescene.cpp:241
+#, kde-format
+msgid "paused"
+msgstr "întrerupt"
+
+#: gamescene.cpp:353
+#, fuzzy, kde-format
+#| msgid "game finished"
+msgid "Game finished"
+msgstr "joc încheiat"
+
+#. i18n: ectx: label, entry (BgColor), group (Background)
+#: klickety.kcfg:36
+#, kde-format
+msgid "The background color to be used."
+msgstr "Culoarea de fundal folosită."
+
+#. i18n: ectx: label, entry (BgImage), group (Background)
+#: klickety.kcfg:40
+#, kde-format
+msgid "The background image to be used."
+msgstr "Imaginea de fundal folosită."
+
+#. i18n: ectx: label, entry (CustomWidth), group (CustomGame)
+#: klickety.kcfg:45
+#, kde-format
+msgid "The width of the playing field."
+msgstr "Lățimea câmpului de joc."
+
+#. i18n: ectx: label, entry (CustomHeight), group (CustomGame)
+#: klickety.kcfg:51
+#, kde-format
+msgid "The height of the playing field."
+msgstr "Înălțimea câmpului de joc."
+
+#. i18n: ectx: label, entry (CustomColorCount), group (CustomGame)
+#: klickety.kcfg:57
+#, kde-format
+msgid "The number of colors in the playing field."
+msgstr "Numărul de culori pe câmpul de joc."
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: klicketyui.rc:22
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Bara de unelte principală"
+
+#: main.cpp:40
+#, kde-format
+msgid "Klickety"
+msgstr "Klickety"
+
+#: main.cpp:41
+#, kde-format
+msgid "Klickety is an adaptation of the \"clickomania\" game"
+msgstr "Klickety e o adaptare a jocului „clickomania”"
+
+#: main.cpp:43
+#, kde-format
+msgid ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+msgstr ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+
+#: main.cpp:50
+#, kde-format
+msgid "Start with KSame compatibility mode"
+msgstr "Pornește în regim de compatibilitate KSame"
+
+#: main.cpp:61
+#, kde-format
+msgid "A little game about balls and how to get rid of them"
+msgstr "Un joc mic despre bile și cum să ne descotorosim de acestea"
+
+#: main.cpp:62
+#, kde-format
+msgid "Marcus Kreutzberger"
+msgstr "Marcus Kreutzberger"
+
+#: main.cpp:62 main.cpp:69
+#, kde-format
+msgid "Original author"
+msgstr "Autor original"
+
+#: main.cpp:63
+#, kde-format
+msgid "Henrique Pinto"
+msgstr "Henrique Pinto"
+
+#: main.cpp:63
+#, kde-format
+msgid "Past maintainer"
+msgstr "Fost responsabil"
+
+#: main.cpp:64 main.cpp:70
+#, kde-format
+msgid "Ni Hui"
+msgstr "Ni Hui"
+
+#: main.cpp:64
+#, kde-format
+msgid "Integration with Klickety. Current maintainer"
+msgstr "Integrarea cu Klickety. Responsabil actual"
+
+#: main.cpp:65
+#, kde-format
+msgid "Johann Ollivier Lapeyre"
+msgstr "Johann Ollivier Lapeyre"
+
+#: main.cpp:65
+#, kde-format
+msgid "Artwork"
+msgstr "Grafică"
+
+#: main.cpp:69
+#, kde-format
+msgid "Nicolas Hadacek"
+msgstr "Nicolas Hadacek"
+
+#: main.cpp:70
+#, kde-format
+msgid "Rewrite for KDE4. Current maintainer"
+msgstr "Rescriere pentru KDE4. Responsabil actual"
+
+#: main.cpp:71
+#, kde-format
+msgid "Dan Hill"
+msgstr "Dan Hill"
+
+#: main.cpp:71
+#, kde-format
+msgid "Icons"
+msgstr "Pictograme"
+
+#. i18n( "Colors: XX" ), 1 );
+#. i18n( "Board: XXXXXX" ), 2 );
+#: mainwindow.cpp:58
+#, kde-format
+msgid "Marked: 0"
+msgstr "Marcat: 0"
+
+#: mainwindow.cpp:59 mainwindow.cpp:245
+#, kde-format
+msgid "Score: 0"
+msgstr "Scor: 0"
+
+#: mainwindow.cpp:65
+#, kde-format
+msgid "Pieces: 0"
+msgstr "Piese: 0"
+
+#: mainwindow.cpp:66
+#, kde-format
+msgid "Time: 00:00"
+msgstr "Timp: 00:00"
+
+#: mainwindow.cpp:91
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: mainwindow.cpp:92
+#, kde-format
+msgid "Theme"
+msgstr "Temă"
+
+#: mainwindow.cpp:93
+#, kde-format
+msgid "Background"
+msgstr "Fundal"
+
+#: mainwindow.cpp:95
+#, kde-format
+msgid "Custom Game"
+msgstr "Joc personalizat"
+
+#: mainwindow.cpp:172
+#, fuzzy, kde-format
+#| msgid "Select Board"
+msgctxt "@title:window"
+msgid "Select Board"
+msgstr "Alege tabla"
+
+#: mainwindow.cpp:173
+#, kde-format
+msgid "Select a board number:"
+msgstr "Alegeți un număr de tablă:"
+
+#: mainwindow.cpp:211 mainwindow.cpp:225
+#, kde-format
+msgid "Klickety Game Files (*.klickety)"
+msgstr ""
+
+#: mainwindow.cpp:237
+#, kde-format
+msgid "Marked: %2 (1 Point)"
+msgid_plural "Marked: %2 (%1 Points)"
+msgstr[0] "Marcat: %2 (1 punct)"
+msgstr[1] "Marcat: %2 (%1 puncte)"
+msgstr[2] "Marcat: %2 (%1 de puncte)"
+
+#: mainwindow.cpp:259
+#, kde-format
+msgid "Score: %1"
+msgstr "Scor: %1"
+
+#: mainwindow.cpp:265
+#, kde-format
+msgid "Pieces: %1"
+msgstr "Piese: %1"
+
+#: mainwindow.cpp:270
+#, kde-format
+msgid "Time: %1"
+msgstr "Timp: %1"
+
+#: mainwindow.cpp:278 mainwindow.cpp:307 mainwindow.cpp:393
+#, kde-format
+msgid "High Scores"
+msgstr "Recorduri"
+
+#: mainwindow.cpp:286 mainwindow.cpp:323
+#, kde-format
+msgid "Remaining pieces"
+msgstr "Piese rămase"
+
+#: mainwindow.cpp:287 mainwindow.cpp:324
+#, kde-format
+msgid "Time"
+msgstr "Timp"
+
+#: mainwindow.cpp:342
+#, kde-format
+msgid "Do you want to resign?"
+msgstr "Doriți să cedați?"
+
+#: mainwindow.cpp:343
+#, kde-format
+msgid "New Game"
+msgstr "Joc nou"
+
+#: mainwindow.cpp:343
+#, fuzzy, kde-format
+#| msgid "Resign"
+msgctxt "@action:button"
+msgid "Resign"
+msgstr "Cedează"
+
+#: mainwindow.cpp:358
+#, kde-format
+msgid "New Numbered Game..."
+msgstr "Joc numerotat nou..."
+
+#: mainwindow.cpp:362
+#, kde-format
+msgid "Play Sounds"
+msgstr ""
+
+#: mainwindow.cpp:377
+#, kde-format
+msgid "Undo All"
+msgstr "Desfă toate"
+
+#: mainwindow.cpp:383
+#, kde-format
+msgid "Redo All"
+msgstr "Refă toate"
+
+#: mainwindow.cpp:404
+#, kde-format
+msgid "Custom"
+msgstr "Personalizat"
+
+#~ msgid "The background type to be used."
+#~ msgstr "Tipul de fundal folosit."
+
+#~ msgid "SameGame"
+#~ msgstr "Identice"

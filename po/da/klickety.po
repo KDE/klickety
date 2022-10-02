@@ -1,0 +1,375 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Martin Schlander <mschlander@opensuse.org>, 2010, 2011, 2012, 2015, 2016, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:42+0000\n"
+"PO-Revision-Date: 2022-08-08 17:42+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Martin Schlander"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mschlander@opensuse.org"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
+#: bgselectorconfig.ui:33
+#, kde-format
+msgid "&Theme"
+msgstr "&Tema"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioColor)
+#: bgselectorconfig.ui:46
+#, kde-format
+msgid "&Color"
+msgstr "&Farve"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioImage)
+#: bgselectorconfig.ui:56
+#, kde-format
+msgid "&Image"
+msgstr "&Billede"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: customgameconfig.ui:17
+#, kde-format
+msgid "Width:"
+msgstr "Bredde:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: customgameconfig.ui:34
+#, kde-format
+msgid "Height:"
+msgstr "Højde:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: customgameconfig.ui:51
+#, kde-format
+msgid "Color count:"
+msgstr "Antal farver:"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowBoundLines)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowBoundLines)
+#: gameconfig.ui:16 gameconfig.ui:19
+#, kde-format
+msgid "Show bound lines"
+msgstr "Vis kantlinjer"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableAnimation)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableAnimation)
+#: gameconfig.ui:26 gameconfig.ui:29
+#, kde-format
+msgid "Enable animation"
+msgstr "Aktivér animation"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableHighlight)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableHighlight)
+#: gameconfig.ui:36 gameconfig.ui:39
+#, kde-format
+msgid "Enable highlight"
+msgstr "Aktivér fremhævning"
+
+#: gamescene.cpp:241
+#, kde-format
+msgid "paused"
+msgstr "på pause"
+
+#: gamescene.cpp:353
+#, kde-format
+msgid "Game finished"
+msgstr "spillet er slut"
+
+#. i18n: ectx: label, entry (BgColor), group (Background)
+#: klickety.kcfg:36
+#, kde-format
+msgid "The background color to be used."
+msgstr "Den baggrundsfarve der skal bruges."
+
+#. i18n: ectx: label, entry (BgImage), group (Background)
+#: klickety.kcfg:40
+#, kde-format
+msgid "The background image to be used."
+msgstr "Den baggrundsbillede der skal bruges."
+
+#. i18n: ectx: label, entry (CustomWidth), group (CustomGame)
+#: klickety.kcfg:45
+#, kde-format
+msgid "The width of the playing field."
+msgstr "Spillefeltets bredde."
+
+#. i18n: ectx: label, entry (CustomHeight), group (CustomGame)
+#: klickety.kcfg:51
+#, kde-format
+msgid "The height of the playing field."
+msgstr "Spillefeltets højde."
+
+#. i18n: ectx: label, entry (CustomColorCount), group (CustomGame)
+#: klickety.kcfg:57
+#, kde-format
+msgid "The number of colors in the playing field."
+msgstr "Antal farver på spillefeltet."
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: klicketyui.rc:22
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Hovedværktøjslinje"
+
+#: main.cpp:40
+#, kde-format
+msgid "Klickety"
+msgstr "Klickety"
+
+#: main.cpp:41
+#, kde-format
+msgid "Klickety is an adaptation of the \"clickomania\" game"
+msgstr "Klickety er en variant af spillet \"clickomania\""
+
+#: main.cpp:43
+#, kde-format
+msgid ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+msgstr ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+
+#: main.cpp:50
+#, kde-format
+msgid "Start with KSame compatibility mode"
+msgstr "Start i kompatibilitetstilstand med KSame"
+
+#: main.cpp:61
+#, kde-format
+msgid "A little game about balls and how to get rid of them"
+msgstr "Et lille spil om bolde og hvordan man slipper af med dem"
+
+#: main.cpp:62
+#, kde-format
+msgid "Marcus Kreutzberger"
+msgstr "Marcus Kreutzberger"
+
+#: main.cpp:62 main.cpp:69
+#, kde-format
+msgid "Original author"
+msgstr "Oprindelig udvikler"
+
+#: main.cpp:63
+#, kde-format
+msgid "Henrique Pinto"
+msgstr "Henrique Pinto"
+
+#: main.cpp:63
+#, kde-format
+msgid "Past maintainer"
+msgstr "Tidligere vedligeholder"
+
+#: main.cpp:64 main.cpp:70
+#, kde-format
+msgid "Ni Hui"
+msgstr "Ni Hui"
+
+#: main.cpp:64
+#, kde-format
+msgid "Integration with Klickety. Current maintainer"
+msgstr "Integration med Klickety. Nuværende vedligeholder"
+
+#: main.cpp:65
+#, kde-format
+msgid "Johann Ollivier Lapeyre"
+msgstr "Johann Ollivier Lapeyre"
+
+#: main.cpp:65
+#, kde-format
+msgid "Artwork"
+msgstr "Grafik"
+
+#: main.cpp:69
+#, kde-format
+msgid "Nicolas Hadacek"
+msgstr "Nicolas Hadacek"
+
+#: main.cpp:70
+#, kde-format
+msgid "Rewrite for KDE4. Current maintainer"
+msgstr "Omskrivning til KDE4. Nuværende vedligeholder"
+
+#: main.cpp:71
+#, kde-format
+msgid "Dan Hill"
+msgstr "Dan Hill"
+
+#: main.cpp:71
+#, kde-format
+msgid "Icons"
+msgstr "Ikoner"
+
+#. i18n( "Colors: XX" ), 1 );
+#. i18n( "Board: XXXXXX" ), 2 );
+#: mainwindow.cpp:58
+#, kde-format
+msgid "Marked: 0"
+msgstr "Markeret: 0"
+
+#: mainwindow.cpp:59 mainwindow.cpp:245
+#, kde-format
+msgid "Score: 0"
+msgstr "Score: 0"
+
+#: mainwindow.cpp:65
+#, kde-format
+msgid "Pieces: 0"
+msgstr "Brikker: 0"
+
+#: mainwindow.cpp:66
+#, kde-format
+msgid "Time: 00:00"
+msgstr "Tid: 00:00"
+
+#: mainwindow.cpp:91
+#, kde-format
+msgid "General"
+msgstr "Generelt"
+
+#: mainwindow.cpp:92
+#, kde-format
+msgid "Theme"
+msgstr "Tema"
+
+#: mainwindow.cpp:93
+#, kde-format
+msgid "Background"
+msgstr "Baggrund"
+
+#: mainwindow.cpp:95
+#, kde-format
+msgid "Custom Game"
+msgstr "Brugertilpasset spil"
+
+#: mainwindow.cpp:172
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Board"
+msgstr "Vælg bræt"
+
+#: mainwindow.cpp:173
+#, kde-format
+msgid "Select a board number:"
+msgstr "Vælg et brætnummer:"
+
+#: mainwindow.cpp:211 mainwindow.cpp:225
+#, kde-format
+msgid "Klickety Game Files (*.klickety)"
+msgstr "Klickety-spilfiler (*.klickety)"
+
+#: mainwindow.cpp:237
+#, kde-format
+msgid "Marked: %2 (1 Point)"
+msgid_plural "Marked: %2 (%1 Points)"
+msgstr[0] "Markeret: %2 (1 point)"
+msgstr[1] "Markeret: %2 (%1 point)"
+
+#: mainwindow.cpp:259
+#, kde-format
+msgid "Score: %1"
+msgstr "Score: %1"
+
+#: mainwindow.cpp:265
+#, kde-format
+msgid "Pieces: %1"
+msgstr "Brikker: %1"
+
+#: mainwindow.cpp:270
+#, kde-format
+msgid "Time: %1"
+msgstr "Tid: %1"
+
+#: mainwindow.cpp:278 mainwindow.cpp:307 mainwindow.cpp:393
+#, kde-format
+msgid "High Scores"
+msgstr "Topscoringer"
+
+#: mainwindow.cpp:286 mainwindow.cpp:323
+#, kde-format
+msgid "Remaining pieces"
+msgstr "Tilbageværende brikker"
+
+#: mainwindow.cpp:287 mainwindow.cpp:324
+#, kde-format
+msgid "Time"
+msgstr "Tid"
+
+#: mainwindow.cpp:342
+#, kde-format
+msgid "Do you want to resign?"
+msgstr "Vil du opgive?"
+
+#: mainwindow.cpp:343
+#, kde-format
+msgid "New Game"
+msgstr "Nyt spil"
+
+#: mainwindow.cpp:343
+#, fuzzy, kde-format
+#| msgid "Resign"
+msgctxt "@action:button"
+msgid "Resign"
+msgstr "Opgiv"
+
+#: mainwindow.cpp:358
+#, kde-format
+msgid "New Numbered Game..."
+msgstr "Nyt nummereret spil..."
+
+#: mainwindow.cpp:362
+#, kde-format
+msgid "Play Sounds"
+msgstr "Afspil lyde"
+
+#: mainwindow.cpp:377
+#, kde-format
+msgid "Undo All"
+msgstr "Fortryd alle"
+
+#: mainwindow.cpp:383
+#, kde-format
+msgid "Redo All"
+msgstr "Gendan alle"
+
+#: mainwindow.cpp:404
+#, kde-format
+msgid "Custom"
+msgstr "Brugertilpasset"
+
+#~ msgid "Ima&ge"
+#~ msgstr "Bil&lede"
+
+#~ msgid "The background type to be used."
+#~ msgstr "Den baggrundstype der skal bruges."
+
+#~ msgid "SameGame"
+#~ msgstr "SameGame"
+
+#~ msgid "The graphical theme to be used."
+#~ msgstr "Det grafiske tema der skal bruges."
+
+#~ msgid "Start with Medium difficulty level"
+#~ msgstr "Start med sværhedsgraden Mellem"
+
+#~ msgid "The difficulty level."
+#~ msgstr "Sværhedsgraden."

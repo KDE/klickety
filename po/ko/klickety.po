@@ -1,0 +1,355 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the klickety package.
+# Shinjo Park <kde@peremen.name>, 2019, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: klickety\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:42+0000\n"
+"PO-Revision-Date: 2022-08-09 13:23+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "박신조"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@peremen.name"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
+#: bgselectorconfig.ui:33
+#, kde-format
+msgid "&Theme"
+msgstr "테마(&T)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioColor)
+#: bgselectorconfig.ui:46
+#, kde-format
+msgid "&Color"
+msgstr "색(&C)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioImage)
+#: bgselectorconfig.ui:56
+#, kde-format
+msgid "&Image"
+msgstr "이미지(&I)"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: customgameconfig.ui:17
+#, kde-format
+msgid "Width:"
+msgstr "너비:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: customgameconfig.ui:34
+#, kde-format
+msgid "Height:"
+msgstr "높이:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: customgameconfig.ui:51
+#, kde-format
+msgid "Color count:"
+msgstr "색상 수:"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowBoundLines)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowBoundLines)
+#: gameconfig.ui:16 gameconfig.ui:19
+#, kde-format
+msgid "Show bound lines"
+msgstr "경계선 표시"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableAnimation)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableAnimation)
+#: gameconfig.ui:26 gameconfig.ui:29
+#, kde-format
+msgid "Enable animation"
+msgstr "애니메이션 사용"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableHighlight)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableHighlight)
+#: gameconfig.ui:36 gameconfig.ui:39
+#, kde-format
+msgid "Enable highlight"
+msgstr "강조 사용"
+
+#: gamescene.cpp:241
+#, kde-format
+msgid "paused"
+msgstr "일시 정지됨"
+
+#: gamescene.cpp:353
+#, kde-format
+msgid "Game finished"
+msgstr "게임 끝"
+
+#. i18n: ectx: label, entry (BgColor), group (Background)
+#: klickety.kcfg:36
+#, kde-format
+msgid "The background color to be used."
+msgstr "사용할 배경색입니다."
+
+#. i18n: ectx: label, entry (BgImage), group (Background)
+#: klickety.kcfg:40
+#, kde-format
+msgid "The background image to be used."
+msgstr "사용할 배경 그림입니다."
+
+#. i18n: ectx: label, entry (CustomWidth), group (CustomGame)
+#: klickety.kcfg:45
+#, kde-format
+msgid "The width of the playing field."
+msgstr "게임 필드의 너비입니다."
+
+#. i18n: ectx: label, entry (CustomHeight), group (CustomGame)
+#: klickety.kcfg:51
+#, kde-format
+msgid "The height of the playing field."
+msgstr "게임 필드의 높이입니다."
+
+#. i18n: ectx: label, entry (CustomColorCount), group (CustomGame)
+#: klickety.kcfg:57
+#, kde-format
+msgid "The number of colors in the playing field."
+msgstr "게임 필드에 표시할 색상 수입니다."
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: klicketyui.rc:22
+#, kde-format
+msgid "Main Toolbar"
+msgstr "주 도구 모음"
+
+#: main.cpp:40
+#, kde-format
+msgid "Klickety"
+msgstr "Klickety"
+
+#: main.cpp:41
+#, kde-format
+msgid "Klickety is an adaptation of the \"clickomania\" game"
+msgstr "Klickety는 \"Clickomania\" 게임의 파생형입니다."
+
+#: main.cpp:43
+#, kde-format
+msgid ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+msgstr ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+
+#: main.cpp:50
+#, kde-format
+msgid "Start with KSame compatibility mode"
+msgstr "KSame 호환 모드로 시작"
+
+#: main.cpp:61
+#, kde-format
+msgid "A little game about balls and how to get rid of them"
+msgstr "공을 제거하는 방법에 관한 작은 게임"
+
+#: main.cpp:62
+#, kde-format
+msgid "Marcus Kreutzberger"
+msgstr "Marcus Kreutzberger"
+
+#: main.cpp:62 main.cpp:69
+#, kde-format
+msgid "Original author"
+msgstr "원 작성자"
+
+#: main.cpp:63
+#, kde-format
+msgid "Henrique Pinto"
+msgstr "Henrique Pinto"
+
+#: main.cpp:63
+#, kde-format
+msgid "Past maintainer"
+msgstr "이전 관리자"
+
+#: main.cpp:64 main.cpp:70
+#, kde-format
+msgid "Ni Hui"
+msgstr "Ni Hui"
+
+#: main.cpp:64
+#, kde-format
+msgid "Integration with Klickety. Current maintainer"
+msgstr "Klickety 통합. 현재 관리자"
+
+#: main.cpp:65
+#, kde-format
+msgid "Johann Ollivier Lapeyre"
+msgstr "Johann Ollivier Lapeyre"
+
+#: main.cpp:65
+#, kde-format
+msgid "Artwork"
+msgstr "그래픽"
+
+#: main.cpp:69
+#, kde-format
+msgid "Nicolas Hadacek"
+msgstr "Nicolas Hadacek"
+
+#: main.cpp:70
+#, kde-format
+msgid "Rewrite for KDE4. Current maintainer"
+msgstr "KDE 4용으로 재작성. 현재 관리자"
+
+#: main.cpp:71
+#, kde-format
+msgid "Dan Hill"
+msgstr "Dan Hill"
+
+#: main.cpp:71
+#, kde-format
+msgid "Icons"
+msgstr "아이콘"
+
+#. i18n( "Colors: XX" ), 1 );
+#. i18n( "Board: XXXXXX" ), 2 );
+#: mainwindow.cpp:58
+#, kde-format
+msgid "Marked: 0"
+msgstr "표시함: 0"
+
+#: mainwindow.cpp:59 mainwindow.cpp:245
+#, kde-format
+msgid "Score: 0"
+msgstr "점수: 0"
+
+#: mainwindow.cpp:65
+#, kde-format
+msgid "Pieces: 0"
+msgstr "조각: 0"
+
+#: mainwindow.cpp:66
+#, kde-format
+msgid "Time: 00:00"
+msgstr "시간: 00:00"
+
+#: mainwindow.cpp:91
+#, kde-format
+msgid "General"
+msgstr "일반"
+
+#: mainwindow.cpp:92
+#, kde-format
+msgid "Theme"
+msgstr "테마"
+
+#: mainwindow.cpp:93
+#, kde-format
+msgid "Background"
+msgstr "배경"
+
+#: mainwindow.cpp:95
+#, kde-format
+msgid "Custom Game"
+msgstr "사용자 정의 게임"
+
+#: mainwindow.cpp:172
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Board"
+msgstr "보드 선택"
+
+#: mainwindow.cpp:173
+#, kde-format
+msgid "Select a board number:"
+msgstr "보드 번호 선택:"
+
+#: mainwindow.cpp:211 mainwindow.cpp:225
+#, kde-format
+msgid "Klickety Game Files (*.klickety)"
+msgstr "Klickety 게임 파일 (*.klickety)"
+
+#: mainwindow.cpp:237
+#, kde-format
+msgid "Marked: %2 (1 Point)"
+msgid_plural "Marked: %2 (%1 Points)"
+msgstr[0] "표시함: %2(%1점)"
+
+#: mainwindow.cpp:259
+#, kde-format
+msgid "Score: %1"
+msgstr "점수: %1"
+
+#: mainwindow.cpp:265
+#, kde-format
+msgid "Pieces: %1"
+msgstr "조각: %1"
+
+#: mainwindow.cpp:270
+#, kde-format
+msgid "Time: %1"
+msgstr "시간: %1"
+
+#: mainwindow.cpp:278 mainwindow.cpp:307 mainwindow.cpp:393
+#, kde-format
+msgid "High Scores"
+msgstr "최고 기록"
+
+#: mainwindow.cpp:286 mainwindow.cpp:323
+#, kde-format
+msgid "Remaining pieces"
+msgstr "남은 조각"
+
+#: mainwindow.cpp:287 mainwindow.cpp:324
+#, kde-format
+msgid "Time"
+msgstr "시간"
+
+#: mainwindow.cpp:342
+#, kde-format
+msgid "Do you want to resign?"
+msgstr "게임을 포기하시겠습니까?"
+
+#: mainwindow.cpp:343
+#, kde-format
+msgid "New Game"
+msgstr "새 게임"
+
+#: mainwindow.cpp:343
+#, kde-format
+msgctxt "@action:button"
+msgid "Resign"
+msgstr "포기"
+
+#: mainwindow.cpp:358
+#, kde-format
+msgid "New Numbered Game..."
+msgstr "새 게임(번호 지정)..."
+
+#: mainwindow.cpp:362
+#, kde-format
+msgid "Play Sounds"
+msgstr "소리 재생"
+
+#: mainwindow.cpp:377
+#, kde-format
+msgid "Undo All"
+msgstr "모두 실행 취소"
+
+#: mainwindow.cpp:383
+#, kde-format
+msgid "Redo All"
+msgstr "모두 다시 실행"
+
+#: mainwindow.cpp:404
+#, kde-format
+msgid "Custom"
+msgstr "사용자 정의"

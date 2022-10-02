@@ -1,0 +1,966 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY klickety "<application
+>Klickety</application
+>">
+  <!ENTITY kappname "&klickety;">
+  <!ENTITY package "kdegames"
+><!-- do not change this! -->
+  <!ENTITY kappversion "2.0"
+><!--Applicaion version. Use this variable everywhere it's needed.-->
+  <!ENTITY % addindex "IGNORE"
+><!-- do not change this! -->
+  <!ENTITY % Estonian  "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klickety" lang="&language;"
+><!-- do not change this! -->
+<bookinfo>
+<title
+>&klickety; käsiraamat</title
+><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immediate authors begins here. -->
+<authorgroup>
+<author
+><personname
+> <firstname
+>Thomas</firstname
+> <surname
+>Davey</surname
+> </personname
+> <email
+>thomas.davey@gmail.com</email
+> </author>
+<author
+><personname
+> <firstname
+>Hui</firstname
+> <surname
+>Ni</surname
+> </personname
+> <email
+>shuizhuyuanluo@126.com</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Marek</firstname
+><surname
+>Laane</surname
+><affiliation
+><address
+><email
+>bald@smail.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Thomas Davey</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Ni Hui</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2013-05-06</date
+><!-- Date of (re)writing, or update.-->
+<releaseinfo
+>&kappversion; (4.11)</releaseinfo
+><!-- Application version number. Use the variable definitions within header to change this value.-->
+
+<abstract>
+<para
+>&klickety; on &kde; strateegiamäng, mängu <application
+>Clickomania</application
+> mugandus.</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+<keyword
+>KDE</keyword
+><!-- do not change this! -->
+<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+<keyword
+>mäng</keyword
+><!-- do not change this! -->
+<keyword
+>Klickety</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+<keyword
+>lauamäng</keyword>
+<keyword
+>loogika</keyword>
+<keyword
+>strateegia</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+<keyword
+>üks mängija</keyword>
+<!--All other relevant keywords-->
+</keywordset>
+
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction">
+<title
+>Sissejuhatus</title
+><!-- do not change this! -->
+<note
+><title
+>Mängu tüüp:</title
+><para
+>lauamäng</para
+></note>
+<note
+><title
+>Mängijate arv:</title
+><para
+>üks</para
+></note>
+<para
+>&klickety; on mängu Clickomania mugandus. Reeglis sarnanevad "Sama mängu" omadega: eesmärk on puhastada mänguväli, klõpsates kivide kombinatsioonile, millega kombinatsiooni kuuluvad kivid hävitatakse. Üldine eesmärk on saavutada võimalikult väike tulemus. See pakub meelelahutust igas mõttes, aga kui soovid saavutada tõeliselt väikest tulemust, siis on see tõsine loogikaülesanne. </para>
+</chapter>
+
+<chapter id="how-to-play">
+<title
+>Kuidas mängida</title
+><!-- do not change this! -->
+<note
+><title
+>Eesmärk:</title
+><para
+>mängulaua puhastamine kõigist värvilistest plokkidest võimalikult kiiresti.</para
+></note>
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+<para
+>Rakendust käivitades näed umbes sellist pilti, mida nägime eelmises osas. Mängu eesmärk on eemaldada plokid, milleks tuleb neile klõpsata. </para>
+<para
+>Plokki saab aga eemaldada ainult siis, kui sellega liitub veel vähemalt üks sama värvi plokk. Diagonaalis ühendusi ei arvestata, plokid peavad olema külg külje kõrval. Uut mängu käivitades valitakse mänguväli juhuslikult. </para>
+<para
+>Kui klõpsad vajalikul moel teistega ühendatud plokile, see kaob. Kaovad ka kõik selle kõrval asunud sama värvi plokid, samuti plokid, mis olid <emphasis
+>viimastega</emphasis
+> samal moel ühendatud ja nii edasi. Kõik eemaldatud plokkide kohal asetsenud muud värvi plokid langevad allapoole ja täidavad tühikud. Kui eemaldad terve tulba, nihkuvad sellest paremal pool asuvad tulbad vasakule ja täidavad tühiku. </para>
+<para
+>Mäng saab läbi, kui pole enam ühtegi plokki, mis oleks seotud teise sama värvi plokiga. </para>
+
+<sect1 id="game-screen">
+<title
+>Mänguväli</title>
+<para>
+<screenshot>
+<screeninfo
+>&klickety; pilt</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Pilt</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+Mänguvälja osade lühike selgitus. </para>
+<variablelist>
+<varlistentry>
+<term
+>Mänguväli</term>
+<listitem
+><para
+>Mänguväli asub akna keskel ja on selle suurim osa. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Olekuriba</term>
+<listitem
+><para
+>Olekuriba asub mänguvälja all. See näitab, kui palju kive on parajasti alles, samuti taimerit, mis hoiab silma peal mängu algusest selle lõpuni kuluval ajal. </para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+</chapter>
+
+<chapter id="ksame_mode">
+<title
+>KSame'i režiim</title
+><!-- do not change this! -->
+<para
+>&klickety; pakub &ksame;'i tulemuste arvestamise režiimi. </para>
+<para
+>Tulemust arvutatakse nii:</para>
+<para
+>Eemaldatud nuppude arvust lahutatakse 2 ja tulemus võetakse ruutu. </para>
+<para
+>Kui näiteks eemaldad seitse nuppu, saad 25 punkti (7 miinus 2 võrdub 5 ja 5 ruudus on 25). Kui eemaldad 8 nuppu, saad 36 punkti (8 miinus 2 võrdub 6 ja 6 ruudus on 36). </para>
+<para
+>Vaata, kuidas sul õnnestuks kokku saada võimalikult suur ühesuguste nuppude kogum - selle eemaldamisega teenid rohkem punkte. Mäng on läbi, kui enam ei ole võimalik ühtegi nupuühendit eemaldada. </para>
+<para
+>Seejärel väheneb tulemus lauale jäänud nuppude võrra. Kui oled eemaldanud kõik nupud, saad boonuseks 1000 punkti juurde. </para>
+<screenshot>
+<screeninfo
+>&klickety; pilt KSame'i režiimis</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Pilt</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</chapter>
+
+<chapter id="interface">
+<title
+>Liidese tutvustus</title
+><!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+<sect1 id="default-keybindings">
+<title id="keybindings-title"
+>Vaikimisi kiirklahvid</title>
+<para
+>Vaikimisi kiirklahvid on järgmised:</para>
+
+<table>
+<title
+>Kiirklahvid</title>
+<tgroup cols="2">
+<tbody>
+<row>
+<entry
+>Uus</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Ava</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Käivita mäng uuesti</entry>
+<entry
+><keycap
+>F5</keycap
+></entry>
+</row>
+<row>
+<entry
+>Salvesta</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Paus</entry>
+<entry
+><keycap
+>P</keycap
+></entry>
+</row>
+<row>
+<entry
+>Rekordite näitamine</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Välju</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Võta tagasi</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Tee uuesti</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Abi</entry>
+<entry
+><keycap
+>F1</keycap
+></entry>
+</row>
+<row>
+<entry
+>Mis see on?</entry>
+<entry
+><keycombo action="simul"
+>&Shift;<keycap
+>F1</keycap
+></keycombo
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect1>
+
+<sect1 id="menu">
+<title
+>Menüükirjed</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Uus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Alustab uut mängu.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Ava...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Avab varem salvestatud mängu.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Käivita mäng uuesti</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Käivitab uuesti aktiivse mängu.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Uus mäng numbriga...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Käivitab numbriga määratud mängu.</action>
+    <screenshot>
+    <screeninfo
+>Numbriga mängu käivitamise dialoog</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Numbriga mängu käivitamise dialoog</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Salvesta</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Salvestab mängu oleku kettale.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>P</keycap
+></shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Paus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Peatab või taasalustab mängu. Pausi ajal on kivid peidetud.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Näita rekordeid</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Näitab rekordite tabelit.</action>
+    <screenshot>
+    <screeninfo
+>Rekordite tabel</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Rekordite tabel</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para>
+<para
+>Kui sinu mängu tulemus mahub esikümnesse, palutakse sul sisestada oma nimi. </para
+> </listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Välju</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Selle valimine lõpetab aktiivse mängu ja sulgeb &klickety;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+> </keycombo
+> </shortcut
+> <guimenu
+>Liikumine</guimenu
+> <guimenuitem
+>Võta tagasi</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Tühistab viimase käigu.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Liikumine</guimenu
+> <guimenuitem
+>Tee uuesti</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kui oled käigu tagasi võtnud, saad selle käsuga selle uuesti sooritada.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Liikumine</guimenu
+> <guimenuitem
+>Võta kõik tagasi</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Tühistab</action
+> kõik sooritatud käigud.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Liikumine</guimenu
+> <guimenuitem
+>Tee kõik uuesti</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Sooritab uuesti</action
+> kõik tagasi võetud käigud.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Seadistused</guimenu
+> <guisubmenu
+>Raskusaste</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<para
+>Võimaldab alammenüüst valida mängu raskusastme.</para>
+<para
+>Raskusastmeid on neli: <itemizedlist>
+<listitem
+><para
+><guimenuitem
+>Väga kerge</guimenuitem
+>: 12 rida, 10 veergu, 3 tüüpi kivid.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Kerge</guimenuitem
+>: 16 rida, 10 veergu, 4 tüüpi kivid.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Keskmine</guimenuitem
+>: 16 rida, 10 veergu, 5 tüüpi kivid.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Raske</guimenuitem
+>: 16 rida, 10 veergu, 6 tüüpi kivid.</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Lisaks on olemas ka <guimenuitem
+>Kohandatud</guimenuitem
+> tase.</para>
+<para
+>Kui valid võimaluse <guimenuitem
+>Kohandatud</guimenuitem
+>, kasutatakse väärtusi, mille oled määranud dialoogis <guimenuitem
+>&klickety; seadistamine</guimenuitem
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Lisaks on &kappname;l tavapärased &kde; <guimenu
+>seadistuste</guimenu
+> ja <guimenu
+>abi</guimenu
+>menüü elemendid, mille kohta leiab rohkem teavet &kde; põhialuste käsiraamatu osadest <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menüü Seadistused</ulink
+> ja <ulink url="help:/fundamentals/ui.html#menus-help"
+>Menüü Abi</ulink
+>. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Korduma kippuvad küsimused</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question
+><para
+>Ma soovin muuta mängu välimust. On see võimalik? </para
+></question>
+<answer
+><para
+>Jah. &klickety; välimuse muutmiseks kasuta <link linkend="configuration"
+>seadistustedialoogi</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Kas mängida saab ka klaviatuuri abil?</para
+></question>
+<answer
+><para
+>Ei, seda mängu ei saa veel klaviatuuri abil mängida.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Kuidas käivitada mäng KSame'i režiimis?</para
+></question>
+<answer
+><para
+>Selleks tuleb &klickety; käivitada käsuga <userinput
+>klickety --KSameMode</userinput
+> või kasutada &ksame;'i kirjet K-menüüs.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Mängu seadistamine</title
+><!-- do not change this! -->
+<!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
+<para
+>Menüükäsk <menuchoice
+><guimenu
+>Seadistused</guimenu
+><guimenuitem
+>&klickety; seadistamine...</guimenuitem
+></menuchoice
+> avab <guilabel
+>&klickety; seadistuste</guilabel
+>dialoogi.</para>
+
+<sect1 id="general-options">
+<title
+>Üldised valikud</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Piirjoonte näitamine</guilabel
+></term>
+<listitem
+><para
+>Kividevahelisi piirjooni näidatakse eri värviga. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Animatsiooni lubamine</guilabel
+></term>
+<listitem
+><para
+>Kivide eemaldamisel näidatakse langemise ja liitmise animatsiooni. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Esiletõstmise lubamine</guilabel
+></term>
+<listitem
+><para
+>Kui kive saab eemaldada, tõstetakse nad kursori nende kohale viimisel esile. </para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Üldised valikud</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-general.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Üldised valikud</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="theme-options">
+<title
+>Teemavalikud</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Teema</guilabel
+> valija</term>
+<listitem
+><para
+><guilabel
+>Teema</guilabel
+> valijaga saab määrata mängus kasutatava teema.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Teemavalikud</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Teemavalikud</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="background-options">
+<title
+>Tausta valikud</title>
+<para
+>Mängule on võimalik valida taustagraafika. Taustatüüpe on kolm. <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Teema</guilabel
+></term>
+<listitem
+><para
+>Aktiivse teemaga kaasa pandud tausta kasutamine.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Värv</guilabel
+></term>
+<listitem
+><para
+>Valitud ühtlase värvi kasutamine taustana.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pilt</guilabel
+></term>
+<listitem
+><para
+>Pildi kasutamine taustana.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<screenshot>
+<screeninfo
+>Tausta valikud</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-background.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Tausta valikud</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="customgame-options">
+<title
+>Kohandatud mängu valikud</title>
+<para
+>Võimalik on kindlaks määrata mänguvälja <guilabel
+>kõrgus</guilabel
+> ja <guilabel
+>laius</guilabel
+>, samuti kohandatud tasemel kasutatavate <guilabel
+>värvide arv</guilabel
+>. </para>
+<screenshot>
+<screeninfo
+>Kohandatud mängu valikud</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Kohandatud mängu valikud</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Autorid ja litsents</title>
+<para
+>&klickety;</para>
+<para
+>Rakenduse autoriõigus &copy; 1995: Eirik Eng</para>
+<para
+>Rakenduse autoriõigus &copy; 1996&ndash;2004: &Nicolas.Hadacek; &Nicolas.Hadacek.mail;</para>
+<para
+>Rakenduse autoriõigus &copy; 2010: Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>Dokumentatsiooni autoriõigus &copy; 2005: Thomas Davey</para>
+<para
+>Dokumentatsiooni autoriõigus &copy; 2010: Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>Tõlge eesti keelde: Marek Laane <email
+>bald@smail.ee</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Paigaldamine</title>
+&install.intro.documentation;
+<sect1 id="Compilation">
+<title
+>Kompileerimine ja paigaldamine</title>
+&install.compile.documentation; </sect1>
+</appendix>
+
+&documentation.index;
+</book>

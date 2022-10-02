@@ -1,0 +1,949 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE"
+><!-- do not change this! -->
+  <!ENTITY % Swedish "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klickety" lang="&language;"
+><!-- do not change this! -->
+<bookinfo>
+<title
+>Handbok &klickety;</title
+><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immediate authors begins here. -->
+<authorgroup>
+<author
+><personname
+> <firstname
+>Thomas</firstname
+> <surname
+>Davey</surname
+> </personname
+> <email
+>thomas.davey@gmail.com</email
+> </author>
+<author
+><personname
+> <firstname
+>Hui</firstname
+> <surname
+>Ni</surname
+> </personname
+> <email
+>shuizhuyuanluo@126.com</email
+> </author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Thomas Davey</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Ni Hui</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-08</date>
+<releaseinfo
+>2.1 (KDE Gear 21.04)</releaseinfo>
+
+<abstract>
+<para
+>&klickety; är ett strategispel av &kde;, en anpassning av spelet <application
+>Clickomania</application
+>.</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+<keyword
+>KDE</keyword
+><!-- do not change this! -->
+<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+<keyword
+>spel</keyword
+><!-- do not change this! -->
+<keyword
+>Klickety</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+<keyword
+>bräde</keyword>
+<keyword
+>logik</keyword>
+<keyword
+>strategi</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+<keyword
+>en spelare</keyword>
+<!--All other relevant keywords-->
+</keywordset>
+
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction">
+<title
+>Inledning</title
+><!-- do not change this! -->
+<note
+><title
+>Speltyp:</title
+><para
+>Bräde</para
+></note>
+<note
+><title
+>Antal möjliga spelare:</title
+><para
+>En</para
+></note>
+<para
+>&klickety; är en anpassning av spelet <application
+>Clickomania</application
+>. Reglerna liknar det i spelet <literal
+>Same</literal
+>: målet är att rensa brädet genom att klicka på grupper för att förstöra dem. Det övergripande målet är att få lägsta möjliga poäng. Det är underhållande oberoende av skicklighet, men en utmaning i logiskt tänkande, om man vill nå ett verkligt lågt poängtal. </para>
+</chapter>
+
+<chapter id="how-to-play">
+<title
+>Hur man spelar</title
+><!-- do not change this! -->
+<note
+><title
+>Syfte:</title
+><para
+>Rensa bort alla färgade bitar från spelbrädet på kortast möjliga tid.</para
+></note>
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+<para
+>När programmet startas visas en skärm som ungefär ser ut som skärmbilden i föregående avsnitt. Spelets idé är att ta bort bitar, vilket man gör genom att klicka på dem. </para>
+<para
+>Man kan dock bara ta bort en bit om den ligger intill en eller flera bitar med samma färg, längs en eller flera av dess sidor. Diagonala förbindelser räknas inte. Varje gång ett nytt spel startas skapas ett slumpmässigt bräde. </para>
+<para
+>Om man klickar på en bit som är förbunden enligt beskrivningen, försvinner den. Alla intilliggande bitar med samma färg försvinner också, samt alla med samma färg som ligger intill <emphasis
+>dem</emphasis
+>, och så vidare. Alla bitar ovanför dem faller ner för att fylla i tomrummen lämnade av de försvunna bitarna. Om en hel kolumn rensas, flyttas alla kolumner till höger över för att fylla i tomrummet. </para>
+<para
+>Spelet är slut när det inte finns några bitar intill varandra med samma färg. </para>
+
+<sect1 id="game-screen">
+<title
+>Spelskärmen</title>
+<para>
+<screenshot>
+<screeninfo
+>En skärmbild av &klickety;</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Skärmbild</phrase
+></textobject>
+</mediaobject>
+</screenshot
+>En kort förklaring av spelplanens delar. </para>
+<variablelist>
+<varlistentry>
+<term
+>Spelplanen</term>
+<listitem
+><para
+>Spelbrädet finns mitt på skärmen, och är den största delen av fönstret. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Statusrad</term>
+<listitem
+><para
+>Statusraden är placerad längst ner på skärmen. Den visar hur många bitar som för närvarande är kvar, samt speltiden, som håller reda på åtgången tid från spelets början till det är slut. </para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+</chapter>
+
+<chapter id="ksame_mode">
+<title
+>Ksame-läget</title
+><!-- do not change this! -->
+<para
+>&klickety; tillhandahåller ett &ksame;-poängberäkningsläge. </para>
+<para
+>Poängen beräknas på följande sätt:</para>
+<para
+>Subtrahera två från antalet kulor som togs bort, och multiplicera resultatet med sig självt. </para>
+<para
+>Som ett exempel om du tar bort sju kulor, får du 25 poäng (7 minus 2 = 5. 5 i kvadrat är 25 poäng). Om du tar bort åtta kulor, får du 36 poäng (8 minus 2 = 6, 6 i kvadrat är 36 poäng). </para>
+<para
+>Skaffa så många likadana kulor som möjligt, och ta bort dem med ett klick. På det sättet får du ett högre poängtal. Spelet är slut när det inte finns några kulor att ta bort längre. </para>
+<para
+>Poängen minskas sedan enligt antal kvarvarande kulor. Om du tar bort alla kulor läggs 1000 bonuspoäng till i slutresultatet. </para>
+<screenshot>
+<screeninfo
+>En skärmbild av &klickety; i Ksame-läge</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Skärmbild</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</chapter>
+
+<chapter id="interface">
+<title
+>Översikt av gränssnittet</title
+><!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+<sect1 id="default-keybindings">
+<title id="keybindings-title"
+>Förvalda tangentbindningar</title>
+<para
+>Förvalda genvägar är:</para>
+
+<table>
+<title
+>Genvägar</title>
+<tgroup cols="2">
+<tbody>
+<row>
+<entry
+>Nytt</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Ladda</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Starta om spel</entry>
+<entry
+><keycap
+>F5</keycap
+></entry>
+</row>
+<row>
+<entry
+>Spara</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Paus</entry>
+<entry
+><keycap
+>P</keycap
+></entry>
+</row>
+<row>
+<entry
+>Visa bästa resultat</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Avsluta</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Ångra</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Gör om</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Handbok &klickety;</entry>
+<entry
+><keycap
+>F1</keycap
+></entry>
+</row>
+<row>
+<entry
+>Vad är det här? hjälp</entry>
+<entry
+><keycombo action="simul"
+>&Shift;<keycap
+>F1</keycap
+></keycombo
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect1>
+
+<sect1 id="menu">
+<title
+>Menyalternativ</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Nytt</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Startar ett nytt spel.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Ladda...</guimenuitem
+></menuchoice
+> (inte i Ksame-läget) </term>
+<listitem
+><para
+>Laddar ett tidigare sparat spel.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Starta om spel</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Detta startar om pågående spel.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spel</guimenu
+> <guimenuitem
+>Nytt numrerat spel...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Startar ett specifikt numrerat spel.</action>
+    <screenshot>
+    <screeninfo
+>Speldialogrutan för att starta ett numrerat spel</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Speldialogrutan för att starta ett numrerat spel</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Spara</guimenuitem
+></menuchoice
+> (inte i Ksame-läget)</term>
+<listitem
+><para
+>Sparar spelets nuvarande tillstånd på disk.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>P</keycap
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Paus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Gör paus eller återupptar spelet. Medan spelet är pausat är alla brickor dolda.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Visa bästa resultat</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visar listan med bästa resultat.</action>
+    <screenshot>
+    <screeninfo
+>Visa bästa resultat</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Visa bästa resultat</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para>
+<para
+>När ditt spelresultat överskrider de tio bästa resultaten som anges, blir du tillfrågad om att skriva in ditt namn. </para
+> </listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Avsluta</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Att välja det här alternativet avslutar det pågående spelet, och avslutar &klickety;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Flytta</guimenu
+> <guimenuitem
+>Ångra</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ångra det senaste draget som du gjorde.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Flytta</guimenu
+> <guimenuitem
+>Gör om</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Om du tidigare har ångrat ett drag, kan du göra om det här.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Flytta</guimenu
+> <guimenuitem
+>Ångra alla</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ångra</action
+> alla drag som du gjorde.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Flytta</guimenu
+> <guimenuitem
+>Gör om alla</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Gör om</action
+> alla ångrade drag.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Inställningar</guimenu
+> <guisubmenu
+>Svårighetsnivå</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<para
+>Låter dig ange svårighetsnivån från en undermeny.</para>
+<para
+>Det finns fyra svårighetsnivåer: <itemizedlist>
+<listitem
+><para
+><guimenuitem
+>Mycket lätt</guimenuitem
+>: 16 rader, 10 kolumner, 3 sorters block.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Lätt</guimenuitem
+>: 16 rader, 10 kolumner, 4 sorters bitar.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Normal</guimenuitem
+>: 16 rader, 10 kolumner, 5 sorters bitar.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Svår</guimenuitem
+>: 16 rader, 10 kolumner, 6 sorters bitar.</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Det finns också en <guimenuitem
+>Egen</guimenuitem
+> nivåinställning.</para>
+<para
+>Om du väljer <guimenuitem
+>Egen</guimenuitem
+>, används inställningarna som du har angett i dialogrutan <guimenuitem
+>Anpassa &klickety;</guimenuitem
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Dessutom har &klickety; de vanliga menyalternativen <guimenu
+>Inställningar</guimenu
+> och <guimenu
+>Hjälp</guimenu
+> i &kde;. För mer information, läs avsnitten  <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menyn Inställningar</ulink
+> och <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menyn Hjälp</ulink
+> i &kde;:s Grunder. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Vanliga frågor</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question
+><para
+>Jag vill ändra hur spelet ser ut. Kan man göra det? </para
+></question>
+<answer
+><para
+>Ja. Använd menyraden för att öppna <link linkend="configuration"
+>inställningsverktyget</link
+> för att ändra utseendet på &klickety;.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Kan man använda tangentbordet för att spela?</para
+></question>
+<answer
+><para
+>Nej. Spelet har ännu inte någon funktion för att spela med tangentbordet.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Hur startas spelet med Ksame-läge?</para
+></question>
+<answer
+><para
+>&klickety; kan startas med kommandot  <userinput
+>klickety --KSameMode</userinput
+> eller med menyalternativet &ksame; i K-menyn.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Spelanpassning</title
+><!-- do not change this! -->
+<!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
+<para
+><menuchoice
+><guimenu
+>Inställningar</guimenu
+> <guimenuitem
+>Anpassa &klickety;...</guimenuitem
+></menuchoice
+> visar dialogrutan <guilabel
+>Anpassa - &klickety;</guilabel
+>.</para>
+
+<sect1 id="general-options">
+<title
+>Allmänna alternativ</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Visa kantlinjer</guilabel
+></term>
+<listitem
+><para
+>Alternativet visar kantlinjerna mellan bitar med annorlunda färg. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Aktivera animering</guilabel
+></term>
+<listitem
+><para
+>Alternativet aktiverar animering av fall och sammanfogning när bitar tas bort. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Aktivera färgläggning</guilabel
+></term>
+<listitem
+><para
+>Alternativet aktiverar markering av bitar musen hålls över, om de kan tas bort. </para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Allmänna alternativ</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-general.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Allmänna alternativ</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="theme-options">
+<title
+>Tema-alternativ</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tema</guilabel
+>-väljare</term>
+<listitem
+><para
+>Använd <guilabel
+>Tema</guilabel
+>-väljaren för att ställa in spelets tema.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Tema-alternativ</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Tema-alternativ</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="background-options">
+<title
+>Bakgrundsalternativ</title>
+<para
+>Man kan välja spelets bakgrundsgrafik. Det finns tre olika typer av bakgrund som kan användas. <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tema</guilabel
+></term>
+<listitem
+><para
+>Använd bakgrunden som levereras med det aktuella temat.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Färg</guilabel
+></term>
+<listitem
+><para
+>Använd en egen heltäckande färg som bakgrund.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Bild</guilabel
+></term>
+<listitem
+><para
+>Använd en bild som bakgrundsgrafik.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<screenshot>
+<screeninfo
+>Bakgrundsalternativ</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-background.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Bakgrundsalternativ</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="customgame-options">
+<title
+>Alternativ för eget spel</title>
+<para
+>Man kan ställa in brädets <guilabel
+>Höjd:</guilabel
+> och <guilabel
+>Bredd:</guilabel
+>, samt <guilabel
+>Färgantal:</guilabel
+> som används för den egna nivån. </para>
+<screenshot>
+<screeninfo
+>Alternativ för eget spel</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Alternativ för eget spel</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Tack till och licens</title>
+<para
+>&klickety;</para>
+<para
+>Program Copyright &copy; 1995, Eirik Eng</para>
+<para
+>Program Copyright &copy; 1996&ndash;2004, &Nicolas.Hadacek; &Nicolas.Hadacek.mail;</para>
+<para
+>Program Copyright &copy; 2010, Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>Dokumentation Copyright &copy; 2005, Thomas Davey</para>
+<para
+>Dokumentation Copyright &copy; 2010, Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>

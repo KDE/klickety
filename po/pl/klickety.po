@@ -1,0 +1,387 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrzej Ostrowski <juhasss@o2.pl>, 2011.
+# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2011.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:42+0000\n"
+"PO-Revision-Date: 2022-08-07 06:56+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Andrzej Ostrowski, Łukasz Wojniłowicz"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "a.ostrowski@g.pl, lukasz.wojnilowicz@gmail.com"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
+#: bgselectorconfig.ui:33
+#, kde-format
+msgid "&Theme"
+msgstr "Zes&taw"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioColor)
+#: bgselectorconfig.ui:46
+#, kde-format
+msgid "&Color"
+msgstr "&Kolor"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioImage)
+#: bgselectorconfig.ui:56
+#, kde-format
+msgid "&Image"
+msgstr "&Obraz"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: customgameconfig.ui:17
+#, kde-format
+msgid "Width:"
+msgstr "Szerokość:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: customgameconfig.ui:34
+#, kde-format
+msgid "Height:"
+msgstr "Wysokość:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: customgameconfig.ui:51
+#, kde-format
+msgid "Color count:"
+msgstr "Liczba kolorów:"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowBoundLines)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowBoundLines)
+#: gameconfig.ui:16 gameconfig.ui:19
+#, kde-format
+msgid "Show bound lines"
+msgstr "Pokaż linie siatki"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableAnimation)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableAnimation)
+#: gameconfig.ui:26 gameconfig.ui:29
+#, kde-format
+msgid "Enable animation"
+msgstr "Włącz animacje"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableHighlight)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableHighlight)
+#: gameconfig.ui:36 gameconfig.ui:39
+#, kde-format
+msgid "Enable highlight"
+msgstr "Włącz podświetlanie"
+
+#: gamescene.cpp:241
+#, kde-format
+msgid "paused"
+msgstr "wstrzymane"
+
+#: gamescene.cpp:353
+#, kde-format
+msgid "Game finished"
+msgstr "Gra zakończona"
+
+#. i18n: ectx: label, entry (BgColor), group (Background)
+#: klickety.kcfg:36
+#, kde-format
+msgid "The background color to be used."
+msgstr "Kolor tła do użycia."
+
+#. i18n: ectx: label, entry (BgImage), group (Background)
+#: klickety.kcfg:40
+#, kde-format
+msgid "The background image to be used."
+msgstr "Obrazek tła do użycia."
+
+#. i18n: ectx: label, entry (CustomWidth), group (CustomGame)
+#: klickety.kcfg:45
+#, kde-format
+msgid "The width of the playing field."
+msgstr "Szerokość pola gry."
+
+#. i18n: ectx: label, entry (CustomHeight), group (CustomGame)
+#: klickety.kcfg:51
+#, kde-format
+msgid "The height of the playing field."
+msgstr "Wysokość pola gry."
+
+#. i18n: ectx: label, entry (CustomColorCount), group (CustomGame)
+#: klickety.kcfg:57
+#, kde-format
+msgid "The number of colors in the playing field."
+msgstr "Liczba kolorów na polu gry."
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: klicketyui.rc:22
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Główny pasek narzędzi"
+
+#: main.cpp:40
+#, kde-format
+msgid "Klickety"
+msgstr "Klickety"
+
+#: main.cpp:41
+#, kde-format
+msgid "Klickety is an adaptation of the \"clickomania\" game"
+msgstr "Klickety są przeróbką gry \"clickomania\""
+
+#: main.cpp:43
+#, kde-format
+msgid ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+msgstr ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+
+#: main.cpp:50
+#, kde-format
+msgid "Start with KSame compatibility mode"
+msgstr "Rozpocznij w trybie zgodności z ToSamo"
+
+#: main.cpp:61
+#, kde-format
+msgid "A little game about balls and how to get rid of them"
+msgstr "Prosta gra o kulkach i o tym jak się ich pozbyć."
+
+#: main.cpp:62
+#, kde-format
+msgid "Marcus Kreutzberger"
+msgstr "Marcus Kreutzberger"
+
+#: main.cpp:62 main.cpp:69
+#, kde-format
+msgid "Original author"
+msgstr "Autor pierwszej wersji"
+
+#: main.cpp:63
+#, kde-format
+msgid "Henrique Pinto"
+msgstr "Henrique Pinto"
+
+#: main.cpp:63
+#, kde-format
+msgid "Past maintainer"
+msgstr "Były opiekun"
+
+#: main.cpp:64 main.cpp:70
+#, kde-format
+msgid "Ni Hui"
+msgstr "Ni Hui"
+
+#: main.cpp:64
+#, kde-format
+msgid "Integration with Klickety. Current maintainer"
+msgstr "Integracja z Klickety. Obecny opiekun"
+
+#: main.cpp:65
+#, kde-format
+msgid "Johann Ollivier Lapeyre"
+msgstr "Johann Ollivier Lapeyre"
+
+#: main.cpp:65
+#, kde-format
+msgid "Artwork"
+msgstr "Grafika"
+
+#: main.cpp:69
+#, kde-format
+msgid "Nicolas Hadacek"
+msgstr "Nicolas Hadacek"
+
+#: main.cpp:70
+#, kde-format
+msgid "Rewrite for KDE4. Current maintainer"
+msgstr "Przepisanie dla KDE4. Obecny opiekun"
+
+#: main.cpp:71
+#, kde-format
+msgid "Dan Hill"
+msgstr "Dan Hill"
+
+#: main.cpp:71
+#, kde-format
+msgid "Icons"
+msgstr "Ikony"
+
+#. i18n( "Colors: XX" ), 1 );
+#. i18n( "Board: XXXXXX" ), 2 );
+#: mainwindow.cpp:58
+#, kde-format
+msgid "Marked: 0"
+msgstr "Zaznaczonych: 0"
+
+#: mainwindow.cpp:59 mainwindow.cpp:245
+#, kde-format
+msgid "Score: 0"
+msgstr "Punkty: 0"
+
+#: mainwindow.cpp:65
+#, kde-format
+msgid "Pieces: 0"
+msgstr "Części: 0"
+
+#: mainwindow.cpp:66
+#, kde-format
+msgid "Time: 00:00"
+msgstr "Czas: 00:00"
+
+#: mainwindow.cpp:91
+#, kde-format
+msgid "General"
+msgstr "Ogólne"
+
+#: mainwindow.cpp:92
+#, kde-format
+msgid "Theme"
+msgstr "Wystrój"
+
+#: mainwindow.cpp:93
+#, kde-format
+msgid "Background"
+msgstr "Tło"
+
+#: mainwindow.cpp:95
+#, kde-format
+msgid "Custom Game"
+msgstr "Gra niestandardowa"
+
+#: mainwindow.cpp:172
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Board"
+msgstr "Wybierz planszę"
+
+#: mainwindow.cpp:173
+#, kde-format
+msgid "Select a board number:"
+msgstr "Wybierz numer planszy:"
+
+#: mainwindow.cpp:211 mainwindow.cpp:225
+#, kde-format
+msgid "Klickety Game Files (*.klickety)"
+msgstr "Pliki gry Klickety (*.klickety)"
+
+#: mainwindow.cpp:237
+#, kde-format
+msgid "Marked: %2 (1 Point)"
+msgid_plural "Marked: %2 (%1 Points)"
+msgstr[0] "Zaznaczonych: %2 (%1 punkt)"
+msgstr[1] "Zaznaczonych: %2 (%1 punkty)"
+msgstr[2] "Zaznaczonych: %2 (%1 punktów)"
+
+#: mainwindow.cpp:259
+#, kde-format
+msgid "Score: %1"
+msgstr "Punkty: %1"
+
+#: mainwindow.cpp:265
+#, kde-format
+msgid "Pieces: %1"
+msgstr "Części: %1"
+
+#: mainwindow.cpp:270
+#, kde-format
+msgid "Time: %1"
+msgstr "Czas: %1"
+
+#: mainwindow.cpp:278 mainwindow.cpp:307 mainwindow.cpp:393
+#, kde-format
+msgid "High Scores"
+msgstr "Najlepsze wyniki"
+
+#: mainwindow.cpp:286 mainwindow.cpp:323
+#, kde-format
+msgid "Remaining pieces"
+msgstr "Pozostałych części"
+
+#: mainwindow.cpp:287 mainwindow.cpp:324
+#, kde-format
+msgid "Time"
+msgstr "Czas"
+
+#: mainwindow.cpp:342
+#, kde-format
+msgid "Do you want to resign?"
+msgstr "Czy chcesz przerwać?"
+
+#: mainwindow.cpp:343
+#, kde-format
+msgid "New Game"
+msgstr "Nowa gra"
+
+#: mainwindow.cpp:343
+#, kde-format
+msgctxt "@action:button"
+msgid "Resign"
+msgstr "Zrezygnuj"
+
+#: mainwindow.cpp:358
+#, kde-format
+msgid "New Numbered Game..."
+msgstr "Nowa numerowana gra..."
+
+#: mainwindow.cpp:362
+#, kde-format
+msgid "Play Sounds"
+msgstr "Odtwarzaj dźwięki"
+
+#: mainwindow.cpp:377
+#, kde-format
+msgid "Undo All"
+msgstr "Cofnij wszystko"
+
+#: mainwindow.cpp:383
+#, kde-format
+msgid "Redo All"
+msgstr "Przywróć wszystko"
+
+#: mainwindow.cpp:404
+#, kde-format
+msgid "Custom"
+msgstr "Własne"
+
+#~ msgid "Ima&ge"
+#~ msgstr "O&braz"
+
+#~ msgid "The background type to be used."
+#~ msgstr "Rodzaj tła do użycia."
+
+#~ msgid "SameGame"
+#~ msgstr "ToSamo"
+
+#~ msgid "The graphical theme to be used."
+#~ msgstr "Motyw graficzny do użycia."
+
+#~ msgid "Start with Very Easy difficulty level"
+#~ msgstr "Rozpocznij poziom bardzo łatwy"
+
+#~ msgid "Start with Easy difficulty level"
+#~ msgstr "Rozpocznij poziom łatwy"
+
+#~ msgid "Start with Medium difficulty level"
+#~ msgstr "Rozpocznij poziom średni"
+
+#~ msgid "Start with Hard difficulty level"
+#~ msgstr "Rozpocznij poziom trudny"
+
+#~ msgid "The difficulty level."
+#~ msgstr "Poziom trudności."

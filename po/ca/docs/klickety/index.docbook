@@ -1,0 +1,931 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE"
+><!-- do not change this! -->
+  <!ENTITY % Catalan  "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klickety" lang="&language;"
+><!-- do not change this! -->
+<bookinfo>
+<title
+>El manual del &klickety;</title
+><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immediate authors begins here. -->
+<authorgroup>
+<author
+><personname
+> <firstname
+>Thomas</firstname
+> <surname
+>Davey</surname
+> </personname
+> <email
+>thomas.davey@gmail.com</email
+> </author>
+<author
+><personname
+> <firstname
+>Hui</firstname
+> <surname
+>Ni</surname
+> </personname
+> <email
+>shuizhuyuanluo@126.com</email
+> </author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Thomas Davey</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Ni Hui</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>8 de juliol de 2021</date>
+<releaseinfo
+>2.1 (KDE Gear 21.04)</releaseinfo>
+
+<abstract>
+<para
+>El &klickety; és un joc d'estratègia, creat per la comunitat &kde;, una adaptació del joc <application
+>Clickomania</application
+>.</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+<keyword
+>KDE</keyword
+><!-- do not change this! -->
+<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+<keyword
+>joc</keyword
+><!-- do not change this! -->
+<keyword
+>Klickety</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+<keyword
+>tauler</keyword>
+<keyword
+>lògica</keyword>
+<keyword
+>estratègia</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+<keyword
+>un jugador</keyword>
+<!--All other relevant keywords-->
+</keywordset>
+
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction">
+<title
+>Introducció</title
+><!-- do not change this! -->
+<note
+><title
+>Tipus de joc:</title
+><para
+>Tauler</para
+></note>
+<note
+><title
+>Nombre de possibles jugadors:</title
+><para
+>Un</para
+></note>
+<para
+>El &klickety; és una adaptació del joc <application
+>Clickomania</application
+>. Les regles són similars a les del joc <literal
+>Same</literal
+>: el vostre objectiu és netejar el tauler fent clic sobre els grups per a destruir-los. L'objectiu general és obtenir la puntuació més baixa possible. Proporcionarà entreteniment per a totes les habilitats, però un desafiament al pensament lògic per a obtenir una puntuació realment baixa. </para>
+</chapter>
+
+<chapter id="how-to-play">
+<title
+>Com jugar</title
+><!-- do not change this! -->
+<note
+><title
+>Objectiu:</title
+><para
+>Netejar el tauler de joc de tots els blocs de color en el menor temps possible.</para
+></note>
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+<para
+>Quan inicieu el programa, obtindreu una pantalla que s'assembla a la captura de pantalla a la secció anterior. La idea del joc és eliminar blocs, el qual fareu fent clic sobre seu. </para>
+<para
+>No obstant això, només podreu suprimir un bloc si està adjacent a un o més blocs del mateix color en un o més dels seus costats. Les connexions en diagonal no compten. S'obté un tauler aleatori cada vegada que comenceu una partida nova. </para>
+<para
+>Si feu clic sobre un bloc que està connectat com es descriu, desapareixerà. Tots els blocs adjacents del mateix color també desapareixeran, juntament amb tots els blocs adjacents del mateix color, i així successivament. Qualsevol bloc per sobre seu es desplegaran per a omplir els buits que deixen les peces desaparegudes. Si netegeu tota una columna, totes les columnes de la dreta es mouran per a omplir l'espai. </para>
+<para
+>La partida acaba quan no hi ha blocs adjacents a altres blocs del mateix color. </para>
+
+<sect1 id="game-screen">
+<title
+>La pantalla de joc</title>
+<para>
+<screenshot>
+<screeninfo
+>Una captura de pantalla del &klickety;</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Captura de pantalla</phrase
+></textobject>
+</mediaobject>
+</screenshot
+>Una explicació ràpida de les parts de la pantalla de joc. </para>
+<variablelist>
+<varlistentry>
+<term
+>Pantalla de joc</term>
+<listitem
+><para
+>La pantalla de joc està al centre de la pantalla i és la secció més gran de la finestra. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Barra d'estat</term>
+<listitem
+><para
+>La barra d'estat es troba a la part inferior de la pantalla. Mostra quantes peces queden actualment i el temporitzador de la partida, el qual realitza un seguiment del temps transcorregut des de l'inici de la partida fins que finalitza. </para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+</chapter>
+
+<chapter id="ksame_mode">
+<title
+>El mode &ksame;</title
+><!-- do not change this! -->
+<para
+>El &klickety; proporciona un mode de puntuació &ksame;. </para>
+<para
+>La puntuació es calcula de la manera següent:</para>
+<para
+>Es resta 2 del nombre de boles esborrades i quadra el resultat. </para>
+<para
+>Per exemple, si esborreu 7 boles, obtindreu 25 punts (7 menys 2 = 5, 5 al quadrat són 25 punts). Si netegeu 8 boles, llavors obtindreu 36 punts (8 menys 2 = 6, 6 al quadrat són 36 punts). </para>
+<para
+>Obteniu tantes peces iguals com pugueu i després netegeu-les amb un sol clic. D'aquesta manera obtindreu una puntuació més alta. La partida acaba quan no queden peces que es puguin netejar. </para>
+<para
+>Després, la puntuació es reduirà d'acord amb el nombre de peces restants. Si netegeu totes les peces, s'afegiran 1.000 punts de bonificació a la puntuació final. </para>
+<screenshot>
+<screeninfo
+>Una captura de pantalla del &klickety; en el mode &ksame;</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Captura de pantalla</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</chapter>
+
+<chapter id="interface">
+<title
+>Resum de la interfície</title
+><!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+<sect1 id="default-keybindings">
+<title id="keybindings-title"
+>Dreceres predeterminades</title>
+<para
+>Les dreceres predeterminades són:</para>
+
+<table>
+<title
+>Dreceres</title>
+<tgroup cols="2">
+<tbody>
+<row>
+<entry
+>Nova</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Carrega</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Reinicia el joc</entry>
+<entry
+><keycap
+>F5</keycap
+></entry>
+</row>
+<row>
+<entry
+>Desa</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Fa una pausa</entry>
+<entry
+><keycap
+>P</keycap
+></entry>
+</row>
+<row>
+<entry
+>Mostra les millors puntuacions</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Surt</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Desfés</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Refés</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;&Maj;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>El manual del &klickety;</entry>
+<entry
+><keycap
+>F1</keycap
+></entry>
+</row>
+<row>
+<entry
+>Ajuda «Què és això?»</entry>
+<entry
+><keycombo action="simul"
+>&Maj;<keycap
+>F1</keycap
+></keycombo
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect1>
+
+<sect1 id="menu">
+<title
+>Elements de menú</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Nova</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Comença una partida nova.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Carrega...</guimenuitem
+> </menuchoice
+> (no en el mode KSame) </term>
+<listitem
+><para
+>Càrrega una partida desada anteriorment.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Reinicia la partida</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Reinicia la partida actual.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Joc</guimenu
+> <guimenuitem
+>Partida nova numerada...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Inicia una partida numerada específicament.</action>
+    <screenshot>
+    <screeninfo
+>Inicia el diàleg de Partida numerada</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Inicia el diàleg de Partida numerada</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Desa</guimenuitem
+></menuchoice
+> (no en el mode KSame)</term>
+<listitem
+><para
+>Desa l'estat actual de la partida en el disc.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>P</keycap
+> </shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Pausa</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Posa en pausa o reprèn la partida. Mentre la partida està en pausa, totes les fitxes estaran ocultes.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Mostra les puntuacions</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra la llista de les puntuacions màximes.</action>
+    <screenshot>
+    <screeninfo
+>Mostra les millors puntuacions</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Mostra les millors puntuacions</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para>
+<para
+>Quan la puntuació de la vostra partida superi les deu puntuacions principals llistades, se us demanarà que introduïu el vostre nom. </para
+> </listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Surt</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>En seleccionar aquest element s'acabarà la teva partida en joc i se sortirà del &nbsp;&klickety;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mou</guimenu
+> <guimenuitem
+>Desfés</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Desfà l'últim moviment que heu realitzat.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Maj;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mou</guimenu
+> <guimenuitem
+>Refés</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Si prèviament s'ha desfet una acció, la podeu refer de nou.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Mou</guimenu
+> <guimenuitem
+>Desfés-ho tot</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Desfà</action
+> tots els moviments realitzats.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Mou</guimenu
+> <guimenuitem
+>Refés-ho tot</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Refà</action
+> tots els moviments realitzats.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Arranjament</guimenu
+> <guisubmenu
+>Dificultat</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<para
+>Permet establir el nivell de dificultat des d'un submenú.</para>
+<para
+>Hi ha quatre nivells de dificultat: <itemizedlist>
+<listitem
+><para
+><guimenuitem
+>Molt fàcil</guimenuitem
+>: 16 files, 10 columnes i 3 tipus de peces.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Fàcil</guimenuitem
+>: 16 files, 10 columnes i 4 tipus de peces.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Mitjana</guimenuitem
+>: 16 files, 10 columnes i 5 tipus de peces.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Difícil</guimenuitem
+>: 16 files, 10 columnes i 6 tipus de peces.</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>També hi ha una opció de configuració <guimenuitem
+>Personalitzat</guimenuitem
+> del nivell.</para>
+<para
+>Si seleccioneu <guimenuitem
+>Personalitzat</guimenuitem
+>, s'utilitzarà la configuració en el diàleg <guimenuitem
+>Configuració - &klickety;</guimenuitem
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>De manera addicional, el &klickety; té la configuració comuna al &kde; i els elements dels menús <guimenu
+>Arranjament</guimenu
+> i <guimenu
+>Ajuda</guimenu
+>. Per a obtenir més informació, llegiu les seccions sobre <ulink url="help:/fundamentals/menus.html#menus-settings"
+>El menú Arranjament</ulink
+> i <ulink url="help:/fundamentals/menus.html#menus-help"
+>El menú Ajuda</ulink
+> en els Fonaments del &kde;. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Preguntes més freqüents</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question
+><para
+>Vull canviar l'aparença d'aquest joc. Puc fer-ho? </para
+></question>
+<answer
+><para
+>Sí. Per a canviar l'aparença del &klickety;, empreu la barra de menús per a obrir la <link linkend="configuration"
+>utilitat de configuració</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Puc utilitzar el teclat per a jugar a aquest joc?</para
+></question>
+<answer
+><para
+>No. Aquest joc encara no compta amb un mode de joc amb el teclat.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Com inicio la partida en el mode &ksame;?</para
+></question>
+<answer
+><para
+>Podeu llançar el &klickety; amb l'ordre <userinput
+>klickety --KSameMode</userinput
+> o l'entrada de menú &ksame; en el menú K.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Configuració del joc</title
+><!-- do not change this! -->
+<!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
+<para
+><menuchoice
+><guimenu
+>Arranjament</guimenu
+><guimenuitem
+>Configura el &klickety;...</guimenuitem
+></menuchoice
+> obre el diàleg <guilabel
+>Configuració - &klickety;</guilabel
+>.</para>
+
+<sect1 id="general-options">
+<title
+>Opcions generals</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Mostra les línies del contorn</guilabel
+></term>
+<listitem
+><para
+>Aquesta opció mostrarà les línies delimitadores entre les peces de color diferent. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Habilita les animacions</guilabel
+></term>
+<listitem
+><para
+>Aquesta opció habilitarà l'animació de caiguda i fusió quan s'eliminin les peces. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Habilita el ressaltat</guilabel
+></term>
+<listitem
+><para
+>Aquesta opció permet ressaltar les peces suspeses si es poden eliminar. </para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Opcions generals</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-general.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opcions generals</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="theme-options">
+<title
+>Opcions del tema</title>
+<variablelist>
+<varlistentry>
+<term
+>Selector del <guilabel
+>Tema</guilabel
+></term>
+<listitem
+><para
+>Utilitzeu el selector del <guilabel
+>Tema</guilabel
+> per a establir un tema per al joc.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Opcions del tema</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opcions del tema</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="background-options">
+<title
+>Opcions del fons</title>
+<para
+>Podeu triar un gràfic de fons per al joc. Hi ha tres classes de tipus de fons que podeu utilitzar. <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tema</guilabel
+></term>
+<listitem
+><para
+>Utilitza el fons enviat amb el tema actual.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Color</guilabel
+></term>
+<listitem
+><para
+>Utilitza un color sòlid personalitzat per al fons.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Imatge</guilabel
+></term>
+<listitem
+><para
+>Utilitza una imatge per al gràfic de fons.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<screenshot>
+<screeninfo
+>Opcions del fons</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-background.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opcions del fons</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="customgame-options">
+<title
+>Opcions personalitzades per al joc</title>
+<para
+>Podeu establir l'<guilabel
+>Alçada:</guilabel
+> i l'<guilabel
+>Amplada:</guilabel
+> del tauler i el <guilabel
+>Nombre de colors:</guilabel
+> utilitzats en el vostre nivell personalitzat. </para>
+<screenshot>
+<screeninfo
+>Opcions personalitzades per al joc</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opcions personalitzades per al joc</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Crèdits i llicència</title>
+<para
+>&klickety;</para>
+<para
+>Copyright del programa &copy; 1995, Eirik Eng</para>
+<para
+>Copyright del programa &copy; 1996&ndash;2004, &Nicolas.Hadacek; &Nicolas.Hadacek.mail;</para>
+<para
+>Copyright del programa &copy; 2010, Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>Copyright de la documentació &copy; 2005, Thomas Davey</para>
+<para
+>Copyright de la documentació &copy; 2010, Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>Traductor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>

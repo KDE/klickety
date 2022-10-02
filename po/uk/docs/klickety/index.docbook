@@ -1,0 +1,945 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE"
+><!-- do not change this! -->
+  <!ENTITY % Ukrainian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klickety" lang="&language;"
+><!-- do not change this! -->
+<bookinfo>
+<title
+>Підручник з &klickety;</title
+><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immediate authors begins here. -->
+<authorgroup>
+<author
+><personname
+> <firstname
+>Thomas</firstname
+> <surname
+>Davey</surname
+> </personname
+> <email
+>thomas.davey@gmail.com</email
+> </author>
+<author
+><personname
+> <firstname
+>Hui</firstname
+> <surname
+>Ni</surname
+> </personname
+> <email
+>shuizhuyuanluo@126.com</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Thomas Davey</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Ni Hui</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>8 липня 2021 року</date>
+<releaseinfo
+>2.1 (KDE Gear 21.04)</releaseinfo>
+
+<abstract>
+<para
+>&klickety; — стратегічна гра у &kde;, варіант гри <application
+>Clickomania</application
+> («Клікоманія»).</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+<keyword
+>KDE</keyword
+><!-- do not change this! -->
+<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+<keyword
+>гра</keyword
+><!-- do not change this! -->
+<keyword
+>Klickety</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+<keyword
+>дошка</keyword>
+<keyword
+>логічна</keyword>
+<keyword
+>стратегія</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+<keyword
+>один гравець</keyword>
+<!--All other relevant keywords-->
+</keywordset>
+
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction">
+<title
+>Вступ</title
+><!-- do not change this! -->
+<note
+><title
+>Тип гри:</title
+><para
+>Гра на дошці</para
+></note>
+<note
+><title
+>Можлива кількість гравців:</title
+><para
+>Один</para
+></note>
+<para
+>&klickety; — варіант гри «Клікоманія» (Clickomania). Правила подібні до «Тієї самої гри»: вашою метою є спорожнення дошки натисканням груп шматочків для їх вилучення. Мета гри — завершити гру з найменшим рахунком. У гру можуть грати гравці з різним рівнем підготовки, — виклик вашим логічним здібностям полягає у тому, щоб рахунок був найменшим. </para>
+</chapter>
+
+<chapter id="how-to-play">
+<title
+>Як грати</title
+><!-- do not change this! -->
+<note
+><title
+>Мета:</title
+><para
+>Спорожнити ігрову дошку від кольорових блоків за найменший проміжок часу.</para
+></note>
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+<para
+>Після запуску програми ви побачите вікно, подібне до наведеного на знімку у попередньому розділі. Ігровий процес полягає у вилученні блоків наведенням на них вказівника миші з наступним клацанням лівою кнопкою миші. </para>
+<para
+>Вилучати блок можна, лише якщо він буде сусіднім з одним або декількома блокам того самого кольору з одного або декількох боків. Діагональні блоки не враховуються. На початку кожної гри ви матимете справу з дошкою, сформованою випадковим чином. </para>
+<para
+>Після клацання на блоці, з’єднаному з іншими блоками описаним вище способом, блок зникне. Всі сусідні блоки одного кольору також зникнуть, разом з усіма сусідніми з <emphasis
+>ними</emphasis
+> блоками тощо. Всі розташовані вище блоки впадуть, щоб заповнити прогалини, що залишилися після зникнення шматочків. Якщо зникне цілий стовпчик, всі стовпчики буде пересунуто праворуч, щоб заповнити прогалини. </para>
+<para
+>Гра завершується, якщо на дошці не залишиться сусідніх блоків однакового кольору. </para>
+
+<sect1 id="game-screen">
+<title
+>Вікно гри</title>
+<para>
+<screenshot>
+<screeninfo
+>Знімок вікна &klickety;</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Знімок вікна</phrase
+></textobject>
+</mediaobject>
+</screenshot
+>Короткий опис частин вікна гри. </para>
+<variablelist>
+<varlistentry>
+<term
+>Вікно гри</term>
+<listitem
+><para
+>Вікно гри перебуває у центрі вікна програми і є його найбільшою частиною. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Смужка стану</term>
+<listitem
+><para
+>Смужку стану розташовано у нижній частині вікна. На смужці стану показано кількість шматочків, які залишилися на дошці, та таймер гри, який буде показувати час, що сплив з початку гри, до завершення гри. </para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+</chapter>
+
+<chapter id="ksame_mode">
+<title
+>Режим «Тієї самої гри»</title
+><!-- do not change this! -->
+<para
+>У &klickety; передбачено режим обчислення рахунка «Тієї самої гри». </para>
+<para
+>Рахунок обчислюється таким чином:</para>
+<para
+>Від кількості кульок, які вилучено віднімається число 2, а результат підноситься до квадрату. </para>
+<para
+>Наприклад, якщо ви вилучили 7 кульок, ви отримаєте 25 очок (7 мінус 2 = 5. 5 у квадраті — це 25 очок). Якщо ви вилучите 8 кульок, ви отримаєте 36 очок (8 мінус 2 = 6. 6 у квадраті — це 36 очок). </para>
+<para
+>Зберіть якомога більше однакових кульок разом, а потім вилучіть їх одним клацанням кнопкою миші, — так ви отримаєте більше очок. Гру буде завершено, коли на дошці не залишиться більше кульок для вилучення. </para>
+<para
+>Після цього ваш результат буде зменшено відповідно до кількості кульок, що залишилися на дошці. Якщо вам поталанить вилучити всі кульки, до вашого остаточного результату буде додано бонус у 1.000 очок. </para>
+<screenshot>
+<screeninfo
+>Знімок гри &klickety; у режимі «Тієї самої гри»</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Знімок вікна</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</chapter>
+
+<chapter id="interface">
+<title
+>Огляд інтерфейсу</title
+><!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+<sect1 id="default-keybindings">
+<title id="keybindings-title"
+>Типові клавіатурні скорочення</title>
+<para
+>Типовими клавіатурними скороченнями є такі:</para>
+
+<table>
+<title
+>Клавіатурні скорочення</title>
+<tgroup cols="2">
+<tbody>
+<row>
+<entry
+>Нова</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Завантажити</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Перезапуск гри</entry>
+<entry
+><keycap
+>F5</keycap
+></entry>
+</row>
+<row>
+<entry
+>Зберегти</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Призупинити</entry>
+<entry
+><keycap
+>P</keycap
+></entry>
+</row>
+<row>
+<entry
+>Показати найкращі результати</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Вийти</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Вернути</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Повторити</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Підручник з &klickety;</entry>
+<entry
+><keycap
+>F1</keycap
+></entry>
+</row>
+<row>
+<entry
+>Довідка «Що це?»</entry>
+<entry
+><keycombo action="simul"
+>&Shift;<keycap
+>F1</keycap
+></keycombo
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect1>
+
+<sect1 id="menu">
+<title
+>Пункти меню</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Нова</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Починає нову гру.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Завантажити...</guimenuitem
+></menuchoice
+> (не у режимі «Тієї самої гри») </term>
+<listitem
+><para
+>Завантажує збережену раніше гру.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Перезапустити гру</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Перезапускає поточну гру.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Гра</guimenu
+> <guimenuitem
+>Нова пронумерована гра...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Починає нову особливо пронумеровану гру.</action>
+    <screenshot>
+    <screeninfo
+>Діалогове вікно початку пронумерованої гри</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Діалогове вікно початку пронумерованої гри</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Зберегти</guimenuitem
+></menuchoice
+> (не у режимі «Тієї самої гри»)</term>
+<listitem
+><para
+>Зберігає поточну позицію у грі на диск.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>P</keycap
+></shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Пауза</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Призупиняє або поновлює гру. Якщо гру буде призупинено, всі плитки буде приховано.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Показати найкращі результати</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показує список найкращих результатів.</action>
+    <screenshot>
+    <screeninfo
+>Показ списку найкращих результатів</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Показ списку найкращих результатів</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para>
+<para
+>Якщо ваш результат у грі потрапить до десятки найкращих результатів, програма запросить вас до введення вашого імені. </para
+> </listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Вийти</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Вибір цього пункту меню призведе до завершення поточної гри і закриття вікна &klickety;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Хід</guimenu
+> <guimenuitem
+>Вернути</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Скасовує останній зроблений вами хід.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Хід</guimenu
+> <guimenuitem
+>Повторити</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Якщо ви перед цим скасовували хід, ви можете його повторити за допомогою цього пункту.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Хід</guimenu
+> <guimenuitem
+>Скасувати всі дії</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Скасовує</action
+> всі зроблені вами ходи.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Хід</guimenu
+> <guimenuitem
+>Повторити всі дії</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Повторює</action
+> всі скасовані ходи.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Параметри</guimenu
+> <guisubmenu
+>Складність</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<para
+>Встановіть рівень складності за допомогою підменю.</para>
+<para
+>Передбачено чотири рівня складності: <itemizedlist>
+<listitem
+><para
+><guimenuitem
+>Дуже простий</guimenuitem
+>: 16 рядків, 10 стовпчиків, 3 типи шматочків.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Простий</guimenuitem
+>: 16 рядків, 10 стовпчиків, 4 типи шматочків.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Середній</guimenuitem
+>: 16 рядків, 10 стовпчиків, 5 типів шматочків.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Складний</guimenuitem
+>: 16 рядків, 10 стовпчиків, 6 типів шматочків.</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Крім того, передбачено <guimenuitem
+>Нетипові</guimenuitem
+> параметри рівня.</para>
+<para
+>Якщо ви оберете пункт <guimenuitem
+>Нетиповий</guimenuitem
+>, у грі буде використано параметри, які ви встановили за допомогою діалогового вікна <guimenuitem
+>Налаштувати &klickety;</guimenuitem
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Крім того, у &klickety; передбачено типові для &kde; пункти меню <guimenu
+>Параметри</guimenu
+> і <guimenu
+>Довідка</guimenu
+>. Щоб дізнатися більше, ознайомтеся з розділами щодо <ulink url="help:/fundamentals/menus.html#menus-settings"
+>меню «Параметри»</ulink
+> та <ulink url="help:/fundamentals/menus.html#menus-help"
+>меню «Довідка»</ulink
+> підручника з основ роботи у &kde;. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Поширені запитання</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question
+><para
+>Я хочу змінити вигляд цієї гри. Як це зробити? </para
+></question>
+<answer
+><para
+>Щоб змінити зовнішній вигляд вікна &klickety;, скористайтесь пунктом меню, який відкриває <link linkend="configuration"
+>інструмент налаштування</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Чи можна використовувати для гри клавіатуру?</para
+></question>
+<answer
+><para
+>Ні. У цій грі ще немає можливості грати за допомогою клавіатури.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Як запустити гру у режимі «Тієї самої гри» (KSame)?</para
+></question>
+<answer
+><para
+>Запустити klickety можна за допомогою команди <userinput
+>klickety --KSameMode</userinput
+> або пункту головного меню програм «Тієї самої гри».</para
+></answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Налаштування гри</title
+><!-- do not change this! -->
+<!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
+<para
+>Пункт меню <menuchoice
+><guimenu
+>Параметри</guimenu
+><guimenuitem
+>Налаштувати &klickety;...</guimenuitem
+></menuchoice
+> відкриває діалогове вікно <guilabel
+>Налаштувати &klickety;</guilabel
+>.</para>
+
+<sect1 id="general-options">
+<title
+>Загальні параметри</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Показувати лінії меж</guilabel
+></term>
+<listitem
+><para
+>Якщо буде позначено цей пункт, буде показано лінії меж між шматочками різних кольорів. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Увімкнути анімацію</guilabel
+></term>
+<listitem
+><para
+>За допомогою цього пункту можна увімкнути анімацію падіння і об’єднання шматочків під час зникання. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Увімкнути підсвічування</guilabel
+></term>
+<listitem
+><para
+>За допомогою цього пункту можна увімкнути підсвічування шматочків блоків, які буде вилучено, якщо ви клацнете лівою кнопкою миші у поточній позиції вказівника. </para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Загальні параметри</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-general.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Загальні параметри</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="theme-options">
+<title
+>Параметри теми</title>
+<variablelist>
+<varlistentry>
+<term
+>Вибір <guilabel
+>Теми</guilabel
+></term>
+<listitem
+><para
+>Скористайтеся панеллю вибору <guilabel
+>Теми</guilabel
+>, щоб вказати оформлення вікна гри.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Параметри теми</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Параметри теми</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="background-options">
+<title
+>Параметри тла</title>
+<para
+>Ви можете вибрати графічне тло вікна гри. Передбачено декілька варіантів тла панелі гри. <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Тема</guilabel
+></term>
+<listitem
+><para
+>Використовувати тло, що є частиною поточної теми.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Колір</guilabel
+></term>
+<listitem
+><para
+>Використовувати суцільний колір тла.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Зображення</guilabel
+></term>
+<listitem
+><para
+>Використовувати зображення для графічного тла.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<screenshot>
+<screeninfo
+>Параметри тла</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-background.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Параметри тла</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="customgame-options">
+<title
+>Параметри нетипової гри</title>
+<para
+>Ви можете встановити <guilabel
+>Висоту</guilabel
+> і <guilabel
+>Ширину</guilabel
+> дошки та <guilabel
+>Кількість кольорів</guilabel
+>, використану на нетиповому рівні. </para>
+<screenshot>
+<screeninfo
+>Нетипові параметри гри</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Нетипові параметри гри</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Подяки і ліцензія</title>
+<para
+>&klickety;</para>
+<para
+>Авторські права на програму належать Eirik Eng, 1995</para>
+<para
+>Авторські права на програму належать &Nicolas.Hadacek; &Nicolas.Hadacek.mail;, 1996–2004</para>
+<para
+>Авторські права на програму належать Ni Hui <email
+>shuizhuyuanluo@126.com</email
+>, 2010</para>
+<para
+>Авторські права на документацію до програми належать Thomas Davey, 2005</para>
+<para
+>Авторські права на документацію належать Ni Hui <email
+>shuizhuyuanluo@126.com</email
+>, 2010</para>
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>

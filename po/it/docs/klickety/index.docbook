@@ -1,0 +1,949 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE"
+><!-- do not change this! -->
+  <!ENTITY % Italian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klickety" lang="&language;"
+><!-- do not change this! -->
+<bookinfo>
+<title
+>Manuale di &klickety;</title
+><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immediate authors begins here. -->
+<authorgroup>
+<author
+><personname
+> <firstname
+>Thomas</firstname
+> <surname
+>Davey</surname
+> </personname
+> <email
+>thomas.davey@gmail.com</email
+> </author>
+<author
+><personname
+> <firstname
+>Hui</firstname
+> <surname
+>Ni</surname
+> </personname
+> <email
+>shuizhuyuanluo@126.com</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>ZEnith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Thomas Davey</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Ni Hui</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-08</date>
+<releaseinfo
+>2.1 (KDE Gear 21.04)</releaseinfo>
+
+<abstract>
+<para
+>&klickety; è un gioco di strategia della comunità &kde;, un adattamento del gioco <application
+>Clickomania</application
+>.</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+<keyword
+>KDE</keyword
+><!-- do not change this! -->
+<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+<keyword
+>gioco</keyword
+><!-- do not change this! -->
+<keyword
+>Klickety</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+<keyword
+>tabellone</keyword>
+<keyword
+>logica</keyword>
+<keyword
+>strategia</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+<keyword
+>un giocatore</keyword>
+<!--All other relevant keywords-->
+</keywordset>
+
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction">
+<title
+>Introduzione</title
+><!-- do not change this! -->
+<note
+><title
+>Tipo di gioco:</title
+><para
+>Tabellone</para
+></note>
+<note
+><title
+>Numero di giocatori possibile:</title
+><para
+>Uno</para
+></note>
+<para
+>&klickety; è un adattamento del gioco <application
+>Clickomania</application
+>. Le regole sono simili a quelle del gioco <literal
+>Same</literal
+>: l'obbiettivo è pulire il tabellone facendo clic su dei gruppi per rimuoverli. Lo scopo complessivo è ottenere il punteggio più basso possibile. È divertente a tutti i livelli di abilità, ma anche una sfida logica se vuoi arrivare a un punteggio veramente basso. </para>
+</chapter>
+
+<chapter id="how-to-play">
+<title
+>Come si gioca</title
+><!-- do not change this! -->
+<note
+><title
+>Obbiettivo:</title
+><para
+>Ripulire il tabellone di gioco da tutti i blocchi colorati nel minimo tempo possibile.</para
+></note>
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+<para
+>Quando avvii il programma vedrai una schermata che assomiglia a quella della sezione precedente. L'idea del gioco è rimuovere i blocchi, cosa che si fa facendoci clic. </para>
+<para
+>Però, puoi rimuovere un blocco solo se è adiacente a uno o più altri blocchi dello stesso colore su uno o più dei sui lati. I collegamenti diagonali non contano. Ti viene presentata un tabellone casuale ogni volta che cominci una partita. </para>
+<para
+>Se fai clic su un blocco collegato come descritto, sparirà. Anche tutti i blocchi adiacenti dello stesso colore spariranno, insieme a tutti quelli dello stesso colore adiacenti <emphasis
+>a loro</emphasis
+>, e così via. I blocchi soprastanti cadranno per riempire i vuoti lasciati dai pezzi rimossi. Se pulisci un'intera colonna, tutte le colonne a destra si sposteranno per riempire il vuoto. </para>
+<para
+>Il gioco finisce quando non ci sono più blocchi adiacenti dello stesso colore. </para>
+
+<sect1 id="game-screen">
+<title
+>Lo schermo di gioco</title>
+<para>
+<screenshot>
+<screeninfo
+>Una schermata di &klickety;</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Schermata</phrase
+></textobject>
+</mediaobject>
+</screenshot
+>Una rapida spiegazione delle parti dello schermo di gioco. </para>
+<variablelist>
+<varlistentry>
+<term
+>Schermo di gioco</term>
+<listitem
+><para
+>Lo schermo di gioco è al centro dello schermo ed è la parte principale della finestra. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Barra di stato</term>
+<listitem
+><para
+>La barra di stato si trova in fondo allo schermo. Mostra quanti pezzi rimangono e il cronometro della partita, che registra il tempo passato dall'inizio della partita fino alla sua fine. </para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+</chapter>
+
+<chapter id="ksame_mode">
+<title
+>Modalità &ksame;</title
+><!-- do not change this! -->
+<para
+>&klickety; fornisce una modalità di punteggio &ksame;. </para>
+<para
+>Il punteggio è calcolato come segue:</para>
+<para
+>Sottrai 2 dal numero di piastre rimosse, ed eleva il risultato al quadrato. </para>
+<para
+>Per esempio, se rimuovi 7 piastre, ottieni 25 punti (7 meno 2 = 5, 5 al quadrato è 25 punti). Se rimuovi 8 piastre sono 36 punti (8 meno 2 = 6, 6 al quadrato è 36 punti). </para>
+<para
+>Raccogli tutti i pezzi che puoi, e quindi eliminali in un clic. In questo modo avrai un punteggio maggiore. Il gioco finisce quando non ci sono più pezzi rimovibili. </para>
+<para
+>Il punteggio è quindi ridotto del numero di pezzi rimasti. Se li rimuovi tutti, un bonus di 1000 punti verrà aggiunto al punteggio finale. </para>
+<screenshot>
+<screeninfo
+>Una schermata di &klickety; in modalità &ksame;</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Schermata</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</chapter>
+
+<chapter id="interface">
+<title
+>Panoramica dell'interfaccia</title
+><!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+<sect1 id="default-keybindings">
+<title id="keybindings-title"
+>Associazioni di tasti predefinite</title>
+<para
+>Le scorciatoie predefinite sono:</para>
+
+<table>
+<title
+>Scorciatoie</title>
+<tgroup cols="2">
+<tbody>
+<row>
+<entry
+>Nuova</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Carica</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Riavvia la partita</entry>
+<entry
+><keycap
+>F5</keycap
+></entry>
+</row>
+<row>
+<entry
+>Salva</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Pausa</entry>
+<entry
+><keycap
+>P</keycap
+></entry>
+</row>
+<row>
+<entry
+>Mostra la classifica</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Esci</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Annulla</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Rifai</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Manuale di &klickety;</entry>
+<entry
+><keycap
+>F1</keycap
+></entry>
+</row>
+<row>
+<entry
+>Aiuto «Che cos'è?»</entry>
+<entry
+><keycombo action="simul"
+>&Shift;<keycap
+>F1</keycap
+></keycombo
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect1>
+
+<sect1 id="menu">
+<title
+>Elementi dei menu</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Partita</guimenu
+> <guimenuitem
+>Nuova</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Avvia una nuova partita.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Partita</guimenu
+> <guimenuitem
+>Carica...</guimenuitem
+> </menuchoice
+> (not in modalità KSame) </term>
+<listitem
+><para
+>Carica una partita precedentemente salvata.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Partita</guimenu
+> <guimenuitem
+>Riavvia la partita</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Riavvia la partita attuale.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Partita</guimenu
+><guimenuitem
+>Nuova partita numerata</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Avvia una partita con un numero specifico.</action>
+    <screenshot>
+    <screeninfo
+>Finestra di avvio di una partita numerata</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Finestra di avvio di una partita numerata</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Partita</guimenu
+> <guimenuitem
+>Salva</guimenuitem
+> </menuchoice
+> (non in modalità KSame)</term>
+<listitem
+><para
+>Salva lo stato attuale della partita sul disco.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>P</keycap
+> </shortcut
+> <guimenu
+>Partita</guimenu
+> <guimenuitem
+>Pausa</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mette in pausa o riprende la partita. Durante la pausa tutte le piastre sono nascoste.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Partita</guimenu
+> <guimenuitem
+>Mostra la classifica</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra la classifica.</action>
+    <screenshot>
+    <screeninfo
+>Mostra la classifica</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Mostra la classifica</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para>
+<para
+>Quando il tuo punteggio supera i dieci punteggi massimi elencati, ti verrà chiesto di inserire il tuo nome. </para
+> </listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Partita</guimenu
+> <guimenuitem
+>Esci</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Selezionare questo elemento concluderà la partita attuale e uscirà da &klickety;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Mossa</guimenu
+> <guimenuitem
+>Annulla</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Annulla l'ultima mossa fatta.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Mossa</guimenu
+> <guimenuitem
+>Rifai</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Se precedentemente hai annullato una mossa, la puoi eseguire nuovamente.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Mossa</guimenu
+> <guimenuitem
+>Annulla tutto</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Annulla</action
+> tutte le mosse fatte.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Mossa</guimenu
+> <guimenuitem
+>Rifai tutto</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Rifai</action
+> tutte le mosse annullate.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Impostazioni</guimenu
+> <guisubmenu
+>Difficoltà</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<para
+>Permette di impostare il livello di difficoltà con un sottomenu.</para>
+<para
+>Ci sono quattro livelli di difficoltà: <itemizedlist>
+<listitem
+><para
+><guimenuitem
+>Molto facile</guimenuitem
+>: 16 righe, 10 colonne, 3 tipi di pezzi.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Facile</guimenuitem
+>: 16 righe, 10 colonne, 4 tipi di pezzi.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Medio</guimenuitem
+>: 16 righe, 10 colonne, 5 tipi di pezzi.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Difficile</guimenuitem
+>: 16 righe, 10 colonne, 6 tipi di pezzi.</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>C'è anche un'impostazione per una difficoltà <guimenuitem
+>Personalizzata</guimenuitem
+>.</para>
+<para
+>Se selezioni <guimenuitem
+>Personalizzata</guimenuitem
+>, saranno usate le impostazioni configurate nella finestra <guimenuitem
+>Configura - &klickety;</guimenuitem
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Inoltre, &klickety; ha le normali voci del menu di &kde; <guimenu
+>Impostazioni</guimenu
+> e <guimenu
+>Aiuto</guimenu
+>; per maggiori informazioni leggi la sezione sul <ulink url="help:/fundamentals/menus.html#menus-settings"
+>menu Impostazioni</ulink
+> e sul <ulink url="help:/fundamentals/menus.html#menus-help"
+>menu Aiuto</ulink
+> dei Fondamentali di &kde;. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Domande ricorrenti</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question
+><para
+>Voglio cambiare l'aspetto del gioco. Posso? </para
+></question>
+<answer
+><para
+>Sì. Per cambiare l'aspetto di &klickety;, usa la barra dei menu per aprire l'<link linkend="configuration"
+>utilità di configurazione</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Posso usare la tastiera per giocare?</para
+></question>
+<answer
+><para
+>No. Questo gioco non include ancora una modalità da tastiera.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Come avvio la partita in modalità &ksame;?</para
+></question>
+<answer
+><para
+>Puoi avviare &klickety; con il comando <userinput
+>klickety --KSameMode</userinput
+> o con la voce di &ksame; dal menu K.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Configurazione del gioco</title
+><!-- do not change this! -->
+<!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
+<para
+><menuchoice
+><guimenu
+>Impostazioni</guimenu
+><guimenuitem
+>Configura &klickety;</guimenuitem
+></menuchoice
+> apre la finestra <guilabel
+>Configura - &klickety;</guilabel
+>.</para>
+
+<sect1 id="general-options">
+<title
+>Opzioni generali</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Mostra le linee di confine</guilabel
+></term>
+<listitem
+><para
+>Questa opzione mostrerà le linee di confine tra pezzi di colore diverso. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Abilita le animazioni</guilabel
+></term>
+<listitem
+><para
+>Questa opzione abiliterà le animazioni di caduta e fusione quando i pezzi vengono rimossi. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Abilita l'evidenziazione</guilabel
+></term>
+<listitem
+><para
+>Questa opzione abiliterà l'evidenziazione dei pezzi su cui passa il mouse se possono essere rimossi. </para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Opzioni generali</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-general.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opzioni generali</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="theme-options">
+<title
+>Opzioni dei temi</title>
+<variablelist>
+<varlistentry>
+<term
+>Selettore del <guilabel
+>Tema</guilabel
+></term>
+<listitem
+><para
+>Usa il selettore del <guilabel
+>Tema</guilabel
+> per impostare un tema del gioco.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Opzioni dei temi</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opzioni dei temi</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="background-options">
+<title
+>Opzioni dello sfondo</title>
+<para
+>Puoi scegliere un elemento grafico di sfondo per il gioco. Ci sono tre tipi di sfondo che puoi usare. <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tema</guilabel
+></term>
+<listitem
+><para
+>Usa lo sfondo fornito con il tema attuale.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Colore</guilabel
+></term>
+<listitem
+><para
+>Usa un colore uniforme personalizzato come sfondo.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Immagine</guilabel
+></term>
+<listitem
+><para
+>Usa un'immagine come sfondo.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<screenshot>
+<screeninfo
+>Opzioni dello sfondo</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-background.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opzioni dello sfondo</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="customgame-options">
+<title
+>Opzioni per le partite personalizzate</title>
+<para
+>Puoi impostare l'<guilabel
+>Altezza:</guilabel
+> e la <guilabel
+>Larghezza:</guilabel
+> del tabellone e il <guilabel
+>Numero di colori:</guilabel
+> da usare nel tuo livello personalizzato. </para>
+<screenshot>
+<screeninfo
+>Opzioni per le partite personalizzate</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opzioni per le partite personalizzate</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Riconoscimenti e licenza</title>
+<para
+>&klickety;</para>
+<para
+>Copyright del programma 1995 di Eirik Eng</para>
+<para
+>Copyright del programma 1996&ndash;2004 di &Nicolas.Hadacek; &Nicolas.Hadacek.mail;</para>
+<para
+>Copyright del programma 2010 di Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>Copyright della documentazione 2005 di Thomas Davey</para>
+<para
+>Copyright della documentazione 2010 di Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>Traduzione di Federico Zenith<email
+>federico.zenith@member.fsf.org</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>

@@ -1,0 +1,931 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE"
+><!-- do not change this! -->
+  <!ENTITY % Dutch "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klickety" lang="&language;"
+><!-- do not change this! -->
+<bookinfo>
+<title
+>Het handboek van &klickety;</title
+><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immediate authors begins here. -->
+<authorgroup>
+<author
+><personname
+> <firstname
+>Thomas</firstname
+> <surname
+>Davey</surname
+> </personname
+> <email
+>thomas.davey@gmail.com</email
+> </author>
+<author
+><personname
+> <firstname
+>Hui</firstname
+> <surname
+>Ni</surname
+> </personname
+> <email
+>shuizhuyuanluo@126.com</email
+> </author>
+&Freek.de.Kruijf;&Ronald.Stroethoff; 
+</authorgroup>
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Thomas Davey</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Ni Hui</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-08</date>
+<releaseinfo
+>2.1 (KDE Gear 21.04)</releaseinfo>
+
+<abstract>
+<para
+>&klickety; is een strategiespel door &kde;, een aanpassing van het <application
+>Clickomania</application
+> spel.</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+<keyword
+>KDE</keyword
+><!-- do not change this! -->
+<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+<keyword
+>spel</keyword
+><!-- do not change this! -->
+<keyword
+>Klickety</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+<keyword
+>bord</keyword>
+<keyword
+>logica</keyword>
+<keyword
+>strategie</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+<keyword
+>één speler</keyword>
+<!--All other relevant keywords-->
+</keywordset>
+
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction">
+<title
+>Inleiding</title
+><!-- do not change this! -->
+<note
+><title
+>Speltype:</title
+><para
+>Bord</para
+></note>
+<note
+><title
+>Aantal mogelijke spelers:</title
+><para
+>Eén</para
+></note>
+<para
+>&klickety; is een aangepaste versie van het <application
+>Clickomania</application
+> spel. De regels zijn vergelijkbaar met die van het spel <literal
+>Same</literal
+>: uw doel is het speelbord leeg te krijgen door op de groepen te klikken om ze te vernietigen. Het uiteindelijke doel is om een zo laag mogelijke score te krijgen. Het kan vermaak op alle mogelijke niveaus bieden, maar is vooral uitdagend in logisch denken als u een echt lage score wilt krijgen </para>
+</chapter>
+
+<chapter id="how-to-play">
+<title
+>Hoe te spelen</title
+><!-- do not change this! -->
+<note
+><title
+>Doel:</title
+><para
+>Verwijder alle gekleurde blokken in de kortst mogelijke tijd.</para
+></note>
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+<para
+>Na het starten van het programma ziet een scherm dat eruitziet zoals het schermafdruk in de vorige sectie. Het doel van het spel is het verwijderen van blokken, wat u doet door erop te klikken. </para>
+<para
+>Maar u kunt ze alleen verwijderen als het grenst aan een of meer blokken met dezelfde kleur. Diagonale verbindingen tellen niet. Iedere keer dat u een nieuw spel start krijgt u een willekeurig bord. </para>
+<para
+>Als u op een blok klikt die zoals voorgeschreven verbonden is, dan zal het verdwijnen. Alle blokken die er aan grenzen zullen ook verdwijnen, samen met alle blokken van dezelfde kleur aan <emphasis
+>hen</emphasis
+> grenzen, en zo voorts. Alle blokken erboven vallen vervolgens omlaag zodat de gaten ontstaan door de verdwenen stukken weer opgevuld zijn. Als u een complete kolom heeft verwijderd dan zullen alle kolommen rechts ervan naar links verschuiven om het gat weer te dichten. </para>
+<para
+>Het spel eindigt wanneer er geen blokken naast andere blokken van dezelfde kleur liggen. </para>
+
+<sect1 id="game-screen">
+<title
+>Het speelveld</title>
+<para>
+<screenshot>
+<screeninfo
+>Een schermafdruk van &klickety;</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Schermafdruk</phrase
+></textobject>
+</mediaobject>
+</screenshot
+>Een korte uitleg van de onderdelen van het speelveld. </para>
+<variablelist>
+<varlistentry>
+<term
+>Speelveld</term>
+<listitem
+><para
+>Het speelveld vindt u in het midden van het scherm en vormt het grootste gedeelte van het venster. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Statusbalk</term>
+<listitem
+><para
+>De statusbalk vindt u onderaan het scherm. Het toont hoeveel stukken er nog over zijn en de speeltijd, de verstreken tijd vanaf het start van het spel totdat het spel is geëindigd. </para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+</chapter>
+
+<chapter id="ksame_mode">
+<title
+>De KSame modus</title
+><!-- do not change this! -->
+<para
+>&klickety; heeft ook een &ksame; score modus. </para>
+<para
+>Het puntentotaal wordt als volgt berekend:</para>
+<para
+>Trek 2 af van het aantal verwijderde parels, en neem daar het kwadraat van. </para>
+<para
+>Als voorbeeld, als u 7 ballen verwijdert, dan krijgt u 25 punten (7 min 2 = 5, het kwadraat van 5 is 25 punten). Als u 8 ballen verwijdert, dan krijgt u 36 punten (8 min 2 = 6, het kwadraat van 6 is 36). </para>
+<para
+>Pak zoveel parels als u kunt en verwijder ze met een muisklik. Op die manier krijgt u de meeste punten. Het spel is afgelopen als er geen parels meer kunnen worden verwijderd. </para>
+<para
+>Het puntentotaal wordt dan verminderd met het aantal achtergebleven parels. Als u alle parels verwijdert, dan krijgt u 1.000 bonuspunten. </para>
+<screenshot>
+<screeninfo
+>Een schermafdruk van &klickety; in de KSame modus</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Schermafdruk</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</chapter>
+
+<chapter id="interface">
+<title
+>Overzicht van het interface</title
+><!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+<sect1 id="default-keybindings">
+<title id="keybindings-title"
+>Standaard sneltoetsen</title>
+<para
+>Standaard sneltoetsen zijn:</para>
+
+<table>
+<title
+>Sneltoetsen</title>
+<tgroup cols="2">
+<tbody>
+<row>
+<entry
+>Nieuw</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Laden</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Spel herstarten</entry>
+<entry
+><keycap
+>F5</keycap
+></entry>
+</row>
+<row>
+<entry
+>Opslaan</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Pauzeren</entry>
+<entry
+><keycap
+>P</keycap
+></entry>
+</row>
+<row>
+<entry
+>Hoogste scores tonen.</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Afsluiten</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Ongedaan maken</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Opnieuw</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Handboek van &klickety;</entry>
+<entry
+><keycap
+>F1</keycap
+></entry>
+</row>
+<row>
+<entry
+>Wat is dit? help</entry>
+<entry
+><keycombo action="simul"
+>&Shift;<keycap
+>F1</keycap
+></keycombo
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect1>
+
+<sect1 id="menu">
+<title
+>Menu-items</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Nieuw</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Start een nieuw spel.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Laden...</guimenuitem
+> </menuchoice
+> (niet in modus KSame) </term>
+<listitem
+><para
+>Hiermee wordt een eerder opgeslagen spel weer ingelezen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Spel herstarten</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Dit zal het spel opnieuw starten.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spel</guimenu
+> <guimenuitem
+>Nieuw genummerd spel...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Start een opgegeven genummerd spel.</action>
+    <screenshot>
+    <screeninfo
+>Dialoog Nieuw spel</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Dialoog nieuw spel</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Opslaan</guimenuitem
+> </menuchoice
+> (niet in modus KSame)</term>
+<listitem
+><para
+>Slaat de huidige spelsituatie op naar de schijf.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>P</keycap
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Pauzeren</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Pauzeert of gaat verder met het spel. Wanneer het spel is gepauzeerd zijn de stenen niet te zien.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Topscores tonen</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Toont de lijst met de tien hoogste scores.</action>
+    <screenshot>
+    <screeninfo
+>Topscores tonen</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Topscores tonen</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para>
+<para
+>Wanneer u een score behaalt die hoog genoeg is om in de lijst te worden opgenomen wordt u gevraagd uw naam in te voeren. </para
+> </listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Afsluiten</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Als u dit selecteert dan stopt uw speelronde en sluit &klickety; af.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Zet</guimenu
+> <guimenuitem
+>Ongedaan maken</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Maakt uw laatste zet ongedaan.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Zet</guimenu
+> <guimenuitem
+>Opnieuw</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Als u eerder een zet ongedaan hebt gemaakt, dan kunt u die hiermee opnieuw uitvoeren.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Zet</guimenu
+> <guimenuitem
+>Alles ongedaan maken</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Alle door u gemaakte zetten <action
+>ongedaan maken</action
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Zet</guimenu
+> <guimenuitem
+>Alles opnieuw doen</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Opnieuw</action
+> alle ongedaan gemaakte zetten uitvoeren.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Instellingen</guimenu
+> <guisubmenu
+>Moeilijkheidsgraad</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<para
+>Hier kunt u de moeilijkheidsgraad in een submenu selecteren.</para>
+<para
+>Er zijn vier moeilijkheidsgraden: <itemizedlist>
+<listitem
+><para
+><guimenuitem
+>Zeer eenvoudig</guimenuitem
+>: 16 rijen, 10 kolommen, 3 soorten stenen</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Gemakkelijk</guimenuitem
+>: 16 rijen, 10 kolommen, 4 soorten stenen.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Gemiddeld</guimenuitem
+>: 16 rijen, 10 kolommen, 5 soorten stenen.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Moeilijk</guimenuitem
+>: 16 rijen, 10 kolommen, 6 soorten stenen.</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Daarnaast is er ook een niveau-instelling <guimenuitem
+>Aangepast</guimenuitem
+>.</para>
+<para
+>Als u <guimenuitem
+>Aangepast</guimenuitem
+> selecteert, dan zult u de instellingen, die u in het dialoogvenster <guimenuitem
+>Configureren - &klickety;</guimenuitem
+> hebt geconfigureerd, gebruiken.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Bovendien heeft &klickety; de gezamenlijke menu-items van &kde; <guimenu
+>Instellingen</guimenu
+> en <guimenu
+>Help</guimenu
+>, voor meer informatie lees de secties over de <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menu Instellingen</ulink
+> en <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menu Help</ulink
+> van &kde;-fundamentals. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Veel voorkomende vragen</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question
+><para
+>Ik wil het uiterlijk van dit spel wijzigen. Kan dat? </para
+></question>
+<answer
+><para
+>Ja. Om het uiterlijk van &klickety; te wijzigen gebruikt u de menubalk om het <link linkend="configuration"
+>configuratieprogramma</link
+> te openen.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Kan ik het toetsenbord gebruiken om het spel te spelen?</para
+></question>
+<answer
+><para
+>Nee. Het is nog niet mogelijk dit spel met het toetsenbord te spelen.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Hoe start ik het spel in de Ksame modus?</para
+></question>
+<answer
+><para
+>U kunt &klickety; starten met het commando <userinput
+>klickety --KSameMode</userinput
+> of het &ksame; menu item in het K menu.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Spelconfiguratie</title
+><!-- do not change this! -->
+<!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
+<para
+><menuchoice
+><guimenu
+>Instellen</guimenu
+><guimenuitem
+>&klickety; instellen...</guimenuitem
+></menuchoice
+> opent het <guilabel
+>instellen - &klickety;</guilabel
+> dialoogvenster.</para>
+
+<sect1 id="general-options">
+<title
+>Algemene opties</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gebonden lijnen tonen</guilabel
+></term>
+<listitem
+><para
+>Als dit is ingeschakeld dan zijn er scheidingslijnen te zien tussen stukken met een verschillende kleur. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Animatie activeren</guilabel
+></term>
+<listitem
+><para
+>Als dit is ingeschakeld dan zijn bij het verwijderen van stukken de vallende en samenvoegende animaties te zien. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Accentuering activeren</guilabel
+></term>
+<listitem
+><para
+>Als dit is ingeschakeld dan lichten de stenen op als u ze kunt verwijderen en u er met uw muis boven zweeft. </para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Algemene opties</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-general.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Algemene opties</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="theme-options">
+<title
+>Thema opties</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Thema</guilabel
+> selectie</term>
+<listitem
+><para
+>Gebruikt de <guilabel
+>Thema</guilabel
+> selectie om een thema voor het spel te kiezen.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Thema keuzes</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Thema keuzes</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="background-options">
+<title
+>Opties voor de achtergrond</title>
+<para
+>Hier kunt u het achtergrond voor het spel instellen. Er zijn drie soorten achtergronden die u kunt kiezen. <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Thema</guilabel
+></term>
+<listitem
+><para
+>Gebruik een van de achtergronden die met dit spel zijn meegeleverd.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kleur</guilabel
+></term>
+<listitem
+><para
+>Gebruik een zelf uitgekozen kleur voor de achtergrond.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Afbeelding</guilabel
+></term>
+<listitem
+><para
+>Een afbeelding voor de achtergrond gebruiken.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<screenshot>
+<screeninfo
+>Opties voor de achtergrond</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-background.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opties voor de achtergrond</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="customgame-options">
+<title
+>Opties voor eigen spellen</title>
+<para
+>U kunt de <guilabel
+>Hoogte:</guilabel
+> en <guilabel
+>Breedte:</guilabel
+> van het speelveld en het <guilabel
+>Aantal kleuren</guilabel
+> gebruikt in uw aangepaste niveau aanpassen. </para>
+<screenshot>
+<screeninfo
+>Opties voor eigen spellen</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opties voor eigen spellen</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Dankbetuigingen en licentie</title>
+<para
+>&klickety;</para>
+<para
+>Programma Copyright &copy; 1995, Eirik Eng</para>
+<para
+>Programma copyright &copy; 1996&ndash;2004, &Nicolas.Hadacek; &Nicolas.Hadacek.mail;</para>
+<para
+>Programma Copyright &copy; 2010, Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>Documentatie Copyright &copy; 2005, Thomas Davey</para>
+<para
+>Documentatie Copyright &copy; 2010, Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+&meld.fouten;&vertaling.freek;&vertaling.ronald; &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>

@@ -1,0 +1,375 @@
+# Translation of klickety.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2010, 2015, 2016.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: klickety\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-12 03:22+0200\n"
+"PO-Revision-Date: 2016-03-20 15:25+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Časlav Ilić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
+#: bgselectorconfig.ui:33
+#, kde-format
+msgid "&Theme"
+msgstr "&Tema"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioColor)
+#: bgselectorconfig.ui:46
+#, kde-format
+msgid "&Color"
+msgstr "&Boja"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioImage)
+#: bgselectorconfig.ui:56
+#, kde-format
+msgid "&Image"
+msgstr "&Slika"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: customgameconfig.ui:17
+#, kde-format
+msgid "Width:"
+msgstr "Širina:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: customgameconfig.ui:34
+#, kde-format
+msgid "Height:"
+msgstr "Visina:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: customgameconfig.ui:51
+#, kde-format
+msgid "Color count:"
+msgstr "Broj boja:"
+
+# skip-rule: t-line
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowBoundLines)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowBoundLines)
+#: gameconfig.ui:16 gameconfig.ui:19
+#, kde-format
+msgid "Show bound lines"
+msgstr "Granične linije"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableAnimation)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableAnimation)
+#: gameconfig.ui:26 gameconfig.ui:29
+#, kde-format
+msgid "Enable animation"
+msgstr "Animacija"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableHighlight)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableHighlight)
+#: gameconfig.ui:36 gameconfig.ui:39
+#, kde-format
+msgid "Enable highlight"
+msgstr "Isticanje"
+
+#: gamescene.cpp:247
+#, kde-format
+msgid "paused"
+msgstr "pauzirano"
+
+#: gamescene.cpp:359
+#, kde-format
+msgid "Game finished"
+msgstr "Partija završena"
+
+#. i18n: ectx: label, entry (BgColor), group (Background)
+#: klickety.kcfg:36
+#, kde-format
+msgid "The background color to be used."
+msgstr "Željena boja pozadine."
+
+#. i18n: ectx: label, entry (BgImage), group (Background)
+#: klickety.kcfg:40
+#, kde-format
+msgid "The background image to be used."
+msgstr "Željena slika pozadine."
+
+#. i18n: ectx: label, entry (CustomWidth), group (CustomGame)
+#: klickety.kcfg:45
+#, kde-format
+msgid "The width of the playing field."
+msgstr "Širina polja za igranje."
+
+#. i18n: ectx: label, entry (CustomHeight), group (CustomGame)
+#: klickety.kcfg:51
+#, kde-format
+msgid "The height of the playing field."
+msgstr "Visina polja za igranje."
+
+#. i18n: ectx: label, entry (CustomColorCount), group (CustomGame)
+#: klickety.kcfg:57
+#, kde-format
+msgid "The number of colors in the playing field."
+msgstr "Broj boja u polju za igranje."
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: klicketyui.rc:22
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Glavna traka"
+
+#: main.cpp:51
+#, kde-format
+msgid "Klickety"
+msgstr "Kliketi"
+
+# skip-rule: t-click
+#: main.cpp:52
+#, kde-format
+msgid "Klickety is an adaptation of the \"clickomania\" game"
+msgstr "Kliketi je prerada igre Klikomanija"
+
+#: main.cpp:54
+#, kde-format
+msgid ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+msgstr ""
+"© 2002–2005, Nikola Hadaček\n"
+"© 2010, Ni Huej"
+
+#: main.cpp:60
+#, kde-format
+msgid "Start with KSame compatibility mode"
+msgstr "Pokreni u režimu saglasnosti sa K‑isto‑istim"
+
+#: main.cpp:71
+#, kde-format
+msgid "A little game about balls and how to get rid of them"
+msgstr "Mala igra o lopticama i kako ih se otarasiti"
+
+#: main.cpp:72
+#, kde-format
+msgid "Marcus Kreutzberger"
+msgstr "Markus Krojcberger"
+
+#: main.cpp:72 main.cpp:79
+#, kde-format
+msgid "Original author"
+msgstr "Prvobitni autor"
+
+#: main.cpp:73
+#, kde-format
+msgid "Henrique Pinto"
+msgstr "Enrike Pinto"
+
+#: main.cpp:73
+#, kde-format
+msgid "Past maintainer"
+msgstr "Bivši održavalac"
+
+#: main.cpp:74 main.cpp:80
+#, kde-format
+msgid "Ni Hui"
+msgstr "Ni Huej"
+
+#: main.cpp:74
+#, kde-format
+msgid "Integration with Klickety. Current maintainer"
+msgstr "Uklapanje u Kliketi, trenutni održavalac"
+
+#: main.cpp:75
+#, kde-format
+msgid "Johann Ollivier Lapeyre"
+msgstr "Johan Olivje Laper"
+
+#: main.cpp:75
+#, kde-format
+msgid "Artwork"
+msgstr "Grafika"
+
+#: main.cpp:79
+#, kde-format
+msgid "Nicolas Hadacek"
+msgstr "Nikola Hadaček"
+
+#: main.cpp:80
+#, kde-format
+msgid "Rewrite for KDE4. Current maintainer"
+msgstr "Pisanje iznova za KDE4, trenutni održavalac"
+
+#: main.cpp:81
+#, kde-format
+msgid "Dan Hill"
+msgstr "Den Hil"
+
+#: main.cpp:81
+#, kde-format
+msgid "Icons"
+msgstr "Ikonice"
+
+# >> @info:status
+#. i18n( "Colors: XX" ), 1 );
+#. i18n( "Board: XXXXXX" ), 2 );
+#: mainwindow.cpp:69
+#, kde-format
+msgid "Marked: 0"
+msgstr "označeno: 0"
+
+# >> @info:status
+#: mainwindow.cpp:70 mainwindow.cpp:250
+#, kde-format
+msgid "Score: 0"
+msgstr "rezultat: 0"
+
+# >> @info:status
+#: mainwindow.cpp:76
+#, kde-format
+msgid "Pieces: 0"
+msgstr "dijelova: 0"
+
+# >> @info:status
+#: mainwindow.cpp:77
+#, kde-format
+msgid "Time: 00:00"
+msgstr "vrijeme: 00.00"
+
+#: mainwindow.cpp:102
+#, kde-format
+msgid "General"
+msgstr "Opšte"
+
+#: mainwindow.cpp:103
+#, kde-format
+msgid "Theme"
+msgstr "Tema"
+
+#: mainwindow.cpp:104
+#, kde-format
+msgid "Background"
+msgstr "Pozadina"
+
+# >> @title:window
+#: mainwindow.cpp:106
+#, kde-format
+msgid "Custom Game"
+msgstr "Posebna partija"
+
+# >> @title:window
+#: mainwindow.cpp:177
+#, kde-format
+msgid "Select Board"
+msgstr "Izbor table"
+
+#: mainwindow.cpp:178
+#, kde-format
+msgid "Select a board number:"
+msgstr "Izaberite broj table:"
+
+# rewrite-msgid: /Files//
+# >> @item
+#: mainwindow.cpp:216 mainwindow.cpp:230
+#, kde-format
+msgid "Klickety Game Files (*.klickety)"
+msgstr "Kliketijeve partije (*.klickety)"
+
+# >> @info:status
+#: mainwindow.cpp:242
+#, kde-format
+msgid "Marked: %2 (1 Point)"
+msgid_plural "Marked: %2 (%1 Points)"
+msgstr[0] "označeno: %2 (%1 poen)"
+msgstr[1] "označeno: %2 (%1 poena)"
+msgstr[2] "označeno: %2 (%1 poena)"
+msgstr[3] "označeno: %2 (%1 poen)"
+
+# >> @info:status
+#: mainwindow.cpp:264
+#, kde-format
+msgid "Score: %1"
+msgstr "rezultat: %1"
+
+# >> @info:status
+#: mainwindow.cpp:270
+#, kde-format
+msgid "Pieces: %1"
+msgstr "dijelova: %1"
+
+# >> @info:status
+#: mainwindow.cpp:275
+#, kde-format
+msgid "Time: %1"
+msgstr "vrijeme: %1"
+
+#: mainwindow.cpp:283 mainwindow.cpp:312 mainwindow.cpp:398
+#, kde-format
+msgid "High Scores"
+msgstr "Najrezultati"
+
+# >> @title:column
+#: mainwindow.cpp:291 mainwindow.cpp:328
+#, kde-format
+msgid "Remaining pieces"
+msgstr "preostalo dijelova"
+
+# >> @title:column
+#: mainwindow.cpp:292 mainwindow.cpp:329
+#, kde-format
+msgid "Time"
+msgstr "vrijeme"
+
+#: mainwindow.cpp:347
+#, kde-format
+msgid "Do you want to resign?"
+msgstr "Želite li da odustanete?"
+
+#: mainwindow.cpp:348
+#, kde-format
+msgid "New Game"
+msgstr "Nova partija"
+
+#: mainwindow.cpp:348
+#, kde-format
+msgid "Resign"
+msgstr "Odustajem"
+
+#: mainwindow.cpp:363
+#, kde-format
+msgid "New Numbered Game..."
+msgstr "Nova partija sa brojem..."
+
+#: mainwindow.cpp:367
+#, kde-format
+msgid "Play Sounds"
+msgstr "Puštaj zvukove"
+
+#: mainwindow.cpp:382
+#, kde-format
+msgid "Undo All"
+msgstr "Opozovi sve"
+
+#: mainwindow.cpp:388
+#, kde-format
+msgid "Redo All"
+msgstr "Ponovi sve"
+
+# >> @title:column custom game
+#: mainwindow.cpp:409
+#, kde-format
+msgid "Custom"
+msgstr "posebna"
