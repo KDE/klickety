@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:44+0000\n"
-"PO-Revision-Date: 2022-11-22 16:55+0300\n"
+"PO-Revision-Date: 2022-12-10 18:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -256,7 +256,7 @@ msgstr "Tema"
 #: mainwindow.cpp:94
 #, kde-format
 msgid "Background"
-msgstr "Arkaplan"
+msgstr "Arka Plan"
 
 #: mainwindow.cpp:96
 #, kde-format
