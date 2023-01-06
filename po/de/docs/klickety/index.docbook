@@ -1,193 +1,135 @@
 <?xml version="1.0" ?>
 <!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY % addindex "IGNORE"
-><!-- do not change this! -->
-  <!ENTITY % German "INCLUDE"
-><!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"><!-- do not change this! -->
+  <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
 
-<book id="klickety" lang="&language;"
-><!-- do not change this! -->
+<book id="klickety" lang="&language;"><!-- do not change this! -->
 <bookinfo>
-<title
->Das Handbuch zu &klickety;</title
-><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<title>The &klickety; Handbook</title><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
 <!-- List of immediate authors begins here. -->
 <authorgroup>
-<author
-><personname
-><firstname
->Thomas</firstname
-><surname
->Davey</surname
-></personname
-><email
->thomas.davey@gmail.com</email
-> </author>
-<author
-><personname
-><firstname
->Hui</firstname
-><surname
->Ni</surname
-></personname
-><email
->shuizhuyuanluo@126.com</email
-> </author>
-<othercredit role="translator"
-><firstname
->Johannes</firstname
-><surname
->Obermayr</surname
-><affiliation
-><address
-><email
->johannesobermayr@gmx.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<author>
+<personname>
+<firstname>Thomas</firstname>
+<surname>Davey</surname>
+</personname>
+<email>thomas.davey@gmail.com</email>
+</author>
+<author>
+<personname>
+<firstname>Hui</firstname>
+<surname>Ni</surname>
+</personname>
+<email>shuizhuyuanluo@126.com</email>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
 <copyright>
-<year
->2005</year>
-<holder
->Thomas Davey</holder>
+<year>2005</year>
+<holder>Thomas Davey</holder>
 </copyright>
 <copyright>
-<year
->2010</year>
-<holder
->Ni Hui</holder>
+<year>2010</year>
+<holder>Ni Hui</holder>
 </copyright>
 
-<legalnotice
->&FDLNotice;</legalnotice>
+<legalnotice>&FDLNotice;</legalnotice>
 
-<date
->2021-07-08</date>
-<releaseinfo
->2.1 (KDE Gear 21.04)</releaseinfo>
+<date>2021-07-08</date>
+<releaseinfo>2.1 (KDE Gear 21.04)</releaseinfo>
 
 <abstract>
-<para
->&klickety; ist eine angepasste Version des <application
->Clickomania</application
->-Strategiespiels von &kde;.</para>
+<para>&klickety; is a strategy game by &kde;, an adaption of the <application>Clickomania</application> game.</para>
 </abstract>
 
 <!--List of relevan keywords-->
 <keywordset>
-<keyword
->KDE</keyword
-><!-- do not change this! -->
-<keyword
->kdegames</keyword
-><!-- do not change this! -->
-<keyword
->Spiel</keyword
-><!-- do not change this! -->
-<keyword
->Klickety</keyword
-><!--Application name goes here-->
+<keyword>KDE</keyword><!-- do not change this! -->
+<keyword>kdegames</keyword><!-- do not change this! -->
+<keyword>game</keyword><!-- do not change this! -->
+<keyword>Klickety</keyword><!--Application name goes here-->
 <!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
-<keyword
->Brettspiel</keyword>
-<keyword
->Logik</keyword>
-<keyword
->Strategie</keyword>
+<keyword>board</keyword>
+<keyword>logic</keyword>
+<keyword>strategy</keyword>
 <!--Number of possible players. It can be: One, Two,..., Multiplayer-->
-<keyword
->Einzelspieler</keyword>
+<keyword>one player</keyword>
 <!--All other relevant keywords-->
 </keywordset>
 
 </bookinfo>
 <!--Content begins here: -->
 <chapter id="introduction">
-<title
->Einleitung</title
-><!-- do not change this! -->
-<note
-><title
->Spielart:</title
-><para
->Brettspiel</para
-></note>
-<note
-><title
->Anzahl der Spieler:</title
-><para
->Einer</para
-></note>
-<para
->&klickety; ist eine angepasste Version des Spiels <application
->Clickomania</application
->. Die Spielregeln sind mit denen des Spiels <literal
->Same</literal
-> vergleichbar: Das Spielfeld muss durch Anklicken von gruppierten Stücken geleert werden. Das grundsätzliche Ziel besteht im Erreichen einer möglichst niedrigen Punktzahl. Es bietet Unterhaltung für alle Fähigkeiten und eine Herausforderung hinsichtlich des logischen Denkvermögens sofern eine möglichst niedrige Punktzahl erreicht werden soll. </para>
+<title>Introduction</title><!-- do not change this! -->
+<note><title>Gametype:</title><para>Board</para></note>
+<note><title>Number of possible players:</title><para>One</para></note>
+<para>
+&klickety; is an adaptation of the <application>Clickomania</application> game. The rules are similar to
+those of the <literal>Same</literal> game: your goal is to clear the board by clicking on groups
+to destroy them. The overall aim is to get the lowest score
+possible. It will provide entertainment for all abilities, but a
+challenge in logical thought if you want to get a really low score.
+</para>
 </chapter>
 
 <chapter id="how-to-play">
-<title
->Spielanleitung</title
-><!-- do not change this! -->
-<note
-><title
->Spielziel:</title
-><para
->Das Spielfeld von allen Stücken in möglichst kurzer Zeit zu befreien.</para
-></note>
+<title>How to Play</title><!-- do not change this! -->
+<note><title>Objective:</title><para>Clear the game board of all the colored blocks in the least possible time.</para></note>
 <!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
-<para
->Sobald &klickety; aufgerufen wurde, wird ein Fenster angezeigt, das dem Bildschirmfoto im nächsten Abschnitt ähnlich ist. Die Idee des Spiels ist das Entfernen der Stücke vom Spielfeld indem auf diese geklickt wird. </para>
-<para
->Jedoch können jeweils nur zwei oder mehr zusammenhängende Stücke derselben Farbe entfernt werden, wobei diagonale Verbindungen nicht berücksichtigt werden. Bei jedem Start eines neuen Spiels wird ein zufälliges Spielfeld gewählt. </para>
-<para
->Wenn Sie auf einen Block klicken, der, wie beschrieben, andere gleichfarbige Blöcke als Nachbarn hat, verschwindet er. Genauso verschwinden die direkt benachbarten gleichfarbigen Blöcke und ebenso neben <emphasis
->diesen</emphasis
-> gelegene gleichfarbige Blöcke und so weiter. Alle Blöcke oberhalb der entfernten Blöcke rutschen nach unten in die entstandenen Lücken. Wenn Sie eine ganze Spalte entfernt haben, werden alle vorhandenen Spalten von rechts in diese Lücke geschoben. </para>
-<para
->Das Spiel ist beendet sobald keine zusammenhängende Stücke derselben Farbe mehr verfügbar sind. </para>
+<para>
+When you start the program you will get a screen that looks
+something like the screenshot in the previous section. The idea of the
+game is to remove blocks, which you do by clicking on them.
+</para>
+<para>
+However, you can only remove a block if it is adjacent to one or
+more other blocks of the same color on one or more of its
+sides. Diagonal connections do not count. You get a random board every
+time you start a new game.
+</para>
+<para>
+If you click on a block which is connected as described, it will
+disappear. Any adjacent blocks of the same color will also disappear,
+along with all of the same color adjacent to <emphasis>them</emphasis>, and so
+on. Any blocks above them drop down to fill the gaps left by the
+disappeared pieces. If you clear an entire column, all the columns to
+the right move across to fill the gap.
+</para>
+<para>
+The game ends when there are no blocks adjacent to other blocks
+of the same colour.
+</para>
 
 <sect1 id="game-screen">
-<title
->Programmfenster</title>
+<title>The Game Screen</title>
 <para>
 <screenshot>
-<screeninfo
->Ein Bildschirmfoto von &klickety;.</screeninfo>
+<screeninfo>A screenshot of &klickety;</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Bildschirmfoto</phrase
-></textobject>
+<imageobject><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
+<textobject><phrase>Screenshot</phrase></textobject>
 </mediaobject>
-</screenshot
->Eine kurze Beschreibung aller Teile des Programmfensters. </para>
+</screenshot>
+A quick explanation of the parts of the game screen.
+</para>
 <variablelist>
 <varlistentry>
-<term
->Spielfeld</term>
-<listitem
-><para
->Das Spielfeld in der Mitte belegt den größten Teil des Programmfensters. </para
-></listitem>
+<term>Game Screen</term>
+<listitem><para>
+The Game screen is in the center of the screen and is the largest section of the window.
+</para></listitem>
 </varlistentry>
 <varlistentry>
-<term
->Statusleiste</term>
-<listitem
-><para
->Die Statusleiste befindet sich im unteren Teil des Programmfensters. Es zeigt die aktuell verbleibenden Stücke und die Spielzeit vom Beginn bis zum Ende des jeweiligen Spiels an. </para
-></listitem>
+<term>Statusbar</term>
+<listitem><para>
+The Status bar is located at the bottom of the screen.
+It displays how many pieces are left currently and
+the game timer, which keeps track of the elapsed time from
+the start of the game until the game is finished.
+</para></listitem>
 </varlistentry>
 </variablelist>
 </sect1>
@@ -195,167 +137,90 @@
 </chapter>
 
 <chapter id="ksame_mode">
-<title
->KSame-Modus</title
-><!-- do not change this! -->
-<para
->&klickety; stellt auch das Punktemodell von <emphasis
->&ksame;</emphasis
-> zur Verfügung. </para>
-<para
->Die Punkte werden dabei wie folgt berechnet:</para>
-<para
->Zunächst ist die Anzahl der Stücke des zusammenhängenden Blocks um zwei zu vermindern und dieses Ergebnis zu Quadrieren (<emphasis
->[Stückanzahl - 2]²</emphasis
->). </para>
-<para
->Beispielsweise werden beim Entfernen von 7 Stücken 25 Punkte erreicht (<emphasis
->[7-2]² = 5² = 25</emphasis
->). Beim Entfernen von 8 Stücken ergeben sich folglich 36 Punkte (<emphasis
->[8-2]² = 6² =36</emphasis
->). </para>
-<para
->Versuchen Sie, soviele zusammenhängende Kugeln wie möglich zu erhalten und sie mit einem Klick zu entfernen. Auf diese Weise erhalten Sie eine höhere Punktzahl. Das Spiel ist beendet, wenn Sie keine Kugeln mehr entfernen können. </para>
-<para
->Die Punktzahl wird um die Anzahl der übrig gebliebenen Kugeln verringert. Wenn Sie alle Kugeln entfernen, werden 1000 Punkte zu Ihrer Endpunktzahl addiert. </para>
+<title>The KSame Mode</title><!-- do not change this! -->
+<para>
+&klickety; provides a &ksame; scoring mode.
+</para>
+<para>The score is calculated as follows:</para>
+<para>Subtract 2 from the number of marbles erased, and square the result.
+</para>
+<para>As an example, if you erase 7 balls, then you get 25 points
+(7 minus 2 = 5, 5 squared is 25 points). If you erase 8
+balls, then you get 36 points (8 minus 2 = 6, 6 squared is 36 points).
+</para>
+<para>
+Get as many of the same pieces as you can, and then erase them
+in one click. That way you will get a higher score. The game is
+over when there are no pieces that can be erased.
+</para>
+<para>
+The score will then be decreased according to the number of remaining
+pieces. If you erase all pieces 1,000 bonus points will be added to the final
+score.
+</para>
 <screenshot>
-<screeninfo
->Bildschirmfoto von &klickety; im KSame-Modus</screeninfo>
+<screeninfo>A screenshot of &klickety; in KSame mode</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Bildschirmfoto</phrase
-></textobject>
+<imageobject><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
+<textobject><phrase>Screenshot</phrase></textobject>
 </mediaobject>
 </screenshot>
 </chapter>
 
 <chapter id="interface">
-<title
->Die Benutzeroberfläche</title
-><!-- do not change this! -->
-<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
-> and <varlistentry
->. Split the chapter into sections using <sect1(2,3)
-> for better viewing.-->
+<title>Interface Overview</title><!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist> and <varlistentry>. Split the chapter into sections using <sect1(2,3)> for better viewing.-->
 <sect1 id="default-keybindings">
-<title id="keybindings-title"
->Standard-Tastenkürzel</title>
-<para
->Folgende Kurzbefehle sind als Standard eingestellt:</para>
+<title id="keybindings-title">Default Keybindings</title>
+<para>Default shortcuts are:</para>
 
 <table>
-<title
->Kurzbefehle</title>
+<title>Shortcuts</title>
 <tgroup cols="2">
 <tbody>
 <row>
-<entry
->Neu</entry>
-<entry
-><keycombo action="simul"
->&Ctrl;<keycap
->N</keycap
-></keycombo
-></entry>
+<entry>New</entry>
+<entry><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></entry>
 </row>
 <row>
-<entry
->Laden</entry>
-<entry
-><keycombo action="simul"
->&Ctrl;<keycap
->O</keycap
-></keycombo
-></entry>
+<entry>Load</entry>
+<entry><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo></entry>
 </row>
 <row>
-<entry
->Spiel neu starten</entry>
-<entry
-><keycap
->F5</keycap
-></entry>
+<entry>Restart Game</entry>
+<entry><keycap>F5</keycap></entry>
 </row>
 <row>
-<entry
->Speichern</entry>
-<entry
-><keycombo action="simul"
->&Ctrl;<keycap
->S</keycap
-></keycombo
-></entry>
+<entry>Save</entry>
+<entry><keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo></entry>
 </row>
 <row>
-<entry
->Pause</entry>
-<entry
-><keycap
->P</keycap
-></entry>
+<entry>Pause</entry>
+<entry><keycap>P</keycap></entry>
 </row>
 <row>
-<entry
->Bestenliste anzeigen</entry>
-<entry
-><keycombo action="simul"
->&Ctrl;<keycap
->H</keycap
-></keycombo
-></entry>
+<entry>Show High Scores</entry>
+<entry><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></entry>
 </row>
 <row>
-<entry
->Beenden</entry>
-<entry
-><keycombo action="simul"
->&Ctrl;<keycap
->Q</keycap
-></keycombo
-></entry>
+<entry>Quit</entry>
+<entry><keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo></entry>
 </row>
 <row>
-<entry
->Rückgängig</entry>
-<entry
-><keycombo action="simul"
->&Ctrl;<keycap
->Z</keycap
-></keycombo
-></entry>
+<entry>Undo</entry>
+<entry><keycombo action="simul">&Ctrl;<keycap>Z</keycap></keycombo></entry>
 </row>
 <row>
-<entry
->Wiederherstellen</entry>
-<entry
-><keycombo action="simul"
->&Ctrl;&Shift;<keycap
->Z</keycap
-></keycombo
-></entry>
+<entry>Redo</entry>
+<entry><keycombo action="simul">&Ctrl;&Shift;<keycap>Z</keycap></keycombo></entry>
 </row>
 <row>
-<entry
->Das Handbuch zu &klickety;</entry>
-<entry
-><keycap
->F1</keycap
-></entry>
+<entry>&klickety; Handbook</entry>
+<entry><keycap>F1</keycap></entry>
 </row>
 <row>
-<entry
-><quote
->Was ist das?</quote
->-Hilfe</entry>
-<entry
-><keycombo action="simul"
->&Shift;<keycap
->F1</keycap
-></keycombo
-></entry>
+<entry>What's this? help</entry>
+<entry><keycombo action="simul">&Shift;<keycap>F1</keycap></keycombo></entry>
 </row>
 </tbody>
 </tgroup>
@@ -363,565 +228,284 @@
 </sect1>
 
 <sect1 id="menu">
-<title
->Menüeinträge</title>
+<title>Menu Items</title>
 
 <variablelist>
 
 <varlistentry>
-<term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;<keycap
->N</keycap
-></keycombo
-></shortcut
-><guimenu
->Spiel</guimenu
-> <guimenuitem
->Neu</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
->Startet ein neues Spiel.</para
-></listitem>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut>
+<guimenu>Game</guimenu>
+<guimenuitem>New</guimenuitem>
+</menuchoice></term>
+<listitem><para>Starts a new game.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;<keycap
->O</keycap
-></keycombo
-></shortcut
-><guimenu
->Spiel</guimenu
-> <guimenuitem
->Laden ...</guimenuitem
-></menuchoice
-> (nicht im KSame-Modus) </term>
-<listitem
-><para
->Lädt ein vorher gespeichertes Spiel.</para
-></listitem>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo></shortcut>
+<guimenu>Game</guimenu>
+<guimenuitem>Load...</guimenuitem>
+</menuchoice> (not in KSame mode) </term>
+<listitem><para>Loads a previously saved game.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><shortcut
-><keycap
->F5</keycap
-></shortcut
-><guimenu
->Spiel</guimenu
-><guimenuitem
->Spiel neu starten</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
->Startet das aktuelle Spiel erneut.</para
-></listitem>
+<term><menuchoice>
+<shortcut><keycap>F5</keycap></shortcut>
+<guimenu>Game</guimenu>
+<guimenuitem>Restart Game</guimenuitem>
+</menuchoice></term>
+<listitem><para>This will restart the current game.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><guimenu
->Spiel</guimenu
-><guimenuitem
->Neue Spielnummer ...</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
-><action
->Startet ein Spiel mit einer bestimmten Nummer.</action>
+<term><menuchoice>
+<guimenu>Game</guimenu>
+<guimenuitem>New Numbered Game...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Starts a specifically numbered game.</action>
     <screenshot>
-    <screeninfo
->Spiel mit bestimmter Nummer starten</screeninfo>
+    <screeninfo>Start a Numbered Game Dialog</screeninfo>
     <mediaobject>
-    <imageobject
-><imagedata fileref="numbered.png" format="PNG"/></imageobject>
-    <textobject
-><phrase
->Spiel mit bestimmter Nummer starten</phrase
-></textobject>
+    <imageobject><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+    <textobject><phrase>Start a Numbered Game Dialog</phrase></textobject>
     </mediaobject>
     </screenshot>
-</para
-></listitem>
+</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;<keycap
->S</keycap
-></keycombo
-></shortcut
-><guimenu
->Spiel</guimenu
-> <guimenuitem
->Speichern</guimenuitem
-></menuchoice
-> (nicht im KSame-Modus)</term>
-<listitem
-><para
->Speichert den aktuellen Spielstand auf die Festplatte.</para
-></listitem>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo></shortcut>
+<guimenu>Game</guimenu>
+<guimenuitem>Save</guimenuitem>
+</menuchoice> (not in KSame mode)</term>
+<listitem><para>Saves the current state of the game to the disk.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><shortcut
-><keycap
->P</keycap
-> </shortcut
-><guimenu
->Spiel</guimenu
-><guimenuitem
->Pause</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
-><action
->Hält das Spiel an bzw. setzt es fort. Wenn das Spiel angehalten ist, werden alle Spielsteine ausgeblendet.</action
-></para
-></listitem>
+<term><menuchoice>
+<shortcut><keycap>P</keycap></shortcut>
+<guimenu>Game</guimenu>
+<guimenuitem>Pause</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Pauses or resumes the game. While the game is paused, all tiles are hidden.</action></para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;<keycap
->H</keycap
-></keycombo
-></shortcut
-><guimenu
->Spiel</guimenu
-><guimenuitem
->Bestenliste anzeigen</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
-><action
->Zeigt die Bestenliste an.</action>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></shortcut>
+<guimenu>Game</guimenu>
+<guimenuitem>Show High Scores</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Shows the high score list.</action>
     <screenshot>
-    <screeninfo
->Bestenliste anzeigen</screeninfo>
+    <screeninfo>Show High scores</screeninfo>
     <mediaobject>
-    <imageobject
-><imagedata fileref="highscore.png" format="PNG"/></imageobject>
-    <textobject
-><phrase
->Bestenliste anzeigen</phrase
-></textobject>
+    <imageobject><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+    <textobject><phrase>Show High scores</phrase></textobject>
     </mediaobject>
     </screenshot>
 </para>
-<para
->Sobald die Punktzahl im Bereich der zehn besten liegt, erfolgt die Aufforderung zur Eingabe des Namens. </para
-> </listitem>
+<para>
+When your game scores exceed the top ten scores listed, you are prompted to enter your name.
+</para> </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;<keycap
->Q</keycap
-></keycombo
-></shortcut
-><guimenu
->Spiel</guimenu
-><guimenuitem
->Beenden</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
->Durch Auswahl dieser Funktion werden das aktuelle Spiel und &klickety; beendet.</para
-></listitem>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo></shortcut>
+<guimenu>Game</guimenu>
+<guimenuitem>Quit</guimenuitem>
+</menuchoice></term>
+<listitem><para>Selecting this item will end your current game, and exit &klickety;.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;<keycap
->Z</keycap
-></keycombo
-></shortcut
-><guimenu
->Zug</guimenu
-><guimenuitem
->Zurücknehmen</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
-><action
->Nimmt den zuletzt ausgeführten Spielzug zurück.</action
-></para
-></listitem>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;<keycap>Z</keycap></keycombo></shortcut>
+<guimenu>Move</guimenu>
+<guimenuitem>Undo</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Undo the last move you made.</action></para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;&Shift;<keycap
->Z</keycap
-></keycombo
-></shortcut
-><guimenu
->Zug</guimenu
-><guimenuitem
->Wiederherstellen</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
-><action
->Stellt einen vorher zurückgenommenen Spielzug wieder her.</action
-></para
-></listitem>
+<term><menuchoice>
+<shortcut><keycombo action="simul">&Ctrl;&Shift;<keycap>Z</keycap></keycombo></shortcut>
+<guimenu>Move</guimenu>
+<guimenuitem>Redo</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>If you have previously undone a move, you can redo it here.</action></para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><guimenu
->Zug</guimenu
-><guimenuitem
->Alles zurücknehmen</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
-><action
->Nimmt</action
-> alle ausgeführten Züge zurück.</para
-></listitem>
+<term><menuchoice>
+<guimenu>Move</guimenu>
+<guimenuitem>Undo All</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Undo</action> all moves you made.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><guimenu
->Zug</guimenu
-><guimenuitem
->Alles wiederherstellen</guimenuitem
-> </menuchoice
-></term>
-<listitem
-><para
-><action
->Stellt</action
-> alle zurückgenommenen Züge wieder her.</para
-></listitem>
+<term><menuchoice>
+<guimenu>Move</guimenu>
+<guimenuitem>Redo All</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Redo</action> all undone moves.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><guimenu
->Einstellungen</guimenu
-> <guisubmenu
->Schwierigkeitsgrad</guisubmenu
-> </menuchoice
-></term>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guisubmenu>Difficulty</guisubmenu>
+</menuchoice></term>
 <listitem>
-<para
->Hier können Sie den Schwierigkeitsgrad aus einem Untermenü wählen.</para>
-<para
->Es gibt vier Schwierigkeitsgrade: <itemizedlist>
-<listitem
-><para
-><guimenuitem
->Sehr einfach</guimenuitem
->: 16 Zeilen, 10 Spalten, 3 Arten von Steinen.</para
-></listitem>
-<listitem
-><para
-><guimenuitem
->Einfach</guimenuitem
->: 16 Zeilen, 10 Spalten, 4 Arten von Steinen.</para
-></listitem>
-<listitem
-><para
-><guimenuitem
->Mittel</guimenuitem
->: 16 Zeilen, 10 Spalten, 5 Arten von Steinen.</para
-></listitem>
-<listitem
-><para
-><guimenuitem
->Schwierig</guimenuitem
->: 16 Zeilen, 10 Spalten, 6 Arten von Steinen.</para
-></listitem>
+<para>Lets you set the difficulty level from a sub-menu.</para>
+<para>There are four levels of difficulty:
+<itemizedlist>
+<listitem><para><guimenuitem>Very easy</guimenuitem>: 16 rows, 10 columns, 3 types of pieces.</para></listitem>
+<listitem><para><guimenuitem>Easy</guimenuitem>: 16 rows, 10 columns, 4 types of pieces.</para></listitem>
+<listitem><para><guimenuitem>Medium</guimenuitem>: 16 rows, 10 columns, 5 types of pieces.</para></listitem>
+<listitem><para><guimenuitem>Hard</guimenuitem>: 16 rows, 10 columns, 6 types of pieces.</para></listitem>
 </itemizedlist>
 </para>
-<para
->Es gibt ausserdem Einstellungen für <guimenuitem
->Benutzerdefinierte</guimenuitem
-> Schwierigkeitsgrade.</para>
-<para
->Falls Sie <guimenuitem
->Benutzerdefiniert</guimenuitem
-> auswählen, werden die im Dialog <guimenuitem
->Einrichten - &klickety;</guimenuitem
-> eingestellten Werte verwendet.</para>
+<para>There is also a <guimenuitem>Custom</guimenuitem> level settings.</para>
+<para>If you select <guimenuitem>Custom</guimenuitem>, then the
+settings you have configured in the <guimenuitem>Configure - &klickety;</guimenuitem> dialog will be used.</para>
 </listitem>
 </varlistentry>
 
 </variablelist>
 
-<para
->Zusätzlich hat &klickety; die bekannten &kde;-Einträge im Menü <guimenu
->Einstellungen</guimenu
-> und <guimenu
->Hilfe</guimenu
->, weitere Informationen dazu finden Sie in den Abschnitten über die Menüs <ulink url="help:/fundamentals/menus.html#menus-settings"
->Einstellungen</ulink
-> und <ulink url="help:/fundamentals/menus.html#menus-help"
->Hilfe</ulink
-> der &kde;-Grundlagen. </para>
+<para>
+Additionally &klickety; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+menu items, for more information read the sections about the <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Settings Menu</ulink> and <ulink url="help:/fundamentals/menus.html#menus-help">Help Menu</ulink>
+of the &kde; Fundamentals.
+</para>
 
 </sect1>
 
 </chapter>
 
 <chapter id="faq">
-<title
->Häufig gestellte Fragen</title
-> <!-- do not change this! -->
-<!--This chapter is for frequently asked questions. Please use <qandaset
-> <qandaentry
-> only!-->
+<title>Frequently asked questions</title> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset> <qandaentry> only!-->
 <qandaset>
 
 <!--Following is a standard list of FAQ questions.-->
 <qandaentry>
-<question
-><para
->Kann ich das Erscheinungsbild des Spiels ändern? </para
-></question>
-<answer
-><para
->Ja. Um das Design für &klickety; zu ändern, verwenden Sie das Menü, um den <link linkend="configuration"
->Einrichtungsdialog</link
-> zu öffnen.</para
-></answer>
+<question><para>I want to change the way this game looks. Can I? </para></question>
+<answer><para>Yes. To change the way &klickety; looks use the menubar to open the <link linkend="configuration">configuration utility</link>.</para></answer>
 </qandaentry>
 <qandaentry>
-<question
-><para
->Kann ich mit der Tastatur spielen?</para
-></question>
-<answer
-><para
->Nein, dieses Spiel kann nicht mit der Tastatur gespielt werden.</para
-></answer>
+<question><para>Can I use the keyboard to play the game?</para></question>
+<answer><para>No. This game does not feature a keyboard play mode yet.</para></answer>
 </qandaentry>
 <qandaentry>
-<question
-><para
->Wie starte ich ein Spiel im KSame-Modus?</para
-></question>
-<answer
-><para
->Starten Sie &klickety; mit dem Befehl <userinput
->klickety --KSameMode</userinput
-> in einer Konsole oder wählen Sie den Menüeintrag &ksame; aus dem K-Menü.</para
-></answer>
+<question><para>How to start the game in KSame mode?</para></question>
+<answer><para>You can launch &klickety; with command <userinput>klickety --KSameMode</userinput> or &ksame; menu entry in K menu.</para></answer>
 </qandaentry>
 
 </qandaset>
 </chapter>
 
 <chapter id="configuration">
-<title
->Spieleinstellungen</title
-><!-- do not change this! -->
+<title>Game Configuration</title><!-- do not change this! -->
 <!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
-<para
-><menuchoice
-><guimenu
->Einstellungen</guimenu
-><guimenuitem
->&klickety; einrichten ...</guimenuitem
-></menuchoice
-> öffnet den Einrichtungsdialog für &klickety;.</para>
+<para>
+<menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &klickety;...</guimenuitem></menuchoice> opens
+the <guilabel>Configure - &klickety;</guilabel> dialog.</para>
 
 <sect1 id="general-options">
-<title
->Allgemeine Einstellungen</title>
+<title>General options</title>
 <variablelist>
 <varlistentry>
-<term
-><guilabel
->Umrisse der zusammengehörenden Teile anzeigen</guilabel
-></term>
-<listitem
-><para
->Mit dieser Einstellung werden Umrisse der zusammengehörenden Teile in verschiedenen Farben angezeigt. </para
-></listitem>
+<term><guilabel>Show bound lines</guilabel></term>
+<listitem><para>
+This option will show bound lines between pieces with different color.
+</para></listitem>
 </varlistentry>
 <varlistentry>
-<term
-><guilabel
->Animationen aktivieren</guilabel
-></term>
-<listitem
-><para
->Mit dieser Einstellung wird das Fallen und Zusammenfügen von Steinen animiert, wenn Steine entfernt werden. </para
-></listitem>
+<term><guilabel>Enable animation</guilabel></term>
+<listitem><para>
+This option will enable the falling and merging animation when pieces are removed.
+</para></listitem>
 </varlistentry>
 <varlistentry>
-<term
-><guilabel
->Hervorheben aktivieren</guilabel
-></term>
-<listitem
-><para
->Mit dieser Einstellung werden Steine hervorgehoben, wenn Sie den Mauszeiger darüber führen und sie entfernt werden können. </para
-></listitem>
+<term><guilabel>Enable highlight</guilabel></term>
+<listitem><para>
+This option will enable highlighting on pieces hovered if they can be removed.
+</para></listitem>
 </varlistentry>
 </variablelist>
 <screenshot>
-<screeninfo
->Allgemeine Einstellungen</screeninfo>
+<screeninfo>General options</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="config-general.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Allgemeine Einstellungen</phrase
-></textobject>
+<imageobject><imagedata fileref="config-general.png" format="PNG"/></imageobject>
+<textobject><phrase>General options</phrase></textobject>
 </mediaobject>
 </screenshot>
 </sect1>
 
 <sect1 id="theme-options">
-<title
->Designeinstellungen</title>
+<title>Theme options</title>
 <variablelist>
 <varlistentry>
-<term
->Auswahl von <guilabel
->Design</guilabel
->s</term>
-<listitem
-><para
->Verwenden Sie die <guilabel
->Design</guilabel
->auswahl, um ein anderes Design für das Spiel einzustellen.</para
-></listitem>
+<term><guilabel>Theme</guilabel> selector</term>
+<listitem><para>Use the <guilabel>Theme</guilabel> selector to set a theme for the game.</para></listitem>
 </varlistentry>
 </variablelist>
 <screenshot>
-<screeninfo
->Designeinstellungen</screeninfo>
+<screeninfo>Theme options</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Designeinstellungen</phrase
-></textobject>
+<imageobject><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
+<textobject><phrase>Theme options</phrase></textobject>
 </mediaobject>
 </screenshot>
 </sect1>
 
 <sect1 id="background-options">
-<title
->Einstellungen für den Hintergrund</title>
-<para
->Als Hintergrundgrafik für das Spiel können drei verschiedene Arten ausgewählt werden: <variablelist>
+<title>Background options</title>
+<para>
+You can choose a background graphic for the game. There are three kinds of background type you can use.
+<variablelist>
 <varlistentry>
-<term
-><guilabel
->Design</guilabel
-></term>
-<listitem
-><para
->Verwendet den Hintergrund des aktuell ausgewählten Designs.</para
-></listitem>
+<term><guilabel>Theme</guilabel></term>
+<listitem><para>Use the background shipped with the current theme.</para></listitem>
 </varlistentry>
 <varlistentry>
-<term
-><guilabel
->Farbe</guilabel
-></term>
-<listitem
-><para
->Verwendet einen einfarbigen Hintergrund.</para
-></listitem>
+<term><guilabel>Color</guilabel></term>
+<listitem><para>Use a custom solid color for the background.</para></listitem>
 </varlistentry>
 <varlistentry>
-<term
-><guilabel
->Bild</guilabel
-></term>
-<listitem
-><para
->Verwendet ein Bild für als Hintergrundgrafik.</para
-></listitem>
+<term><guilabel>Image</guilabel></term>
+<listitem><para>Use an image for the background graphic.</para></listitem>
 </varlistentry>
 </variablelist>
 </para>
 <screenshot>
-<screeninfo
->Einstellungen für den Hintergrund</screeninfo>
+<screeninfo>Background options</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="config-background.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Einstellungen für den Hintergrund</phrase
-></textobject>
+<imageobject><imagedata fileref="config-background.png" format="PNG"/></imageobject>
+<textobject><phrase>Background options</phrase></textobject>
 </mediaobject>
 </screenshot>
 </sect1>
 
 <sect1 id="customgame-options">
-<title
->Benutzerdefinierte Spieleinstellungen</title>
-<para
->Hier kann die <guilabel
->Höhe</guilabel
-> und <guilabel
->Breite</guilabel
-> des Spielfelds sowie die <guilabel
->Anzahl an Farben</guilabel
-> des benutzerdefinierten Spiels eingestellt werden. </para>
+<title>Custom Game options</title>
+<para>
+You can set the <guilabel>Height:</guilabel> and <guilabel>Width:</guilabel> of the board
+and the <guilabel>Color count:</guilabel> used in your custom level.
+</para>
 <screenshot>
-<screeninfo
->Benutzerdefinierte Spieleinstellungen</screeninfo>
+<screeninfo>Custom game options</screeninfo>
 <mediaobject>
-<imageobject
-><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
-<textobject
-><phrase
->Benutzerdefinierte Spieleinstellungen</phrase
-></textobject>
+<imageobject><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
+<textobject><phrase>Custom game options</phrase></textobject>
 </mediaobject>
 </screenshot>
 </sect1>
@@ -929,29 +513,17 @@
 </chapter>
 
 <chapter id="credits">
-<title
->Danksagungen und Lizenz</title>
-<para
->&klickety;</para>
-<para
->Copyright für das Programm &copy; 1995, Eirik Eng</para>
-<para
->Copyright für das Programm &copy; 1996&ndash;2004, &Nicolas.Hadacek; &Nicolas.Hadacek.mail;</para>
-<para
->Programm Copyright &copy; 2010, Ni Hui <email
->shuizhuyuanluo@126.com</email
-></para>
-<para
->Copyright für die Dokumentation &copy; 2005, Thomas Davey</para>
-<para
->Dokumentation Copyright &copy; 2010, Ni Hui <email
->shuizhuyuanluo@126.com</email
-></para>
-<para
->Übersetzung: Johannes Obermayr <email
->johannesobermayr@gmx.de</email
-></para
-> &underFDL; &underGPL; </chapter>
+<title>Credits and License</title>
+<para>&klickety;</para>
+<para>Program Copyright &copy; 1995, Eirik Eng</para>
+<para>Program Copyright &copy; 1996&ndash;2004, &Nicolas.Hadacek; &Nicolas.Hadacek.mail;</para>
+<para>Program Copyright &copy; 2010, Ni Hui <email>shuizhuyuanluo@126.com</email></para>
+<para>Documentation Copyright &copy; 2005, Thomas Davey</para>
+<para>Documentation Copyright &copy; 2010, Ni Hui <email>shuizhuyuanluo@126.com</email></para>
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+&underFDL;
+&underGPL;
+</chapter>
 
 &documentation.index;
 </book>
