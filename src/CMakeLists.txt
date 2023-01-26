@@ -28,10 +28,10 @@ ecm_add_app_icon(klickety ICONS ${ICONS_SRCS})
 
 target_link_libraries(klickety
     KF5KDEGames
-    KF5::Crash
-    KF5::DBusAddons
-    KF5::KIOWidgets
-    KF5::XmlGui
+    KF${KF_MAJOR_VERSION}::Crash
+    KF${KF_MAJOR_VERSION}::DBusAddons
+    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF${KF_MAJOR_VERSION}::XmlGui
 )
 
 install(TARGETS klickety ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
