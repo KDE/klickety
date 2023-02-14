@@ -49,7 +49,7 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
 find_package(KF5KDEGames 7.3.0 REQUIRED)
 
 ecm_set_disabled_deprecation_versions(QT 6.4
-     KF 5.101.0
+     KF 5.103.0
     )
 add_subdirectory(sounds)
 add_subdirectory(pics)
