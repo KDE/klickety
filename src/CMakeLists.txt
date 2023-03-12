@@ -26,8 +26,13 @@ kconfig_add_kcfg_files(klickety settings.kcfgc)
 file(GLOB ICONS_SRCS "${CMAKE_SOURCE_DIR}/pics/*-apps-klickety.png")
 ecm_add_app_icon(klickety ICONS ${ICONS_SRCS})
 
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(klickety KDEGames6)
+else()
+    target_link_libraries(klickety KF5KDEGames)
+endif()
+
 target_link_libraries(klickety
-    KF5KDEGames
     KF${KF_MAJOR_VERSION}::Crash
     KF${KF_MAJOR_VERSION}::DBusAddons
     KF${KF_MAJOR_VERSION}::KIOWidgets
