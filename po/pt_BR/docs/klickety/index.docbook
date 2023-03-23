@@ -69,9 +69,9 @@
 >&FDLNotice;</legalnotice>
 
 <date
->09/05/2016</date>
+>08/07/2021</date>
 <releaseinfo
->2.1+ (Applications 16.04)</releaseinfo>
+>2.1 (KDE Gear 21.04)</releaseinfo>
 
 <abstract>
 <para
@@ -126,7 +126,11 @@
 >Um</para
 ></note>
 <para
->O &klickety; é uma adaptação do jogo Clickomania. As regras são semelhantes às do jogo Same: o seu objetivo é limpar o tabuleiro do jogo de todos os blocos coloridos, clicando nos grupos para destruí-los. O intuito global é obter a menor pontuação possível. Ele irá oferecer entretenimento para todas as aptidões, mas é um desafio de raciocínio lógico se você quiser obter uma pontuação realmente baixa. </para>
+>O &klickety; é uma adaptação do jogo <application
+>Clickomania</application
+>. As regras são semelhantes às do jogo <literal
+>Same</literal
+>: o seu objetivo é limpar o tabuleiro do jogo de todos os blocos coloridos, clicando nos grupos para destruí-los. O intuito global é obter a menor pontuação possível. Ele irá oferecer entretenimento para todas as aptidões, mas é um desafio de raciocínio lógico se você quiser obter uma pontuação realmente baixa. </para>
 </chapter>
 
 <chapter id="how-to-play">
@@ -201,7 +205,7 @@
 <para
 >Subtraia 2 do número de peças retiradas e eleve ao quadrado o resultado. </para>
 <para
->Por exemplo, se você apagar 7 bolas, recebe 25 pontos (7 menos 2 = 5. 5 ao quadrado são 25 pontos). Se apagar 8 bolas, recebe 36 pontos (8 menos 2 = 6. 6 ao quadrado são 36 pontos). </para>
+>Por exemplo, se você apagar 7 bolas, recebe 25 pontos (7 menos 2 = 5, 5 ao quadrado são 25 pontos). Se apagar 8 bolas, recebe 36 pontos (8 menos 2 = 6, 6 ao quadrado são 36 pontos). </para>
 <para
 >Junte tantas peças iguais quanto possível e depois apague-as de uma só vez. Assim irá obter uma melhor pontuação. O jogo termina quando não é possível apagar mais peças. </para>
 <para
@@ -327,7 +331,7 @@
 </row>
 <row>
 <entry
->Ajuda</entry>
+>Manual do &klickety;</entry>
 <entry
 ><keycap
 >F1</keycap
@@ -335,7 +339,7 @@
 </row>
 <row>
 <entry
->O que é isto?</entry>
+>Ajuda 'O que é isto?'</entry>
 <entry
 ><keycombo action="simul"
 >&Shift;<keycap
@@ -389,7 +393,7 @@
 > <guimenuitem
 >Carregar...</guimenuitem
 > </menuchoice
-> (não no KSameMode) </term>
+> (não no modo KSame) </term>
 <listitem
 ><para
 >Carrega um jogo previamente salvo.</para
@@ -458,7 +462,7 @@
 > <guimenuitem
 >Salvar</guimenuitem
 > </menuchoice
-> (não no KSameMode)</term>
+> (não no modo KSame)</term>
 <listitem
 ><para
 >Salva o estado atual do jogo no disco.</para
@@ -672,7 +676,7 @@
 >Selecionando o <guimenuitem
 >Personalizado</guimenuitem
 >, serão usadas as opções que tiver configurado na janela <guimenuitem
->Configurar o &klickety;</guimenuitem
+>Configurar - &klickety;</guimenuitem
 >.</para>
 </listitem>
 </varlistentry>
@@ -894,11 +898,11 @@
 >Opções personalizadas do jogo</title>
 <para
 >Você poderá definir a <guilabel
->Altura</guilabel
+>Altura:</guilabel
 > e <guilabel
->Largura</guilabel
+>Largura:</guilabel
 > do tabuleiro e o <guilabel
->Número de cores</guilabel
+>Número de cores:</guilabel
 > usado no seu nível personalizado. </para>
 <screenshot>
 <screeninfo
