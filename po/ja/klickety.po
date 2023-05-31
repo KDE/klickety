@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -277,7 +277,6 @@ msgstr ""
 msgid "Marked: %2 (1 Point)"
 msgid_plural "Marked: %2 (%1 Points)"
 msgstr[0] ""
-msgstr[1] ""
 
 #: mainwindow.cpp:260
 #, kde-format
