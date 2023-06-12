@@ -3,13 +3,13 @@
 #
 # Translators:
 # Volkan Gezer <volkangezer@gmail.com>, 2013.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:44+0000\n"
-"PO-Revision-Date: 2022-12-10 18:38+0300\n"
+"PO-Revision-Date: 2023-06-11 22:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -135,12 +135,12 @@ msgstr "Ana Araç Çubuğu"
 #: main.cpp:40
 #, kde-format
 msgid "Klickety"
-msgstr "Klickety"
+msgstr "Kliketi"
 
 #: main.cpp:41
 #, kde-format
 msgid "Klickety is an adaptation of the \"clickomania\" game"
-msgstr "Klickety, \"clickomania\" oyununa bir benzetmedir"
+msgstr "Kliketi, \"clickomania\" oyununa bir benzetmedir"
 
 #: main.cpp:43
 #, kde-format
@@ -154,7 +154,7 @@ msgstr ""
 #: main.cpp:50
 #, kde-format
 msgid "Start with KSame compatibility mode"
-msgstr "KSame uyumluluk kipi ile başla"
+msgstr "K Same uyumluluk kipi ile başla"
 
 #: main.cpp:61
 #, kde-format
@@ -189,7 +189,7 @@ msgstr "Ni Hui"
 #: main.cpp:64
 #, kde-format
 msgid "Integration with Klickety. Current maintainer"
-msgstr "Klickety ile tümleştirme. Geçerli bakımcı"
+msgstr "Kliketi ile tümleştirme. Geçerli bakımcı"
 
 #: main.cpp:65
 #, kde-format
@@ -277,7 +277,7 @@ msgstr "Bir tahta sayıcı seçin:"
 #: mainwindow.cpp:212 mainwindow.cpp:226
 #, kde-format
 msgid "Klickety Game Files (*.klickety)"
-msgstr "Klickety Oyun Dosyaları (*.klickety)"
+msgstr "Kliketi Oyun Dosyaları (*.klickety)"
 
 #: mainwindow.cpp:238
 #, kde-format
