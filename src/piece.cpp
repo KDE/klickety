@@ -56,3 +56,5 @@ void Piece::mousePressEvent( QGraphicsSceneMouseEvent* event )
     Q_UNUSED(event)
     Q_EMIT pieceClicked( m_x, m_y );
 }
+
+#include "moc_piece.cpp"

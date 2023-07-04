@@ -755,3 +755,5 @@ void GameScene::drawBackground( QPainter* painter, const QRectF& rect )
         }
     }
 }
+
+#include "moc_gamescene.cpp"

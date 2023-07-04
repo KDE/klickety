@@ -429,3 +429,5 @@ void MainWindow::setSoundsEnabled( bool enabled )
     Settings::setEnableSounds( enabled );
     Settings::self()->save();
 }
+
+#include "moc_mainwindow.cpp"
