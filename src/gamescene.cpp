@@ -10,7 +10,6 @@
 #include "settings.h"
 #include "undo.h"
 // KDEGames
-#include <kdegames_version.h>
 #include <KGamePopupItem>
 #include <KgTheme>
 #include <KgThemeProvider>
@@ -34,11 +33,7 @@ static KgThemeProvider* provider()
         Settings::self()->config()->name() == QLatin1String("ksamerc")
         ? QLatin1String("ksame") : QLatin1String("default");
     KgThemeProvider* prov = new KgThemeProvider;
-#if KDEGAMES_VERSION >= QT_VERSION_CHECK(7, 4, 0)
     prov->discoverThemes(QStringLiteral("themes"), defaultTheme);
-#else
-    prov->discoverThemes("appdata", QStringLiteral("themes"), defaultTheme);
-#endif
     return prov;
 }
 

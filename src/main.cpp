@@ -11,9 +11,6 @@
 #include <KAboutData>
 #include <KCrash>
 #include <KDBusService>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#endif
 #include <KLocalizedString>
 
 #include <QApplication>
@@ -22,21 +19,11 @@
 
 int main( int argc, char* argv[] )
 {
-    // Fixes blurry icons with fractional scaling
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-#endif
     QApplication app( argc, argv );
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral( "klickety" )));
 
     KLocalizedString::setApplicationDomain("klickety");
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    // Migrate pre-existing (4.x) configuration
-    Kdelibs4ConfigMigrator migrate(QStringLiteral("klickety"));
-    migrate.setConfigFiles(QStringList() << QStringLiteral("klicketyrc"));
-    migrate.setUiFiles(QStringList() << QStringLiteral("klicketyui.rc"));
-    migrate.migrate();
-#endif
+
     KAboutData aboutData( QStringLiteral( "klickety" ), i18n( "Klickety" ), QStringLiteral( KLICKETY_VERSION_STRING ),
                           i18n( "Klickety is an adaptation of the \"clickomania\" game" ),
                           KAboutLicense::GPL,

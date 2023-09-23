@@ -13,7 +13,6 @@
 #include "gameview.h"
 #include "settings.h"
 
-#include <kwidgetsaddons_version.h>
 #include <QAction>
 #include <KActionCollection>
 #include <KConfigDialog>
@@ -341,20 +340,12 @@ void MainWindow::onGameOver( int remainCount )
 bool MainWindow::confirmAbort()
 {
     return m_scene->isGameFinished() ||
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         ( KMessageBox::questionTwoActions( this,
-#else
-        ( KMessageBox::questionYesNo( this,
-#endif
                                       i18n( "Do you want to resign?" ),
                                       i18n( "New Game" ),
                                       KGuiItem( i18nc("@action:button", "Resign") ),
                                       KStandardGuiItem::cancel() )
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
           == KMessageBox::PrimaryAction );
-#else
-          == KMessageBox::Yes );
-#endif
 }
 
 void MainWindow::setupActions()
