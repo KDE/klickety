@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:44+0000\n"
+"POT-Creation-Date: 2023-09-25 01:39+0000\n"
 "PO-Revision-Date: 2017-02-14 22:58+0100\n"
 "Last-Translator: Kiszel Kristóf <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -85,12 +85,12 @@ msgstr "Animáció engedélyezése"
 msgid "Enable highlight"
 msgstr "Kiemelés engedélyezése"
 
-#: gamescene.cpp:241
+#: gamescene.cpp:236
 #, kde-format
 msgid "paused"
 msgstr "szüneteltetve"
 
-#: gamescene.cpp:353
+#: gamescene.cpp:348
 #, kde-format
 msgid "Game finished"
 msgstr "A játék befejeződött"
@@ -131,17 +131,17 @@ msgstr "Az színek száma a játéktéren."
 msgid "Main Toolbar"
 msgstr "Fő eszköztár"
 
-#: main.cpp:40
+#: main.cpp:27
 #, kde-format
 msgid "Klickety"
 msgstr "Klickety"
 
-#: main.cpp:41
+#: main.cpp:28
 #, kde-format
 msgid "Klickety is an adaptation of the \"clickomania\" game"
 msgstr "A Klickety a „clickomania” játék átdolgozása"
 
-#: main.cpp:43
+#: main.cpp:30
 #, kde-format
 msgid ""
 "(c) 2002-2005, Nicolas Hadacek\n"
@@ -150,210 +150,210 @@ msgstr ""
 "(c) Nicolas Hadacek, 2002-2005.\n"
 "(c) Ni Hui, 2010."
 
-#: main.cpp:50
+#: main.cpp:37
 #, kde-format
 msgid "Start with KSame compatibility mode"
 msgstr "Indítás KSame kompatibilitási móddal"
 
-#: main.cpp:61
+#: main.cpp:48
 #, kde-format
 msgid "A little game about balls and how to get rid of them"
 msgstr "Egy kicsi játék labdákról és hogy hogyan lehet megszabadulni tőlük"
 
-#: main.cpp:62
+#: main.cpp:49
 #, kde-format
 msgid "Marcus Kreutzberger"
 msgstr "Marcus Kreutzberger"
 
-#: main.cpp:62 main.cpp:69
+#: main.cpp:49 main.cpp:56
 #, kde-format
 msgid "Original author"
 msgstr "Eredeti szerző"
 
-#: main.cpp:63
+#: main.cpp:50
 #, kde-format
 msgid "Henrique Pinto"
 msgstr "Henrique Pinto"
 
-#: main.cpp:63
+#: main.cpp:50
 #, kde-format
 msgid "Past maintainer"
 msgstr "Régi karbantartó"
 
-#: main.cpp:64 main.cpp:70
+#: main.cpp:51 main.cpp:57
 #, kde-format
 msgid "Ni Hui"
 msgstr "Ni Hui"
 
-#: main.cpp:64
+#: main.cpp:51
 #, kde-format
 msgid "Integration with Klickety. Current maintainer"
 msgstr "Integráció a Klickety-vel. Jelenlegi karbantartó"
 
-#: main.cpp:65
+#: main.cpp:52
 #, kde-format
 msgid "Johann Ollivier Lapeyre"
 msgstr "Johann Ollivier Lapeyre"
 
-#: main.cpp:65
+#: main.cpp:52
 #, kde-format
 msgid "Artwork"
 msgstr "Grafika"
 
-#: main.cpp:69
+#: main.cpp:56
 #, kde-format
 msgid "Nicolas Hadacek"
 msgstr "Nicolas Hadacek"
 
-#: main.cpp:70
+#: main.cpp:57
 #, kde-format
 msgid "Rewrite for KDE4. Current maintainer"
 msgstr "Átírás KDE4-re. Aktuális karbantartó"
 
-#: main.cpp:71
+#: main.cpp:58
 #, kde-format
 msgid "Dan Hill"
 msgstr "Dan Hill"
 
-#: main.cpp:71
+#: main.cpp:58
 #, kde-format
 msgid "Icons"
 msgstr "Ikonok"
 
 #. i18n( "Colors: XX" ), 1 );
 #. i18n( "Board: XXXXXX" ), 2 );
-#: mainwindow.cpp:59
+#: mainwindow.cpp:58
 #, kde-format
 msgid "Marked: 0"
 msgstr "Megjelölve: 0"
 
-#: mainwindow.cpp:60 mainwindow.cpp:246
+#: mainwindow.cpp:59 mainwindow.cpp:245
 #, kde-format
 msgid "Score: 0"
 msgstr "Pontszám: 0"
 
-#: mainwindow.cpp:66
+#: mainwindow.cpp:65
 #, kde-format
 msgid "Pieces: 0"
 msgstr "Elemek: 0"
 
-#: mainwindow.cpp:67
+#: mainwindow.cpp:66
 #, kde-format
 msgid "Time: 00:00"
 msgstr "Idő: 00.00"
 
-#: mainwindow.cpp:92
+#: mainwindow.cpp:91
 #, kde-format
 msgid "General"
 msgstr "Általános"
 
-#: mainwindow.cpp:93
+#: mainwindow.cpp:92
 #, kde-format
 msgid "Theme"
 msgstr "Téma"
 
-#: mainwindow.cpp:94
+#: mainwindow.cpp:93
 #, kde-format
 msgid "Background"
 msgstr "Háttér"
 
-#: mainwindow.cpp:96
+#: mainwindow.cpp:95
 #, kde-format
 msgid "Custom Game"
 msgstr "Egyedi játék"
 
-#: mainwindow.cpp:173
+#: mainwindow.cpp:172
 #, fuzzy, kde-format
 #| msgid "Select Board"
 msgctxt "@title:window"
 msgid "Select Board"
 msgstr "Tábla kiválasztása"
 
-#: mainwindow.cpp:174
+#: mainwindow.cpp:173
 #, kde-format
 msgid "Select a board number:"
 msgstr "Táblaszám kiválasztása:"
 
-#: mainwindow.cpp:212 mainwindow.cpp:226
+#: mainwindow.cpp:211 mainwindow.cpp:225
 #, kde-format
 msgid "Klickety Game Files (*.klickety)"
 msgstr "Klickety játékfájlok (*.klickety)"
 
-#: mainwindow.cpp:238
+#: mainwindow.cpp:237
 #, kde-format
 msgid "Marked: %2 (1 Point)"
 msgid_plural "Marked: %2 (%1 Points)"
 msgstr[0] "Megjelölve: %2 (1 pont)"
 msgstr[1] "Megjelölve: %2 (%1 pont)"
 
-#: mainwindow.cpp:260
+#: mainwindow.cpp:259
 #, kde-format
 msgid "Score: %1"
 msgstr "Pontszám: %1"
 
-#: mainwindow.cpp:266
+#: mainwindow.cpp:265
 #, kde-format
 msgid "Pieces: %1"
 msgstr "Elemek: %1"
 
-#: mainwindow.cpp:271
+#: mainwindow.cpp:270
 #, kde-format
 msgid "Time: %1"
 msgstr "Idő: %1"
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:407
+#: mainwindow.cpp:278 mainwindow.cpp:307 mainwindow.cpp:398
 #, kde-format
 msgid "High Scores"
 msgstr "Dicsőségtábla"
 
-#: mainwindow.cpp:287 mainwindow.cpp:324
+#: mainwindow.cpp:286 mainwindow.cpp:323
 #, kde-format
 msgid "Remaining pieces"
 msgstr "Hátralévő elemek"
 
-#: mainwindow.cpp:288 mainwindow.cpp:325
+#: mainwindow.cpp:287 mainwindow.cpp:324
 #, kde-format
 msgid "Time"
 msgstr "Idő"
 
-#: mainwindow.cpp:349
+#: mainwindow.cpp:344
 #, kde-format
 msgid "Do you want to resign?"
 msgstr "Szeretné feladni?"
 
-#: mainwindow.cpp:350
+#: mainwindow.cpp:345
 #, kde-format
 msgid "New Game"
 msgstr "Új játék"
 
-#: mainwindow.cpp:351
+#: mainwindow.cpp:346
 #, fuzzy, kde-format
 #| msgid "Resign"
 msgctxt "@action:button"
 msgid "Resign"
 msgstr "Feladás"
 
-#: mainwindow.cpp:372
+#: mainwindow.cpp:363
 #, kde-format
 msgid "New Numbered Game..."
 msgstr "Új számozott játék…"
 
-#: mainwindow.cpp:376
+#: mainwindow.cpp:367
 #, kde-format
 msgid "Play Sounds"
 msgstr "Hangok lejátszása"
 
-#: mainwindow.cpp:391
+#: mainwindow.cpp:382
 #, kde-format
 msgid "Undo All"
 msgstr "Mind visszavonása"
 
-#: mainwindow.cpp:397
+#: mainwindow.cpp:388
 #, kde-format
 msgid "Redo All"
 msgstr "Mind ismétlése"
 
-#: mainwindow.cpp:418
+#: mainwindow.cpp:409
 #, kde-format
 msgid "Custom"
 msgstr "Egyedi"

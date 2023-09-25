@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:44+0000\n"
+"POT-Creation-Date: 2023-09-25 01:39+0000\n"
 "PO-Revision-Date: 2016-07-27 19:48+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -84,12 +84,12 @@ msgstr "Animatsiooni lubamine"
 msgid "Enable highlight"
 msgstr "Esiletõstmise lubamine"
 
-#: gamescene.cpp:241
+#: gamescene.cpp:236
 #, kde-format
 msgid "paused"
 msgstr "paus"
 
-#: gamescene.cpp:353
+#: gamescene.cpp:348
 #, kde-format
 msgid "Game finished"
 msgstr "Mäng on läbi"
@@ -130,17 +130,17 @@ msgstr "Värvide arv mänguväljal."
 msgid "Main Toolbar"
 msgstr "Peamine tööriistariba"
 
-#: main.cpp:40
+#: main.cpp:27
 #, kde-format
 msgid "Klickety"
 msgstr "Klickety"
 
-#: main.cpp:41
+#: main.cpp:28
 #, kde-format
 msgid "Klickety is an adaptation of the \"clickomania\" game"
 msgstr "Klickety on mängu Clickomania mugandus"
 
-#: main.cpp:43
+#: main.cpp:30
 #, kde-format
 msgid ""
 "(c) 2002-2005, Nicolas Hadacek\n"
@@ -149,210 +149,210 @@ msgstr ""
 "(c) 2002-2005: Nicolas Hadacek\n"
 "(c) 2010: Ni Hui"
 
-#: main.cpp:50
+#: main.cpp:37
 #, kde-format
 msgid "Start with KSame compatibility mode"
 msgstr "Käivitamine KSame'iga ühildumise režiimis"
 
-#: main.cpp:61
+#: main.cpp:48
 #, kde-format
 msgid "A little game about balls and how to get rid of them"
 msgstr "Väike mäng pallidega ja kuidas nendest lahti saada"
 
-#: main.cpp:62
+#: main.cpp:49
 #, kde-format
 msgid "Marcus Kreutzberger"
 msgstr "Marcus Kreutzberger"
 
-#: main.cpp:62 main.cpp:69
+#: main.cpp:49 main.cpp:56
 #, kde-format
 msgid "Original author"
 msgstr "Algne autor"
 
-#: main.cpp:63
+#: main.cpp:50
 #, kde-format
 msgid "Henrique Pinto"
 msgstr "Henrique Pinto"
 
-#: main.cpp:63
+#: main.cpp:50
 #, kde-format
 msgid "Past maintainer"
 msgstr "Endine hooldaja"
 
-#: main.cpp:64 main.cpp:70
+#: main.cpp:51 main.cpp:57
 #, kde-format
 msgid "Ni Hui"
 msgstr "Ni Hui"
 
-#: main.cpp:64
+#: main.cpp:51
 #, kde-format
 msgid "Integration with Klickety. Current maintainer"
 msgstr "Lõimimine Klicketyga. Praegune hooldaja"
 
-#: main.cpp:65
+#: main.cpp:52
 #, kde-format
 msgid "Johann Ollivier Lapeyre"
 msgstr "Johann Ollivier Lapeyre"
 
-#: main.cpp:65
+#: main.cpp:52
 #, kde-format
 msgid "Artwork"
 msgstr "Kunstiline kujundus"
 
-#: main.cpp:69
+#: main.cpp:56
 #, kde-format
 msgid "Nicolas Hadacek"
 msgstr "Nicolas Hadacek"
 
-#: main.cpp:70
+#: main.cpp:57
 #, kde-format
 msgid "Rewrite for KDE4. Current maintainer"
 msgstr "Ümberkirjutamine KDE4 tarbeks. Praegune hooldaja"
 
-#: main.cpp:71
+#: main.cpp:58
 #, kde-format
 msgid "Dan Hill"
 msgstr "Dan Hill"
 
-#: main.cpp:71
+#: main.cpp:58
 #, kde-format
 msgid "Icons"
 msgstr "Ikoonid"
 
 #. i18n( "Colors: XX" ), 1 );
 #. i18n( "Board: XXXXXX" ), 2 );
-#: mainwindow.cpp:59
+#: mainwindow.cpp:58
 #, kde-format
 msgid "Marked: 0"
 msgstr "Märgitud: 0"
 
-#: mainwindow.cpp:60 mainwindow.cpp:246
+#: mainwindow.cpp:59 mainwindow.cpp:245
 #, kde-format
 msgid "Score: 0"
 msgstr "Punktisumma: 0"
 
-#: mainwindow.cpp:66
+#: mainwindow.cpp:65
 #, kde-format
 msgid "Pieces: 0"
 msgstr "Tükid: 0"
 
-#: mainwindow.cpp:67
+#: mainwindow.cpp:66
 #, kde-format
 msgid "Time: 00:00"
 msgstr "Aeg: 00:00"
 
-#: mainwindow.cpp:92
+#: mainwindow.cpp:91
 #, kde-format
 msgid "General"
 msgstr "Üldine"
 
-#: mainwindow.cpp:93
+#: mainwindow.cpp:92
 #, kde-format
 msgid "Theme"
 msgstr "Teema"
 
-#: mainwindow.cpp:94
+#: mainwindow.cpp:93
 #, kde-format
 msgid "Background"
 msgstr "Taust"
 
-#: mainwindow.cpp:96
+#: mainwindow.cpp:95
 #, kde-format
 msgid "Custom Game"
 msgstr "Kohandatud mäng"
 
-#: mainwindow.cpp:173
+#: mainwindow.cpp:172
 #, fuzzy, kde-format
 #| msgid "Select Board"
 msgctxt "@title:window"
 msgid "Select Board"
 msgstr "Mängulaua valik"
 
-#: mainwindow.cpp:174
+#: mainwindow.cpp:173
 #, kde-format
 msgid "Select a board number:"
 msgstr "Laua number:"
 
-#: mainwindow.cpp:212 mainwindow.cpp:226
+#: mainwindow.cpp:211 mainwindow.cpp:225
 #, kde-format
 msgid "Klickety Game Files (*.klickety)"
 msgstr "Klickety mängufailid (*.klickety)"
 
-#: mainwindow.cpp:238
+#: mainwindow.cpp:237
 #, kde-format
 msgid "Marked: %2 (1 Point)"
 msgid_plural "Marked: %2 (%1 Points)"
 msgstr[0] "Märgitud: %2 (1 punkt)"
 msgstr[1] "Märgitud: %1 (%2 punkti)"
 
-#: mainwindow.cpp:260
+#: mainwindow.cpp:259
 #, kde-format
 msgid "Score: %1"
 msgstr "Punktisumma: %1"
 
-#: mainwindow.cpp:266
+#: mainwindow.cpp:265
 #, kde-format
 msgid "Pieces: %1"
 msgstr "Tükid: %1"
 
-#: mainwindow.cpp:271
+#: mainwindow.cpp:270
 #, kde-format
 msgid "Time: %1"
 msgstr "Aeg: %1"
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:407
+#: mainwindow.cpp:278 mainwindow.cpp:307 mainwindow.cpp:398
 #, kde-format
 msgid "High Scores"
 msgstr "Rekordid"
 
-#: mainwindow.cpp:287 mainwindow.cpp:324
+#: mainwindow.cpp:286 mainwindow.cpp:323
 #, kde-format
 msgid "Remaining pieces"
 msgstr "Allesjäänud tükid"
 
-#: mainwindow.cpp:288 mainwindow.cpp:325
+#: mainwindow.cpp:287 mainwindow.cpp:324
 #, kde-format
 msgid "Time"
 msgstr "Aeg"
 
-#: mainwindow.cpp:349
+#: mainwindow.cpp:344
 #, kde-format
 msgid "Do you want to resign?"
 msgstr "Kas soovid alustada uut mängu?"
 
-#: mainwindow.cpp:350
+#: mainwindow.cpp:345
 #, kde-format
 msgid "New Game"
 msgstr "Uus mäng"
 
-#: mainwindow.cpp:351
+#: mainwindow.cpp:346
 #, fuzzy, kde-format
 #| msgid "Resign"
 msgctxt "@action:button"
 msgid "Resign"
 msgstr "Alusta uut mängu"
 
-#: mainwindow.cpp:372
+#: mainwindow.cpp:363
 #, kde-format
 msgid "New Numbered Game..."
 msgstr "Uus mäng numbriga... "
 
-#: mainwindow.cpp:376
+#: mainwindow.cpp:367
 #, kde-format
 msgid "Play Sounds"
 msgstr "Helide esitamine"
 
-#: mainwindow.cpp:391
+#: mainwindow.cpp:382
 #, kde-format
 msgid "Undo All"
 msgstr "Võta kõik tagasi"
 
-#: mainwindow.cpp:397
+#: mainwindow.cpp:388
 #, kde-format
 msgid "Redo All"
 msgstr "Tee kõik uuesti"
 
-#: mainwindow.cpp:418
+#: mainwindow.cpp:409
 #, kde-format
 msgid "Custom"
 msgstr "Kohandatud"
