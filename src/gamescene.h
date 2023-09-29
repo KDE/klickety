@@ -8,8 +8,9 @@
 #define GAMESCENE_H
 
 #include <QGraphicsScene>
+#include <QList>
 #include <QUndoStack>
-#include <QVector>
+
 #include <KGameRenderer>
 #include <KgSound>
 
@@ -107,7 +108,7 @@ class GameScene : public QGraphicsScene
         /** The popup messenger used when game paused or finished */
         KGamePopupItem* m_messenger;
         /** The container of all the pieces */
-        QVector<Piece*> m_pieces;
+        QList<Piece*> m_pieces;
         /** The undo stack recording moves */
         QUndoStack m_undoStack;
         /** True if the bound lines should be showed */
