@@ -18,7 +18,7 @@
 #include <KConfigDialog>
 #include <QFileDialog>
 #include <KGameClock>
-#include <KgDifficulty>
+#include <KGameDifficulty>
 #include <KgThemeSelector>
 #include <QInputDialog>
 #include <KLocalizedString>
@@ -138,20 +138,20 @@ void MainWindow::newGameWithId( int gameId )
 
     m_gameClock->restart();
 
-    switch ( Kg::difficultyLevel() ) {
-        case KgDifficultyLevel::VeryEasy:
+    switch ( KGameDifficulty::globalLevel() ) {
+        case KGameDifficultyLevel::VeryEasy:
             m_scene->startNewGame( 10, 16, 3, gameId );
             break;
-        case KgDifficultyLevel::Easy:
+        case KGameDifficultyLevel::Easy:
             m_scene->startNewGame( 10, 16, 4, gameId );
             break;
-        case KgDifficultyLevel::Medium:
+        case KGameDifficultyLevel::Medium:
             m_scene->startNewGame( 10, 16, 5, gameId );
             break;
-        case KgDifficultyLevel::Hard:
+        case KGameDifficultyLevel::Hard:
             m_scene->startNewGame( 10, 16, 6, gameId );
             break;
-        case KgDifficultyLevel::Custom:
+        case KGameDifficultyLevel::Custom:
             m_scene->startNewGame( Settings::customWidth(),
                                    Settings::customHeight(),
                                    Settings::customColorCount(), gameId );
@@ -274,7 +274,7 @@ void MainWindow::showHighscores()
 {
     if ( m_kSameMode ) {
         QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
-        d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
+        d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ false);
         d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
         d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
         d->exec();
@@ -285,7 +285,7 @@ void MainWindow::showHighscores()
     QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
     d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QStringLiteral( "remains" ) );
     d->addField( KScoreDialog::Custom2, i18n( "Time" ), QStringLiteral( "time" ) );
-    d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
+    d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ true);
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
     d->hideField( KScoreDialog::Score );
     d->exec();
@@ -303,7 +303,7 @@ void MainWindow::onGameOver( int remainCount )
         }
 
         QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
-        d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ false);
+        d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ false);
         d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
         d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
 
@@ -322,7 +322,7 @@ void MainWindow::onGameOver( int remainCount )
     QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
     d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QStringLiteral( "remains" ) );
     d->addField( KScoreDialog::Custom2, i18n( "Time" ), QStringLiteral( "time" ) );
-    d->initFromDifficulty(Kg::difficulty(), /*setConfigGroup=*/ true);
+    d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ true);
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
     d->hideField( KScoreDialog::Score );
 
@@ -394,22 +394,22 @@ void MainWindow::setupActions()
     KStandardAction::preferences(this, &MainWindow::configureSettings, actionCollection());
 
     if ( m_kSameMode ) {
-        Kg::difficulty()->addLevel(new KgDifficultyLevel(0,
+        KGameDifficulty::global()->addLevel(new KGameDifficultyLevel(0,
             QByteArray( "KSame" ), i18n( "High Scores" )
         ));
         setupGUI( QSize( 576, 384 ) );
         return;
     }
 
-    Kg::difficulty()->addStandardLevelRange(
-        KgDifficultyLevel::VeryEasy, KgDifficultyLevel::Hard,
-        KgDifficultyLevel::Easy //default
+    KGameDifficulty::global()->addStandardLevelRange(
+        KGameDifficultyLevel::VeryEasy, KGameDifficultyLevel::Hard,
+        KGameDifficultyLevel::Easy //default
     );
-    Kg::difficulty()->addLevel(new KgDifficultyLevel(1000,
+    KGameDifficulty::global()->addLevel(new KGameDifficultyLevel(1000,
         QByteArray( "Custom" ), i18n( "Custom" )
     ));
-    KgDifficultyGUI::init(this);
-    connect(Kg::difficulty(), &KgDifficulty::currentLevelChanged,
+    KGameDifficultyGUI::init(this);
+    connect(KGameDifficulty::global(), &KGameDifficulty::currentLevelChanged,
             this, &MainWindow::newGame);
 
     setupGUI( QSize( 340, 510 ) );
