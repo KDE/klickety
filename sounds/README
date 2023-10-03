@@ -1,5 +1,5 @@
 Klickety used KNotify with just two standard KDE sounds.
-I ported it to KgSound but just copied those used
+I ported it to KGameSound but just copied those used
 standard KDE sounds into Klickety. Here is what was copied:
 
 KDE-Window-Shade-Down.ogg
