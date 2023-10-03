@@ -11,8 +11,8 @@
 #include "undo.h"
 // KDEGames
 #include <KGamePopupItem>
-#include <KgTheme>
-#include <KgThemeProvider>
+#include <KGameTheme>
+#include <KGameThemeProvider>
 // KF
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -26,13 +26,13 @@
 #include <QSequentialAnimationGroup>
 #include <QStandardPaths>
 
-static KgThemeProvider* provider()
+static KGameThemeProvider* provider()
 {
     //TODO: Do we want to store separate theme choices for Klickety and KSame?
     const QLatin1String defaultTheme =
         Settings::self()->config()->name() == QLatin1String("ksamerc")
         ? QLatin1String("ksame") : QLatin1String("default");
-    KgThemeProvider* prov = new KgThemeProvider;
+    KGameThemeProvider* prov = new KGameThemeProvider;
     prov->discoverThemes(QStringLiteral("themes"), defaultTheme);
     return prov;
 }
@@ -272,7 +272,7 @@ bool GameScene::isGameFinished() const
     return true;
 }
 
-KgThemeProvider* GameScene::themeProvider() const
+KGameThemeProvider* GameScene::themeProvider() const
 {
     return m_renderer.themeProvider();
 }

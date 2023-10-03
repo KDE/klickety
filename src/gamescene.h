@@ -48,8 +48,8 @@ class GameScene : public QGraphicsScene
         void setEnableAnimation( bool isEnabled );
         /** Determine whether the pieces should be highlighted when hovered */
         void setEnableHighlight( bool isEnabled );
-        /** The MainWindow needs a ref. to this for KgThemeSelector */
-        KgThemeProvider* themeProvider() const;
+        /** The MainWindow needs a ref. to this for KGameThemeSelector */
+        KGameThemeProvider* themeProvider() const;
     Q_SIGNALS:
         /** Emitted when undo action enable or disable */
         void canUndoChanged( bool canUndo );
