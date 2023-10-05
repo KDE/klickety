@@ -30,6 +30,7 @@ target_link_libraries(klickety
     KDEGames6
     KF6::Crash
     KF6::DBusAddons
+    KF6::I18n
     KF6::KIOWidgets
     KF6::XmlGui
 )
