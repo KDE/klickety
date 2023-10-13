@@ -7,7 +7,7 @@
 #ifndef PIECE_H
 #define PIECE_H
 
-#include <KGameRenderedObjectItem>
+#include <KGameRenderedGraphicsObject>
 
 class QGraphicsLineItem;
 class QGraphicsSceneMouseEvent;
@@ -15,12 +15,12 @@ class QGraphicsSceneMouseEvent;
  * This class represents a single piece on the game scene.
  * It emits signals when clicked.
  */
-class Piece : public KGameRenderedObjectItem
+class Piece : public KGameRenderedGraphicsObject
 {
     Q_OBJECT
     public:
         /** Constructor */
-        explicit Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent = nullptr );
+        explicit Piece( KGameGraphicsViewRenderer* renderer, int x, int y, int color, QGraphicsItem* parent = nullptr );
         /** Destructor */
         ~Piece() override;
         /** Reimplemented for using bounding rect for detecting hovering and mouse clicking */
@@ -36,7 +36,7 @@ class Piece : public KGameRenderedObjectItem
         /** The bound line graphics item on the bottom side */
         QGraphicsLineItem* const m_bottomLine;
         /** The highlight graphics item overlapped */
-        KGameRenderedObjectItem* const m_highlighter;
+        KGameRenderedGraphicsObject* const m_highlighter;
     Q_SIGNALS:
         /** Emitted when this piece is clicked */
         void pieceClicked( int x, int y );

@@ -10,14 +10,14 @@
 
 #include <QGraphicsLineItem>
 
-Piece::Piece( KGameRenderer* renderer, int x, int y, int color, QGraphicsItem* parent )
-: KGameRenderedObjectItem(renderer,QStringLiteral( "BLOCK_%1" ).arg(QString::number(color)),parent),
+Piece::Piece( KGameGraphicsViewRenderer* renderer, int x, int y, int color, QGraphicsItem* parent )
+: KGameRenderedGraphicsObject(renderer,QStringLiteral( "BLOCK_%1" ).arg(QString::number(color)),parent),
 m_x(x),
 m_y(y),
 m_color(color),
 m_rightLine(new QGraphicsLineItem),
 m_bottomLine(new QGraphicsLineItem),
-m_highlighter(new KGameRenderedObjectItem(renderer,QStringLiteral( "HIGHLIGHT" )))
+m_highlighter(new KGameRenderedGraphicsObject(renderer,QStringLiteral( "HIGHLIGHT" )))
 {
     setAcceptHoverEvents( true );
     setAcceptedMouseButtons( Qt::LeftButton );

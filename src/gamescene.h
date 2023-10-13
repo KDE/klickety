@@ -11,7 +11,7 @@
 #include <QList>
 #include <QUndoStack>
 
-#include <KGameRenderer>
+#include <KGameGraphicsViewRenderer>
 #include <KGameSound>
 
 class QSequentialAnimationGroup;
@@ -104,7 +104,7 @@ class GameScene : public QGraphicsScene
         /** Internal function used to caluculate the remaining piece count */
         int currentRemainCount() const;
         /** The game graphics item renderer */
-        KGameRenderer m_renderer;
+        KGameGraphicsViewRenderer m_renderer;
         /** The popup messenger used when game paused or finished */
         KGamePopupItem* m_messenger;
         /** The container of all the pieces */
