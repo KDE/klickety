@@ -4,6 +4,7 @@ confinement: strict
 grade: stable
 base: core22
 adopt-info: klickety
+version: '23.08.2'
 apps:
     klickety:
         # extensions:
