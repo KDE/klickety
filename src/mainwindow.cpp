@@ -25,7 +25,7 @@
 #include <KMessageBox>
 #include <KScoreDialog>
 #include <KStandardAction>
-#include <KStandardGameAction>
+#include <KGameStandardAction>
 #include <QStatusBar>
 #include <KToggleAction>
 #include <QIcon>
@@ -351,15 +351,15 @@ bool MainWindow::confirmAbort()
 void MainWindow::setupActions()
 {
     // game menu
-    KStandardGameAction::gameNew(this, &MainWindow::newGame, actionCollection());
+    KGameStandardAction::gameNew(this, &MainWindow::newGame, actionCollection());
     if ( !m_kSameMode ) {
-        KStandardGameAction::load(this, &MainWindow::loadGame, actionCollection());
-        KStandardGameAction::save(this, &MainWindow::saveGame, actionCollection());
+        KGameStandardAction::load(this, &MainWindow::loadGame, actionCollection());
+        KGameStandardAction::save(this, &MainWindow::saveGame, actionCollection());
     }
-    KStandardGameAction::restart(this, &MainWindow::restartGame, actionCollection());
-    KStandardGameAction::highscores(this, &MainWindow::showHighscores, actionCollection());
-    m_pauseAction = KStandardGameAction::pause(this, &MainWindow::pauseGame, actionCollection());
-    KStandardGameAction::quit( this, &MainWindow::close, actionCollection());
+    KGameStandardAction::restart(this, &MainWindow::restartGame, actionCollection());
+    KGameStandardAction::highscores(this, &MainWindow::showHighscores, actionCollection());
+    m_pauseAction = KGameStandardAction::pause(this, &MainWindow::pauseGame, actionCollection());
+    KGameStandardAction::quit( this, &MainWindow::close, actionCollection());
     QAction * m_newNumGameAction = new QAction( i18n( "New Numbered Game..." ), actionCollection() );
     actionCollection()->addAction( QStringLiteral( "game_new_numeric" ), m_newNumGameAction );
     connect(m_newNumGameAction, &QAction::triggered, this, &MainWindow::newNumGame);
@@ -370,10 +370,10 @@ void MainWindow::setupActions()
     connect(soundAction, &KToggleAction::triggered, this, &MainWindow::setSoundsEnabled);
 
     // move menu
-    QAction * undoAction = KStandardGameAction::undo(m_scene, &GameScene::undoMove, actionCollection());
+    QAction * undoAction = KGameStandardAction::undo(m_scene, &GameScene::undoMove, actionCollection());
     undoAction->setEnabled( false );
     connect(m_scene, &GameScene::canUndoChanged, undoAction, &QAction::setEnabled);
-    QAction * redoAction = KStandardGameAction::redo(m_scene, &GameScene::redoMove, actionCollection());
+    QAction * redoAction = KGameStandardAction::redo(m_scene, &GameScene::redoMove, actionCollection());
     redoAction->setEnabled( false );
     connect(m_scene, &GameScene::canRedoChanged, redoAction, &QAction::setEnabled);
 
