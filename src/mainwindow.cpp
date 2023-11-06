@@ -216,7 +216,7 @@ void MainWindow::loadGame()
     m_pauseAction->setChecked( false );
     m_pauseAction->setEnabled( true );
     KConfig config( fileName, KConfig::SimpleConfig );
-    KConfigGroup group = config.group( "Savegame" );
+    KConfigGroup group = config.group( QStringLiteral("Savegame") );
     m_scene->loadGame( group );
 }
 
@@ -227,7 +227,7 @@ void MainWindow::saveGame()
         return;
     }
     KConfig config( fileName, KConfig::SimpleConfig );
-    KConfigGroup group = config.group( "Savegame" );
+    KConfigGroup group = config.group( QStringLiteral("Savegame") );
     m_scene->saveGame( group );
 }
 
