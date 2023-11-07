@@ -1,0 +1,354 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the klickety package.
+#
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
+msgid ""
+msgstr ""
+"Project-Id-Version: klickety\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-25 01:39+0000\n"
+"PO-Revision-Date: 2023-11-07 01:09+0100\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Softastur"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "alministradores@softastur.org"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
+#: bgselectorconfig.ui:33
+#, kde-format
+msgid "&Theme"
+msgstr "&Estilu"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioColor)
+#: bgselectorconfig.ui:46
+#, kde-format
+msgid "&Color"
+msgstr "&Color"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioImage)
+#: bgselectorconfig.ui:56
+#, kde-format
+msgid "&Image"
+msgstr "&Imaxe"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: customgameconfig.ui:17
+#, kde-format
+msgid "Width:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: customgameconfig.ui:34
+#, kde-format
+msgid "Height:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: customgameconfig.ui:51
+#, kde-format
+msgid "Color count:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowBoundLines)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowBoundLines)
+#: gameconfig.ui:16 gameconfig.ui:19
+#, kde-format
+msgid "Show bound lines"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableAnimation)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableAnimation)
+#: gameconfig.ui:26 gameconfig.ui:29
+#, kde-format
+msgid "Enable animation"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableHighlight)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableHighlight)
+#: gameconfig.ui:36 gameconfig.ui:39
+#, kde-format
+msgid "Enable highlight"
+msgstr ""
+
+#: gamescene.cpp:236
+#, kde-format
+msgid "paused"
+msgstr ""
+
+#: gamescene.cpp:348
+#, kde-format
+msgid "Game finished"
+msgstr ""
+
+#. i18n: ectx: label, entry (BgColor), group (Background)
+#: klickety.kcfg:36
+#, kde-format
+msgid "The background color to be used."
+msgstr ""
+
+#. i18n: ectx: label, entry (BgImage), group (Background)
+#: klickety.kcfg:40
+#, kde-format
+msgid "The background image to be used."
+msgstr ""
+
+#. i18n: ectx: label, entry (CustomWidth), group (CustomGame)
+#: klickety.kcfg:45
+#, kde-format
+msgid "The width of the playing field."
+msgstr ""
+
+#. i18n: ectx: label, entry (CustomHeight), group (CustomGame)
+#: klickety.kcfg:51
+#, kde-format
+msgid "The height of the playing field."
+msgstr ""
+
+#. i18n: ectx: label, entry (CustomColorCount), group (CustomGame)
+#: klickety.kcfg:57
+#, kde-format
+msgid "The number of colors in the playing field."
+msgstr ""
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: klicketyui.rc:22
+#, kde-format
+msgid "Main Toolbar"
+msgstr ""
+
+#: main.cpp:27
+#, kde-format
+msgid "Klickety"
+msgstr ""
+
+#: main.cpp:28
+#, kde-format
+msgid "Klickety is an adaptation of the \"clickomania\" game"
+msgstr ""
+
+#: main.cpp:30
+#, kde-format
+msgid ""
+"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2010, Ni Hui"
+msgstr ""
+
+#: main.cpp:37
+#, kde-format
+msgid "Start with KSame compatibility mode"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "A little game about balls and how to get rid of them"
+msgstr ""
+
+#: main.cpp:49
+#, kde-format
+msgid "Marcus Kreutzberger"
+msgstr ""
+
+#: main.cpp:49 main.cpp:56
+#, kde-format
+msgid "Original author"
+msgstr ""
+
+#: main.cpp:50
+#, kde-format
+msgid "Henrique Pinto"
+msgstr ""
+
+#: main.cpp:50
+#, kde-format
+msgid "Past maintainer"
+msgstr ""
+
+#: main.cpp:51 main.cpp:57
+#, kde-format
+msgid "Ni Hui"
+msgstr ""
+
+#: main.cpp:51
+#, kde-format
+msgid "Integration with Klickety. Current maintainer"
+msgstr ""
+
+#: main.cpp:52
+#, kde-format
+msgid "Johann Ollivier Lapeyre"
+msgstr ""
+
+#: main.cpp:52
+#, kde-format
+msgid "Artwork"
+msgstr ""
+
+#: main.cpp:56
+#, kde-format
+msgid "Nicolas Hadacek"
+msgstr ""
+
+#: main.cpp:57
+#, kde-format
+msgid "Rewrite for KDE4. Current maintainer"
+msgstr ""
+
+#: main.cpp:58
+#, kde-format
+msgid "Dan Hill"
+msgstr ""
+
+#: main.cpp:58
+#, kde-format
+msgid "Icons"
+msgstr ""
+
+#. i18n( "Colors: XX" ), 1 );
+#. i18n( "Board: XXXXXX" ), 2 );
+#: mainwindow.cpp:58
+#, kde-format
+msgid "Marked: 0"
+msgstr ""
+
+#: mainwindow.cpp:59 mainwindow.cpp:245
+#, kde-format
+msgid "Score: 0"
+msgstr ""
+
+#: mainwindow.cpp:65
+#, kde-format
+msgid "Pieces: 0"
+msgstr ""
+
+#: mainwindow.cpp:66
+#, kde-format
+msgid "Time: 00:00"
+msgstr ""
+
+#: mainwindow.cpp:91
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: mainwindow.cpp:92
+#, kde-format
+msgid "Theme"
+msgstr ""
+
+#: mainwindow.cpp:93
+#, kde-format
+msgid "Background"
+msgstr ""
+
+#: mainwindow.cpp:95
+#, kde-format
+msgid "Custom Game"
+msgstr ""
+
+#: mainwindow.cpp:172
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Board"
+msgstr ""
+
+#: mainwindow.cpp:173
+#, kde-format
+msgid "Select a board number:"
+msgstr ""
+
+#: mainwindow.cpp:211 mainwindow.cpp:225
+#, kde-format
+msgid "Klickety Game Files (*.klickety)"
+msgstr ""
+
+#: mainwindow.cpp:237
+#, kde-format
+msgid "Marked: %2 (1 Point)"
+msgid_plural "Marked: %2 (%1 Points)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: mainwindow.cpp:259
+#, kde-format
+msgid "Score: %1"
+msgstr ""
+
+#: mainwindow.cpp:265
+#, kde-format
+msgid "Pieces: %1"
+msgstr ""
+
+#: mainwindow.cpp:270
+#, kde-format
+msgid "Time: %1"
+msgstr ""
+
+#: mainwindow.cpp:278 mainwindow.cpp:307 mainwindow.cpp:398
+#, kde-format
+msgid "High Scores"
+msgstr ""
+
+#: mainwindow.cpp:286 mainwindow.cpp:323
+#, kde-format
+msgid "Remaining pieces"
+msgstr ""
+
+#: mainwindow.cpp:287 mainwindow.cpp:324
+#, kde-format
+msgid "Time"
+msgstr ""
+
+#: mainwindow.cpp:344
+#, kde-format
+msgid "Do you want to resign?"
+msgstr ""
+
+#: mainwindow.cpp:345
+#, kde-format
+msgid "New Game"
+msgstr ""
+
+#: mainwindow.cpp:346
+#, kde-format
+msgctxt "@action:button"
+msgid "Resign"
+msgstr ""
+
+#: mainwindow.cpp:363
+#, kde-format
+msgid "New Numbered Game..."
+msgstr ""
+
+#: mainwindow.cpp:367
+#, kde-format
+msgid "Play Sounds"
+msgstr ""
+
+#: mainwindow.cpp:382
+#, kde-format
+msgid "Undo All"
+msgstr ""
+
+#: mainwindow.cpp:388
+#, kde-format
+msgid "Redo All"
+msgstr ""
+
+#: mainwindow.cpp:409
+#, kde-format
+msgid "Custom"
+msgstr ""
