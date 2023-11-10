@@ -13,6 +13,8 @@
 #include "gameview.h"
 #include "settings.h"
 
+#include <KGameHighScoreDialog>
+
 #include <QAction>
 #include <KActionCollection>
 #include <KConfigDialog>
@@ -23,7 +25,6 @@
 #include <QInputDialog>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KScoreDialog>
 #include <KStandardAction>
 #include <KGameStandardAction>
 #include <QStatusBar>
@@ -273,7 +274,7 @@ void MainWindow::changeTime( const QString& newTime )
 void MainWindow::showHighscores()
 {
     if ( m_kSameMode ) {
-        QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
+        QPointer<KGameHighScoreDialog> d = new KGameHighScoreDialog( KGameHighScoreDialog::Name | KGameHighScoreDialog::Score, this );
         d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ false);
         d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
         d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
@@ -282,12 +283,12 @@ void MainWindow::showHighscores()
         return;
     }
 
-    QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QStringLiteral( "remains" ) );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QStringLiteral( "time" ) );
+    QPointer<KGameHighScoreDialog> d = new KGameHighScoreDialog( KGameHighScoreDialog::Name, this );
+    d->addField( KGameHighScoreDialog::Custom1, i18n( "Remaining pieces" ), QStringLiteral( "remains" ) );
+    d->addField( KGameHighScoreDialog::Custom2, i18n( "Time" ), QStringLiteral( "time" ) );
     d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ true);
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
-    d->hideField( KScoreDialog::Score );
+    d->hideField( KGameHighScoreDialog::Score );
     d->exec();
     delete d;
 }
@@ -302,13 +303,13 @@ void MainWindow::onGameOver( int remainCount )
             m_gameScore += 1000;
         }
 
-        QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name | KScoreDialog::Score, this );
+        QPointer<KGameHighScoreDialog> d = new KGameHighScoreDialog( KGameHighScoreDialog::Name | KGameHighScoreDialog::Score, this );
         d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ false);
         d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
         d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
 
-        KScoreDialog::FieldInfo scoreInfo;
-        scoreInfo[ KScoreDialog::Score ].setNum( m_gameScore );
+        KGameHighScoreDialog::FieldInfo scoreInfo;
+        scoreInfo[ KGameHighScoreDialog::Score ].setNum( m_gameScore );
 
         if ( d->addScore( scoreInfo ) != 0 ) {
             d->exec();
@@ -319,19 +320,19 @@ void MainWindow::onGameOver( int remainCount )
 
     m_gameClock->pause();
 
-    QPointer<KScoreDialog> d = new KScoreDialog( KScoreDialog::Name, this );
-    d->addField( KScoreDialog::Custom1, i18n( "Remaining pieces" ), QStringLiteral( "remains" ) );
-    d->addField( KScoreDialog::Custom2, i18n( "Time" ), QStringLiteral( "time" ) );
+    QPointer<KGameHighScoreDialog> d = new KGameHighScoreDialog( KGameHighScoreDialog::Name, this );
+    d->addField( KGameHighScoreDialog::Custom1, i18n( "Remaining pieces" ), QStringLiteral( "remains" ) );
+    d->addField( KGameHighScoreDialog::Custom2, i18n( "Time" ), QStringLiteral( "time" ) );
     d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ true);
     d->setHiddenConfigGroups( QList<QByteArray>() << "KSame" );
-    d->hideField( KScoreDialog::Score );
+    d->hideField( KGameHighScoreDialog::Score );
 
-    KScoreDialog::FieldInfo scoreInfo;
-    scoreInfo[KScoreDialog::Custom1].setNum( remainCount );
-    scoreInfo[KScoreDialog::Custom2] = m_gameClock->timeString();
+    KGameHighScoreDialog::FieldInfo scoreInfo;
+    scoreInfo[KGameHighScoreDialog::Custom1].setNum( remainCount );
+    scoreInfo[KGameHighScoreDialog::Custom2] = m_gameClock->timeString();
     // remainCount*10000000 is much bigger than a usual time seconds
-    scoreInfo[KScoreDialog::Score].setNum( remainCount*10000000 + m_gameClock->seconds() );
-    if ( d->addScore( scoreInfo, KScoreDialog::LessIsMore ) != 0 ) {
+    scoreInfo[KGameHighScoreDialog::Score].setNum( remainCount*10000000 + m_gameClock->seconds() );
+    if ( d->addScore( scoreInfo, KGameHighScoreDialog::LessIsMore ) != 0 ) {
         d->exec();
     }
     delete d;
