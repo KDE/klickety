@@ -3,19 +3,20 @@
 #
 # Franklin Weng <franklin@mail.everfocus.com.tw>, 2010.
 # Jeff Huang <s8321414@gmail.com>, 2016.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-10 01:46+0000\n"
-"PO-Revision-Date: 2016-11-14 21:00+0800\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-11-10 23:29+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -263,8 +264,7 @@ msgid "Custom Game"
 msgstr "自定遊戲"
 
 #: mainwindow.cpp:173
-#, fuzzy, kde-format
-#| msgid "Select Board"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Board"
 msgstr "選擇遊戲板"
@@ -326,8 +326,7 @@ msgid "New Game"
 msgstr "新遊戲"
 
 #: mainwindow.cpp:347
-#, fuzzy, kde-format
-#| msgid "Resign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resign"
 msgstr "放棄"
