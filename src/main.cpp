@@ -31,10 +31,12 @@ int main( int argc, char* argv[] )
                           QString(),
                           QStringLiteral("https://apps.kde.org/klickety"));
 
-    QCommandLineParser parser;
     KAboutData::setApplicationData( aboutData );
+
     KCrash::initialize();
-    parser.addOption( QCommandLineOption( QStringList() <<  QStringLiteral( "KSameMode" ), i18n( "Start with KSame compatibility mode" ) ) );
+
+    QCommandLineParser parser;
+    parser.addOption( QCommandLineOption({QStringLiteral("KSameMode")}, i18n("Start with KSame compatibility mode")));
 
     aboutData.setupCommandLine( &parser );
     parser.process( app );
