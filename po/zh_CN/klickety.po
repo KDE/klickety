@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-10 01:46+0000\n"
+"POT-Creation-Date: 2024-01-13 00:36+0000\n"
 "PO-Revision-Date: 2024-01-06 03:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -149,72 +149,72 @@ msgstr ""
 "(c) 2002-2005, Nicolas Hadacek\n"
 "(c) 2010, Ni Hui"
 
-#: main.cpp:37
+#: main.cpp:39
 #, kde-format
 msgid "Start with KSame compatibility mode"
 msgstr "以非常困难难度开始"
 
-#: main.cpp:48
+#: main.cpp:50
 #, kde-format
 msgid "A little game about balls and how to get rid of them"
 msgstr "一个计算如何消掉小球的游戏"
 
-#: main.cpp:49
+#: main.cpp:51
 #, kde-format
 msgid "Marcus Kreutzberger"
 msgstr "Marcus Kreutzberger"
 
-#: main.cpp:49 main.cpp:56
+#: main.cpp:51 main.cpp:58
 #, kde-format
 msgid "Original author"
 msgstr "原作者"
 
-#: main.cpp:50
+#: main.cpp:52
 #, kde-format
 msgid "Henrique Pinto"
 msgstr "Henrique Pinto"
 
-#: main.cpp:50
+#: main.cpp:52
 #, kde-format
 msgid "Past maintainer"
 msgstr "前任维护者"
 
-#: main.cpp:51 main.cpp:57
+#: main.cpp:53 main.cpp:59
 #, kde-format
 msgid "Ni Hui"
 msgstr "Ni Hui"
 
-#: main.cpp:51
+#: main.cpp:53
 #, kde-format
 msgid "Integration with Klickety. Current maintainer"
 msgstr "与 Klickety 整合。当前维护者"
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "Johann Ollivier Lapeyre"
 msgstr "Johann Ollivier Lapeyre"
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "Artwork"
 msgstr "美工"
 
-#: main.cpp:56
+#: main.cpp:58
 #, kde-format
 msgid "Nicolas Hadacek"
 msgstr "Nicolas Hadacek"
 
-#: main.cpp:57
+#: main.cpp:59
 #, kde-format
 msgid "Rewrite for KDE4. Current maintainer"
 msgstr "为 KDE4 重写。当前维护者 "
 
-#: main.cpp:58
+#: main.cpp:60
 #, kde-format
 msgid "Dan Hill"
 msgstr "Dan Hill"
 
-#: main.cpp:58
+#: main.cpp:60
 #, kde-format
 msgid "Icons"
 msgstr "图标"

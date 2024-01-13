@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-10 01:46+0000\n"
+"POT-Creation-Date: 2024-01-13 00:36+0000\n"
 "PO-Revision-Date: 2013-10-27 07:22+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -153,72 +153,72 @@ msgstr ""
 "(c) 2002-2005, Nicolas Hadacek\n"
 "(c) 2010, Ni Hui"
 
-#: main.cpp:37
+#: main.cpp:39
 #, kde-format
 msgid "Start with KSame compatibility mode"
 msgstr "Pornește în regim de compatibilitate KSame"
 
-#: main.cpp:48
+#: main.cpp:50
 #, kde-format
 msgid "A little game about balls and how to get rid of them"
 msgstr "Un joc mic despre bile și cum să ne descotorosim de acestea"
 
-#: main.cpp:49
+#: main.cpp:51
 #, kde-format
 msgid "Marcus Kreutzberger"
 msgstr "Marcus Kreutzberger"
 
-#: main.cpp:49 main.cpp:56
+#: main.cpp:51 main.cpp:58
 #, kde-format
 msgid "Original author"
 msgstr "Autor original"
 
-#: main.cpp:50
+#: main.cpp:52
 #, kde-format
 msgid "Henrique Pinto"
 msgstr "Henrique Pinto"
 
-#: main.cpp:50
+#: main.cpp:52
 #, kde-format
 msgid "Past maintainer"
 msgstr "Fost responsabil"
 
-#: main.cpp:51 main.cpp:57
+#: main.cpp:53 main.cpp:59
 #, kde-format
 msgid "Ni Hui"
 msgstr "Ni Hui"
 
-#: main.cpp:51
+#: main.cpp:53
 #, kde-format
 msgid "Integration with Klickety. Current maintainer"
 msgstr "Integrarea cu Klickety. Responsabil actual"
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "Johann Ollivier Lapeyre"
 msgstr "Johann Ollivier Lapeyre"
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "Artwork"
 msgstr "Grafică"
 
-#: main.cpp:56
+#: main.cpp:58
 #, kde-format
 msgid "Nicolas Hadacek"
 msgstr "Nicolas Hadacek"
 
-#: main.cpp:57
+#: main.cpp:59
 #, kde-format
 msgid "Rewrite for KDE4. Current maintainer"
 msgstr "Rescriere pentru KDE4. Responsabil actual"
 
-#: main.cpp:58
+#: main.cpp:60
 #, kde-format
 msgid "Dan Hill"
 msgstr "Dan Hill"
 
-#: main.cpp:58
+#: main.cpp:60
 #, kde-format
 msgid "Icons"
 msgstr "Pictograme"
