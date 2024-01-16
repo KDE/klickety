@@ -22,7 +22,7 @@ int main( int argc, char* argv[] )
     QApplication app( argc, argv );
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral( "klickety" )));
 
-    KLocalizedString::setApplicationDomain("klickety");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("klickety"));
 
     KAboutData aboutData( QStringLiteral( "klickety" ), i18n( "Klickety" ), QStringLiteral( KLICKETY_VERSION_STRING ),
                           i18n( "Klickety is an adaptation of the \"clickomania\" game" ),
