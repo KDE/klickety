@@ -134,7 +134,5 @@ Exec=klickety -qwindowtitle %c
 Type=Application
 Comment=
 StartupNotify=true
-X-DBUS-StartupType=Multi
 Categories=Qt;KDE;Game;StrategyGame;
 X-DocPath=klickety/index.html
-X-DBUS-ServiceName=org.kde.klickety
