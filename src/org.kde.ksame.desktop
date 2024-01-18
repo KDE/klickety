@@ -153,5 +153,5 @@ Exec=klickety --KSameMode -qwindowtitle %c
 Type=Application
 X-DocPath=klickety/index.html#ksame_mode
 Icon=ksame
-X-KDE-StartupNotify=true
+StartupNotify=true
 Categories=Qt;KDE;Game;StrategyGame;
