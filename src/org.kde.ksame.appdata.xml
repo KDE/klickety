@@ -19,6 +19,7 @@
   <name xml:lang="fi">KSame</name>
   <name xml:lang="fr">KSame</name>
   <name xml:lang="gl">KSame</name>
+  <name xml:lang="hu">KSame</name>
   <name xml:lang="ia">KSame</name>
   <name xml:lang="id">KSame</name>
   <name xml:lang="it">KSame</name>
@@ -56,6 +57,7 @@
   <summary xml:lang="fi">KSame on pelitila Klickety-pelissä, joka taas on sovellus Clickomania-pelistä</summary>
   <summary xml:lang="fr">KSame est un mode de jeu du jeu Klickety, une adaptation du jeu « clickomania »</summary>
   <summary xml:lang="gl">KSame é un modo do xogo Klickety, que é unha adaptación do xogo «clickomania»</summary>
+  <summary xml:lang="hu">A KSame a Klickety egy játékmódja, amely a „clickomania” játék átdolgozása</summary>
   <summary xml:lang="id">KSame adalah mode permainan dari permainan Klickety, yang beradaptasi dari permainan "clickomania"</summary>
   <summary xml:lang="it">KSame è una modalità di gioco del gioco Klickety, il quale è un adattamento del gioco «clickomania»</summary>
   <summary xml:lang="ka">KSame თამაშის რეჟიმია თამაშისთვის Klickety, რომელიც "clickomania" თამაშის ადაპტაციას წარმოადგენს</summary>
@@ -90,6 +92,7 @@
     <p xml:lang="fi">KSame on yksinkertainen mutta haastava värinsovituspeli, jonka esikuvana on aikanaan suosittu SameGame-peli. KSamen tavoitteena on tyhjentää koko pelilauta monivärisistä marmorilaatoista.</p>
     <p xml:lang="fr">KSame est un jeu de mise en correspondance des couleurs simple à prendre en main mais aux possibilités complexes inspiré du jeu SameGame. L'objectif de KSame est de vider le plateau de jeu rempli de billes multicolores.</p>
     <p xml:lang="gl">KSame é un xogo de asociación de cores, simple pero esixente, baseado no outrora famoso xogo «SameGame». O obxectivo de KSame consiste en baleirar completamente un taboleiro cheo de bólas de varias cores.</p>
+    <p xml:lang="hu">KSame egy egyszerű, mégis kihívást jelentő színegyeztető játék, amelyet az egykor híres SameGame játék után mintáztak. A KSame lényege, hogy a többszínű golyókkal teli játéktáblát teljesen ki kell tisztítani.</p>
     <p xml:lang="id">KSame adalah permainan pencocokan warna yang sederhana namun menantang yang dimodelkan setelah permainan terkenal bernama  SameGame. Gagasan di balik KSame adalah untuk sepenuhnya menghapus papan permainan yang diisi dengan kelereng warna-warni.</p>
     <p xml:lang="it">KSame è un semplice gioco di corrispondenza dei colori creato sulla falsa riga del famoso gioco SameGame. L'idea soggiacente KSame è quella di sgombrare il tavoliere occupato dai quadrati di marmo di colori diversi.</p>
     <p xml:lang="ka">KSame მარტივი, მაგრამ გამომწვევი ფერების დამთხვევის თამაშია ერთ დროს პოპულარული თამაშის, SameGame-ის მსგავსად. KSame -ის იდეა თამაშის დაფის, რომელიც მრავალფერიანი ნივთებითაა სავსე, გასუფთავებაა.</p>
