@@ -45,6 +45,7 @@
   <name xml:lang="zh-CN">Klickety</name>
   <name xml:lang="zh-TW">Klickety</name>
   <summary>Klickety is an adaptation of the "clickomania" game</summary>
+  <summary xml:lang="ar">كلاكتي هي تعديل للعبة "clickomania".</summary>
   <summary xml:lang="ca">El Klickety és una adaptació del joc «Clickomania»</summary>
   <summary xml:lang="ca-valencia">Klickety és una adaptació del joc «Clickomania»</summary>
   <summary xml:lang="cs">Klickety je adaptace hry "clickomania"</summary>
@@ -86,6 +87,7 @@
     <p>
       Klickety is a strategy game by KDE, an adaption of the Clickomania game.
     </p>
+    <p xml:lang="ar"> كلاكتي هي لعبة إستراتيجية من إنتاج كيدي، وهي نسخة مقتبسة من لعبة Clickomania</p>
     <p xml:lang="ca">El Klickety és un joc d'estratègia, creat per la comunitat KDE, una adaptació del joc Clickomania.</p>
     <p xml:lang="ca-valencia">Klickety és un joc d'estratègia, creat per la comunitat KDE, una adaptació del joc Clickomania.</p>
     <p xml:lang="cs">Klickety je strategická hra od KDE. Je adaptací hry Clickomania.</p>
