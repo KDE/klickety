@@ -83,7 +83,7 @@
   <summary xml:lang="zh-TW">Klickety 是一套 clickomania 的遊戲</summary>
   <description>
     <p>
-      Klickety is a strategy game by KDE, an adaption of the Clickomania game.
+      Klickety is an adaptation of the Clickomania game. The rules are similar to those of the Same game: your goal is to clear the board by clicking on groups to destroy them. The overall aim is to get the lowest score possible. It will provide entertainment for all abilities, but a challenge in logical thought if you want to get a really low score.
     </p>
     <p xml:lang="ca">El Klickety és un joc d'estratègia, creat per la comunitat KDE, una adaptació del joc Clickomania.</p>
     <p xml:lang="ca-valencia">Klickety és un joc d'estratègia, creat per la comunitat KDE, una adaptació del joc Clickomania.</p>
@@ -122,6 +122,10 @@
     <p xml:lang="zh-CN">Klickety是一个改编自Clickomania的KDE桌面战略游戏。</p>
     <p xml:lang="zh-TW">Klickety 是來自 KDE 上類似 Clickomania 的策略遊戲。</p>
   </description>
+  <developer id="org.kde">
+    <name>The KDE Community</name>
+    <url>https://kde.org</url>
+  </developer>
   <url type="homepage">https://apps.kde.org/klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
   <url type="help">https://docs.kde.org/?application=klickety</url>
