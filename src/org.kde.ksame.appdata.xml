@@ -44,7 +44,7 @@
   <name xml:lang="x-test">xxKSamexx</name>
   <name xml:lang="zh-CN">KSame</name>
   <name xml:lang="zh-TW">KSame</name>
-  <summary>KSame is a game mode of the game Klickety, which is an adaptation of the "clickomania" game</summary>
+  <summary>Game mode of Klickety, which is an adaptation of the "clickomania" game</summary>
   <summary xml:lang="ar">سيم ك هو وضع لعب للعبة كلاكتي والتي هي تعديل للعبة "clickomania".</summary>
   <summary xml:lang="ca">El KSame és un mode de partida del joc Klickety, el qual és una adaptació del joc «Clickomania»</summary>
   <summary xml:lang="ca-valencia">KSame és un mode de partida del joc Klickety, el qual és una adaptació del joc «Clickomania»</summary>
@@ -119,6 +119,10 @@
     <p xml:lang="zh-CN">KSame 是一个简单但具有挑战性的颜色配对游戏，它仿制了著名的 SameGame。KSame 的游戏目的是完全清空游戏版面中的所有彩色玻璃珠。</p>
     <p xml:lang="zh-TW">KSame 是一套簡單但也很有挑戰性的遊戲，從知名的 SameGame 演變而來。KSame 目的是完全清除遊戲棋盤上的各種不同顏色。</p>
   </description>
+  <developer id="org.kde">
+    <name>The KDE Community</name>
+    <url>https://kde.org</url>
+  </developer>
   <url type="homepage">https://apps.kde.org/klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
   <url type="help">https://docs.kde.org/?application=klickety&amp;branch=stable&amp;path=ksame_mode.html</url>
