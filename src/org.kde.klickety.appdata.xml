@@ -85,42 +85,6 @@
     <p>
       Klickety is an adaptation of the Clickomania game. The rules are similar to those of the Same game: your goal is to clear the board by clicking on groups to destroy them. The overall aim is to get the lowest score possible. It will provide entertainment for all abilities, but a challenge in logical thought if you want to get a really low score.
     </p>
-    <p xml:lang="ca">El Klickety és un joc d'estratègia, creat per la comunitat KDE, una adaptació del joc Clickomania.</p>
-    <p xml:lang="ca-valencia">Klickety és un joc d'estratègia, creat per la comunitat KDE, una adaptació del joc Clickomania.</p>
-    <p xml:lang="cs">Klickety je strategická hra od KDE. Je adaptací hry Clickomania.</p>
-    <p xml:lang="de">Klickety ist ein Strategiespiel von KDE, das „Clickomania“ nachempfunden ist.</p>
-    <p xml:lang="el">Το Klickety είναι ένα παιχνίδι στρατηγικής από το KDE, μια προσαρμογή του παιχνιδιού Clickomania.</p>
-    <p xml:lang="en-GB">Klickety is a strategy game by KDE, an adaption of the Clickomania game.</p>
-    <p xml:lang="eo">Klickety estas strategia ludo de KDE, adaptaĵo de la Clickomania-ludo.</p>
-    <p xml:lang="es">Klickety es un juego de estrategia creado por KDE, adaptación del juego Clickomania.</p>
-    <p xml:lang="et">Klickety on KDE strateegiamäng, mängu Clickomania mugandus.</p>
-    <p xml:lang="eu">«Klickety» KDEk eginiko estrategia joko bat da, «Clickomania» jokoaren egokitzapen bat.</p>
-    <p xml:lang="fi">Klickety on KDE:n strategiapeli, sovitus Clickomania-pelistä.</p>
-    <p xml:lang="fr">Klickety est un jeu de stratégie par KDE, une adaptation du jeu Clickomania.</p>
-    <p xml:lang="gl">Klickety é un xogo de estratexia de KDE, unha adaptación do xogo «Clickomania».</p>
-    <p xml:lang="hu">A Klickety egy stratégiai játék a KDE-től, a „clickomania” játék átdolgozása.</p>
-    <p xml:lang="id">Klickety adalah sebuah permainan strategi oleh KDE, yang beradaptasi dari permainan Clickomania</p>
-    <p xml:lang="it">Klickety è un gioco di strategia di KDE, un adattamento del gioco Clickomania.</p>
-    <p xml:lang="ka">Klickety -ი სტრატეგიული თამაშია KDE-სგან, Clickomania-ის თამაშის ადაპტაცია.</p>
-    <p xml:lang="ko">Klickety는 KDE의 전략 게임으로 "Clickomania" 게임의 파생형입니다.</p>
-    <p xml:lang="nl">Klickety is een strategiespel door KDE, een aanpassing van het spel Clickomania.</p>
-    <p xml:lang="nn">Klickety er eit strategispel frå KDE, basert på spelet Clickomania.</p>
-    <p xml:lang="pl">Klickety jest grą strategiczną stworzoną przez KDE i adaptacją gry Clickomania.</p>
-    <p xml:lang="pt">O Klickety é um jogo de estratégia do KDE, sendo uma adaptação do jogo Clickomania.</p>
-    <p xml:lang="pt-BR">Klickety é um jogo de estratégia do KDE, uma adaptação do jogo Clickomania.</p>
-    <p xml:lang="ru">Klickety — стратегическая игра от KDE, адаптация игры «Clickomania»</p>
-    <p xml:lang="sk">Klickety je strategická hra pre KDE, adaptácia hry Clickomania.</p>
-    <p xml:lang="sl">Klickety je strateška igra s strani KDE. Gre za priredbo igre »Clickomania«.</p>
-    <p xml:lang="sr">Кликети је стратешка игра из КДЕ‑а, прерада игре Кликоманија.</p>
-    <p xml:lang="sr-Latn">Kliketi je strateška igra iz KDE‑a, prerada igre Klikomanija.</p>
-    <p xml:lang="sr-ijekavian">Кликети је стратешка игра из КДЕ‑а, прерада игре Кликоманија.</p>
-    <p xml:lang="sr-ijekavianlatin">Kliketi je strateška igra iz KDE‑a, prerada igre Klikomanija.</p>
-    <p xml:lang="sv">Klickety är ett strategispel av KDE, en anpassning av spelet Clickomania.</p>
-    <p xml:lang="tr">Kliketi, KDE için bir strateji oyunudur ve Clickomania oyununa bir uyarlamadır.</p>
-    <p xml:lang="uk">Klickety — стратегічна гра від KDE, варіант гри Clickomania («Клікоманія»).</p>
-    <p xml:lang="x-test">xxKlickety is a strategy game by KDE, an adaption of the Clickomania game.xx</p>
-    <p xml:lang="zh-CN">Klickety是一个改编自Clickomania的KDE桌面战略游戏。</p>
-    <p xml:lang="zh-TW">Klickety 是來自 KDE 上類似 Clickomania 的策略遊戲。</p>
   </description>
   <developer id="org.kde">
     <name>The KDE Community</name>
