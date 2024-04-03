@@ -104,8 +104,7 @@
     <p xml:lang="zh-TW">KSame 是一套簡單但也很有挑戰性的遊戲，從知名的 SameGame 演變而來。KSame 目的是完全清除遊戲棋盤上的各種不同顏色。</p>
   </description>
   <developer id="org.kde">
-    <name>The KDE Community</name>
-    <url>https://kde.org</url>
+    <name translate="no">KDE</name>
   </developer>
   <url type="homepage">https://apps.kde.org/klickety</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
