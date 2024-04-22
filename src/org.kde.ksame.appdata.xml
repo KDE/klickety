@@ -4,7 +4,6 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KSame</name>
-  <name xml:lang="ar">سيم ك</name>
   <name xml:lang="ast">KSame</name>
   <name xml:lang="ca">KSame</name>
   <name xml:lang="ca-valencia">KSame</name>
@@ -20,7 +19,6 @@
   <name xml:lang="fi">KSame</name>
   <name xml:lang="fr">KSame</name>
   <name xml:lang="gl">KSame</name>
-  <name xml:lang="he">KSame</name>
   <name xml:lang="hu">KSame</name>
   <name xml:lang="ia">KSame</name>
   <name xml:lang="id">KSame</name>
@@ -48,28 +46,20 @@
   <summary>Game mode of Klickety, which is an adaptation of the "clickomania" game</summary>
   <summary xml:lang="ca">Mode de joc del Klickety, el qual és una adaptació del joc «Clickomania»</summary>
   <summary xml:lang="ca-valencia">Mode de joc de Klickety, el qual és una adaptació del joc «Clickomania»</summary>
-  <summary xml:lang="cs">Herní režim hry Klickety, která je adaptace hry "clickomania"</summary>
   <summary xml:lang="de">Spielmodus von Klickety, der dem Spiel „Clickomania“ nachempfunden ist</summary>
-  <summary xml:lang="eo">Ludreĝimo de la ludo Klickety, kiu estas adaptaĵo de la ludo "clickomania"</summary>
   <summary xml:lang="es">Modo de juego de Klickety, que es una adaptación del juego «clickomania»</summary>
   <summary xml:lang="eu">«Klickety»ren, "clickomania" jokoaren moldaketa bat, joko-modu bat</summary>
   <summary xml:lang="fr">Le mode du jeu Klickety, une adaptation du jeu « clickomania »</summary>
-  <summary xml:lang="he">מצב משחק של Klickety, שהיא הסבה של המשחק „קליקומניה”</summary>
   <summary xml:lang="hu">A Klickety egy játékmódja, amely a „clickomania” játék átdolgozása</summary>
   <summary xml:lang="it">Modalità di gioco di Klickety, che è un adattamento del gioco «clickomania»</summary>
   <summary xml:lang="ka">Klickety-ის თამაშის რეჟიმი, რომელიც "clickomania" თამაშის ადაპტაციას წარმოადგენს</summary>
-  <summary xml:lang="nl">Spelmodus van het spel Klickety, dat een aanpassing is van het spel "clickomania"</summary>
   <summary xml:lang="pl">Tryb gry Klickety, który jest adaptacją gry "clickomania"</summary>
   <summary xml:lang="pt-BR">O modo de jogo do Klickety, que é uma adaptação do jogo "Clickomania"</summary>
   <summary xml:lang="sl">Igralni način igre Klickety, ki je priredba igre 'Clickomania'</summary>
-  <summary xml:lang="tr">“Clickomania” oyununun uyarlanması olan Kliketi’nin bir oyun kipi</summary>
-  <summary xml:lang="uk">Режим гри, який є адаптацією гри «клікоманія»</summary>
-  <summary xml:lang="x-test">xxGame mode of Klickety, which is an adaptation of the "clickomania" gamexx</summary>
   <description>
     <p>
       KSame is a simple, yet challenging color matching game modeled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicolored marbles.
     </p>
-    <p xml:lang="ar">سيم ك هي لعبة مطابقة ألوان بسيطة ولكنها تحوي على تحدي، صممت على غرار لعبة SameGame الشهيرة. الفكرة وراء سيم ك هي تنظيف لوحة اللعبة بالكامل المليئة بقطع متعدد الألوان.</p>
     <p xml:lang="ca">El KSame és un joc senzill però estimulant de correspondències de colors, modelat després del famós joc SameGame. La idea rere el KSame és netejar completament el tauler de partida ple de marbres multicolor.</p>
     <p xml:lang="ca-valencia">KSame és un joc senzill però estimulant de correspondències de colors, modelat després del famós joc SameGame. La idea rere KSame és netejar completament el tauler de partida ple de marbres multicolor.</p>
     <p xml:lang="de">KSame ist ein einfaches aber herausforderndes Spiel, bei dem passende Farben gefunden werden müssen. Das Spiel ist dem ehemals berühmten Spiel SameGame nachempfunden. Ziel des Spiels ist, das gesamte, mit farbigen Murmeln gefüllte Spielfeld zu leeren.</p>
@@ -82,7 +72,6 @@
     <p xml:lang="fi">KSame on yksinkertainen mutta haastava värinsovituspeli, jonka esikuvana on aikanaan suosittu SameGame-peli. KSamen tavoitteena on tyhjentää koko pelilauta monivärisistä marmorilaatoista.</p>
     <p xml:lang="fr">KSame est un jeu de mise en correspondance des couleurs simple à prendre en main mais aux possibilités complexes inspiré du jeu SameGame. L'objectif de KSame est de vider le plateau de jeu rempli de billes multicolores.</p>
     <p xml:lang="gl">KSame é un xogo de asociación de cores, simple pero esixente, baseado no outrora famoso xogo «SameGame». O obxectivo de KSame consiste en baleirar completamente un taboleiro cheo de bólas de varias cores.</p>
-    <p xml:lang="he">KSame הוא משחק התאמת צבעים פשוט אך מאתגר שמתחקה אחר המשחק שנפוץ מהעבר בשם SameSame (משחק הזהים). הרעיון מאחורי KSame הוא לנקות לחלוטין את לוח המשחק שמלא בגולות צבעוניות.</p>
     <p xml:lang="hu">KSame egy egyszerű, mégis kihívást jelentő színegyeztető játék, amelyet az egykor híres SameGame játék után mintáztak. A KSame lényege, hogy a többszínű golyókkal teli játéktáblát teljesen ki kell tisztítani.</p>
     <p xml:lang="id">KSame adalah permainan pencocokan warna yang sederhana namun menantang yang dimodelkan setelah permainan terkenal bernama  SameGame. Gagasan di balik KSame adalah untuk sepenuhnya menghapus papan permainan yang diisi dengan kelereng warna-warni.</p>
     <p xml:lang="it">KSame è un semplice gioco di corrispondenza dei colori creato sulla falsa riga del famoso gioco SameGame. L'idea soggiacente KSame è quella di sgombrare il tavoliere occupato dai quadrati di marmo di colori diversi.</p>
