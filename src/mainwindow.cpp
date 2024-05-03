@@ -89,11 +89,11 @@ void MainWindow::configureSettings()
     }
 
     KConfigDialog* dialog = new KConfigDialog( this, QStringLiteral( "settings" ), Settings::self() );
-    dialog->addPage( new GameConfig( dialog ), i18n( "General" ), QStringLiteral( "games-config-options" ) );
+    dialog->addPage( new GameConfig( dialog ), i18nc( "@title:tab", "General" ), QStringLiteral( "games-config-options" ) );
     dialog->addPage( new KGameThemeSelector( m_scene->themeProvider() ), i18n( "Theme" ), QStringLiteral( "games-config-theme" ) );
-    dialog->addPage( new BgSelectorConfig( dialog ), i18n( "Background" ), QStringLiteral( "games-config-background" ) );
+    dialog->addPage( new BgSelectorConfig( dialog ), i18nc( "@title:tab", "Background" ), QStringLiteral( "games-config-background" ) );
     if ( !m_kSameMode ) {
-        dialog->addPage( new CustomGameConfig( dialog ), i18n( "Custom Game" ), QStringLiteral( "games-config-custom" ) );
+        dialog->addPage( new CustomGameConfig( dialog ), i18nc( "@title:tab", "Custom Game" ), QStringLiteral( "games-config-custom" ) );
     }
 
     connect(m_scene->themeProvider(), &KGameThemeProvider::currentThemeChanged, this, &MainWindow::loadSettings); //setBackgroundType!
@@ -343,7 +343,7 @@ bool MainWindow::confirmAbort()
     return m_scene->isGameFinished() ||
         ( KMessageBox::questionTwoActions( this,
                                       i18n( "Do you want to resign?" ),
-                                      i18n( "New Game" ),
+                                      i18nc( "@title:window", "New Game" ),
                                       KGuiItem( i18nc("@action:button", "Resign") ),
                                       KStandardGuiItem::cancel() )
           == KMessageBox::PrimaryAction );
@@ -361,11 +361,12 @@ void MainWindow::setupActions()
     KGameStandardAction::highscores(this, &MainWindow::showHighscores, actionCollection());
     m_pauseAction = KGameStandardAction::pause(this, &MainWindow::pauseGame, actionCollection());
     KGameStandardAction::quit( this, &MainWindow::close, actionCollection());
-    QAction * m_newNumGameAction = new QAction( i18n( "New Numbered Game..." ), actionCollection() );
+    QAction * m_newNumGameAction = new QAction( i18nc( "@action", "New Numbered Game…" ), actionCollection() );
     actionCollection()->addAction( QStringLiteral( "game_new_numeric" ), m_newNumGameAction );
     connect(m_newNumGameAction, &QAction::triggered, this, &MainWindow::newNumGame);
 
-    KToggleAction * soundAction = new KToggleAction(QIcon::fromTheme(QStringLiteral("speaker")), i18n("Play Sounds"), this);
+    auto *soundAction = new KToggleAction(QIcon::fromTheme(QStringLiteral("speaker")),
+                                          i18nc("@option:check", "Play Sounds"), this);
     soundAction->setChecked(Settings::enableSounds());
     actionCollection()->addAction(QStringLiteral("sounds"), soundAction);
     connect(soundAction, &KToggleAction::triggered, this, &MainWindow::setSoundsEnabled);
@@ -380,13 +381,13 @@ void MainWindow::setupActions()
 
     QAction * undoAllAction = actionCollection()->addAction( QStringLiteral( "move_undo_all" ) );
     undoAllAction->setIcon( QIcon::fromTheme( QStringLiteral( "media-skip-backward" ) ) );
-    undoAllAction->setText( i18n( "Undo All" ) );
+    undoAllAction->setText( i18nc( "@action", "Undo All" ) );
     undoAllAction->setEnabled( false );
     connect(m_scene, &GameScene::canUndoChanged, undoAllAction, &QAction::setEnabled);
     connect(undoAllAction, &QAction::triggered, m_scene, &GameScene::undoAllMove);
     QAction * redoAllAction = actionCollection()->addAction( QStringLiteral( "move_redo_all" ) );
     redoAllAction->setIcon( QIcon::fromTheme( QStringLiteral( "media-skip-forward" ) ) );
-    redoAllAction->setText( i18n( "Redo All" ) );
+    redoAllAction->setText( i18nc( "@action", "Redo All" ) );
     redoAllAction->setEnabled( false );
     connect(m_scene, &GameScene::canRedoChanged, redoAllAction, &QAction::setEnabled);
     connect(redoAllAction, &QAction::triggered, m_scene, &GameScene::redoAllMove);

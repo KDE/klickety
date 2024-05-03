@@ -233,7 +233,7 @@ void GameScene::setPaused( bool isPaused )
     }
 
     if ( m_isPaused ) {
-        m_messenger->showMessage( i18n( "paused" ), KGamePopupItem::Center );
+        m_messenger->showMessage( i18nc( "@info:status", "Paused" ), KGamePopupItem::Center );
         Q_EMIT canUndoChanged( false );
         Q_EMIT canRedoChanged( false );
     }
@@ -345,7 +345,7 @@ void GameScene::checkGameFinished()
         if (Settings::enableSounds()) {
             m_soundGameFinished.start();
         }
-        m_messenger->showMessage( i18n( "Game finished" ) , KGamePopupItem::Center );
+        m_messenger->showMessage( i18nc( "@info:status", "Game finished" ) , KGamePopupItem::Center );
         Q_EMIT canUndoChanged( false );
         Q_EMIT canRedoChanged( false );
         Q_EMIT gameFinished( remain );
