@@ -245,7 +245,7 @@ score.
 <term><menuchoice>
 <shortcut><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo></shortcut>
 <guimenu>Game</guimenu>
-<guimenuitem>Load...</guimenuitem>
+<guimenuitem>Load…</guimenuitem>
 </menuchoice> (not in KSame mode) </term>
 <listitem><para>Loads a previously saved game.</para></listitem>
 </varlistentry>
@@ -262,7 +262,7 @@ score.
 <varlistentry>
 <term><menuchoice>
 <guimenu>Game</guimenu>
-<guimenuitem>New Numbered Game...</guimenuitem>
+<guimenuitem>New Numbered Game…</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Starts a specifically numbered game.</action>
     <screenshot>
@@ -416,7 +416,7 @@ of the &kde; Fundamentals.
 <title>Game Configuration</title><!-- do not change this! -->
 <!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
 <para>
-<menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &klickety;...</guimenuitem></menuchoice> opens
+<menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &klickety;…</guimenuitem></menuchoice> opens
 the <guilabel>Configure - &klickety;</guilabel> dialog.</para>
 
 <sect1 id="general-options">
