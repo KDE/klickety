@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:36+0000\n"
+"POT-Creation-Date: 2024-05-04 00:37+0000\n"
 "PO-Revision-Date: 2023-11-10 23:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -87,12 +87,16 @@ msgid "Enable highlight"
 msgstr "開啟突顯"
 
 #: gamescene.cpp:236
-#, kde-format
-msgid "paused"
+#, fuzzy, kde-format
+#| msgid "paused"
+msgctxt "@info:status"
+msgid "Paused"
 msgstr "暫停"
 
 #: gamescene.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Game finished"
+msgctxt "@info:status"
 msgid "Game finished"
 msgstr "遊戲已完成"
 
@@ -244,7 +248,9 @@ msgid "Time: 00:00"
 msgstr "時間：00:00"
 
 #: mainwindow.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:tab"
 msgid "General"
 msgstr "一般"
 
@@ -254,12 +260,16 @@ msgid "Theme"
 msgstr "主題"
 
 #: mainwindow.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Background"
+msgctxt "@title:tab"
 msgid "Background"
 msgstr "背景"
 
 #: mainwindow.cpp:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Game"
+msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "自定遊戲"
 
@@ -300,7 +310,7 @@ msgstr "數量：%1"
 msgid "Time: %1"
 msgstr "時間：%1"
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:399
+#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:400
 #, kde-format
 msgid "High Scores"
 msgstr "高分榜"
@@ -321,7 +331,9 @@ msgid "Do you want to resign?"
 msgstr "您是否要放棄？"
 
 #: mainwindow.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Game"
+msgctxt "@title:window"
 msgid "New Game"
 msgstr "新遊戲"
 
@@ -332,26 +344,34 @@ msgid "Resign"
 msgstr "放棄"
 
 #: mainwindow.cpp:364
-#, kde-format
-msgid "New Numbered Game..."
+#, fuzzy, kde-format
+#| msgid "New Numbered Game..."
+msgctxt "@action"
+msgid "New Numbered Game…"
 msgstr "新編號的遊戲..."
 
-#: mainwindow.cpp:368
-#, kde-format
+#: mainwindow.cpp:369
+#, fuzzy, kde-format
+#| msgid "Play Sounds"
+msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "播放音效"
 
-#: mainwindow.cpp:383
-#, kde-format
+#: mainwindow.cpp:384
+#, fuzzy, kde-format
+#| msgid "Undo All"
+msgctxt "@action"
 msgid "Undo All"
 msgstr "全部回復"
 
-#: mainwindow.cpp:389
-#, kde-format
+#: mainwindow.cpp:390
+#, fuzzy, kde-format
+#| msgid "Redo All"
+msgctxt "@action"
 msgid "Redo All"
 msgstr "全部重做"
 
-#: mainwindow.cpp:410
+#: mainwindow.cpp:411
 #, kde-format
 msgid "Custom"
 msgstr "自訂"

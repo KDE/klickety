@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:36+0000\n"
+"POT-Creation-Date: 2024-05-04 00:37+0000\n"
 "PO-Revision-Date: 2022-10-10 16:58+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -86,12 +86,16 @@ msgid "Enable highlight"
 msgstr "Povolit zvýraznění"
 
 #: gamescene.cpp:236
-#, kde-format
-msgid "paused"
+#, fuzzy, kde-format
+#| msgid "paused"
+msgctxt "@info:status"
+msgid "Paused"
 msgstr "pozastaveno"
 
 #: gamescene.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Game finished"
+msgctxt "@info:status"
 msgid "Game finished"
 msgstr "Hra skončena"
 
@@ -243,7 +247,9 @@ msgid "Time: 00:00"
 msgstr "Čas: 00:00"
 
 #: mainwindow.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:tab"
 msgid "General"
 msgstr "Obecné"
 
@@ -253,12 +259,16 @@ msgid "Theme"
 msgstr "Motiv"
 
 #: mainwindow.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Background"
+msgctxt "@title:tab"
 msgid "Background"
 msgstr "Pozadí"
 
 #: mainwindow.cpp:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Game"
+msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "Vlastní hra"
 
@@ -301,7 +311,7 @@ msgstr "Kameny: %1"
 msgid "Time: %1"
 msgstr "Čas: %1"
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:399
+#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:400
 #, kde-format
 msgid "High Scores"
 msgstr "Nejvyšší skóre"
@@ -322,7 +332,9 @@ msgid "Do you want to resign?"
 msgstr "Přejete si se vzdát?"
 
 #: mainwindow.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Game"
+msgctxt "@title:window"
 msgid "New Game"
 msgstr "Nová hra"
 
@@ -333,26 +345,34 @@ msgid "Resign"
 msgstr "Vzdát se"
 
 #: mainwindow.cpp:364
-#, kde-format
-msgid "New Numbered Game..."
+#, fuzzy, kde-format
+#| msgid "New Numbered Game..."
+msgctxt "@action"
+msgid "New Numbered Game…"
 msgstr "Nová očíslovaná hra..."
 
-#: mainwindow.cpp:368
-#, kde-format
+#: mainwindow.cpp:369
+#, fuzzy, kde-format
+#| msgid "Play Sounds"
+msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Přehrávat zvuky"
 
-#: mainwindow.cpp:383
-#, kde-format
+#: mainwindow.cpp:384
+#, fuzzy, kde-format
+#| msgid "Undo All"
+msgctxt "@action"
 msgid "Undo All"
 msgstr "Vrátit vše"
 
-#: mainwindow.cpp:389
-#, kde-format
+#: mainwindow.cpp:390
+#, fuzzy, kde-format
+#| msgid "Redo All"
+msgctxt "@action"
 msgid "Redo All"
 msgstr "Vše znovu"
 
-#: mainwindow.cpp:410
+#: mainwindow.cpp:411
 #, kde-format
 msgid "Custom"
 msgstr "Vlastní"

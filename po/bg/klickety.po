@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klickety\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:36+0000\n"
+"POT-Creation-Date: 2024-05-04 00:37+0000\n"
 "PO-Revision-Date: 2022-06-15 00:43+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -86,11 +86,13 @@ msgstr ""
 
 #: gamescene.cpp:236
 #, kde-format
-msgid "paused"
+msgctxt "@info:status"
+msgid "Paused"
 msgstr ""
 
 #: gamescene.cpp:348
 #, kde-format
+msgctxt "@info:status"
 msgid "Game finished"
 msgstr ""
 
@@ -241,6 +243,7 @@ msgstr ""
 
 #: mainwindow.cpp:92
 #, kde-format
+msgctxt "@title:tab"
 msgid "General"
 msgstr ""
 
@@ -251,11 +254,13 @@ msgstr ""
 
 #: mainwindow.cpp:94
 #, kde-format
+msgctxt "@title:tab"
 msgid "Background"
 msgstr ""
 
 #: mainwindow.cpp:96
 #, kde-format
+msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr ""
 
@@ -297,7 +302,7 @@ msgstr ""
 msgid "Time: %1"
 msgstr ""
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:399
+#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:400
 #, kde-format
 msgid "High Scores"
 msgstr ""
@@ -319,6 +324,7 @@ msgstr ""
 
 #: mainwindow.cpp:346
 #, kde-format
+msgctxt "@title:window"
 msgid "New Game"
 msgstr ""
 
@@ -330,25 +336,29 @@ msgstr ""
 
 #: mainwindow.cpp:364
 #, kde-format
-msgid "New Numbered Game..."
+msgctxt "@action"
+msgid "New Numbered Game…"
 msgstr ""
 
-#: mainwindow.cpp:368
+#: mainwindow.cpp:369
 #, kde-format
+msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr ""
 
-#: mainwindow.cpp:383
+#: mainwindow.cpp:384
 #, kde-format
+msgctxt "@action"
 msgid "Undo All"
 msgstr ""
 
-#: mainwindow.cpp:389
+#: mainwindow.cpp:390
 #, kde-format
+msgctxt "@action"
 msgid "Redo All"
 msgstr ""
 
-#: mainwindow.cpp:410
+#: mainwindow.cpp:411
 #, kde-format
 msgid "Custom"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:36+0000\n"
+"POT-Creation-Date: 2024-05-04 00:37+0000\n"
 "PO-Revision-Date: 2012-04-07 02:58+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -88,13 +88,16 @@ msgid "Enable highlight"
 msgstr "Бояулап белгілеу болсын"
 
 #: gamescene.cpp:236
-#, kde-format
-msgid "paused"
+#, fuzzy, kde-format
+#| msgid "paused"
+msgctxt "@info:status"
+msgid "Paused"
 msgstr "аялданған"
 
 #: gamescene.cpp:348
 #, fuzzy, kde-format
 #| msgid "game finished"
+msgctxt "@info:status"
 msgid "Game finished"
 msgstr "ойын аяқталған"
 
@@ -246,7 +249,9 @@ msgid "Time: 00:00"
 msgstr "Уақыты: 00:00"
 
 #: mainwindow.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:tab"
 msgid "General"
 msgstr "Жалпы"
 
@@ -256,12 +261,16 @@ msgid "Theme"
 msgstr "Нақышы"
 
 #: mainwindow.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Background"
+msgctxt "@title:tab"
 msgid "Background"
 msgstr "Аясы"
 
 #: mainwindow.cpp:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Game"
+msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "Өзгеше ойын"
 
@@ -303,7 +312,7 @@ msgstr "Құрақтар: %1"
 msgid "Time: %1"
 msgstr "Уақыты: %1"
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:399
+#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:400
 #, kde-format
 msgid "High Scores"
 msgstr "Жетістіктер"
@@ -324,7 +333,9 @@ msgid "Do you want to resign?"
 msgstr "Жеңілдім дейсіз ба?"
 
 #: mainwindow.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Game"
+msgctxt "@title:window"
 msgid "New Game"
 msgstr "Жаңа ойын"
 
@@ -336,26 +347,33 @@ msgid "Resign"
 msgstr "Жеңілдім"
 
 #: mainwindow.cpp:364
-#, kde-format
-msgid "New Numbered Game..."
+#, fuzzy, kde-format
+#| msgid "New Numbered Game..."
+msgctxt "@action"
+msgid "New Numbered Game…"
 msgstr "Жаңа нөмірлеген ойын..."
 
-#: mainwindow.cpp:368
+#: mainwindow.cpp:369
 #, kde-format
+msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr ""
 
-#: mainwindow.cpp:383
-#, kde-format
+#: mainwindow.cpp:384
+#, fuzzy, kde-format
+#| msgid "Undo All"
+msgctxt "@action"
 msgid "Undo All"
 msgstr "Бүкілінен қайту"
 
-#: mainwindow.cpp:389
-#, kde-format
+#: mainwindow.cpp:390
+#, fuzzy, kde-format
+#| msgid "Redo All"
+msgctxt "@action"
 msgid "Redo All"
 msgstr "Бүкіл қайтудан айну"
 
-#: mainwindow.cpp:410
+#: mainwindow.cpp:411
 #, kde-format
 msgid "Custom"
 msgstr "Өзгеше"

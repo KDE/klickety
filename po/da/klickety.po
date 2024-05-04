@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:36+0000\n"
+"POT-Creation-Date: 2024-05-04 00:37+0000\n"
 "PO-Revision-Date: 2022-08-08 17:42+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -85,12 +85,16 @@ msgid "Enable highlight"
 msgstr "Aktivér fremhævning"
 
 #: gamescene.cpp:236
-#, kde-format
-msgid "paused"
+#, fuzzy, kde-format
+#| msgid "paused"
+msgctxt "@info:status"
+msgid "Paused"
 msgstr "på pause"
 
 #: gamescene.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Game finished"
+msgctxt "@info:status"
 msgid "Game finished"
 msgstr "spillet er slut"
 
@@ -242,7 +246,9 @@ msgid "Time: 00:00"
 msgstr "Tid: 00:00"
 
 #: mainwindow.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:tab"
 msgid "General"
 msgstr "Generelt"
 
@@ -252,12 +258,16 @@ msgid "Theme"
 msgstr "Tema"
 
 #: mainwindow.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Background"
+msgctxt "@title:tab"
 msgid "Background"
 msgstr "Baggrund"
 
 #: mainwindow.cpp:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Game"
+msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "Brugertilpasset spil"
 
@@ -299,7 +309,7 @@ msgstr "Brikker: %1"
 msgid "Time: %1"
 msgstr "Tid: %1"
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:399
+#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:400
 #, kde-format
 msgid "High Scores"
 msgstr "Topscoringer"
@@ -320,7 +330,9 @@ msgid "Do you want to resign?"
 msgstr "Vil du opgive?"
 
 #: mainwindow.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Game"
+msgctxt "@title:window"
 msgid "New Game"
 msgstr "Nyt spil"
 
@@ -332,26 +344,34 @@ msgid "Resign"
 msgstr "Opgiv"
 
 #: mainwindow.cpp:364
-#, kde-format
-msgid "New Numbered Game..."
+#, fuzzy, kde-format
+#| msgid "New Numbered Game..."
+msgctxt "@action"
+msgid "New Numbered Game…"
 msgstr "Nyt nummereret spil..."
 
-#: mainwindow.cpp:368
-#, kde-format
+#: mainwindow.cpp:369
+#, fuzzy, kde-format
+#| msgid "Play Sounds"
+msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Afspil lyde"
 
-#: mainwindow.cpp:383
-#, kde-format
+#: mainwindow.cpp:384
+#, fuzzy, kde-format
+#| msgid "Undo All"
+msgctxt "@action"
 msgid "Undo All"
 msgstr "Fortryd alle"
 
-#: mainwindow.cpp:389
-#, kde-format
+#: mainwindow.cpp:390
+#, fuzzy, kde-format
+#| msgid "Redo All"
+msgctxt "@action"
 msgid "Redo All"
 msgstr "Gendan alle"
 
-#: mainwindow.cpp:410
+#: mainwindow.cpp:411
 #, kde-format
 msgid "Custom"
 msgstr "Brugertilpasset"

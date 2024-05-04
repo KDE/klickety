@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klickety\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:36+0000\n"
+"POT-Creation-Date: 2024-05-04 00:37+0000\n"
 "PO-Revision-Date: 2023-09-25 17:59+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -85,12 +85,15 @@ msgid "Enable highlight"
 msgstr ""
 
 #: gamescene.cpp:236
-#, kde-format
-msgid "paused"
+#, fuzzy, kde-format
+#| msgid "paused"
+msgctxt "@info:status"
+msgid "Paused"
 msgstr "In pausa"
 
 #: gamescene.cpp:348
 #, kde-format
+msgctxt "@info:status"
 msgid "Game finished"
 msgstr ""
 
@@ -240,7 +243,9 @@ msgid "Time: 00:00"
 msgstr "Tempore: 00:00"
 
 #: mainwindow.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:tab"
 msgid "General"
 msgstr "General"
 
@@ -250,14 +255,18 @@ msgid "Theme"
 msgstr "Thema"
 
 #: mainwindow.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Background"
+msgctxt "@title:tab"
 msgid "Background"
 msgstr "Fundo"
 
 #: mainwindow.cpp:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom"
+msgctxt "@title:tab"
 msgid "Custom Game"
-msgstr ""
+msgstr "Personalisate"
 
 #: mainwindow.cpp:173
 #, kde-format
@@ -297,7 +306,7 @@ msgstr ""
 msgid "Time: %1"
 msgstr "Tempore: %1"
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:399
+#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:400
 #, kde-format
 msgid "High Scores"
 msgstr ""
@@ -318,7 +327,9 @@ msgid "Do you want to resign?"
 msgstr ""
 
 #: mainwindow.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Game"
+msgctxt "@title:window"
 msgid "New Game"
 msgstr "Nove Joco"
 
@@ -330,25 +341,30 @@ msgstr ""
 
 #: mainwindow.cpp:364
 #, kde-format
-msgid "New Numbered Game..."
+msgctxt "@action"
+msgid "New Numbered Game…"
 msgstr ""
 
-#: mainwindow.cpp:368
-#, kde-format
+#: mainwindow.cpp:369
+#, fuzzy, kde-format
+#| msgid "Play Sounds"
+msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Reproduce sonos"
 
-#: mainwindow.cpp:383
+#: mainwindow.cpp:384
 #, kde-format
+msgctxt "@action"
 msgid "Undo All"
 msgstr ""
 
-#: mainwindow.cpp:389
+#: mainwindow.cpp:390
 #, kde-format
+msgctxt "@action"
 msgid "Redo All"
 msgstr ""
 
-#: mainwindow.cpp:410
+#: mainwindow.cpp:411
 #, kde-format
 msgid "Custom"
 msgstr "Personalisate"

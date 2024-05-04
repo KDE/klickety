@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:36+0000\n"
+"POT-Creation-Date: 2024-05-04 00:37+0000\n"
 "PO-Revision-Date: 2023-01-12 10:30+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -92,12 +92,16 @@ msgid "Enable highlight"
 msgstr "Включить подсветку"
 
 #: gamescene.cpp:236
-#, kde-format
-msgid "paused"
+#, fuzzy, kde-format
+#| msgid "paused"
+msgctxt "@info:status"
+msgid "Paused"
 msgstr "Приостановлено"
 
 #: gamescene.cpp:348
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Game finished"
+msgctxt "@info:status"
 msgid "Game finished"
 msgstr "Игра завершена"
 
@@ -249,7 +253,9 @@ msgid "Time: 00:00"
 msgstr "Время: 00:00"
 
 #: mainwindow.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:tab"
 msgid "General"
 msgstr "Общие"
 
@@ -259,12 +265,16 @@ msgid "Theme"
 msgstr "Оформление"
 
 #: mainwindow.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Background"
+msgctxt "@title:tab"
 msgid "Background"
 msgstr "Фон"
 
 #: mainwindow.cpp:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Game"
+msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "Своя доска"
 
@@ -308,7 +318,7 @@ msgstr "Кусочки: %1"
 msgid "Time: %1"
 msgstr "Время: %1"
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:399
+#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:400
 #, kde-format
 msgid "High Scores"
 msgstr "Рекорды"
@@ -329,7 +339,9 @@ msgid "Do you want to resign?"
 msgstr "Хотите сдаться?"
 
 #: mainwindow.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Game"
+msgctxt "@title:window"
 msgid "New Game"
 msgstr "Новая игра"
 
@@ -340,26 +352,34 @@ msgid "Resign"
 msgstr "Сдаться"
 
 #: mainwindow.cpp:364
-#, kde-format
-msgid "New Numbered Game..."
+#, fuzzy, kde-format
+#| msgid "New Numbered Game..."
+msgctxt "@action"
+msgid "New Numbered Game…"
 msgstr "Новая игра по номеру..."
 
-#: mainwindow.cpp:368
-#, kde-format
+#: mainwindow.cpp:369
+#, fuzzy, kde-format
+#| msgid "Play Sounds"
+msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Воспроизводить звуки"
 
-#: mainwindow.cpp:383
-#, kde-format
+#: mainwindow.cpp:384
+#, fuzzy, kde-format
+#| msgid "Undo All"
+msgctxt "@action"
 msgid "Undo All"
 msgstr "Отменить всё"
 
-#: mainwindow.cpp:389
-#, kde-format
+#: mainwindow.cpp:390
+#, fuzzy, kde-format
+#| msgid "Redo All"
+msgctxt "@action"
 msgid "Redo All"
 msgstr "Повторить всё"
 
-#: mainwindow.cpp:410
+#: mainwindow.cpp:411
 #, kde-format
 msgid "Custom"
 msgstr "Другой"

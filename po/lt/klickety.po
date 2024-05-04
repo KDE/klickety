@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klickety\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:36+0000\n"
+"POT-Creation-Date: 2024-05-04 00:37+0000\n"
 "PO-Revision-Date: 2015-12-29 17:52+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -89,13 +89,16 @@ msgid "Enable highlight"
 msgstr ""
 
 #: gamescene.cpp:236
-#, kde-format
-msgid "paused"
+#, fuzzy, kde-format
+#| msgid "paused"
+msgctxt "@info:status"
+msgid "Paused"
 msgstr "pristabdyta"
 
 #: gamescene.cpp:348
 #, fuzzy, kde-format
 #| msgid "game finished"
+msgctxt "@info:status"
 msgid "Game finished"
 msgstr "žaidimas baigtas"
 
@@ -247,7 +250,9 @@ msgid "Time: 00:00"
 msgstr "Laikas: 00:00"
 
 #: mainwindow.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:tab"
 msgid "General"
 msgstr "Bendri"
 
@@ -257,12 +262,16 @@ msgid "Theme"
 msgstr "Apipavidalinimas"
 
 #: mainwindow.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Background"
+msgctxt "@title:tab"
 msgid "Background"
 msgstr "Fonas"
 
 #: mainwindow.cpp:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Game"
+msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "Pasirinktas žaidimas"
 
@@ -307,7 +316,7 @@ msgstr "Dalys: %1"
 msgid "Time: %1"
 msgstr "Laikas: %1"
 
-#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:399
+#: mainwindow.cpp:279 mainwindow.cpp:308 mainwindow.cpp:400
 #, kde-format
 msgid "High Scores"
 msgstr "Geriausi rezultatai"
@@ -328,7 +337,9 @@ msgid "Do you want to resign?"
 msgstr "Ar norite perskirti?"
 
 #: mainwindow.cpp:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New Game"
+msgctxt "@title:window"
 msgid "New Game"
 msgstr "Naujas žaidimas"
 
@@ -341,25 +352,29 @@ msgstr "Perskirti"
 
 #: mainwindow.cpp:364
 #, kde-format
-msgid "New Numbered Game..."
+msgctxt "@action"
+msgid "New Numbered Game…"
 msgstr ""
 
-#: mainwindow.cpp:368
+#: mainwindow.cpp:369
 #, kde-format
+msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr ""
 
-#: mainwindow.cpp:383
+#: mainwindow.cpp:384
 #, kde-format
+msgctxt "@action"
 msgid "Undo All"
 msgstr ""
 
-#: mainwindow.cpp:389
+#: mainwindow.cpp:390
 #, kde-format
+msgctxt "@action"
 msgid "Redo All"
 msgstr ""
 
-#: mainwindow.cpp:410
+#: mainwindow.cpp:411
 #, kde-format
 msgid "Custom"
 msgstr "Pasirinktas"
