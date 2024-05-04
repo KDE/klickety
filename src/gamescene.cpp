@@ -29,9 +29,9 @@
 static KGameThemeProvider* provider()
 {
     //TODO: Do we want to store separate theme choices for Klickety and KSame?
-    const QLatin1String defaultTheme =
+    const QString defaultTheme =
         Settings::self()->config()->name() == QLatin1String("ksamerc")
-        ? QLatin1String("ksame") : QLatin1String("default");
+        ? QStringLiteral("ksame") : QStringLiteral("default");
     KGameThemeProvider* prov = new KGameThemeProvider;
     prov->discoverThemes(QStringLiteral("themes"), defaultTheme);
     return prov;
