@@ -375,7 +375,7 @@
 > <guimenu
 >Joc</guimenu
 > <guimenuitem
->Carrega...</guimenuitem
+>Carrega…</guimenuitem
 > </menuchoice
 > (no en el mode KSame) </term>
 <listitem
@@ -409,7 +409,7 @@
 ><guimenu
 >Joc</guimenu
 > <guimenuitem
->Partida nova numerada...</guimenuitem
+>Partida nova numerada…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -740,7 +740,7 @@
 ><guimenu
 >Arranjament</guimenu
 ><guimenuitem
->Configura el &klickety;...</guimenuitem
+>Configura el &klickety;…</guimenuitem
 ></menuchoice
 > obre el diàleg <guilabel
 >Configuració - &klickety;</guilabel
