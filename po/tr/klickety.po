@@ -3,13 +3,13 @@
 #
 # Translators:
 # Volkan Gezer <volkangezer@gmail.com>, 2013.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-13 00:36+0000\n"
-"PO-Revision-Date: 2023-06-11 22:09+0300\n"
+"PO-Revision-Date: 2024-05-04 14:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -140,7 +140,7 @@ msgstr "Kliketi"
 #: main.cpp:28
 #, kde-format
 msgid "Klickety is an adaptation of the \"clickomania\" game"
-msgstr "Kliketi, \"clickomania\" oyununa bir benzetmedir"
+msgstr "Kliketi, “clickomania” oyununun bir uyarlamasıdır"
 
 #: main.cpp:30
 #, kde-format
@@ -148,7 +148,7 @@ msgid ""
 "(c) 2002-2005, Nicolas Hadacek\n"
 "(c) 2010, Ni Hui"
 msgstr ""
-"(c) 2002-2005, Nicolas Hadacek\n"
+"(c) 2002–2005, Nicolas Hadacek\n"
 "(c) 2010, Ni Hui"
 
 #: main.cpp:39
@@ -169,7 +169,7 @@ msgstr "Marcus Kreutzberger"
 #: main.cpp:51 main.cpp:58
 #, kde-format
 msgid "Original author"
-msgstr "İlk yazar"
+msgstr "Özgün yazar"
 
 #: main.cpp:52
 #, kde-format
@@ -189,7 +189,7 @@ msgstr "Ni Hui"
 #: main.cpp:53
 #, kde-format
 msgid "Integration with Klickety. Current maintainer"
-msgstr "Kliketi ile tümleştirme. Geçerli bakımcı"
+msgstr "Kliketi ile tümleştirme, şu anki bakımcı"
 
 #: main.cpp:54
 #, kde-format
@@ -199,7 +199,7 @@ msgstr "Johann Ollivier Lapeyre"
 #: main.cpp:54
 #, kde-format
 msgid "Artwork"
-msgstr "Sanatsal İşler"
+msgstr "Sanatsal işler"
 
 #: main.cpp:58
 #, kde-format
@@ -209,7 +209,7 @@ msgstr "Nicolas Hadacek"
 #: main.cpp:59
 #, kde-format
 msgid "Rewrite for KDE4. Current maintainer"
-msgstr "KDE4 için yeniden yazan. Projeyi yürüten"
+msgstr "KDE4 için yeniden yazan, şu anki bakımcı"
 
 #: main.cpp:60
 #, kde-format
@@ -226,7 +226,7 @@ msgstr "Simgeler"
 #: mainwindow.cpp:59
 #, kde-format
 msgid "Marked: 0"
-msgstr "İşaretli: 0"
+msgstr "İmli: 0"
 
 #: mainwindow.cpp:60 mainwindow.cpp:246
 #, kde-format
@@ -267,24 +267,24 @@ msgstr "Özel Oyun"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Board"
-msgstr "Tahta Seçin"
+msgstr "Tahta Seç"
 
 #: mainwindow.cpp:174
 #, kde-format
 msgid "Select a board number:"
-msgstr "Bir tahta sayıcı seçin:"
+msgstr "Bir tahta sayısı seç:"
 
 #: mainwindow.cpp:212 mainwindow.cpp:226
 #, kde-format
 msgid "Klickety Game Files (*.klickety)"
-msgstr "Kliketi Oyun Dosyaları (*.klickety)"
+msgstr "Kliketi oyun dosyaları (*.klickety)"
 
 #: mainwindow.cpp:238
 #, kde-format
 msgid "Marked: %2 (1 Point)"
 msgid_plural "Marked: %2 (%1 Points)"
-msgstr[0] "İşaretli: %2 (1 Nokta)"
-msgstr[1] "İşaretli: %2 (%1 Nokta)"
+msgstr[0] "İmli: %2 (1 Nokta)"
+msgstr[1] "İmli: %2 (%1 Nokta)"
 
 #: mainwindow.cpp:260
 #, kde-format
