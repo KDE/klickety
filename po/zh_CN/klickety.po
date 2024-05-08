@@ -85,15 +85,13 @@ msgid "Enable highlight"
 msgstr "启用突出显示"
 
 #: gamescene.cpp:236
-#, fuzzy, kde-format
-#| msgid "paused"
+#, kde-format
 msgctxt "@info:status"
 msgid "Paused"
-msgstr "已暂停"
+msgstr ""
 
 #: gamescene.cpp:348
-#, fuzzy, kde-format
-#| msgid "Game finished"
+#, kde-format
 msgctxt "@info:status"
 msgid "Game finished"
 msgstr "游戏完成"
@@ -246,8 +244,7 @@ msgid "Time: 00:00"
 msgstr "时间：00:00"
 
 #: mainwindow.cpp:92
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:tab"
 msgid "General"
 msgstr "常规"
@@ -258,15 +255,13 @@ msgid "Theme"
 msgstr "主题"
 
 #: mainwindow.cpp:94
-#, fuzzy, kde-format
-#| msgid "Background"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Background"
 msgstr "背景"
 
 #: mainwindow.cpp:96
-#, fuzzy, kde-format
-#| msgid "Custom Game"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "自定义游戏"
@@ -329,8 +324,7 @@ msgid "Do you want to resign?"
 msgstr "您要放弃吗？"
 
 #: mainwindow.cpp:346
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "新建游戏"
@@ -342,29 +336,25 @@ msgid "Resign"
 msgstr "放弃"
 
 #: mainwindow.cpp:364
-#, fuzzy, kde-format
-#| msgid "New Numbered Game..."
+#, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
-msgstr "新建编号游戏..."
+msgstr ""
 
 #: mainwindow.cpp:369
-#, fuzzy, kde-format
-#| msgid "Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "播放声音"
 
 #: mainwindow.cpp:384
-#, fuzzy, kde-format
-#| msgid "Undo All"
+#, kde-format
 msgctxt "@action"
 msgid "Undo All"
 msgstr "全部撤销"
 
 #: mainwindow.cpp:390
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "全部重做"

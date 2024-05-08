@@ -86,18 +86,16 @@ msgid "Enable highlight"
 msgstr "Povolit zvýraznění"
 
 #: gamescene.cpp:236
-#, fuzzy, kde-format
-#| msgid "paused"
+#, kde-format
 msgctxt "@info:status"
 msgid "Paused"
-msgstr "pozastaveno"
+msgstr "Pozastaven"
 
 #: gamescene.cpp:348
-#, fuzzy, kde-format
-#| msgid "Game finished"
+#, kde-format
 msgctxt "@info:status"
 msgid "Game finished"
-msgstr "Hra skončena"
+msgstr ""
 
 #. i18n: ectx: label, entry (BgColor), group (Background)
 #: klickety.kcfg:36
@@ -247,8 +245,7 @@ msgid "Time: 00:00"
 msgstr "Čas: 00:00"
 
 #: mainwindow.cpp:92
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:tab"
 msgid "General"
 msgstr "Obecné"
@@ -259,18 +256,16 @@ msgid "Theme"
 msgstr "Motiv"
 
 #: mainwindow.cpp:94
-#, fuzzy, kde-format
-#| msgid "Background"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Background"
-msgstr "Pozadí"
+msgstr ""
 
 #: mainwindow.cpp:96
-#, fuzzy, kde-format
-#| msgid "Custom Game"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Game"
-msgstr "Vlastní hra"
+msgstr ""
 
 #: mainwindow.cpp:173
 #, kde-format
@@ -332,8 +327,7 @@ msgid "Do you want to resign?"
 msgstr "Přejete si se vzdát?"
 
 #: mainwindow.cpp:346
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "Nová hra"
@@ -345,32 +339,28 @@ msgid "Resign"
 msgstr "Vzdát se"
 
 #: mainwindow.cpp:364
-#, fuzzy, kde-format
-#| msgid "New Numbered Game..."
+#, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
-msgstr "Nová očíslovaná hra..."
+msgstr ""
 
 #: mainwindow.cpp:369
-#, fuzzy, kde-format
-#| msgid "Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
-msgstr "Přehrávat zvuky"
+msgstr ""
 
 #: mainwindow.cpp:384
-#, fuzzy, kde-format
-#| msgid "Undo All"
+#, kde-format
 msgctxt "@action"
 msgid "Undo All"
-msgstr "Vrátit vše"
+msgstr ""
 
 #: mainwindow.cpp:390
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
-msgstr "Vše znovu"
+msgstr ""
 
 #: mainwindow.cpp:411
 #, kde-format
