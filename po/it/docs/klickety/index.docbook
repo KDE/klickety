@@ -391,7 +391,7 @@
 > <guimenu
 >Partita</guimenu
 > <guimenuitem
->Carica...</guimenuitem
+>Carica…</guimenuitem
 > </menuchoice
 > (not in modalità KSame) </term>
 <listitem
@@ -425,7 +425,7 @@
 ><guimenu
 >Partita</guimenu
 ><guimenuitem
->Nuova partita numerata</guimenuitem
+>Nuova partita numerata…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -756,7 +756,7 @@
 ><guimenu
 >Impostazioni</guimenu
 ><guimenuitem
->Configura &klickety;</guimenuitem
+>Configura &klickety;…</guimenuitem
 ></menuchoice
 > apre la finestra <guilabel
 >Configura - &klickety;</guilabel
