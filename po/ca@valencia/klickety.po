@@ -338,7 +338,7 @@ msgstr "Abandona"
 #: mainwindow.cpp:364
 #, kde-format
 msgid "New Numbered Game..."
-msgstr "Partida nova numerada..."
+msgstr "Partida nova numerada…"
 
 #: mainwindow.cpp:368
 #, kde-format
