@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-04 00:37+0000\n"
-"PO-Revision-Date: 2024-04-26 16:06+0200\n"
+"PO-Revision-Date: 2024-05-08 18:14+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -91,15 +91,13 @@ msgid "Enable highlight"
 msgstr "Activer le surlignage"
 
 #: gamescene.cpp:236
-#, fuzzy, kde-format
-#| msgid "paused"
+#, kde-format
 msgctxt "@info:status"
 msgid "Paused"
-msgstr "pause"
+msgstr "Mise en pause"
 
 #: gamescene.cpp:348
-#, fuzzy, kde-format
-#| msgid "Game finished"
+#, kde-format
 msgctxt "@info:status"
 msgid "Game finished"
 msgstr "Jeu terminé"
@@ -252,11 +250,10 @@ msgid "Time: 00:00"
 msgstr "Temps : 00:00"
 
 #: mainwindow.cpp:92
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:tab"
 msgid "General"
-msgstr "Général "
+msgstr "Général"
 
 #: mainwindow.cpp:93
 #, kde-format
@@ -264,18 +261,16 @@ msgid "Theme"
 msgstr "Thème"
 
 #: mainwindow.cpp:94
-#, fuzzy, kde-format
-#| msgid "Background"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Background"
 msgstr "Arrière-plan"
 
 #: mainwindow.cpp:96
-#, fuzzy, kde-format
-#| msgid "Custom Game"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Game"
-msgstr "Jeu personnalisé"
+msgstr "Partie personnalisée"
 
 #: mainwindow.cpp:173
 #, kde-format
@@ -336,8 +331,7 @@ msgid "Do you want to resign?"
 msgstr "Voulez-vous abandonner ?"
 
 #: mainwindow.cpp:346
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "Nouvelle partie"
@@ -349,32 +343,28 @@ msgid "Resign"
 msgstr "Abandonner"
 
 #: mainwindow.cpp:364
-#, fuzzy, kde-format
-#| msgid "New Numbered Game..."
+#, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
-msgstr "Nouvelle partie numérotée..."
+msgstr "Nouvelle partie numérotée…"
 
 #: mainwindow.cpp:369
-#, fuzzy, kde-format
-#| msgid "Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Jouer les sons"
 
 #: mainwindow.cpp:384
-#, fuzzy, kde-format
-#| msgid "Undo All"
+#, kde-format
 msgctxt "@action"
 msgid "Undo All"
 msgstr "Tout annuler"
 
 #: mainwindow.cpp:390
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
-msgstr "Tout recommencer"
+msgstr "Tout refaire"
 
 #: mainwindow.cpp:411
 #, kde-format
