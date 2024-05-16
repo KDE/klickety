@@ -748,7 +748,7 @@
 ><!-- do not change this! -->
 <!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
 <para
-><menuchoice
+>L'élémnt de menu <menuchoice
 ><guimenu
 >Configuration</guimenu
 ><guimenuitem
