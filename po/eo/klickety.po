@@ -1,15 +1,15 @@
 # translation of klickety.pot to esperanto
 # Copyright (C) 2017 Free Software Foundation, Inc.
 # This file is distributed under the same license as the klickety package.
-# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: klickety\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-13 00:36+0000\n"
-"PO-Revision-Date: 2023-10-15 09:42+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-04 07:47+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "okellogg@users.sourceforge.net"
+msgstr "olivermkellogg@gmail.com"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
 #: bgselectorconfig.ui:33
@@ -99,7 +99,7 @@ msgstr "Ludo finiĝis"
 #: klickety.kcfg:36
 #, kde-format
 msgid "The background color to be used."
-msgstr "La fonkoloro uzenda."
+msgstr "La fonkoloro uzota."
 
 #. i18n: ectx: label, entry (BgImage), group (Background)
 #: klickety.kcfg:40
