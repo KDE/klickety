@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2010.
-# Steve Allewell <steve.allewell@gmail.com>, 2015, 2016, 2021, 2022.
+# SPDX-FileCopyrightText: 2015, 2016, 2021, 2022, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-04 00:37+0000\n"
-"PO-Revision-Date: 2022-08-07 10:56+0100\n"
+"PO-Revision-Date: 2024-05-21 19:28+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -86,15 +86,13 @@ msgid "Enable highlight"
 msgstr "Enable highlight"
 
 #: gamescene.cpp:236
-#, fuzzy, kde-format
-#| msgid "paused"
+#, kde-format
 msgctxt "@info:status"
 msgid "Paused"
-msgstr "paused"
+msgstr "Paused"
 
 #: gamescene.cpp:348
-#, fuzzy, kde-format
-#| msgid "Game finished"
+#, kde-format
 msgctxt "@info:status"
 msgid "Game finished"
 msgstr "Game finished"
@@ -247,8 +245,7 @@ msgid "Time: 00:00"
 msgstr "Time: 00:00"
 
 #: mainwindow.cpp:92
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:tab"
 msgid "General"
 msgstr "General"
@@ -259,15 +256,13 @@ msgid "Theme"
 msgstr "Theme"
 
 #: mainwindow.cpp:94
-#, fuzzy, kde-format
-#| msgid "Background"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Background"
 msgstr "Background"
 
 #: mainwindow.cpp:96
-#, fuzzy, kde-format
-#| msgid "Custom Game"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "Custom Game"
@@ -331,8 +326,7 @@ msgid "Do you want to resign?"
 msgstr "Do you want to resign?"
 
 #: mainwindow.cpp:346
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "New Game"
@@ -344,29 +338,25 @@ msgid "Resign"
 msgstr "Resign"
 
 #: mainwindow.cpp:364
-#, fuzzy, kde-format
-#| msgid "New Numbered Game..."
+#, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
-msgstr "New Numbered Game..."
+msgstr "New Numbered Game…"
 
 #: mainwindow.cpp:369
-#, fuzzy, kde-format
-#| msgid "Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Play Sounds"
 
 #: mainwindow.cpp:384
-#, fuzzy, kde-format
-#| msgid "Undo All"
+#, kde-format
 msgctxt "@action"
 msgid "Undo All"
 msgstr "Undo All"
 
 #: mainwindow.cpp:390
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "Redo All"
