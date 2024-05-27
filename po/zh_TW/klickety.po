@@ -3,20 +3,20 @@
 #
 # Franklin Weng <franklin@mail.everfocus.com.tw>, 2010.
 # Jeff Huang <s8321414@gmail.com>, 2016.
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-04 00:37+0000\n"
-"PO-Revision-Date: 2023-11-10 23:29+0900\n"
+"PO-Revision-Date: 2024-05-26 23:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -87,15 +87,13 @@ msgid "Enable highlight"
 msgstr "開啟突顯"
 
 #: gamescene.cpp:236
-#, fuzzy, kde-format
-#| msgid "paused"
+#, kde-format
 msgctxt "@info:status"
 msgid "Paused"
 msgstr "暫停"
 
 #: gamescene.cpp:348
-#, fuzzy, kde-format
-#| msgid "Game finished"
+#, kde-format
 msgctxt "@info:status"
 msgid "Game finished"
 msgstr "遊戲已完成"
@@ -248,8 +246,7 @@ msgid "Time: 00:00"
 msgstr "時間：00:00"
 
 #: mainwindow.cpp:92
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:tab"
 msgid "General"
 msgstr "一般"
@@ -260,18 +257,16 @@ msgid "Theme"
 msgstr "主題"
 
 #: mainwindow.cpp:94
-#, fuzzy, kde-format
-#| msgid "Background"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Background"
 msgstr "背景"
 
 #: mainwindow.cpp:96
-#, fuzzy, kde-format
-#| msgid "Custom Game"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Game"
-msgstr "自定遊戲"
+msgstr "自訂遊戲"
 
 #: mainwindow.cpp:173
 #, kde-format
@@ -331,8 +326,7 @@ msgid "Do you want to resign?"
 msgstr "您是否要放棄？"
 
 #: mainwindow.cpp:346
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "新遊戲"
@@ -344,29 +338,25 @@ msgid "Resign"
 msgstr "放棄"
 
 #: mainwindow.cpp:364
-#, fuzzy, kde-format
-#| msgid "New Numbered Game..."
+#, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
 msgstr "新編號的遊戲..."
 
 #: mainwindow.cpp:369
-#, fuzzy, kde-format
-#| msgid "Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "播放音效"
 
 #: mainwindow.cpp:384
-#, fuzzy, kde-format
-#| msgid "Undo All"
+#, kde-format
 msgctxt "@action"
 msgid "Undo All"
-msgstr "全部回復"
+msgstr "全部復原"
 
 #: mainwindow.cpp:390
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "全部重做"
