@@ -63,6 +63,20 @@
 ><contrib
 >Traductora</contrib
 ></othercredit
+> <othercredit role="translator"
+><firstname
+>Eloy</firstname
+> <surname
+>Cuadra</surname
+> <affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+> <contrib
+>Corrección de la traducción</contrib
+></othercredit
 > 
 </authorgroup>
 
@@ -144,7 +158,7 @@
 >Clickomania</application
 >. Las reglas son similares a las del juego <literal
 >Same</literal
->: su objetivo es limpiar el tablero haciendo clic en grupos para destruirlos. La meta global es obtener la puntuación más baja posible. Proporcionará entretenimiento para todas las habilidades, pero será un desafío para el pensamiento lógico si lo que quiere es conseguir una puntuación realmente baja. </para>
+>: tu objetivo es limpiar el tablero haciendo clic en grupos para destruirlos. La meta global es obtener la puntuación más baja posible. Proporcionará entretenimiento para todas las habilidades, pero será un desafío para el pensamiento lógico si lo que quieres es conseguir una puntuación realmente baja. </para>
 </chapter>
 
 <chapter id="how-to-play">
@@ -155,19 +169,19 @@
 ><title
 >Objetivo:</title
 ><para
->Limpie el tablero de todos los bloques de colores en el menor tiempo posible.</para
+>Limpia el tablero de todos los bloques de colores en el menor tiempo posible.</para
 ></note>
 <!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
 <para
->Cuando inicie el programa, obtendrá una pantalla que se parece algo a la captura de pantalla de la sección anterior. La idea del juego es eliminar bloques, lo que se consigue haciendo clic en ellos. </para>
+>Cuando lances el programa, verás una pantalla parecida a la captura de la sección anterior. La idea del juego es eliminar bloques haciendo clic en ellos. </para>
 <para
->Sin embargo, solo puede eliminar un bloque si es adyacente a uno o más del mismo color en uno o más de sus lados. Las conexiones diagonales no cuentan. Se tiene un tablero aleatorio cada vez que se inicia un nuevo juego. </para>
+>Sin embargo, solo puedes eliminar un bloque si es adyacente a uno o más del mismo color por uno o más de sus lados. Las conexiones diagonales no cuentan. Se tiene un tablero aleatorio cada vez que se inicia una nueva partida. </para>
 <para
->Si hace clic en un bloque que está conectado como se describe, desaparecerá. Cualquier bloque adyacente del mismo color también desaparecerá, junto con todos los del mismo color adyacentes <emphasis
+>Si pulsas en un bloque que está conectado como se describe, desaparecerá. Cualquier bloque adyacente del mismo color también desaparecerá, junto con todos los del mismo color adyacentes <emphasis
 >a ellos</emphasis
->, y así sucesivamente. Los bloques situados encima caerán para rellenar los huecos que dejan las piezas desaparecidas. Si elimina una columna completa, todas las columnas a la derecha se moverán para rellenar el hueco. </para>
+>, y así sucesivamente. Los bloques situados encima caerán para rellenar los huecos que dejan las piezas desaparecidas. Si eliminas una columna completa, todas las columnas que estén a la derecha se moverán para rellenar el hueco. </para>
 <para
->El juego termina cuando no hay bloques adyacentes a otros bloques del mismo color. </para>
+>El juego termina cuando no quedan bloques adyacentes a otros bloques del mismo color. </para>
 
 <sect1 id="game-screen">
 <title
@@ -185,7 +199,7 @@
 ></textobject>
 </mediaobject>
 </screenshot
->Rápida explicación de las partes de la pantalla de juego. </para>
+>Breve explicación de las partes de la pantalla de juego. </para>
 <variablelist>
 <varlistentry>
 <term
@@ -200,7 +214,7 @@
 >Barra de estado</term>
 <listitem
 ><para
->La barra de estado se localiza en la parte inferior de la pantalla. Muestra cuántas piezas quedan actualmente y el temporizador del juego, que registra el tiempo desde el inicio del juego hasta que este termina. </para
+>La barra de estado se localiza en la parte inferior de la pantalla. Muestra el número de piezas que quedan actualmente y el temporizador del juego, que registra el tiempo desde el inicio de la partida hasta que esta termina. </para
 ></listitem>
 </varlistentry>
 </variablelist>
@@ -217,13 +231,13 @@
 <para
 >La puntuación se calcula como sigue:</para>
 <para
->Se sustrae 2 del número de piezas eliminadas y se eleva al cuadrado el resultado. </para>
+>Se resta 2 del número de piezas eliminadas y se eleva al cuadrado el resultado. </para>
 <para
->Por ejemplo, si elimina 7 bolas, entonces obtiene 25 puntos (7 menos 2 = 5. 5 al cuadrado es 25 puntos). Si elimina 8 bolas, entonces obtiene 36 puntos (8 menos 2 = 6, 6 al cuadrado es 36 puntos). </para>
+>Por ejemplo: si eliminas 7 bolas, obtienes 25 puntos (7 - 2 = 5, y 5 al cuadrado son 25 puntos). Si elimina 8 bolas, obtienes 36 puntos (8 - 2 = 6, y 6 al cuadrado son 36 puntos). </para>
 <para
->Consiga tantas piezas iguales como pueda, y después elimínelas con un solo clic. De esta forma obtendrá una puntuación más alta. El juego termina cuando no hay piezas que se puedan eliminar. </para>
+>Consigue tantas piezas iguales como puedas y elimínalas con un solo clic. De esta forma obtendrás una puntuación más alta. La partida termina cuando no quedan piezas que se puedan eliminar. </para>
 <para
->La puntuación entonces disminuirá según el número de piezas restantes. Si elimina todas las piezas, se añadirán 1.000 puntos de bonificación a la puntuación final. </para>
+>La puntuación disminuirá según el número de piezas restantes. Si eliminas todas las piezas, se añadirán 1.000 puntos de bonificación a la puntuación final. </para>
 <screenshot>
 <screeninfo
 >Captura de pantalla de &klickety; en modo KSame</screeninfo>
@@ -248,9 +262,9 @@
 > for better viewing.-->
 <sect1 id="default-keybindings">
 <title id="keybindings-title"
->Atajos de teclado por defecto</title>
+>Atajos de teclado predeterminados</title>
 <para
->Los atajos por defecto son:</para>
+>Los atajos predeterminados son:</para>
 
 <table>
 <title
@@ -279,7 +293,7 @@
 </row>
 <row>
 <entry
->Reiniciar juego</entry>
+>Reiniciar el juego</entry>
 <entry
 ><keycap
 >F5</keycap
@@ -353,7 +367,7 @@
 </row>
 <row>
 <entry
->Ayuda ¿Qué es esto?</entry>
+>Ayuda «¿Qué es esto?»</entry>
 <entry
 ><keycombo action="simul"
 >&Shift;<keycap
@@ -368,7 +382,7 @@
 
 <sect1 id="menu">
 <title
->Opciones de menú</title>
+>Opciones del menú</title>
 
 <variablelist>
 
@@ -382,14 +396,14 @@
 ></keycombo
 ></shortcut
 > <guimenu
->Partida</guimenu
+>Juego</guimenu
 > <guimenuitem
 >Guardar</guimenuitem
 > </menuchoice
 ></term>
 <listitem
 ><para
->Inicia una nueva partida.</para
+>Empieza una partida nueva.</para
 ></listitem>
 </varlistentry>
 
@@ -410,7 +424,7 @@
 > (no en el modo KSame) </term>
 <listitem
 ><para
->Carga un juego guardado previamente.</para
+>Carga una partida guardada previamente.</para
 ></listitem>
 </varlistentry>
 
@@ -424,12 +438,12 @@
 > <guimenu
 >Juego</guimenu
 > <guimenuitem
->Reiniciar juego</guimenuitem
+>Reiniciar partida</guimenuitem
 > </menuchoice
 ></term>
 <listitem
 ><para
->Esto reiniciará el juego actual.</para
+>Esto reiniciará la partida actual.</para
 ></listitem>
 </varlistentry>
 
@@ -445,16 +459,16 @@
 <listitem
 ><para
 ><action
->Inicia específicamente un juego numerado.</action>
+>Inicia específicamente una partida numerada.</action>
     <screenshot>
     <screeninfo
->Diálogo para iniciar un juego numerado</screeninfo>
+>Diálogo para iniciar una partida numerada</screeninfo>
     <mediaobject>
     <imageobject
 ><imagedata fileref="numbered.png" format="PNG"/></imageobject>
     <textobject
 ><phrase
->Diálogo para iniciar un juego numerado</phrase
+>Diálogo para iniciar una partida numerada</phrase
 ></textobject>
     </mediaobject>
     </screenshot>
@@ -476,10 +490,10 @@
 > <guimenuitem
 >Guardar</guimenuitem
 > </menuchoice
-> (no en el modo KSame)</term>
+> (no en modo KSame)</term>
 <listitem
 ><para
->Guarda el estado actual del juego al disco.</para
+>Guarda el estado actual de la partida en el disco.</para
 ></listitem>
 </varlistentry>
 
@@ -499,7 +513,7 @@
 <listitem
 ><para
 ><action
->Pausa o retoma el juego. Mientras que el juego está pausado, todas las piezas se ocultan.</action
+>Pausa o continúa la partida. Mientras la partida está en pausa se ocultarán todas las piezas.</action
 ></para
 ></listitem>
 </varlistentry>
@@ -525,19 +539,19 @@
 >Muestra la lista de puntuaciones más altas.</action>
     <screenshot>
     <screeninfo
->Mostrar puntuaciones más altas</screeninfo>
+>Mostrar las mejores puntuaciones</screeninfo>
     <mediaobject>
     <imageobject
 ><imagedata fileref="highscore.png" format="PNG"/></imageobject>
     <textobject
 ><phrase
->Mostrar puntuaciones más altas</phrase
+>Mostrar las mejores puntuaciones</phrase
 ></textobject>
     </mediaobject>
     </screenshot>
 </para>
 <para
->Cuando su puntuación en el juego excede de las listadas en las diez puntuaciones más altas, se le pedirá que introduzca su nombre. </para
+>Si tu puntuación es superior a las diez mejores que se muestran, se te pedirá que introduzcas tu nombre. </para
 > </listitem>
 </varlistentry>
 
@@ -558,7 +572,7 @@
 ></term>
 <listitem
 ><para
->Seleccionar este elemento finalizará el juego actual y saldrá de &klickety;.</para
+>Si seleccionas esta opción terminarás la partida actual y saldrás de &klickety;.</para
 ></listitem>
 </varlistentry>
 
@@ -580,7 +594,7 @@
 <listitem
 ><para
 ><action
->Deshace el último movimiento que ha hecho.</action
+>Deshace el último movimiento que has realizado.</action
 ></para
 ></listitem>
 </varlistentry>
@@ -603,7 +617,7 @@
 <listitem
 ><para
 ><action
->Si ha deshecho un movimiento anteriormente, puede rehacerlo aquí.</action
+>Si has deshecho un movimiento anteriormente, puedes volver a hacerlo aquí.</action
 ></para
 ></listitem>
 </varlistentry>
@@ -621,7 +635,7 @@
 ><para
 ><action
 >Deshacer</action
-> todos los movimientos que ha hecho.</para
+> todos los movimientos que has realizado.</para
 ></listitem>
 </varlistentry>
 
@@ -638,7 +652,7 @@
 ><para
 ><action
 >Rehacer</action
-> todos los movimientos deshechos.</para
+> todos los movimientos que has deshecho.</para
 ></listitem>
 </varlistentry>
 
@@ -653,9 +667,9 @@
 ></term>
 <listitem>
 <para
->Le permite establecer el nivel de dificultad desde un sub-menú.</para>
+>Permite establecer el nivel de dificultad usando un submenú.</para>
 <para
->Hay cuatro niveles de dificultad: <itemizedlist>
+>Existen cuatro niveles de dificultad: <itemizedlist>
 <listitem
 ><para
 ><guimenuitem
@@ -683,13 +697,13 @@
 </itemizedlist>
 </para>
 <para
->También hay preferencias para niveles <guimenuitem
+>También hay ajustes para niveles <guimenuitem
 >personalizados</guimenuitem
 >.</para>
 <para
->Si selecciona <guimenuitem
+>Si seleccionas <guimenuitem
 >Personalizado</guimenuitem
->, se usarán las preferencias que haya configurado en el diálogo <guimenuitem
+>, se usarán las preferencias que hayas configurado en el diálogo <guimenuitem
 >Configurar - &klickety;</guimenuitem
 >.</para>
 </listitem>
@@ -698,15 +712,15 @@
 </variablelist>
 
 <para
->Además &klickety; tiene las opciones de menú <guimenu
+>Además, &klickety; tiene las opciones de los menús <guimenu
 >Preferencias</guimenu
 > y <guimenu
 >Ayuda</guimenu
-> comunes de &kde;. Para obtener más información, consulte las secciones sobre el <ulink url="help:/fundamentals/menus.html#menus-settings"
+> comunes de &kde;. Para obtener más información, consulta las secciones sobre el <ulink url="help:/fundamentals/menus.html#menus-settings"
 >Menú «Preferencias»</ulink
-> y <ulink url="help:/fundamentals/menus.html#menus-help"
+> y el <ulink url="help:/fundamentals/menus.html#menus-help"
 >Menú «Ayuda» </ulink
-> de «Aspectos básicos de &kde;». </para>
+> de los «Aspectos básicos de &kde;». </para>
 
 </sect1>
 
@@ -729,7 +743,7 @@
 ></question>
 <answer
 ><para
->Sí. Para cambiar el aspecto de &klickety;, use la <link linkend="configuration"
+>Sí. Para cambiar el aspecto de &klickety;, usa la <link linkend="configuration"
 >utilidad de configuración</link
 >.</para
 ></answer>
@@ -751,9 +765,9 @@
 ></question>
 <answer
 ><para
->Puede iniciar &klickety; mediante la orden <userinput
+>Puedes iniciar &klickety; mediante la orden <userinput
 >klickety --KSameMode</userinput
-> o la entrada de menú &ksame; en el menú K.</para
+> o usando la entrada de menú &ksame; en el menú K.</para
 ></answer>
 </qandaentry>
 
@@ -793,21 +807,21 @@
 <varlistentry>
 <term
 ><guilabel
->Habilitar animaciones</guilabel
+>Activar las animaciones</guilabel
 ></term>
 <listitem
 ><para
->Esta opción habilitará la animación de caída y fusión cuando se eliminan las piezas. </para
+>Esta opción activará la animación de caída y fusión cuando se eliminan las piezas. </para
 ></listitem>
 </varlistentry>
 <varlistentry>
 <term
 ><guilabel
->Habilitar resaltado</guilabel
+>Activar el resaltado</guilabel
 ></term>
 <listitem
 ><para
->Esta opción habilitará el resaltado de las piezas sobre las que se sitúa el cursor si se pueden eliminar. </para
+>Esta opción activará el resaltado de las piezas sobre las que se sitúes cursor si se pueden eliminar. </para
 ></listitem>
 </varlistentry>
 </variablelist>
@@ -836,7 +850,7 @@
 ></term>
 <listitem
 ><para
->Use el selector de <guilabel
+>Usa el selector de <guilabel
 >temas</guilabel
 > para establecer un tema para el juego.</para
 ></listitem>
@@ -844,13 +858,13 @@
 </variablelist>
 <screenshot>
 <screeninfo
->Opciones de tema</screeninfo>
+>Opciones del tema</screeninfo>
 <mediaobject>
 <imageobject
 ><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
 <textobject
 ><phrase
->Opciones de tema</phrase
+>Opciones del tema</phrase
 ></textobject>
 </mediaobject>
 </screenshot>
@@ -858,9 +872,9 @@
 
 <sect1 id="background-options">
 <title
->Opciones de fondo</title>
+>Opciones del fondo</title>
 <para
->Puede elegir un gráfico como fondo para el juego. Hay tres tipos de fondo que puede usar. <variablelist>
+>Puedes usar un gráfico como fondo para el juego. Hay tres tipos de fondo que puedes usar. <variablelist>
 <varlistentry>
 <term
 ><guilabel
@@ -868,7 +882,7 @@
 ></term>
 <listitem
 ><para
->Use el fondo incluido en el juego actual</para
+>Usar el fondo incluido en el tema actual.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -878,7 +892,7 @@
 ></term>
 <listitem
 ><para
->Use un color sólido personalizado como fondo.</para
+>Usar un color sólido personalizado como fondo.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -888,20 +902,20 @@
 ></term>
 <listitem
 ><para
->Use una imagen como gráfico de fondo.</para
+>Usar una imagen como gráfico para el fondo.</para
 ></listitem>
 </varlistentry>
 </variablelist>
 </para>
 <screenshot>
 <screeninfo
->Opciones de fondo</screeninfo>
+>Opciones del fondo</screeninfo>
 <mediaobject>
 <imageobject
 ><imagedata fileref="config-background.png" format="PNG"/></imageobject>
 <textobject
 ><phrase
->Opciones de fondo</phrase
+>Opciones del fondo</phrase
 ></textobject>
 </mediaobject>
 </screenshot>
@@ -909,24 +923,24 @@
 
 <sect1 id="customgame-options">
 <title
->Opciones de juego personalizadas</title>
+>Opciones de juego personalizado</title>
 <para
->Puede establecer la <guilabel
+>Puedes definir la <guilabel
 >Altura:</guilabel
 > y la <guilabel
 >Anchura:</guilabel
 > del tablero y el <guilabel
 >Número de colores:</guilabel
-> usados en su nivel personalizado. </para>
+> que se usan en el nivel personalizado. </para>
 <screenshot>
 <screeninfo
->Opciones de juego personalizadas</screeninfo>
+>Opciones de juego personalizado</screeninfo>
 <mediaobject>
 <imageobject
 ><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
 <textobject
 ><phrase
->Opciones de juego personalizadas</phrase
+>Opciones de juego personalizado</phrase
 ></textobject>
 </mediaobject>
 </screenshot>
@@ -954,10 +968,14 @@
 >shuizhuyuanluo@126.com</email
 ></para>
 <para
->Traducido por Rocío Gallego <email
+>Documentación traducida por Rocío Gallego <email
 >traducciones@rociogallego.com</email
 > y Kira J. Fernández <email
 >kirajfdez@gmail.com</email
+>.</para
+><para
+>Corregida por Eloy Cuadra <email
+>ecuadra@eloihr.net</email
 >.</para
 > &underFDL; &underGPL; </chapter>
 
