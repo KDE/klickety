@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2010, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2010, 2015, 2016, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-04 00:37+0000\n"
-"PO-Revision-Date: 2022-08-03 10:09+0200\n"
+"PO-Revision-Date: 2024-06-19 02:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -86,15 +86,13 @@ msgid "Enable highlight"
 msgstr "Aktivera färgläggning"
 
 #: gamescene.cpp:236
-#, fuzzy, kde-format
-#| msgid "paused"
+#, kde-format
 msgctxt "@info:status"
 msgid "Paused"
-msgstr "paus"
+msgstr "Pausad"
 
 #: gamescene.cpp:348
-#, fuzzy, kde-format
-#| msgid "Game finished"
+#, kde-format
 msgctxt "@info:status"
 msgid "Game finished"
 msgstr "Spelet är klart"
@@ -247,8 +245,7 @@ msgid "Time: 00:00"
 msgstr "Tid: 00.00"
 
 #: mainwindow.cpp:92
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:tab"
 msgid "General"
 msgstr "Allmänt"
@@ -259,15 +256,13 @@ msgid "Theme"
 msgstr "Tema"
 
 #: mainwindow.cpp:94
-#, fuzzy, kde-format
-#| msgid "Background"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Background"
 msgstr "Bakgrund"
 
 #: mainwindow.cpp:96
-#, fuzzy, kde-format
-#| msgid "Custom Game"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "Eget spel"
@@ -331,8 +326,7 @@ msgid "Do you want to resign?"
 msgstr "Vill du dra dig ur aktuellt spel?"
 
 #: mainwindow.cpp:346
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "Nytt spel"
@@ -344,29 +338,25 @@ msgid "Resign"
 msgstr "Ge upp"
 
 #: mainwindow.cpp:364
-#, fuzzy, kde-format
-#| msgid "New Numbered Game..."
+#, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
-msgstr "Nytt numrerat spel..."
+msgstr "Nytt numrerat spel…"
 
 #: mainwindow.cpp:369
-#, fuzzy, kde-format
-#| msgid "Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Spela ljud"
 
 #: mainwindow.cpp:384
-#, fuzzy, kde-format
-#| msgid "Undo All"
+#, kde-format
 msgctxt "@action"
 msgid "Undo All"
 msgstr "Ångra allt"
 
 #: mainwindow.cpp:390
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "Gör om allt"
