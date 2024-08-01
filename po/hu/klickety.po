@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-04 00:37+0000\n"
-"PO-Revision-Date: 2024-01-25 10:26+0100\n"
+"PO-Revision-Date: 2024-07-31 21:34+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.01.90\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -87,15 +87,13 @@ msgid "Enable highlight"
 msgstr "Kiemelés engedélyezése"
 
 #: gamescene.cpp:236
-#, fuzzy, kde-format
-#| msgid "paused"
+#, kde-format
 msgctxt "@info:status"
 msgid "Paused"
-msgstr "szüneteltetve"
+msgstr "Szüneteltetve"
 
 #: gamescene.cpp:348
-#, fuzzy, kde-format
-#| msgid "Game finished"
+#, kde-format
 msgctxt "@info:status"
 msgid "Game finished"
 msgstr "A játék befejeződött"
@@ -248,8 +246,7 @@ msgid "Time: 00:00"
 msgstr "Idő: 00.00"
 
 #: mainwindow.cpp:92
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:tab"
 msgid "General"
 msgstr "Általános"
@@ -260,18 +257,16 @@ msgid "Theme"
 msgstr "Téma"
 
 #: mainwindow.cpp:94
-#, fuzzy, kde-format
-#| msgid "Background"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Background"
 msgstr "Háttér"
 
 #: mainwindow.cpp:96
-#, fuzzy, kde-format
-#| msgid "Custom Game"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Game"
-msgstr "Egyedi játék"
+msgstr "Egyéni játék"
 
 #: mainwindow.cpp:173
 #, kde-format
@@ -332,8 +327,7 @@ msgid "Do you want to resign?"
 msgstr "Szeretné feladni?"
 
 #: mainwindow.cpp:346
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "Új játék"
@@ -345,29 +339,25 @@ msgid "Resign"
 msgstr "Feladás"
 
 #: mainwindow.cpp:364
-#, fuzzy, kde-format
-#| msgid "New Numbered Game..."
+#, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
 msgstr "Új számozott játék…"
 
 #: mainwindow.cpp:369
-#, fuzzy, kde-format
-#| msgid "Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Hangok lejátszása"
 
 #: mainwindow.cpp:384
-#, fuzzy, kde-format
-#| msgid "Undo All"
+#, kde-format
 msgctxt "@action"
 msgid "Undo All"
 msgstr "Mind visszavonása"
 
 #: mainwindow.cpp:390
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "Mind ismétlése"
