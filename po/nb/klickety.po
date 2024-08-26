@@ -90,7 +90,6 @@ msgstr "Slå på framheving"
 
 #: gamescene.cpp:236
 #, fuzzy, kde-format
-#| msgid "paused"
 msgctxt "@info:status"
 msgid "Paused"
 msgstr "pause"
@@ -250,7 +249,6 @@ msgstr "Tid: 00:00"
 
 #: mainwindow.cpp:92
 #, fuzzy, kde-format
-#| msgid "General"
 msgctxt "@title:tab"
 msgid "General"
 msgstr "Generelt"
@@ -262,14 +260,12 @@ msgstr "Tema"
 
 #: mainwindow.cpp:94
 #, fuzzy, kde-format
-#| msgid "Background"
 msgctxt "@title:tab"
 msgid "Background"
 msgstr "Bakgrunn"
 
 #: mainwindow.cpp:96
 #, fuzzy, kde-format
-#| msgid "Custom Game"
 msgctxt "@title:tab"
 msgid "Custom Game"
 msgstr "Selvvalgt spill"
@@ -334,7 +330,6 @@ msgstr "Vil du gi opp?"
 
 #: mainwindow.cpp:346
 #, fuzzy, kde-format
-#| msgid "New Game"
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "Nytt spill"
@@ -347,28 +342,24 @@ msgstr ""
 
 #: mainwindow.cpp:364
 #, fuzzy, kde-format
-#| msgid "New Numbered Game..."
 msgctxt "@action"
 msgid "New Numbered Game…"
 msgstr "Nytt nummerert spill …"
 
 #: mainwindow.cpp:369
 #, fuzzy, kde-format
-#| msgid "Play Sounds"
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Spill lyder"
 
 #: mainwindow.cpp:384
 #, fuzzy, kde-format
-#| msgid "Undo All"
 msgctxt "@action"
 msgid "Undo All"
 msgstr "Angre alt"
 
 #: mainwindow.cpp:390
 #, fuzzy, kde-format
-#| msgid "Redo All"
 msgctxt "@action"
 msgid "Redo All"
 msgstr "Gjør om alt"
