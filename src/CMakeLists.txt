@@ -33,6 +33,7 @@ target_link_libraries(klickety
     KF6::I18n
     KF6::KIOWidgets
     KF6::XmlGui
+    KF6::IconThemes
 )
 
 install(TARGETS klickety ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
