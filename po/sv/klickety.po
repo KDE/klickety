@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-04 00:37+0000\n"
+"POT-Creation-Date: 2024-11-22 00:38+0000\n"
 "PO-Revision-Date: 2024-06-19 02:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -133,17 +133,17 @@ msgstr "Antal färger på spelfältet."
 msgid "Main Toolbar"
 msgstr "Huvudverktygsrad"
 
-#: main.cpp:27
+#: main.cpp:45
 #, kde-format
 msgid "Klickety"
 msgstr "Klickety"
 
-#: main.cpp:28
+#: main.cpp:46
 #, kde-format
 msgid "Klickety is an adaptation of the \"clickomania\" game"
 msgstr "Klickety är en anpassning av spelet \"clickomania\""
 
-#: main.cpp:30
+#: main.cpp:48
 #, kde-format
 msgid ""
 "(c) 2002-2005, Nicolas Hadacek\n"
@@ -152,72 +152,72 @@ msgstr ""
 "© 2002-2005, Nicolas Hadacek\n"
 "© 2010, Ni Hui"
 
-#: main.cpp:39
+#: main.cpp:57
 #, kde-format
 msgid "Start with KSame compatibility mode"
 msgstr "Börja med Ksame-kompatibilitetsläge"
 
-#: main.cpp:50
+#: main.cpp:68
 #, kde-format
 msgid "A little game about balls and how to get rid of them"
 msgstr "Ett litet spel som handlar om bollar och hur man blir av med dem"
 
-#: main.cpp:51
+#: main.cpp:69
 #, kde-format
 msgid "Marcus Kreutzberger"
 msgstr "Marcus Kreutzberger"
 
-#: main.cpp:51 main.cpp:58
+#: main.cpp:69 main.cpp:76
 #, kde-format
 msgid "Original author"
 msgstr "Ursprunglig upphovsman"
 
-#: main.cpp:52
+#: main.cpp:70
 #, kde-format
 msgid "Henrique Pinto"
 msgstr "Henrique Pinto"
 
-#: main.cpp:52
+#: main.cpp:70
 #, kde-format
 msgid "Past maintainer"
 msgstr "Tidigare utvecklare"
 
-#: main.cpp:53 main.cpp:59
+#: main.cpp:71 main.cpp:77
 #, kde-format
 msgid "Ni Hui"
 msgstr "Ni Hui"
 
-#: main.cpp:53
+#: main.cpp:71
 #, kde-format
 msgid "Integration with Klickety. Current maintainer"
 msgstr "Integration med Klickety. Nuvarande utvecklare"
 
-#: main.cpp:54
+#: main.cpp:72
 #, kde-format
 msgid "Johann Ollivier Lapeyre"
 msgstr "Johann Ollivier Lapeyre"
 
-#: main.cpp:54
+#: main.cpp:72
 #, kde-format
 msgid "Artwork"
 msgstr "Grafik"
 
-#: main.cpp:58
+#: main.cpp:76
 #, kde-format
 msgid "Nicolas Hadacek"
 msgstr "Nicolas Hadacek"
 
-#: main.cpp:59
+#: main.cpp:77
 #, kde-format
 msgid "Rewrite for KDE4. Current maintainer"
 msgstr "Omskrivning för KDE4. Nuvarande utvecklare"
 
-#: main.cpp:60
+#: main.cpp:78
 #, kde-format
 msgid "Dan Hill"
 msgstr "Dan Hill"
 
-#: main.cpp:60
+#: main.cpp:78
 #, kde-format
 msgid "Icons"
 msgstr "Ikoner"

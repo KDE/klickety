@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-04 00:37+0000\n"
+"POT-Creation-Date: 2024-11-22 00:38+0000\n"
 "PO-Revision-Date: 2024-09-19 22:13+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -134,17 +134,17 @@ msgstr "Ο αριθμός των χρωμάτων στο πεδίο του πα�
 msgid "Main Toolbar"
 msgstr "Κύρια γραμμή εργαλείων"
 
-#: main.cpp:27
+#: main.cpp:45
 #, kde-format
 msgid "Klickety"
 msgstr "Klickety"
 
-#: main.cpp:28
+#: main.cpp:46
 #, kde-format
 msgid "Klickety is an adaptation of the \"clickomania\" game"
 msgstr "Το Klickety αποτελεί μια προσαρμογή του παιχνιδιού \"clickomania\""
 
-#: main.cpp:30
+#: main.cpp:48
 #, kde-format
 msgid ""
 "(c) 2002-2005, Nicolas Hadacek\n"
@@ -153,72 +153,72 @@ msgstr ""
 "(c) 2002-2005, Nicolas Hadacek\n"
 "(c) 2010, Ni Hui"
 
-#: main.cpp:39
+#: main.cpp:57
 #, kde-format
 msgid "Start with KSame compatibility mode"
 msgstr "Έναρξη σε λειτουργία συμβατότητας KSame"
 
-#: main.cpp:50
+#: main.cpp:68
 #, kde-format
 msgid "A little game about balls and how to get rid of them"
 msgstr "Ένα μικρό παιχνίδι για μπάλες και πώς να τις ξεφορτωθείτε"
 
-#: main.cpp:51
+#: main.cpp:69
 #, kde-format
 msgid "Marcus Kreutzberger"
 msgstr "Marcus Kreutzberger"
 
-#: main.cpp:51 main.cpp:58
+#: main.cpp:69 main.cpp:76
 #, kde-format
 msgid "Original author"
 msgstr "Αρχικός συγγραφέας"
 
-#: main.cpp:52
+#: main.cpp:70
 #, kde-format
 msgid "Henrique Pinto"
 msgstr "Henrique Pinto"
 
-#: main.cpp:52
+#: main.cpp:70
 #, kde-format
 msgid "Past maintainer"
 msgstr "Πρώην συντηρητής"
 
-#: main.cpp:53 main.cpp:59
+#: main.cpp:71 main.cpp:77
 #, kde-format
 msgid "Ni Hui"
 msgstr "Ni Hui"
 
-#: main.cpp:53
+#: main.cpp:71
 #, kde-format
 msgid "Integration with Klickety. Current maintainer"
 msgstr "Ενσωμάτωση με το Klickety. Τρέχων συντηρητής"
 
-#: main.cpp:54
+#: main.cpp:72
 #, kde-format
 msgid "Johann Ollivier Lapeyre"
 msgstr "Johann Ollivier Lapeyre"
 
-#: main.cpp:54
+#: main.cpp:72
 #, kde-format
 msgid "Artwork"
 msgstr "Γραφικά"
 
-#: main.cpp:58
+#: main.cpp:76
 #, kde-format
 msgid "Nicolas Hadacek"
 msgstr "Nicolas Hadacek"
 
-#: main.cpp:59
+#: main.cpp:77
 #, kde-format
 msgid "Rewrite for KDE4. Current maintainer"
 msgstr "Επανασυγγραφή του παιχνιδιού για το KDE4. Τρέχων συντηρητής"
 
-#: main.cpp:60
+#: main.cpp:78
 #, kde-format
 msgid "Dan Hill"
 msgstr "Dan Hill"
 
-#: main.cpp:60
+#: main.cpp:78
 #, kde-format
 msgid "Icons"
 msgstr "Εικονίδια"
