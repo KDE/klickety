@@ -724,12 +724,12 @@ void GameScene::drawBackground( QPainter* painter, const QRectF& rect )
         if ( size_offset.width() < -100 || size_offset.height() < -100 || theme_pre != m_renderer.theme()->identifier() ) {
             qWarning() << "export";
             theme_pre = m_renderer.theme()->identifier();
-            size_pre = rect.toRect().size();
+            size_pre = rect.toRect().size() * painter->device()->devicePixelRatio();
             pix = m_renderer.spritePixmap( QStringLiteral( "BACKGROUND" ), size_pre );
             painter->drawPixmap( rect.topLeft(), pix );
         }
         else {
-            painter->drawPixmap( rect.topLeft(), pix.scaled( rect.toRect().size() ) );
+            painter->drawPixmap( rect.topLeft(), pix.scaled( rect.toRect().size() * painter->device()->devicePixelRatio() ) );
         }
     }
     if ( Settings::radioColor() == true ) {
