@@ -15,6 +15,18 @@ target_sources(klickety PRIVATE
     klickety.qrc
 )
 
+if(APPLE)
+    set_target_properties(klickety PROPERTIES
+           MACOSX_BUNDLE_DISPLAY_NAME "Klickety"
+        MACOSX_BUNDLE_BUNDLE_NAME "Klickety"
+        MACOSX_BUNDLE_LONG_VERSION_STRING "Klickety ${RELEASE_SERVICE_VERSION}"
+        MACOSX_BUNDLE_SHORT_VERSION_STRING "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}"
+        MACOSX_BUNDLE_BUNDLE_VERSION "${RELEASE_SERVICE_VERSION}"
+        MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.klickety"
+        MACOSX_BUNDLE_COPYRIGHT "2024 The Klickety Developers")
+endif()
+
+
 ki18n_wrap_ui(klickety
     bgselectorconfig.ui
     customgameconfig.ui
