@@ -6,11 +6,11 @@ ecm_setup_version(${klickety_VERSION}
 add_executable(klickety)
 
 target_sources(klickety PRIVATE
-    gamescene.cpp
-    gameview.cpp
+    gamescene.cpp gamescene.h
+    gameview.cpp gameview.h
     main.cpp
-    mainwindow.cpp
-    piece.cpp
+    mainwindow.cpp mainwindow.h
+    piece.cpp piece.h
 
     klickety.qrc
 )
