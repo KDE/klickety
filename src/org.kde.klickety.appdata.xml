@@ -34,6 +34,7 @@
   <name xml:lang="pt">Klickety</name>
   <name xml:lang="pt-BR">Klickety</name>
   <name xml:lang="ru">Klickety</name>
+  <name xml:lang="sa">क्लिकेटी</name>
   <name xml:lang="sk">Klickety</name>
   <name xml:lang="sl">Klickety</name>
   <name xml:lang="sr">Кликети</name>
@@ -71,6 +72,7 @@
   <summary xml:lang="nn">Ei tilpassa utgåve av spelet Clickomania.</summary>
   <summary xml:lang="pl">Przeróbka gry "clickomania".</summary>
   <summary xml:lang="ru">Klickety — адаптация игры «Clickomania».</summary>
+  <summary xml:lang="sa">"क्लिकमेनिया" क्रीडायाः अनुकूलनम् ।</summary>
   <summary xml:lang="sl">Klickety je priredba igre »Clickomania«.</summary>
   <summary xml:lang="sv">En anpassning av spelet "clickomania".</summary>
   <summary xml:lang="tr">Kliketi, “Clickomania” oyununun bir uyarlamasıdır.</summary>
@@ -103,6 +105,7 @@
     <p xml:lang="pl">Klickety jest adaptacją gry Clickomania. Zasady są podobne, co w grze Same: twoim zadaniem jest oczyścić planszę naciskając na grupy tak, aby je zniszczyć. Najwyższym celem jest uzyskanie najniższej możliwej punktacji. Zapewni rozrywkę na każdym poziomie umiejętności, a dodatkowo wyzwanie w logicznym myśleniu, jeśli chcesz uzyskać na prawdę niski wynik.</p>
     <p xml:lang="pt-BR">O Klickety é uma adaptação do jogo Clickomania. As regras são semelhantes às do jogo Same: o seu objetivo é limpar o tabuleiro do jogo de todos os blocos coloridos, clicando nos grupos para destruí-los. O intuito global é obter a menor pontuação possível. Ele irá oferecer entretenimento para todas as aptidões, mas é um desafio de raciocínio lógico se você quiser obter uma pontuação realmente baixa.</p>
     <p xml:lang="ru">Klickety — адаптация игры «Clickomania». Правила этой игры похожи на правила «Same Game»: нужно очистить игровую доску, нажимая на группы шариков. Главная задача — набрать как можно меньше очков. Можно играть как просто ради развлечения, так и развивать логическое мышление (продумывать ходы для набора минимального количества очков не так уж просто).</p>
+    <p xml:lang="sa">क्लिकेटी क्लिक्मेनिया-क्रीडायाः रूपान्तरणम् अस्ति । नियमाः समानक्रीडायाः सदृशाः सन्ति: भवतः लक्ष्यं समूहान् क्लिक् कृत्वा फलकं स्वच्छं कृत्वा तान् नाशयितुं भवति। समग्रं लक्ष्यं न्यूनतमं स्कोरं प्राप्तुं भवति। सर्वेषां क्षमतानां कृते मनोरञ्जनं प्रदास्यति, परन्तु यदि भवान् वास्तविकरूपेण न्यूनं स्कोरं प्राप्तुम् इच्छति तर्हि तार्किकचिन्तने एकं आव्हानं।</p>
     <p xml:lang="sl">Klickety je priredba igre Clickomania. Pravila so podobna tistim v igri Same: vaš cilj je počistiti tablo s klikom na skupine, da jih uničite. Splošni cilj je doseči najnižjo možno oceno. Zagotovila bo zabavo za vse sposobnosti, a izziv pri logičnem razmišljanju, če želite doseči res nizek rezultat.</p>
     <p xml:lang="sv">Klickety är en anpassning av spelet Clickomania. Reglerna liknar reglerna i spel Same: målet är att rensa brädet genom att klicka på grupper för att förstöra dem. Det övergripande målet är att få lägsta möjliga poäng. Det är underhållande för alla förmågor, men en utmaning i logiskt tänkande om du vill få riktigt låg poäng.</p>
     <p xml:lang="tr">Kliketi, Clickomania oyununun bir uyarlamasıdır. Kurallar aynı oyundakilere benzer: Amacınız grupları yok etmek için üzerlerine tıklayarak tahtayı temizlemektir. Genel amaç olabilen en düşük puanı almaktır. Tüm yetenekler için eğlence sağlayacaktır; ancak gerçekten düşük bir puan almak istiyorsanız mantıksal düşünme konusunda zorluk çekeceksiniz.</p>

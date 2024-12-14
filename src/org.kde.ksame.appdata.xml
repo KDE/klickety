@@ -34,6 +34,7 @@
   <name xml:lang="pt">KSame</name>
   <name xml:lang="pt-BR">KSame</name>
   <name xml:lang="ru">KSame</name>
+  <name xml:lang="sa">समान</name>
   <name xml:lang="sk">KSame</name>
   <name xml:lang="sl">KSame</name>
   <name xml:lang="sr">К‑исто‑исто</name>
@@ -71,6 +72,7 @@
   <summary xml:lang="pl">Tryb gry Klickety, który jest adaptacją gry "clickomania"</summary>
   <summary xml:lang="pt-BR">O modo de jogo do Klickety, que é uma adaptação do jogo "Clickomania"</summary>
   <summary xml:lang="ru">Игровой режим игры Klickety, которая является адаптацией игры «Clickomania»</summary>
+  <summary xml:lang="sa">क्लिकेटी इत्यस्य क्रीडाविधिः, यत् "क्लिकमेनिया" क्रीडायाः अनुकूलनम् अस्ति</summary>
   <summary xml:lang="sl">Igralni način igre Klickety, ki je priredba igre 'Clickomania'</summary>
   <summary xml:lang="sv">Spelvariant av Klickety, som är en anpassning av spelet "clickomania".</summary>
   <summary xml:lang="tr">“Clickomania” oyununun uyarlanması olan Kliketi’nin bir oyun kipi</summary>
@@ -107,6 +109,7 @@
     <p xml:lang="pt">O KSame é um jogo de correspondência de cores simples, mas desafiante, modelado com base no famoso jogo SameGame. A ideia por trás do KSame é limpar por completo o tabuleiro do jogo, estando este preenchido com berlindes coloridos.</p>
     <p xml:lang="pt-BR">KSame é um jogo simples de correspondência de cores, mas desafiante, modelado com base no famoso jogo SameGame. A ideia por trás do KSame é limpar completamente o tabuleiro do jogo, preenchendo-o com bolinhas coloridas.</p>
     <p xml:lang="ru">KSame — простая, но вместе с тем достаточно интересная игра на сопоставление цветов, созданная на основе когда-то популярной игры «Same Game». Цель игры заключается в том, чтобы полностью очистить заполненную разноцветными шариками игровую доску.</p>
+    <p xml:lang="sa">KSame एकः सरलः, तथापि चुनौतीपूर्णः वर्णमेलनक्रीडा अस्ति यस्य प्रतिरूपणं एकदा प्रसिद्धस्य SameGame इत्यस्य क्रीडायाः अनुसरणं कृतम् अस्ति । KSame इत्यस्य पृष्ठतः विचारः बहुवर्णीयसङ्गमरमरैः पूरितं गेमबोर्डं पूर्णतया स्वच्छं कर्तुं वर्तते।</p>
     <p xml:lang="sk">KSame je jednoduchá, ale náročná hra na porovnávanie farieb vytvorená podľa známej hry SameGame. Cieľom je úplne vyčistiť hraciu plochu vyplnenú viacfarebnými dlaždicami.</p>
     <p xml:lang="sl">KSame je preprosta igra ujemanja barv, polna izzivov, prirejena po nekoč priljubljeni igri SameGame. Cilj igre je počistiti igralno površino, ki je zapolnjena z raznobarvnimi frnikolami.</p>
     <p xml:lang="sr">К‑исто‑исто је једноставна, а опет изазовна игра поклапања боја, по узору на некада чувену игру исто‑исто. Идеја иза К‑исто‑истог је да се потпуно очисти играчка табла попуњена разнобојним кликерима.</p>
