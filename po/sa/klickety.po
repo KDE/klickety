@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klickety\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:38+0000\n"
-"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -63,7 +63,7 @@ msgstr "औनत्यम्‌:"
 #: customgameconfig.ui:51
 #, kde-format
 msgid "Color count:"
-msgstr "वर्णगणना : १."
+msgstr "वर्णगणना :"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowBoundLines)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowBoundLines)
@@ -277,7 +277,7 @@ msgstr "बोर्ड चयन करें"
 #: mainwindow.cpp:174
 #, kde-format
 msgid "Select a board number:"
-msgstr "एकं बोर्डसङ्ख्यां चिनोतु : १."
+msgstr "एकं बोर्डसङ्ख्यां चिनोतु :"
 
 #: mainwindow.cpp:212 mainwindow.cpp:226
 #, kde-format
