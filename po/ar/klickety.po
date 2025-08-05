@@ -179,7 +179,7 @@ msgstr "Henrique Pinto"
 #: main.cpp:70
 #, kde-format
 msgid "Past maintainer"
-msgstr "المصين السابق"
+msgstr "الصائن السابق"
 
 #: main.cpp:71 main.cpp:77
 #, kde-format
