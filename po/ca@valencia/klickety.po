@@ -275,12 +275,12 @@ msgstr "Partida personalitzada"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Board"
-msgstr "Seleccioneu el tauler"
+msgstr "Trieu el tauler"
 
 #: mainwindow.cpp:174
 #, kde-format
 msgid "Select a board number:"
-msgstr "Selecciona un número de tauler:"
+msgstr "Tria un número de tauler:"
 
 #: mainwindow.cpp:212 mainwindow.cpp:226
 #, kde-format
