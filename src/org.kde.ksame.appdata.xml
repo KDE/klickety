@@ -44,7 +44,6 @@
   <name xml:lang="sv">Ksame</name>
   <name xml:lang="tr">K Same</name>
   <name xml:lang="uk">KSame</name>
-  <name xml:lang="x-test">xxKSamexx</name>
   <name xml:lang="zh-CN">KSame</name>
   <name xml:lang="zh-TW">KSame</name>
   <summary>Game mode of Klickety, which is an adaptation of the "clickomania" game</summary>
@@ -77,7 +76,6 @@
   <summary xml:lang="sv">Spelvariant av Klickety, som är en anpassning av spelet "clickomania".</summary>
   <summary xml:lang="tr">“Clickomania” oyununun uyarlanması olan Kliketi’nin bir oyun kipi</summary>
   <summary xml:lang="uk">Режим гри, який є адаптацією гри «клікоманія»</summary>
-  <summary xml:lang="x-test">xxGame mode of Klickety, which is an adaptation of the "clickomania" gamexx</summary>
   <summary xml:lang="zh-CN">Klickety 的游戏模式，它改编自“clickomania”游戏。</summary>
   <summary xml:lang="zh-TW">Klickety 的一種遊戲模式，類似 clickomania 遊戲</summary>
   <description>
@@ -120,7 +118,6 @@
     <p xml:lang="sv">Ksame är ett enkelt, men ändå utmanande färgjämförelsespel modellerat enligt det en gång berömda spelet Samegame. Idén bakom Ksame är att helt och hållet tömma spelbrädet, som är fyllt med mångfärgade kulor.</p>
     <p xml:lang="tr">K Same, bir zamanların ünlü SameGame oyunundan sonra modellenen, basit; ancak zorlu bir renk eşleştirme oyunudur. K Same’in arkasındaki fikir, çok renkli mermerlerle dolu oyun tahtasını tamamen temizlemektir.</p>
     <p xml:lang="uk">KSame — проста, але захоплива гра у пошук відповідних кольорів. Джерелом натхнення для створення гри була гра SameGame. Дуже проста умова. На дошці будуть кульки. Приберіть їх всі.</p>
-    <p xml:lang="x-test">xxKSame is a simple, yet challenging color matching game modeled after once famous game of SameGame. The idea behind KSame is to completely clear the game board filled with the multicolored marbles.xx</p>
     <p xml:lang="zh-CN">KSame 是一个简单但具有挑战性的颜色配对游戏，它仿制了著名的 SameGame。KSame 的游戏目的是完全清空游戏版面中的所有彩色玻璃珠。</p>
     <p xml:lang="zh-TW">KSame 是一套簡單但也很有挑戰性的遊戲，從知名的 SameGame 演變而來。KSame 目的是完全清除遊戲棋盤上的各種不同顏色。</p>
   </description>
