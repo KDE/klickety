@@ -44,7 +44,6 @@
   <name xml:lang="sv">Klickety</name>
   <name xml:lang="tr">Kliketi</name>
   <name xml:lang="uk">Klickety</name>
-  <name xml:lang="x-test">xxKlicketyxx</name>
   <name xml:lang="zh-CN">Klickety</name>
   <name xml:lang="zh-TW">Klickety</name>
   <summary>An adaptation of the "clickomania" game.</summary>
@@ -78,7 +77,6 @@
   <summary xml:lang="sv">En anpassning av spelet "clickomania".</summary>
   <summary xml:lang="tr">Kliketi, “Clickomania” oyununun bir uyarlamasıdır.</summary>
   <summary xml:lang="uk">Реалізація гри «клікоманія».</summary>
-  <summary xml:lang="x-test">xxAn adaptation of the "clickomania" game.xx</summary>
   <summary xml:lang="zh-CN">“clickomania”游戏的改编</summary>
   <summary xml:lang="zh-TW">一套 "clickomania" 遊戲的改作。</summary>
   <description>
@@ -113,7 +111,6 @@
     <p xml:lang="sv">Klickety är en anpassning av spelet Clickomania. Reglerna liknar reglerna i spel Same: målet är att rensa brädet genom att klicka på grupper för att förstöra dem. Det övergripande målet är att få lägsta möjliga poäng. Det är underhållande för alla förmågor, men en utmaning i logiskt tänkande om du vill få riktigt låg poäng.</p>
     <p xml:lang="tr">Kliketi, Clickomania oyununun bir uyarlamasıdır. Kurallar aynı oyundakilere benzer: Amacınız grupları yok etmek için üzerlerine tıklayarak tahtayı temizlemektir. Genel amaç olabilen en düşük puanı almaktır. Tüm yetenekler için eğlence sağlayacaktır; ancak gerçekten düşük bir puan almak istiyorsanız mantıksal düşünme konusunda zorluk çekeceksiniz.</p>
     <p xml:lang="uk">Klickety — варіант гри «Клікоманія» (Clickomania). Правила подібні до «Тієї самої гри»: вашою метою є спорожнення дошки натисканням груп шматочків для їх вилучення. Мета гри — завершити гру з найменшим рахунком. У гру можуть грати гравці з різним рівнем підготовки, — виклик вашим логічним здібностям полягає у тому, щоб рахунок був найменшим.</p>
-    <p xml:lang="x-test">xxKlickety is an adaptation of the Clickomania game. The rules are similar to those of the Same game: your goal is to clear the board by clicking on groups to destroy them. The overall aim is to get the lowest score possible. It will provide entertainment for all abilities, but a challenge in logical thought if you want to get a really low score.xx</p>
     <p xml:lang="zh-CN">Klickety 改编自 Clickomania 游戏。其规则与 Same game 类似：您的目标是通过点击色块组来消除它们，从而清空整个面板。最终目标是获得尽可能低的分数。它为所有水平的玩家提供娱乐，但如果想要取得极低的分数，则需要具备出色的逻辑思维能力，充满挑战性。</p>
     <p xml:lang="zh-TW">Klickety 是 Clickomania 遊戲的一個改作。規則類似 Same 遊戲：目標是點擊遊玩區域中的點來消除它們，並達到整個遊玩區域清空為止。目標分數是越低越好。它對於所有能力程度的人都能提供娛樂，但真的希望得到極低的分數的時候也是邏輯思考的考驗。</p>
   </description>
