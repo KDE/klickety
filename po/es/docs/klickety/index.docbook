@@ -419,7 +419,7 @@
 > <guimenu
 >Juego</guimenu
 > <guimenuitem
->Cargar...</guimenuitem
+>Cargar…</guimenuitem
 > </menuchoice
 > (no en modo KSame) </term>
 <listitem
@@ -453,7 +453,7 @@
 ><guimenu
 >Juego</guimenu
 > <guimenuitem
->Nueva partida numerada...</guimenuitem
+>Nueva partida numerada…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -784,7 +784,7 @@
 ><guimenu
 >Preferencias</guimenu
 ><guimenuitem
->Configurar &klickety;...</guimenuitem
+>Configurar &klickety;…</guimenuitem
 ></menuchoice
 > abre el diálogo <guilabel
 >Configurar - &klickety;</guilabel
