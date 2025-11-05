@@ -143,7 +143,7 @@
 <para
 >Cependant, vous ne pouvez supprimer un bloc que s'il est adjacent à un ou plus autres blocs de la même couleur d'un ou plus de ses côtés. Les liens en diagonale ne comptent pas. Vous obtenez un plateau aléatoire à chaque fois que vous lancez une nouvelle partie. </para>
 <para
->Si vous cliquez sur un bloc qui est connecté comme décrit, il disparaîtra. Tous les blocs adjacents de la même couleur disparaîtront aussi, ainsi que tous ceux de la même couleurs adjacents à <emphasis
+>Si vous cliquez sur un bloc qui est connecté comme décrit, il disparaitra. Tous les blocs adjacents de la même couleur disparaitront aussi, ainsi que tous ceux de la même couleurs adjacents à <emphasis
 >ces derniers</emphasis
 >, et ainsi de suite. Tous les blocs se trouvant au dessus tomberont pour remplir les vides laissés par les pièces disparues. Si vous effacez une colonne entière, toute les colonnes à droite vont se déplacer pour combler le décalage. </para>
 <para
@@ -428,13 +428,13 @@
 >Commence une partie spécifiquement numérotée.</action>
     <screenshot>
     <screeninfo
->Ouverture d'une boîte de dialogue de nouvelle partie numérotée</screeninfo>
+>Ouverture d'une boite de dialogue de nouvelle partie numérotée</screeninfo>
     <mediaobject>
     <imageobject
 ><imagedata fileref="numbered.png" format="PNG"/></imageobject>
     <textobject
 ><phrase
->Ouverture d'une boîte de dialogue de nouvelle partie numérotée</phrase
+>Ouverture d'une boite de dialogue de nouvelle partie numérotée</phrase
 ></textobject>
     </mediaobject>
     </screenshot>
@@ -669,7 +669,7 @@
 <para
 >Si vous sélectionnez <guimenuitem
 >Personnalisé</guimenuitem
->, alors les options que vous avez configurées dans la boîte de dialogue <guimenuitem
+>, alors les options que vous avez configurées dans la boite de dialogue <guimenuitem
 >Configurer &klickety;</guimenuitem
 > seront utilisées.</para>
 </listitem>
@@ -754,7 +754,7 @@
 ><guimenuitem
 >Configurer &klickety;...</guimenuitem
 ></menuchoice
-> ouvre la boîte de dialogue <guilabel
+> ouvre la boite de dialogue <guilabel
 >Configuration - &klickety;</guilabel
 >.</para>
 
