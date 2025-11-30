@@ -391,7 +391,7 @@
 > <guimenu
 >Jogo</guimenu
 > <guimenuitem
->Carregar...</guimenuitem
+>Carregar…</guimenuitem
 > </menuchoice
 > (não no modo KSame) </term>
 <listitem
@@ -425,7 +425,7 @@
 ><guimenu
 >Jogo</guimenu
 > <guimenuitem
->Novo jogo numerado...</guimenuitem
+>Novo jogo numerado…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -756,7 +756,7 @@
 ><guimenu
 >Configurações</guimenu
 ><guimenuitem
->Configurar o &klickety;...</guimenuitem
+>Configurar &klickety;…</guimenuitem
 ></menuchoice
 > abre a janela para <guilabel
 >Configuração - &klickety;</guilabel
