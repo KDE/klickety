@@ -39,9 +39,11 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     ConfigWidgets
     XmlGui
     KIO
-    DocTools
     DBusAddons
     IconThemes
+)
+find_package(KF6 ${KF_MIN_VERSION} OPTIONAL_COMPONENTS
+    DocTools
 )
 
 find_package(KDEGames6 6.0.0 REQUIRED)
@@ -59,6 +61,8 @@ add_subdirectory(doc)
 add_subdirectory(src)
 
 ki18n_install(po)
-kdoctools_install(po)
+if(KF6DocTools_FOUND)
+    kdoctools_install(po)
+endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
