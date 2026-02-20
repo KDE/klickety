@@ -29,24 +29,21 @@ msgstr "kscanne@gmail.com"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
 #: bgselectorconfig.ui:33
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgid "&Theme"
-msgstr "Téama"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioColor)
 #: bgselectorconfig.ui:46
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "&Color"
-msgstr "Dath"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioImage)
 #: bgselectorconfig.ui:56
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "&Image"
-msgstr "Íomhá"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: customgameconfig.ui:17
@@ -101,17 +98,15 @@ msgstr ""
 
 #. i18n: ectx: label, entry (BgColor), group (Background)
 #: klickety.kcfg:36
-#, fuzzy, kde-format
-#| msgid "The graphical theme to be used."
+#, kde-format
 msgid "The background color to be used."
-msgstr "An téama grafach le húsáid."
+msgstr ""
 
 #. i18n: ectx: label, entry (BgImage), group (Background)
 #: klickety.kcfg:40
-#, fuzzy, kde-format
-#| msgid "The graphical theme to be used."
+#, kde-format
 msgid "The background image to be used."
-msgstr "An téama grafach le húsáid."
+msgstr ""
 
 #. i18n: ectx: label, entry (CustomWidth), group (CustomGame)
 #: klickety.kcfg:45
@@ -127,10 +122,9 @@ msgstr "Airde na páirce imeartha."
 
 #. i18n: ectx: label, entry (CustomColorCount), group (CustomGame)
 #: klickety.kcfg:57
-#, fuzzy, kde-format
-#| msgid "The height of the playing field."
+#, kde-format
 msgid "The number of colors in the playing field."
-msgstr "Airde na páirce imeartha."
+msgstr ""
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: klicketyui.rc:22
@@ -248,11 +242,10 @@ msgid "Time: 00:00"
 msgstr "Am: 00:00"
 
 #: mainwindow.cpp:92
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:tab"
 msgid "General"
-msgstr "Ginearálta"
+msgstr ""
 
 #: mainwindow.cpp:93
 #, kde-format
@@ -260,25 +253,22 @@ msgid "Theme"
 msgstr "Téama"
 
 #: mainwindow.cpp:94
-#, fuzzy, kde-format
-#| msgid "Background"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Background"
-msgstr "Cúlra"
+msgstr ""
 
 #: mainwindow.cpp:96
-#, fuzzy, kde-format
-#| msgid "Custom Game"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Game"
-msgstr "Cluiche Saincheaptha"
+msgstr ""
 
 #: mainwindow.cpp:173
-#, fuzzy, kde-format
-#| msgid "Select Board"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Board"
-msgstr "Roghnaigh Clár"
+msgstr ""
 
 #: mainwindow.cpp:174
 #, kde-format
@@ -333,25 +323,22 @@ msgid "Do you want to resign?"
 msgstr "An bhfuil fonn ort éirí as?"
 
 #: mainwindow.cpp:346
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
-msgstr "Cluiche Nua"
+msgstr ""
 
 #: mainwindow.cpp:347
-#, fuzzy, kde-format
-#| msgid "Resign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resign"
-msgstr "Éirigh As"
+msgstr ""
 
 #: mainwindow.cpp:364
-#, fuzzy, kde-format
-#| msgid "New Numbered Game..."
+#, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
-msgstr "Cluiche Nua Uimhrithe..."
+msgstr ""
 
 #: mainwindow.cpp:369
 #, kde-format
@@ -360,43 +347,18 @@ msgid "Play Sounds"
 msgstr ""
 
 #: mainwindow.cpp:384
-#, fuzzy, kde-format
-#| msgid "Undo All"
+#, kde-format
 msgctxt "@action"
 msgid "Undo All"
-msgstr "Cealaigh Uile"
+msgstr ""
 
 #: mainwindow.cpp:390
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
-msgstr "Athdhéan Uile"
+msgstr ""
 
 #: mainwindow.cpp:411
 #, kde-format
 msgid "Custom"
 msgstr "Saincheaptha"
-
-#, fuzzy
-#~| msgid "The graphical theme to be used."
-#~ msgid "The background type to be used."
-#~ msgstr "An téama grafach le húsáid."
-
-#~ msgid "SameGame"
-#~ msgstr "SameGame"
-
-#~ msgid "Start with Very Easy difficulty level"
-#~ msgstr "Tosaigh le leibhéal an-éasca"
-
-#~ msgid "Start with Easy difficulty level"
-#~ msgstr "Tosaigh le leibhéal éasca"
-
-#~ msgid "Start with Medium difficulty level"
-#~ msgstr "Tosaigh le meánleibhéal"
-
-#~ msgid "Start with Hard difficulty level"
-#~ msgstr "Tosaigh le leibhéal crua"
-
-#~ msgid "The difficulty level."
-#~ msgstr "An leibhéal deacrachta."
