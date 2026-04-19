@@ -27,24 +27,24 @@ include(ECMDeprecationSettings)
 include(InternalMacros)
 
 find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS
+    Gui
     Widgets
 )
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
-    CoreAddons
     Config
-    Crash
-    WidgetsAddons
-    I18n
     ConfigWidgets
-    XmlGui
-    KIO
+    CoreAddons
+    Crash
     DBusAddons
+    I18n
     IconThemes
+    KIO
+    WidgetsAddons
+    XmlGui
 )
-find_package(KF6 ${KF_MIN_VERSION} OPTIONAL_COMPONENTS
-    DocTools
-)
+
+find_package(KF6DocTools ${KF_MIN_VERSION})
 
 find_package(KDEGames6 6.0.0 REQUIRED)
 
@@ -57,11 +57,11 @@ ecm_set_disabled_deprecation_versions(
 add_subdirectory(sounds)
 add_subdirectory(pics)
 add_subdirectory(themes)
-add_subdirectory(doc)
 add_subdirectory(src)
 
 ki18n_install(po)
 if(KF6DocTools_FOUND)
+    add_subdirectory(doc)
     kdoctools_install(po)
 endif()
 
