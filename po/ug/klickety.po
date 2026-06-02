@@ -8,45 +8,43 @@ msgstr ""
 "Project-Id-Version: klickety\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:49+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-31 18:56-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioTheme)
 #: bgselectorconfig.ui:33
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgid "&Theme"
-msgstr "ئۆرنەك"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioColor)
 #: bgselectorconfig.ui:46
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "&Color"
-msgstr "رەڭ"
+msgstr "رەڭ(&C)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_RadioImage)
 #: bgselectorconfig.ui:56
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "&Image"
-msgstr "سۈرەت"
+msgstr "سۈرەت(&I)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: customgameconfig.ui:17
@@ -78,7 +76,7 @@ msgstr ""
 #: gameconfig.ui:26 gameconfig.ui:29
 #, kde-format
 msgid "Enable animation"
-msgstr ""
+msgstr "جانلاندۇرۇمنى قوزغىتىدۇ"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableHighlight)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableHighlight)
@@ -88,11 +86,10 @@ msgid "Enable highlight"
 msgstr ""
 
 #: gamescene.cpp:236
-#, fuzzy, kde-format
-#| msgid "paused"
+#, kde-format
 msgctxt "@info:status"
 msgid "Paused"
-msgstr "ۋاقىتلىق توختىتىلدى"
+msgstr "ۋاقىتلىق توختىدى"
 
 #: gamescene.cpp:348
 #, kde-format
@@ -171,12 +168,12 @@ msgstr ""
 #: main.cpp:69 main.cpp:76
 #, kde-format
 msgid "Original author"
-msgstr "ئەسلى ئاپتور"
+msgstr "ئەسلى يازغۇچى"
 
 #: main.cpp:70
 #, kde-format
 msgid "Henrique Pinto"
-msgstr "Henrique Pinto"
+msgstr ""
 
 #: main.cpp:70
 #, kde-format
@@ -186,7 +183,7 @@ msgstr ""
 #: main.cpp:71 main.cpp:77
 #, kde-format
 msgid "Ni Hui"
-msgstr "Ni Hui"
+msgstr ""
 
 #: main.cpp:71
 #, kde-format
@@ -196,7 +193,7 @@ msgstr ""
 #: main.cpp:72
 #, kde-format
 msgid "Johann Ollivier Lapeyre"
-msgstr "Johann Ollivier Lapeyre"
+msgstr ""
 
 #: main.cpp:72
 #, kde-format
@@ -206,7 +203,7 @@ msgstr "سەنئەت بۇيۇمى"
 #: main.cpp:76
 #, kde-format
 msgid "Nicolas Hadacek"
-msgstr "Nicolas Hadacek"
+msgstr ""
 
 #: main.cpp:77
 #, kde-format
@@ -221,7 +218,7 @@ msgstr ""
 #: main.cpp:78
 #, kde-format
 msgid "Icons"
-msgstr "سىنبەلگىلەر"
+msgstr "سىنبەلگە"
 
 #. i18n( "Colors: XX" ), 1 );
 #. i18n( "Board: XXXXXX" ), 2 );
@@ -246,8 +243,7 @@ msgid "Time: 00:00"
 msgstr "ۋاقىت: 00:00"
 
 #: mainwindow.cpp:92
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:tab"
 msgid "General"
 msgstr "ئادەتتىكى"
@@ -258,18 +254,16 @@ msgid "Theme"
 msgstr "ئۆرنەك"
 
 #: mainwindow.cpp:94
-#, fuzzy, kde-format
-#| msgid "Background"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Background"
 msgstr "تەگلىك"
 
 #: mainwindow.cpp:96
-#, fuzzy, kde-format
-#| msgid "Custom Game"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Custom Game"
-msgstr "ئىختىيارى ئويۇن"
+msgstr ""
 
 #: mainwindow.cpp:173
 #, kde-format
@@ -329,25 +323,22 @@ msgid "Do you want to resign?"
 msgstr ""
 
 #: mainwindow.cpp:346
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "يېڭى ئويۇن"
 
 #: mainwindow.cpp:347
-#, fuzzy, kde-format
-#| msgid "Resign"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resign"
-msgstr "بويسۇنۇش"
+msgstr ""
 
 #: mainwindow.cpp:364
-#, fuzzy, kde-format
-#| msgid "New Numbered Game..."
+#, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
-msgstr "يېڭى نومۇرلۇق ئويۇن…"
+msgstr ""
 
 #: mainwindow.cpp:369
 #, kde-format
@@ -356,15 +347,13 @@ msgid "Play Sounds"
 msgstr ""
 
 #: mainwindow.cpp:384
-#, fuzzy, kde-format
-#| msgid "Undo All"
+#, kde-format
 msgctxt "@action"
 msgid "Undo All"
-msgstr "ھەممىدىن يېنىۋال"
+msgstr ""
 
 #: mainwindow.cpp:390
-#, fuzzy, kde-format
-#| msgid "Redo All"
+#, kde-format
 msgctxt "@action"
 msgid "Redo All"
 msgstr "ھەممىنى قايتا قىلىش"
