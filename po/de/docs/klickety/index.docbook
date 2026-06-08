@@ -401,7 +401,7 @@
 ><guimenu
 >Spiel</guimenu
 > <guimenuitem
->Laden …</guimenuitem
+>Laden ...</guimenuitem
 ></menuchoice
 > (nicht im KSame-Modus) </term>
 <listitem
@@ -435,7 +435,7 @@
 ><guimenu
 >Spiel</guimenu
 ><guimenuitem
->Neue Spielnummer …</guimenuitem
+>Neue Spielnummer ...</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -766,7 +766,7 @@
 ><guimenu
 >Einstellungen</guimenu
 ><guimenuitem
->&klickety; einrichten …</guimenuitem
+>&klickety; einrichten ...</guimenuitem
 ></menuchoice
 > öffnet den Einrichtungsdialog für &klickety;.</para>
 
