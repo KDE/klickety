@@ -1,6 +1,7 @@
 # Translation of klickety to Norwegian Nynorsk
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2002, 2004.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2016, 2022, 2024, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: klickety\n"
