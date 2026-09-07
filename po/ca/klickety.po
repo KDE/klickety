@@ -1,17 +1,17 @@
 # Translation of klickety.po to Catalan
-# Copyright (C) 2010-2024 This_file_is_part_of_KDE
+# Copyright (C) 2010-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2010 Manuel Tortosa Moreno <manutortosa@chakra-project.org>
-# SPDX-FileCopyrightText: 2013, 2015-2016, 2020-2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2013, 2015-2016, 2020-2022, 2024, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2020-2021 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klickety\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:49+0000\n"
-"PO-Revision-Date: 2024-05-04 10:24+0200\n"
+"PO-Revision-Date: 2026-09-06 18:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -60,7 +60,7 @@ msgstr "Amplada:"
 #: customgameconfig.ui:34
 #, kde-format
 msgid "Height:"
-msgstr "Alçada:"
+msgstr "Altura:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: customgameconfig.ui:51
@@ -123,7 +123,7 @@ msgstr "L'amplada del camp de joc."
 #: klickety.kcfg:51
 #, kde-format
 msgid "The height of the playing field."
-msgstr "L'alçada del camp de joc."
+msgstr "L'altura del camp de joc."
 
 #. i18n: ectx: label, entry (CustomColorCount), group (CustomGame)
 #: klickety.kcfg:57
