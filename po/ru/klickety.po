@@ -75,7 +75,7 @@ msgstr "Количество цветов:"
 #: gameconfig.ui:16 gameconfig.ui:19
 #, kde-format
 msgid "Show bound lines"
-msgstr "Показывать связанные линии"
+msgstr "Показывать линии границ"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableAnimation)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableAnimation)
@@ -238,7 +238,7 @@ msgstr "Отмечено: 0"
 #: mainwindow.cpp:60 mainwindow.cpp:246
 #, kde-format
 msgid "Score: 0"
-msgstr "Очков: 0"
+msgstr "Очки: 0"
 
 #: mainwindow.cpp:66
 #, kde-format
@@ -349,7 +349,7 @@ msgstr "Сдаться"
 #, kde-format
 msgctxt "@action"
 msgid "New Numbered Game…"
-msgstr "Новая игра по номеру..."
+msgstr "Новая игра по номеру…"
 
 #: mainwindow.cpp:369
 #, kde-format

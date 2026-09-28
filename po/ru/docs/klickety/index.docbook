@@ -1,0 +1,949 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE"
+><!-- do not change this! -->
+  <!ENTITY % Russian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klickety" lang="&language;"
+><!-- do not change this! -->
+<bookinfo>
+<title
+>Руководство пользователя &klickety;</title
+><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immediate authors begins here. -->
+<authorgroup>
+<author
+><personname
+> <firstname
+>Thomas</firstname
+> <surname
+>Davey</surname
+> </personname
+> <email
+>thomas.davey@gmail.com</email
+> </author>
+<author
+><personname
+> <firstname
+>Hui</firstname
+> <surname
+>Ni</surname
+> </personname
+> <email
+>shuizhuyuanluo@126.com</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><affiliation
+><address
+><email
+>kekcuha@gmail.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Thomas Davey</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Ni Hui</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-08</date>
+<releaseinfo
+>2.1 (KDE Gear 21.04)</releaseinfo>
+
+<abstract>
+<para
+>&klickety; — стратегическая игра от &kde;, адаптация игры <application
+>Clickomania</application
+>.</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+<keyword
+>KDE</keyword
+><!-- do not change this! -->
+<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+<keyword
+>игра</keyword
+><!-- do not change this! -->
+<keyword
+>Klickety</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+<keyword
+>игровое поле</keyword>
+<keyword
+>логика</keyword>
+<keyword
+>стратегия</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+<keyword
+>один игрок</keyword>
+<!--All other relevant keywords-->
+</keywordset>
+
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction">
+<title
+>Введение</title
+><!-- do not change this! -->
+<note
+><title
+>Тип игры:</title
+><para
+>Игровое поле</para
+></note>
+<note
+><title
+>Возможное число игроков:</title
+><para
+>Один</para
+></note>
+<para
+>&klickety; — адаптация игры <application
+>Clickomania</application
+>. Правила похожи на правила игры <literal
+>Same</literal
+>: нужно очистить игровое поле, щёлкая по группам кусочков, чтобы убрать их. Задача — набрать как можно меньше очков. Игра подойдёт игрокам любого уровня, а чтобы набрать действительно мало очков, придётся как следует подумать. </para>
+</chapter>
+
+<chapter id="how-to-play">
+<title
+>Правила игры</title
+><!-- do not change this! -->
+<note
+><title
+>Очистить игровое поле от всех цветных кусочков за минимальное время.</title
+><para
+>Очистите игровое поле от всех цветных блоков за минимально возможное время.</para
+></note>
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+<para
+>После запуска программы появляется экран, похожий на снимок в предыдущем разделе. Смысл игры — убирать кусочки, щёлкая по ним. </para>
+<para
+>Однако убрать кусочек можно, только если хотя бы одной стороной он примыкает к кусочку того же цвета. Соприкосновение по диагонали не считается. Каждая новая игра начинается на случайном поле. </para>
+<para
+>Если щёлкнуть по кусочку, соединённому таким образом, он исчезнет. Вместе с ним исчезнут все соседние кусочки того же цвета, а также соседние с <emphasis
+>ними</emphasis
+> кусочки того же цвета и так далее. Кусочки, лежавшие выше, опускаются и заполняют освободившееся место. Если очистить столбец целиком, все столбцы справа сдвигаются, заполняя промежуток. </para>
+<para
+>Игра заканчивается, когда не остаётся кусочков, соседствующих с кусочками того же цвета. </para>
+
+<sect1 id="game-screen">
+<title
+>Игровой экран</title>
+<para>
+<screenshot>
+<screeninfo
+>Снимок экрана &klickety;</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Снимок экрана</phrase
+></textobject>
+</mediaobject>
+</screenshot
+>Краткое описание элементов игрового экрана. </para>
+<variablelist>
+<varlistentry>
+<term
+>Игровой экран</term>
+<listitem
+><para
+>Игровой экран находится в центре и занимает бо́льшую часть окна. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Строка состояния</term>
+<listitem
+><para
+>Строка состояния расположена в нижней части окна. В ней показано, сколько осталось кусочков, и игровой таймер, отсчитывающий время от начала игры до её завершения. </para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+</chapter>
+
+<chapter id="ksame_mode">
+<title
+>Режим KSame</title
+><!-- do not change this! -->
+<para
+>&klickety; поддерживает режим подсчёта очков, как в &ksame;. </para>
+<para
+>Очки начисляются следующим образом:</para>
+<para
+>Из числа убранных шариков вычитается 2, и результат возводится в квадрат. </para>
+<para
+>Например, если убрать 7 шариков, получится 25 очков (7 минус 2 = 5, 5 в квадрате — 25 очков). Если убрать 8 шариков, получится 36 очков (8 минус 2 = 6, 6 в квадрате — 36 очков). </para>
+<para
+>Собирайте вместе как можно больше одинаковых кусочков и убирайте их одним щелчком — так набирается больше очков. Игра заканчивается, когда убрать больше нечего. </para>
+<para
+>Затем очки уменьшаются в зависимости от числа оставшихся кусочков. Если убрать все кусочки, к итогу добавляется 1 000 премиальных очков. </para>
+<screenshot>
+<screeninfo
+>Снимок экрана &klickety; в режиме KSame</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Снимок экрана</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</chapter>
+
+<chapter id="interface">
+<title
+>Обзор интерфейса</title
+><!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+<sect1 id="default-keybindings">
+<title id="keybindings-title"
+>Комбинации клавиш по умолчанию</title>
+<para
+>Комбинации клавиш по умолчанию:</para>
+
+<table>
+<title
+>Комбинации клавиш</title>
+<tgroup cols="2">
+<tbody>
+<row>
+<entry
+>Начать игру</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Загрузить</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Начать заново</entry>
+<entry
+><keycap
+>F5</keycap
+></entry>
+</row>
+<row>
+<entry
+>Сохранить</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Пауза</entry>
+<entry
+><keycap
+>P</keycap
+></entry>
+</row>
+<row>
+<entry
+>Показать лучшие результаты</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Выход</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Отменить</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Повторить</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>Руководство пользователя &klickety;</entry>
+<entry
+><keycap
+>F1</keycap
+></entry>
+</row>
+<row>
+<entry
+>Справка «Что это?»</entry>
+<entry
+><keycombo action="simul"
+>&Shift;<keycap
+>F1</keycap
+></keycombo
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect1>
+
+<sect1 id="menu">
+<title
+>Пункты меню</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Начать игру</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Начинает новую игру.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Загрузить…</guimenuitem
+> </menuchoice
+> (не в режиме KSame) </term>
+<listitem
+><para
+>Загружает ранее сохранённую игру.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Начать заново</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Начинает текущую игру заново.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Игра</guimenu
+> <guimenuitem
+>Новая игра по номеру…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Начинает игру с заданным номером.</action>
+    <screenshot>
+    <screeninfo
+>Диалог начала игры по номеру</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Диалог начала игры по номеру</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Сохранить</guimenuitem
+> </menuchoice
+> (не в режиме KSame)</term>
+<listitem
+><para
+>Сохраняет текущее состояние игры на диск.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>P</keycap
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Пауза</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Приостанавливает или возобновляет игру. Пока игра приостановлена, кусочки скрыты.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Показать лучшие результаты</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Показывает список лучших результатов.</action>
+    <screenshot>
+    <screeninfo
+>Показ лучших результатов</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>Показать лучшие результаты</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para>
+<para
+>Если результат попадает в десятку лучших, будет предложено ввести имя. </para
+> </listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Выход</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>Завершает текущую игру и закрывает &klickety;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Ход</guimenu
+> <guimenuitem
+>Отменить</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Отменяет последний ход.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Ход</guimenu
+> <guimenuitem
+>Повторить</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Повторяет ранее отменённый ход.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ход</guimenu
+> <guimenuitem
+>Отменить всё</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Отменяет</action
+> все сделанные ходы.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ход</guimenu
+> <guimenuitem
+>Повторить всё</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Повторяет</action
+> все отменённые ходы.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Настройка</guimenu
+> <guisubmenu
+>Уровень сложности</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<para
+>Позволяет выбрать уровень сложности во вложенном меню.</para>
+<para
+>В игре четыре уровня сложности: <itemizedlist>
+<listitem
+><para
+><guimenuitem
+>Очень лёгкий</guimenuitem
+>: 16 строк, 10 столбцов, 3 цвета кусочков.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Лёгкий</guimenuitem
+>: 16 строк, 10 столбцов, 4 цвета кусочков.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Средний</guimenuitem
+>: 16 строк, 10 столбцов, 5 цветов кусочков.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>Трудный</guimenuitem
+>: 16 строк, 10 столбцов, 6 цветов кусочков.</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Есть также уровень <guimenuitem
+>Другой</guimenuitem
+>.</para>
+<para
+>Если выбрать <guimenuitem
+>Другой</guimenuitem
+>, используются параметры, заданные в диалоге <guimenuitem
+>Настройка — &klickety;</guimenuitem
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Кроме того, в &klickety; имеются общие пункты меню &kde; <guimenu
+>Настройка</guimenu
+> и <guimenu
+>Справка</guimenu
+>; дополнительные сведения приведены в разделах <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Меню «Настройка»</ulink
+> и <ulink url="help:/fundamentals/menus.html#menus-help"
+>Меню «Справка»</ulink
+> документа «Основы &kde;». </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>Часто задаваемые вопросы</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question
+><para
+>Я хочу изменить оформление игры. Это возможно? </para
+></question>
+<answer
+><para
+>Да. Чтобы изменить внешний вид &klickety;, откройте через меню <link linkend="configuration"
+>диалог настройки</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Можно ли играть с помощью клавиатуры?</para
+></question>
+<answer
+><para
+>Нет. Управления с клавиатуры в игре пока нет.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>Как запустить игру в режиме KSame?</para
+></question>
+<answer
+><para
+>Запустите &klickety; командой <userinput
+>klickety --KSameMode</userinput
+> или пунктом &ksame; в меню запуска приложений.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Настройка игры</title
+><!-- do not change this! -->
+<!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
+<para
+>Пункт меню <menuchoice
+><guimenu
+>Настройка</guimenu
+><guimenuitem
+>Настроить &klickety;…</guimenuitem
+></menuchoice
+> открывает диалог <guilabel
+>Настройка — &klickety;</guilabel
+>.</para>
+
+<sect1 id="general-options">
+<title
+>Основные параметры</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Показывать линии границ</guilabel
+></term>
+<listitem
+><para
+>Показывает линии границ между кусочками разного цвета. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Включить анимацию</guilabel
+></term>
+<listitem
+><para
+>Включает анимацию падения и слияния при удалении кусочков. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Включить подсветку</guilabel
+></term>
+<listitem
+><para
+>Подсвечивает кусочки под указателем, если их можно убрать. </para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Основные параметры</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-general.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Основные параметры</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="theme-options">
+<title
+>Параметры оформления</title>
+<variablelist>
+<varlistentry>
+<term
+>Список <guilabel
+>Оформление</guilabel
+></term>
+<listitem
+><para
+>В списке <guilabel
+>Оформление</guilabel
+> выбирается оформление игры.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>Параметры оформления</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Параметры оформления</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="background-options">
+<title
+>Параметры фона</title>
+<para
+>Для игры можно выбрать фон одного из трёх видов. <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Из оформления</guilabel
+></term>
+<listitem
+><para
+>Фон из текущего оформления.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Сплошной цвет</guilabel
+></term>
+<listitem
+><para
+>Сплошной цвет фона, выбранный пользователем.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Изображение</guilabel
+></term>
+<listitem
+><para
+>Изображение в качестве фона.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<screenshot>
+<screeninfo
+>Параметры фона</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-background.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Параметры фона</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="customgame-options">
+<title
+>Своя доска</title>
+<para
+>Здесь задаются <guilabel
+>Высота:</guilabel
+> и <guilabel
+>Ширина:</guilabel
+> игрового поля и <guilabel
+>Количество цветов:</guilabel
+> для своего уровня. </para>
+<screenshot>
+<screeninfo
+>Параметры своей доски</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>Параметры своей доски</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Авторские права и лицензия</title>
+<para
+>&klickety;</para>
+<para
+>© Eirik Eng, 1995 (программа)</para>
+<para
+>© &Nicolas.Hadacek; &Nicolas.Hadacek.mail;, 1996&ndash;2004 (программа)</para>
+<para
+>© Ni Hui <email
+>shuizhuyuanluo@126.com</email
+>, 2010 (программа)</para>
+<para
+>© Thomas Davey, 2005 (документация)</para>
+<para
+>© Ni Hui <email
+>shuizhuyuanluo@126.com</email
+>, 2010 (документация)</para>
+<para
+>Перевод на русский — Александр Яворский<email
+>kekcuha@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
