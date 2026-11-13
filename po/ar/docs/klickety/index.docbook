@@ -1,0 +1,949 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE"
+><!-- do not change this! -->
+  <!ENTITY % Arabic "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klickety" lang="&language;"
+><!-- do not change this! -->
+<bookinfo>
+<title
+>دليل كلاكتي</title
+><!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immediate authors begins here. -->
+<authorgroup>
+<author
+><personname
+> <firstname
+>Thomas</firstname
+> <surname
+>Davey</surname
+> </personname
+> <email
+>thomas.davey@gmail.com</email
+> </author>
+<author
+><personname
+> <firstname
+>Hui</firstname
+> <surname
+>Ni</surname
+> </personname
+> <email
+>shuizhuyuanluo@126.com</email
+> </author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Thomas Davey</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Ni Hui</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-08</date>
+<releaseinfo
+>2.1 (ترس كيدي 21.04)</releaseinfo>
+
+<abstract>
+<para
+>كلاكتي هي لعبة استراتيجية من كيدي، وهي تعديل للعبة <application
+>Clickomania</application
+>.</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+<keyword
+>كيدي</keyword
+><!-- do not change this! -->
+<keyword
+>ألعاب كيدي</keyword
+><!-- do not change this! -->
+<keyword
+>لعبة</keyword
+><!-- do not change this! -->
+<keyword
+>كلاكتي</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+<keyword
+>لوحة</keyword>
+<keyword
+>منطق</keyword>
+<keyword
+>استراتيجية</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+<keyword
+>لاعب واحد</keyword>
+<!--All other relevant keywords-->
+</keywordset>
+
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction">
+<title
+>مقدمة</title
+><!-- do not change this! -->
+<note
+><title
+>نوع اللعبة:</title
+><para
+>لوحة</para
+></note>
+<note
+><title
+>عدد اللاعبين الممكنين:</title
+><para
+>واحد</para
+></note>
+<para
+>كلاكتي هو تعديل للعبة <application
+>Clickomania</application
+>. القواعد مشابهة لتلك الموجودة في لعبة <literal
+>Same</literal
+>: هدفك هو مسح اللوحة من خلال النقر على المجموعات لتدميرها. الهدف العام هو الحصول على أقل درجة ممكنة.سوف توفر الترفيه لجميع القدرات، ولكن تحديا في التفكير المنطقي إذا كنت ترغب في الحصول على درجة منخفضة حقا. </para>
+</chapter>
+
+<chapter id="how-to-play">
+<title
+>كيف تلعب</title
+><!-- do not change this! -->
+<note
+><title
+>الهدف:</title
+><para
+>مسح لوحة اللعبة من جميع الكتل الملونة في أقل وقت ممكن.</para
+></note>
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+<para
+>عند بدء البرنامج ستحصل على شاشة تشبه لقطة الشاشة في القسم السابق. فكرة اللعبة هي إزالة الكتل، وهو ما تفعله بالنقر عليها. </para>
+<para
+>ومع ذلك، لا يمكنك إزالة كتلة إلا إذا كانت مجاورة لكتلة واحدة أو أكثر من نفس اللون على جانب واحد أو أكثر من جوانبها. التوصيلات القطرية لا تُحتسب. تحصل على لوحة عشوائية في كل مرة تبدأ فيها لعبة جديدة. </para>
+<para
+>إذا نقرت على كتلة متصلة كما هو موضح، فسوف تختفي. ستختفي أيضا أي كتل مجاورة من نفس اللون، إلى جانب كل ما له نفس اللون والمجاور <emphasis
+>لها</emphasis
+>، وهكذا دواليك. تسقط أي كتل فوقها لملء الفجوات التي خلفتها القطع المختفية. إذا مسحت عمودا كاملا، فإن جميع الأعمدة الموجودة على اليمين تتحرك لملء الفجوة. </para>
+<para
+>تنتهي اللعبة عندما لا يكون هناك كتل مجاورة لكتل أخرى من نفس اللون. </para>
+
+<sect1 id="game-screen">
+<title
+>شاشة اللعبة</title>
+<para>
+<screenshot>
+<screeninfo
+>لقطة شاشة لكلاكتي</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="gamescreen.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>لقطة شاشة</phrase
+></textobject>
+</mediaobject>
+</screenshot
+>شرح سريع لأجزاء شاشة اللعبة. </para>
+<variablelist>
+<varlistentry>
+<term
+>شاشة اللعبة</term>
+<listitem
+><para
+>شاشة اللعبة موجودة في وسط الشاشة وهي الجزء الأكبر من النافذة. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+>شريط الحالة</term>
+<listitem
+><para
+>يقع شريط الحالة في أسفل الشاشة. ويعرض عدد القطع المتبقية حاليا ومؤقت اللعبة، الذي يتتبع الوقت المنقضي من بداية اللعبة حتى انتهائها. </para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+</chapter>
+
+<chapter id="ksame_mode">
+<title
+>وضع KSame</title
+><!-- do not change this! -->
+<para
+>يوفر كلاكتي وضع تسجيل نقاط &ksame;. </para>
+<para
+>تُحسب النتيجة كما يلي:</para>
+<para
+>اطرح 2 من عدد الكرات الممسوحة، ثم ربع النتيجة. </para>
+<para
+>كمثال، إذا مسحت 7 كرات، فستحصل على 25 نقطة (7 ناقص 2 = 5، ومربع 5 هو 25 نقطة). إذا مسحت 8 كرات، فستحصل على 36 نقطة (8 ناقص 2 = 6، ومربع 6 هو 36 نقطة). </para>
+<para
+>احصل على أكبر عدد ممكن من نفس القطع، ثم امسحها بنقرة واحدة. بهذه الطريقة ستحصل على نتيجة أعلى. تنتهي اللعبة عندما لا يكون هناك قطع يمكن مسحها. </para>
+<para
+>ستُنقص النتيجة بعد ذلك وفقا لعدد القطع المتبقية. إذا مسحت جميع القطع، ستُضاف 1000 نقطة إضافية إلى النتيجة النهائية. </para>
+<screenshot>
+<screeninfo
+>لقطة شاشة لـ كلاكتي في وضع KSame</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="ksamemode.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>لقطة شاشة</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</chapter>
+
+<chapter id="interface">
+<title
+>نظرة عامة على الواجهة</title
+><!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+<sect1 id="default-keybindings">
+<title id="keybindings-title"
+>ارتباطات المفاتيح المبدئية</title>
+<para
+>الاختصارات المبدئية هي:</para>
+
+<table>
+<title
+>الاختصارات</title>
+<tgroup cols="2">
+<tbody>
+<row>
+<entry
+>جديد</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>حمّل</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>أعد بدء اللعبة</entry>
+<entry
+><keycap
+>F5</keycap
+></entry>
+</row>
+<row>
+<entry
+>احفظ</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>ألبث</entry>
+<entry
+><keycap
+>P</keycap
+></entry>
+</row>
+<row>
+<entry
+>أظهر أعلى النتائج</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>أنهِ</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>تراجع</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>كرّر</entry>
+<entry
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></entry>
+</row>
+<row>
+<entry
+>دليل كلاكتي</entry>
+<entry
+><keycap
+>F1</keycap
+></entry>
+</row>
+<row>
+<entry
+>مساعدة "ما هذا؟"</entry>
+<entry
+><keycombo action="simul"
+>&Shift;<keycap
+>F1</keycap
+></keycombo
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect1>
+
+<sect1 id="menu">
+<title
+>عناصر القائمة</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>لعبة</guimenu
+> <guimenuitem
+>جديد</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>يبدأ لعبة جديدة.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+> <guimenu
+>لعبة</guimenu
+> <guimenuitem
+>حمّل…</guimenuitem
+> </menuchoice
+> (ليس في وضع KSame) </term>
+<listitem
+><para
+>يُحمل لعبة حُفظت مسبقًا.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>لعبة</guimenu
+> <guimenuitem
+>أعد بدء اللعبة</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>سيعيد هذا بدء اللعبة الحالية.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>لعبة</guimenu
+> <guimenuitem
+>لعبة مرقمة جديدة…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>يبدأ لعبة ذات رقم محدد.</action>
+    <screenshot>
+    <screeninfo
+>مربع حوار بدء لعبة مرقمة</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="numbered.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>مربع حوار بدء لعبة مرقمة</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+> <shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+> <guimenu
+>لعبة</guimenu
+> <guimenuitem
+>احفظ</guimenuitem
+> </menuchoice
+> (ليس في وضع KSame)</term>
+<listitem
+><para
+>يحفظ الحالة الحالية للعبة على القرص.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>P</keycap
+></shortcut
+> <guimenu
+>لعبة</guimenu
+> <guimenuitem
+>ألبث</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>يلبث اللعبة أو يستأنفها. عندما تُلبث اللعبة، تُخفى جميع البلاطات.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>لعبة</guimenu
+> <guimenuitem
+>أظهر أعلى النتائج</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>يعرض قائمة أعلى النتائج.</action>
+    <screenshot>
+    <screeninfo
+>أظهر أعلى النتائج</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata fileref="highscore.png" format="PNG"/></imageobject>
+    <textobject
+><phrase
+>أظهر أعلى النتائج</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+</para>
+<para
+>عندما تتجاوز نتائج لعبتك أعلى عشر نتائج مدرجة، سيُطلب منك إدخال اسمك. </para
+> </listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>لعبة</guimenu
+> <guimenuitem
+>أنهِ</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+>اختيار هذا العنصر سينهي لعبتك الحالية، ويخرج من كلاكتي.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>حركة</guimenu
+> <guimenuitem
+>تراجع</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>يتراجع عن آخر نقلة قمت بها.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo
+></shortcut
+> <guimenu
+>حركة</guimenu
+> <guimenuitem
+>كرّر</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>إذا تراجعت عن نقلة مسبقًا، فيمكنك تكرارها هنا.</action
+></para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>حركة</guimenu
+> <guimenuitem
+>تراجع عن الكل</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>تراجع</action
+> عن جميع النقلات التي قمت بها.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>حركة</guimenu
+> <guimenuitem
+>كرّر الكل</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>كرّر</action
+> جميع النقلات المتراجع عنها.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>الإعدادات</guimenu
+><guisubmenu
+>الصعوبة</guisubmenu
+> </menuchoice
+></term>
+<listitem>
+<para
+>يتيح لك ضبط مستوى الصعوبة من قائمة فرعية.</para>
+<para
+>هناك أربعة مستويات للصعوبة: <itemizedlist>
+<listitem
+><para
+><guimenuitem
+>سهل جدا</guimenuitem
+>: 16 صفا، 10 أعمدة، 3 أنواع من القطع.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>سهل</guimenuitem
+>: 16 صفا، 10 أعمدة، 4 أنواع من القطع.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>متوسط</guimenuitem
+>: 16 صفا، 10 أعمدة، 5 أنواع من القطع.</para
+></listitem>
+<listitem
+><para
+><guimenuitem
+>صعب</guimenuitem
+>: 16 صفا، 10 أعمدة، 6 أنواع من القطع.</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>هناك أيضا إعدادات لمستوى <guimenuitem
+>مخصص</guimenuitem
+>.</para>
+<para
+>إذا حددت <guimenuitem
+>مخصص</guimenuitem
+>، فستُستخدم الإعدادات التي ضبطتها في مربع حوار <guimenuitem
+>اضبط - كلاكتي</guimenuitem
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>بالإضافة إلى ذلك، يحتوي كلاكتي على عناصر قائمتي كيدي الشائعة <guimenu
+>الإعدادات</guimenu
+> و <guimenu
+>مساعدة</guimenu
+>، لمزيد من المعلومات، اقرأ الأقسام المتعلقة بـ <ulink url="help:/fundamentals/menus.html#menus-settings"
+>قائمة الإعدادات</ulink
+> و <ulink url="help:/fundamentals/menus.html#menus-help"
+>قائمة المساعدة</ulink
+> في أساسيات كيدي. </para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="faq">
+<title
+>الأسئلة الشائعة</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question
+><para
+>أريد تغيير شكل اللعبة. هل يمكنني ذلك؟ </para
+></question>
+<answer
+><para
+>نعم. لتغيير شكل كلاكتي استخدم شريط القائمة لفتح <link linkend="configuration"
+>أداة الضبط</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>هل يمكنني استخدام لوحة المفاتيح للعب؟</para
+></question>
+<answer
+><para
+>لا. لا توفر هذه اللعبة وضع لعب بلوحة المفاتيح بعد.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question
+><para
+>كيف تبدأ اللعبة في وضع KSame؟</para
+></question>
+<answer
+><para
+>يمكنك تشغيل كلاكتي بالأمر <userinput
+>klickety --KSameMode</userinput
+> أو مدخل قائمة &ksame; في قائمة K.</para
+></answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration">
+<title
+>ضبط اللعبة</title
+><!-- do not change this! -->
+<!--This section describes configuration &GUI;. If your game is configured using menubar exclusively, please remove this section.-->
+<para
+><menuchoice
+><guimenu
+>الإعدادات</guimenu
+><guimenuitem
+>اضبط كلاكتي…</guimenuitem
+></menuchoice
+> يفتح مربع حوار <guilabel
+>اضبط - كلاكتي</guilabel
+>.</para>
+
+<sect1 id="general-options">
+<title
+>خيارات عامة</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>أظهر الخطوط المرتبطة</guilabel
+></term>
+<listitem
+><para
+>سيعرض هذا الخيار خطوطا مرتبطة بين القطع ذات الألوان المختلفة. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مكّن التحريك</guilabel
+></term>
+<listitem
+><para
+>سيمكّن هذا الخيار تحريك السقوط والدمج عند إزالة القطع. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مكّن التمييز</guilabel
+></term>
+<listitem
+><para
+>سيمكّن هذا الخيار تمييز القطع التي يُحلق فوقها إذا كان من الممكن إزالتها. </para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>خيارات عامة</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-general.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>خيارات عامة</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="theme-options">
+<title
+>خيارات السمة</title>
+<variablelist>
+<varlistentry>
+<term
+>محدد <guilabel
+>السمة</guilabel
+></term>
+<listitem
+><para
+>استخدم محدد <guilabel
+>السمة</guilabel
+> لضبط سمة للعبة.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<screenshot>
+<screeninfo
+>خيارات السمة</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-theme.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>خيارات السمة</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="background-options">
+<title
+>خيارات الخلفية</title>
+<para
+>يمكنك اختيار رسم خلفية للعبة. هناك ثلاثة أنواع من أنواع الخلفيات التي يمكنك استخدامها. <variablelist>
+<varlistentry>
+<term
+><guilabel
+>السمة</guilabel
+></term>
+<listitem
+><para
+>استخدم الخلفية المرفقة مع السمة الحالية.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>اللون</guilabel
+></term>
+<listitem
+><para
+>استخدم لونا صلبا مخصصا للخلفية.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>صورة</guilabel
+></term>
+<listitem
+><para
+>استخدم صورة لرسم الخلفية.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<screenshot>
+<screeninfo
+>خيارات الخلفية</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-background.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>خيارات الخلفية</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+<sect1 id="customgame-options">
+<title
+>خيارات اللعبة المخصصة</title>
+<para
+>يمكنك ضبط <guilabel
+>الارتفاع:</guilabel
+> و <guilabel
+>العرض:</guilabel
+> للوحة و <guilabel
+>عدد الألوان:</guilabel
+> المستخدمة في مستواك المخصص. </para>
+<screenshot>
+<screeninfo
+>خيارات اللعبة المخصصة</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="config-customgame.png" format="PNG"/></imageobject>
+<textobject
+><phrase
+>خيارات اللعبة المخصصة</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>الحقوق والترخيص</title>
+<para
+>كلاكتي</para>
+<para
+>حقوق نشر البرنامج &copy; 1995، Eirik Eng</para>
+<para
+>حقوق نشر البرنامج &copy; 1996&ndash;2004، &Nicolas.Hadacek; &Nicolas.Hadacek.mail;</para>
+<para
+>حقوق نشر البرنامج &copy; 2010، Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>حقوق نشر التوثيق &copy; 2005، Thomas Davey</para>
+<para
+>حقوق نشر التوثيق &copy; 2010، Ni Hui <email
+>shuizhuyuanluo@126.com</email
+></para>
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
