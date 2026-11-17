@@ -276,7 +276,7 @@ void MainWindow::showHighscores()
     if ( m_kSameMode ) {
         QPointer<KGameHighScoreDialog> d = new KGameHighScoreDialog( KGameHighScoreDialog::Name | KGameHighScoreDialog::Score, this );
         d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ false);
-        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
+        d->setConfigGroup( std::make_pair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
         d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
         d->exec();
         delete d;
@@ -305,7 +305,7 @@ void MainWindow::onGameOver( int remainCount )
 
         QPointer<KGameHighScoreDialog> d = new KGameHighScoreDialog( KGameHighScoreDialog::Name | KGameHighScoreDialog::Score, this );
         d->initFromDifficulty(KGameDifficulty::global(), /*setConfigGroup=*/ false);
-        d->setConfigGroup( qMakePair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
+        d->setConfigGroup( std::make_pair( QByteArray( "KSame" ), i18n( "High Scores" ) ) );
         d->setHiddenConfigGroups( QList<QByteArray>() << "Very Easy" << "Easy" << "Medium" << "Hard" << "Custom" );
 
         KGameHighScoreDialog::FieldInfo scoreInfo;
