@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>org.kde.ksame</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0+</project_license>
+  <project_license>GPL-2.0-or-later</project_license>
   <name>KSame</name>
   <name xml:lang="ar">سيم ك</name>
   <name xml:lang="ast">KSame</name>
@@ -134,6 +134,8 @@
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klickety</url>
   <url type="help">https://docs.kde.org/?application=klickety&amp;branch=stable&amp;path=ksame_mode.html</url>
   <url type="donation">https://www.kde.org/community/donations/?app=klickety&amp;source=appdata</url>
+  <url type="vcs-browser">https://invent.kde.org/games/klickety/</url>
+  <url type="contribute">https://community.kde.org/Get_Involved</url>
   <screenshots>
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/ksame/ksame.png</image>
